@@ -1,1 +1,29 @@
-{"name":"jansuvidha-skeleton","version":"0.1.0","private":true,"type":"module","scripts":{"start":"node server.mjs","test":"node checks.mjs"}}
+{
+  "name": "jansuvidha-skeleton",
+  "version": "0.1.0",
+  "private": true,
+  "type": "module",
+  "engines": { "node": ">=22.13.0" },
+  "scripts": {
+    "start": "node server.mjs",
+    "dev": "node --watch server.mjs",
+    "test": "node checks.mjs",
+    "lint": "eslint .",
+    "check": "npm run lint && npm test",
+    "analyze": "node analysis.mjs",
+    "android:sync": "cap sync android",
+    "android:open": "cap open android",
+    "android:run": "cap run android"
+  },
+  "dependencies": {
+    "@capacitor/android": "^8.6.0",
+    "@capacitor/core": "^8.6.0",
+    "simple-statistics": "^8.0.0"
+  },
+  "devDependencies": {
+    "@capacitor/cli": "^8.6.0",
+    "@eslint/js": "^10.0.1",
+    "eslint": "^10.14.0",
+    "globals": "^17.14.0"
+  }
+}
