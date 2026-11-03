@@ -29,6 +29,8 @@
 [data-theme="dark"] .map svg g[stroke="#d8d9c3"]{stroke:#81927b}
 [data-theme="dark"] dialog::backdrop{background:#0009}
 [data-theme="dark"] #toast{background:#b5ebc9;color:#102b1c}
+.facility-photos{display:grid;grid-template-columns:repeat(auto-fit,minmax(150px,1fr));gap:12px;margin:16px 0}
+.facility-photos img{display:block;width:100%;height:180px;object-fit:contain;border-radius:8px;background:var(--surface)}
 header{height:auto;min-height:78px;gap:12px;padding-top:12px;padding-bottom:12px;flex-wrap:wrap}
 .header-actions{flex-wrap:wrap}
 @media(max-width:850px){header{min-height:55px}.header-actions{gap:8px}.language-control select{min-width:90px}}

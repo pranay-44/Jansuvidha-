@@ -5,7 +5,7 @@ import {score,filterFacilities,facilities} from './dist/data.js';
 import {languages,normalizeLanguage,translate,translations} from './dist/language.js';
 assert.equal(score([]),null);
 assert.equal(score([100,null,undefined,0]),50);
-assert.equal(filterFacilities({ward:'Ward 01',usable:true}).length,1);
+assert.equal(filterFacilities({ward:'Ward unknown'}).length,facilities.filter(f=>!f.ward).length);
 assert.equal(filterFacilities({query:'NONEXISTENT'}).length,0);
 assert.ok(filterFacilities({accessible:true}).every(f=>f.accessible));
 assert.equal(new Set(facilities.map(f=>f.id)).size,facilities.length);

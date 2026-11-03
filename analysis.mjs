@@ -3,9 +3,9 @@ import { facilities, score } from './dist/data.js';
 
 // Analyze the same rounded facility scores displayed by the application.
 // Missing assessments are excluded, rather than treated as zero.
-console.log('Fictional sample data only; scores use illustrative equal weights.');
-console.table(['All wards', ...new Set(facilities.map(f => f.ward))].map(ward => {
-  const records = facilities.filter(f => ward === 'All wards' || f.ward === ward);
+console.log('Thane records; unknown assessments are excluded from score statistics.');
+console.table(['All wards', ...new Set(facilities.map(f => f.ward??'Ward unknown'))].map(ward => {
+  const records = facilities.filter(f => ward === 'All wards' || (f.ward??'Ward unknown') === ward);
   const scores = records.map(f => score(f.scores)).filter(Number.isFinite);
   return {
     ward,

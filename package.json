@@ -3,21 +3,28 @@
   "version": "0.1.0",
   "private": true,
   "type": "module",
-  "engines": { "node": ">=22.13.0" },
+  "engines": {
+    "node": ">=22.13.0"
+  },
   "scripts": {
     "start": "node server.mjs",
     "dev": "node --watch server.mjs",
-    "test": "node checks.mjs",
+    "test": "node checks.mjs && node import-checks.mjs",
     "lint": "eslint .",
     "check": "npm run lint && npm test",
     "analyze": "node analysis.mjs",
     "android:sync": "cap sync android",
     "android:open": "cap open android",
-    "android:run": "cap run android"
+    "android:run": "cap run android",
+    "data:import": "node import-thane.mjs",
+    "prestart": "npm run data:import",
+    "predev": "npm run data:import",
+    "preandroid:sync": "npm run data:import"
   },
   "dependencies": {
     "@capacitor/android": "^8.6.0",
     "@capacitor/core": "^8.6.0",
+    "csv-parse": "^7.0.3",
     "simple-statistics": "^8.0.0"
   },
   "devDependencies": {

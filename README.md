@@ -1,6 +1,25 @@
 # JanSuvidha foundation
 
-Responsive browser prototype based on the October 2026 PRD. All wards, facilities and scores are fictional sample data. No reports are sent to a public authority.
+Responsive web and Android prototype based on the October 2026 PRD, now using 13 real Thane facility records and 64 supplied photos. Records are photo-documented, not independently field-verified. No reports are sent to a public authority.
+
+## Thane dataset imports
+
+Source CSV: `public/data/thane/Thane_facilities.csv`; source images: `public/data/thane/photos/`. The supplied files were copied from `C:/Users/Pranay/Documents/Codex/2026-10-31/nee/outputs/Thane-facility-dataset`. The original folder is unchanged. No earlier demo dataset is required or imported.
+
+Run `npm run data:import` after editing the CSV/photos. To import a new dataset folder containing the same CSV filename and a `photos/` directory:
+
+```powershell
+npm run data:import -- "C:/path/to/dataset-folder"
+npm run android:sync
+```
+
+The importer validates IDs, coordinates, statuses, photo counts and referenced image files, then upserts into `public/data/thane/facilities.json` by **facility_id**. Existing IDs are replaced with the incoming row; new IDs are added; records absent from an update are retained. Duplicate IDs within one CSV are rejected. Reimporting the same data creates no duplicates. Blank fields in an updated row clear previous values. `id` is an unchanged alias of `facility_id` used by the existing complaint/rating UI. Do not edit generated JSON or `dist/data/thane/facilities.js` manually.
+
+There is no backend database yet. This is a build-time import into a persistent JSON registry and browser ES module. The importer copies images and the latest CSV into `dist/data/thane/` so the same records work on the web and offline inside the Android package. `npm start`, `npm run dev` and `npm run android:sync` automatically run the importer. Static hosting should publish `dist/` after importing. After future imports, rebuild the APK or redeploy the web files.
+
+Unknown wards, hours, accessibility, fees and water availability stay unknown. Scores stay empty until an assessment implementation is added. Photo timestamps are never treated as verification dates. The existing map layout is a coordinate overview with a decorative background, not a street map; photo-stamped coordinates are unconfirmed. Details show all photos, provenance, observations and review notes. Local reports linked to IDs outside the current dataset are excluded from the active UI without deleting stored data during loading.
+
+Validation: `npm run check` covers repeat imports, ID-based updates, retained rows, CSV quoting, malformed values, unknown assessments and every photo path. `npm run analyze` summarizes the imported records; unassessed scores remain null.
 
 ## Development environment (web and Android)
 
@@ -12,7 +31,7 @@ Use Node.js 24 LTS and npm. Run `npm ci` after cloning to install the locked dep
 | --- | --- |
 | `npm run check` | ESLint static analysis followed by existing application checks |
 | `npm test` | Scoring, filters, languages and theme checks |
-| `npm run analyze` | Sample facility count, mean, median and population standard deviation by ward |
+| `npm run analyze` | Imported facility count, mean, median and population standard deviation by ward |
 | `npm run android:sync` | Copy current web files and plugin configuration into Android |
 | `npm run android:open` | Open the native project in Android Studio |
 | `npm run android:run` | Deploy to a connected Android device or emulator |
@@ -47,7 +66,7 @@ At setup, npm reported eight moderate advisories in transitive development depen
 - Suvidha Map screen with a clearly labelled schematic, type/ward/search/usability/access filters, facility details and verification dates.
 - Local complaint submission and tracking, staff assignment/priority/status changes and an activity log.
 - Resolution blocked until photo evidence support is implemented.
-- Analytics, illustrative equal-weight facility scores and CSV export.
+- Analytics and CSV export based on imported facilities; scores remain unavailable without assessments.
 - Local ratings and assessment drafts that never overwrite verified status.
 - Responsive layout, labelled inputs, keyboard navigation and modal dialogs.
 
