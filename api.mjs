@@ -5,7 +5,7 @@ import {Passport} from 'passport';
 import {Strategy} from 'passport-local';
 import {randomUUID,timingSafeEqual} from 'node:crypto';
 import {rows,transaction} from './db.mjs';
-import {token,digest,hashPassword,verifyPassword,validatePassword,username,email,text,fail,canAccess,transitions} from './auth-security.mjs';
+import {token,digest,hashPassword,verifyPassword,validatePassword,username,email,text,fail,canAccess,transitions,isPrivateIPv4} from './auth-security.mjs';
 import {audit,recoveryCodes,hasMail,deliverToken} from './accounts.mjs';
 import {facilities} from './dist/data.js';
 
@@ -18,6 +18,12 @@ export async function createApp(pool,{rateLimitNamespace=''}={}) {
   const store=new (createMySQLStore(session))({createDatabaseTable:false,clearExpired:true,expiration:8*60*60*1000},pool);
   const dummy=await hashPassword(token());
   app.disable('x-powered-by');
+  if(process.env.PRESENTATION_MODE==='true')app.use((req,res,next)=>{
+    const address=req.socket.remoteAddress?.replace(/^::ffff:/,'');
+    if(!isPrivateIPv4(address||'')&&address!=='127.0.0.1'&&address!=='::1')return res.status(403).send('Presentation access is restricted to the local network.');
+    if(req.get('host')!==new URL(process.env.APP_ORIGIN).host)return res.status(403).send('Use the presentation link printed in the terminal.');
+    next();
+  });
   // Diagnose the real browser's login latency without recording credentials or identifiers.
   app.use('/api/auth/staff-login',(req,res,next)=>{
     if(req.method==='POST'){

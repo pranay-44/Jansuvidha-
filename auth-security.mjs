@@ -1,5 +1,6 @@
 import {createHash, randomBytes} from 'node:crypto';
 import argon2 from 'argon2';
+import {isIP} from 'node:net';
 
 export const token = () => randomBytes(32).toString('base64url');
 export const digest = value => createHash('sha256').update(value).digest('hex');
@@ -34,7 +35,14 @@ export const transitions = Object.freeze({Submitted:['Rejected'],Assigned:['In p
 export function canAccess(user, complaint) {
   return user.status === 'ACTIVE' && (user.role === 'ADMIN' || (user.role === 'CITIZEN' && user.id === complaint.citizen_id) || (user.role === 'OFFICER' && user.id === complaint.assigned_officer_id && user.department_id === complaint.department_id && user.jurisdiction_id === complaint.jurisdiction_id));
 }
+export function isPrivateIPv4(host) {
+  if(isIP(host)!==4)return false;
+  const [a,b]=host.split('.').map(Number);
+  return a===10||(a===172&&b>=16&&b<=31)||(a===192&&b===168);
+}
 export function assertLocalPrototype() {
   if (process.env.NODE_ENV === 'production') throw Error('Production startup blocked: staff MFA enrollment, verification and recovery must be implemented first.');
-  if (!['127.0.0.1','localhost','::1'].includes(process.env.HOST || '127.0.0.1')) throw Error('This prototype must bind to loopback until staff MFA is implemented.');
+  const host=process.env.HOST||'127.0.0.1';
+  if(process.env.PRESENTATION_MODE==='true'&&process.env.NODE_ENV==='development'&&isPrivateIPv4(host))return;
+  if (!['127.0.0.1','localhost','::1'].includes(host)) throw Error('Use loopback or npm run presentation on a private network. Public deployment requires staff MFA.');
 }

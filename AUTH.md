@@ -2,7 +2,7 @@
 
 This is one Node/Express application with one MySQL application database. The separate `jansuvidha_test` database is used only by automated tests. The existing map, dataset, theme and language controls remain available. Complaints now use authenticated backend storage; old browser demo complaints are neither imported nor deleted.
 
-**Local prototype, not production-ready:** staff MFA is deferred. `NODE_ENV=production` refuses startup, and the server binds only to loopback. Staff login additionally requires `ALLOW_LOCAL_STAFF_WITHOUT_MFA=true`. Do not expose this prototype through a proxy or tunnel. Implement an established MFA enrollment, verification and recovery flow before lifting these guards. Staff password reset must retain the MFA requirement.
+**Local prototype, not production-ready:** staff MFA is deferred. `NODE_ENV=production` refuses startup, and the ordinary server binds only to loopback. The explicit `npm run presentation` command permits a private LAN address for phone demonstrations; see [PRESENTATION.md](PRESENTATION.md). Staff login additionally requires `ALLOW_LOCAL_STAFF_WITHOUT_MFA=true`. Do not expose this prototype through a public proxy or tunnel. Implement an established MFA enrollment, verification and recovery flow before lifting these guards. Staff password reset must retain the MFA requirement.
 
 ## Setup and start
 

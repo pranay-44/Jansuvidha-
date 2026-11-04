@@ -25,6 +25,7 @@ const rateLimitNamespace=randomUUID();
 try {
   const connection=await pool.getConnection();try{await migrate(connection);}finally{connection.release();}
   const {app,store:sessionStore}=await createApp(pool,{rateLimitNamespace});store=sessionStore;server=app.listen(0,'127.0.0.1');await once(server,'listening');const origin=`http://127.0.0.1:${server.address().port}`;
+  process.env.APP_ORIGIN=origin;
   function client(){const cookies={},csrf={};let portal='citizen';return {
     async usePortal(next){portal=next;return this.request('/auth/session');},
     async request(path,body,method=body?'POST':'GET',omitCsrf=false){
