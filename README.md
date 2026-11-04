@@ -17,7 +17,17 @@ The importer validates IDs, coordinates, statuses, photo counts and referenced i
 
 There is no backend database yet. This is a build-time import into a persistent JSON registry and browser ES module. The importer copies images and the latest CSV into `dist/data/thane/` so the same records work on the web and offline inside the Android package. `npm start`, `npm run dev` and `npm run android:sync` automatically run the importer. Static hosting should publish `dist/` after importing. After future imports, rebuild the APK or redeploy the web files.
 
-Unknown wards, hours, accessibility, fees and water availability stay unknown. Scores stay empty until an assessment implementation is added. Photo timestamps are never treated as verification dates. The existing map layout is a coordinate overview with a decorative background, not a street map; photo-stamped coordinates are unconfirmed. Details show all photos, provenance, observations and review notes. Local reports linked to IDs outside the current dataset are excluded from the active UI without deleting stored data during loading.
+Unknown wards, hours, accessibility, fees and water availability stay unknown. Scores stay empty until an assessment implementation is added. Photo timestamps are never treated as verification dates. The street map uses real latitude/longitude; photo-stamped facility coordinates remain unconfirmed. Details show all photos, provenance, observations and review notes. Local reports linked to IDs outside the current dataset are excluded from the active UI without deleting stored data during loading.
+
+## Thane street map
+
+Leaflet 1.9.4 is bundled locally in `dist/vendor/leaflet/`, with its licence. `npm run map:assets` refreshes those files from the locked npm dependency; web start and Android sync run this automatically. The initial viewport covers Thane at city scale (it is not an official municipal boundary). Zoom to see roads and mapped building footprints. “Entire Thane” resets the view; “Show facilities” fits the currently filtered pins. Clicking a pin opens its existing facility details, while selecting a list item also focuses its street location.
+
+The interface belongs to this project; base-map data and online tiles are provided by OpenStreetMap, not Google. No API key is required. Street tiles need internet access; the dataset, photos and Leaflet code are packaged locally. Unmapped buildings may not appear. Tile failures show a message without disabling the facility list. A dedicated Android User-Agent suffix identifies JanSuvidha.
+
+Visible attribution and browser caching follow the [OpenStreetMap tile usage policy](https://operations.osmfoundation.org/policies/tiles/). No tile prefetch or offline city download is implemented. Public tile service availability is best-effort; for production traffic or offline maps, use a suitable hosted or self-hosted tile service and update the URL/attribution in `dist/facility-map.js`.
+
+`map-checks.mjs` tests the map adapter's coordinate mapping, filtered markers, selection, focus, empty results, tile-error messaging and cleanup without fetching tiles. It is not a visual browser test.
 
 Validation: `npm run check` covers repeat imports, ID-based updates, retained rows, CSV quoting, malformed values, unknown assessments and every photo path. `npm run analyze` summarizes the imported records; unassessed scores remain null.
 
@@ -63,7 +73,7 @@ At setup, npm reported eight moderate advisories in transitive development depen
 
 - Citizen language selector: English, Hindi and Marathi, with a remembered browser preference. Citizen map, facility details and complaint controls are translated; entered reports remain in their original language. Staff and analytics copy remains primarily English.
 
-- Suvidha Map screen with a clearly labelled schematic, type/ward/search/usability/access filters, facility details and verification dates.
+- Thane street map with type/ward/search/usability/access filters, facility details and verification dates.
 - Local complaint submission and tracking, staff assignment/priority/status changes and an activity log.
 - Resolution blocked until photo evidence support is implemented.
 - Analytics and CSV export based on imported facilities; scores remain unavailable without assessments.
@@ -76,6 +86,6 @@ At setup, npm reported eight moderate advisories in transitive development depen
 
 ## Next implementation
 
-Confirm the pilot city, wards, amenity types, scoring methodology. Replace the schematic with Leaflet and real location data. Move records to the PRD's FastAPI/PostgreSQL/PostGIS backend and add authentication, server-side role permissions, evidence uploads and auditing. React/Vite migration can accompany that integration; this first skeleton uses dependency-free browser modules. Add full type-specific checklists, validated scoring/version history, OTP, GPS, notifications, staff-only notes, SLA handling, moderation, PWA/offline support and staff/analytics translations. None of those services are active yet.
+Confirm wards, entrance coordinates and scoring methodology for the Thane pilot. Move records to the PRD's FastAPI/PostgreSQL/PostGIS backend and add authentication, server-side role permissions, evidence uploads and auditing. React/Vite migration can accompany that integration; the current interface uses browser modules with bundled Leaflet. Add full type-specific checklists, validated scoring/version history, OTP, GPS, notifications, staff-only notes, SLA handling, moderation, PWA/offline support and staff/analytics translations. None of those services are active yet.
 
 Local storage is a single-device demo convenience, not secure multi-user persistence. Do not enter real personal information. Google Fonts is optional; system fonts work if unavailable.

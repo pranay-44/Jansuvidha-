@@ -9,7 +9,7 @@
   "scripts": {
     "start": "node server.mjs",
     "dev": "node --watch server.mjs",
-    "test": "node checks.mjs && node import-checks.mjs",
+    "test": "node checks.mjs && node import-checks.mjs && node map-checks.mjs",
     "lint": "eslint .",
     "check": "npm run lint && npm test",
     "analyze": "node analysis.mjs",
@@ -17,14 +17,16 @@
     "android:open": "cap open android",
     "android:run": "cap run android",
     "data:import": "node import-thane.mjs",
-    "prestart": "npm run data:import",
-    "predev": "npm run data:import",
-    "preandroid:sync": "npm run data:import"
+    "prestart": "npm run map:assets && npm run data:import",
+    "predev": "npm run map:assets && npm run data:import",
+    "preandroid:sync": "npm run map:assets && npm run data:import",
+    "map:assets": "node prepare-map-assets.mjs"
   },
   "dependencies": {
     "@capacitor/android": "^8.6.0",
     "@capacitor/core": "^8.6.0",
     "csv-parse": "^7.0.3",
+    "leaflet": "^1.9.4",
     "simple-statistics": "^8.0.0"
   },
   "devDependencies": {

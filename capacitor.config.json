@@ -1,5 +1,6 @@
 {
   "appId": "org.jansuvidha.app",
   "appName": "JanSuvidha",
-  "webDir": "dist"
+  "webDir": "dist",
+  "appendUserAgent": " JanSuvidha/0.1 (org.jansuvidha.app)"
 }

@@ -1,14 +1,6 @@
 import records from './data/thane/facilities.js';
 export const facilities = records;
 export const wards = [...new Set(facilities.map(f => f.ward ?? 'Ward unknown'))];
-// Coordinate overview only: the decorative background is not a street map.
-const located = facilities.filter(f => f.latitude !== null && f.longitude !== null);
-const latitudes = located.map(f => f.latitude), longitudes = located.map(f => f.longitude);
-const position = (value, values) => 12 + 76 * (value - Math.min(...values)) / (Math.max(...values) - Math.min(...values) || 1);
-for (const f of located) {
-  f.x = position(f.longitude, longitudes);
-  f.y = 100 - position(f.latitude, latitudes);
-}
 export const photoUrl = path => 'data/thane/' + path;
 export const dimensions = ['Provision','Availability','Accessibility','Functionality','Usability','Safety','Cleanliness','Affordability','Satisfaction'];
 export const statusLabels={usable:'Usable',partial:'Partly usable',unusable:'Not usable',unverified:'Unverified'};
