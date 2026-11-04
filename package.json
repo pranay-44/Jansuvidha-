@@ -7,9 +7,14 @@
     "node": ">=22.13.0"
   },
   "scripts": {
-    "start": "node server.mjs",
-    "dev": "node --watch server.mjs",
-    "test": "node checks.mjs && node import-checks.mjs && node map-checks.mjs",
+    "start": "node --env-file=.env server.mjs",
+    "dev": "node --env-file=.env --watch server.mjs",
+    "db:setup": "node setup-db.mjs",
+    "db:migrate": "node --env-file=.env migrate.mjs",
+    "auth:bootstrap": "node --env-file=.env auth-cli.mjs bootstrap",
+    "auth:dev-link": "node --env-file=.env auth-cli.mjs dev-link",
+    "test:auth": "node --env-file=.env auth-checks.mjs",
+    "test": "node checks.mjs && node import-checks.mjs && node map-checks.mjs && node account-checks.mjs",
     "lint": "eslint .",
     "check": "npm run lint && npm test",
     "analyze": "node analysis.mjs",
@@ -25,8 +30,17 @@
   "dependencies": {
     "@capacitor/android": "^8.6.0",
     "@capacitor/core": "^8.6.0",
+    "@inquirer/prompts": "^8.7.5",
+    "argon2": "^0.45.2",
     "csv-parse": "^7.0.3",
+    "express": "^5.3.0",
+    "express-mysql-session": "^3.0.3",
+    "express-session": "^1.19.0",
     "leaflet": "^1.9.4",
+    "mysql2": "^3.24.6",
+    "nodemailer": "^10.3.1",
+    "passport": "^0.7.0",
+    "passport-local": "^1.0.0",
     "simple-statistics": "^8.0.0"
   },
   "devDependencies": {

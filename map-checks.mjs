@@ -3,6 +3,12 @@ import { readFileSync } from 'node:fs';
 import { runInNewContext } from 'node:vm';
 import { facilities } from './dist/data.js';
 
+const serverSource=readFileSync(new URL('./api.mjs',import.meta.url),'utf8');
+const mapSource=readFileSync(new URL('./dist/facility-map.js',import.meta.url),'utf8');
+const tileOrigin=new URL(mapSource.match(/L\.tileLayer\('([^']+)'/)[1]).origin;
+const imagePolicy=serverSource.match(/img-src ([^;]+);/)[1].split(' ');
+assert.ok(imagePolicy.includes(tileOrigin),'CSP must permit the exact map tile origin');
+
 // Exercise our map adapter without downloading map tiles during automated tests.
 const calls = { markers: [], bounds: [], handlers: {} };
 const map = {

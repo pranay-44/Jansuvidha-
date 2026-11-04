@@ -1,5 +1,7 @@
 # JanSuvidha foundation
 
+Citizen, officer and administrator accounts now use a Node/Express backend with MySQL. Start with [AUTH.md](AUTH.md) for database setup, first-admin creation, login, invitations and recovery. Staff MFA is deferred; production startup is blocked. Use the Node-served web application for accounts.
+
 Responsive web and Android prototype based on the October 2026 PRD, now using 13 real Thane facility records and 64 supplied photos. Records are photo-documented, not independently field-verified. No reports are sent to a public authority.
 
 ## Thane dataset imports
@@ -15,7 +17,7 @@ npm run android:sync
 
 The importer validates IDs, coordinates, statuses, photo counts and referenced image files, then upserts into `public/data/thane/facilities.json` by **facility_id**. Existing IDs are replaced with the incoming row; new IDs are added; records absent from an update are retained. Duplicate IDs within one CSV are rejected. Reimporting the same data creates no duplicates. Blank fields in an updated row clear previous values. `id` is an unchanged alias of `facility_id` used by the existing complaint/rating UI. Do not edit generated JSON or `dist/data/thane/facilities.js` manually.
 
-There is no backend database yet. This is a build-time import into a persistent JSON registry and browser ES module. The importer copies images and the latest CSV into `dist/data/thane/` so the same records work on the web and offline inside the Android package. `npm start`, `npm run dev` and `npm run android:sync` automatically run the importer. Static hosting should publish `dist/` after importing. After future imports, rebuild the APK or redeploy the web files.
+Facility data remains a build-time import into a persistent JSON registry and browser ES module. The importer copies images and the latest CSV into `dist/data/thane/` so the same records work on the web and offline inside the Android package. `npm start`, `npm run dev` and `npm run android:sync` automatically run the importer. Static hosting can show the map, but account and complaint features require the Node/MySQL server. After future imports, rebuild the APK or redeploy the web files.
 
 Unknown wards, hours, accessibility, fees and water availability stay unknown. Scores stay empty until an assessment implementation is added. Photo timestamps are never treated as verification dates. The street map uses real latitude/longitude; photo-stamped facility coordinates remain unconfirmed. Details show all photos, provenance, observations and review notes. Local reports linked to IDs outside the current dataset are excluded from the active UI without deleting stored data during loading.
 
@@ -63,7 +65,7 @@ $env:ANDROID_HOME = "$env:LOCALAPPDATA/Android/Sdk"
 
 Output: `android/app/build/outputs/apk/debug/app-debug.apk`. Gradle downloads dependencies on the first build. For a different SDK location, set `ANDROID_HOME` accordingly or configure it in Android Studio. The provisional application ID is `org.jansuvidha.app`; confirm ownership before store publication. Release signing and store submission are not configured.
 
-No API keys or `.env` settings are required for the local prototype. The frontend has no automatic `.env` loader; never put secrets into browser or Android web assets. Web and Android demo storage are separate.
+The account backend requires server-only `.env` settings; see AUTH.md. The frontend has no automatic `.env` loader; never put secrets into browser or Android web assets. Web and Android demo storage are separate.
 
 At setup, npm reported eight moderate advisories in transitive development dependencies of ESLint and Capacitor CLI. Compatible `npm audit fix` did not resolve them; the proposed forced fixes downgrade major tools. Recheck with `npm audit` when updating dependencies.
 
@@ -74,7 +76,7 @@ At setup, npm reported eight moderate advisories in transitive development depen
 - Citizen language selector: English, Hindi and Marathi, with a remembered browser preference. Citizen map, facility details and complaint controls are translated; entered reports remain in their original language. Staff and analytics copy remains primarily English.
 
 - Thane street map with type/ward/search/usability/access filters, facility details and verification dates.
-- Local complaint submission and tracking, staff assignment/priority/status changes and an activity log.
+- Authenticated MySQL-backed complaint submission, tracking, scoped staff assignment/status updates and audit history.
 - Resolution blocked until photo evidence support is implemented.
 - Analytics and CSV export based on imported facilities; scores remain unavailable without assessments.
 - Local ratings and assessment drafts that never overwrite verified status.
@@ -82,10 +84,10 @@ At setup, npm reported eight moderate advisories in transitive development depen
 
 ## Files
 
-`dist/index.html` is the app shell; `dist/style.css` holds presentation; `dist/data.js` contains sample fixtures and pure scoring/filtering functions; `dist/app.js` contains the screen workflows. `server.mjs` is a development-only static server.
+`dist/index.html` is the app shell; `dist/style.css` holds presentation; `dist/data.js` contains sample fixtures and pure scoring/filtering functions; `dist/app.js` contains the screen workflows. `server.mjs` starts the local Express/MySQL application. `api.mjs` implements authentication and permissions; `dist/account.js` contains account and complaint screens.
 
 ## Next implementation
 
-Confirm wards, entrance coordinates and scoring methodology for the Thane pilot. Move records to the PRD's FastAPI/PostgreSQL/PostGIS backend and add authentication, server-side role permissions, evidence uploads and auditing. React/Vite migration can accompany that integration; the current interface uses browser modules with bundled Leaflet. Add full type-specific checklists, validated scoring/version history, OTP, GPS, notifications, staff-only notes, SLA handling, moderation, PWA/offline support and staff/analytics translations. None of those services are active yet.
+Confirm wards, entrance coordinates and scoring methodology for the Thane pilot. The requested Node/MySQL authentication, complaint permissions and auditing are implemented. Add production staff MFA and evidence uploads before deployment. React/Vite migration can accompany that integration; the current interface uses browser modules with bundled Leaflet. Add full type-specific checklists, validated scoring/version history, OTP, GPS, notifications, staff-only notes, SLA handling, moderation, PWA/offline support and staff/analytics translations. Only the account/complaint features documented in AUTH.md are backed by active server APIs.
 
 Local storage is a single-device demo convenience, not secure multi-user persistence. Do not enter real personal information. Google Fonts is optional; system fonts work if unavailable.

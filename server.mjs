@@ -1,5 +1,14 @@
-import http from 'node:http';
-import {readFile} from 'node:fs/promises';
-import {resolve,extname,sep} from 'node:path';
-const root=resolve('dist');
-http.createServer(async(req,res)=>{try{const path=resolve(root,'.'+decodeURIComponent(new URL(req.url,'http://localhost').pathname));if(path!==root&&!path.startsWith(root+sep)){res.writeHead(403);res.end();return}const file=path===root?resolve(root,'index.html'):path;res.setHeader('Content-Type',({'.html':'text/html','.js':'text/javascript','.css':'text/css','.jpg':'image/jpeg','.jpeg':'image/jpeg','.png':'image/png','.webp':'image/webp','.csv':'text/csv;charset=utf-8'})[extname(file)]??'application/octet-stream');res.end(await readFile(file))}catch{res.writeHead(404);res.end('Not found')}}).listen(4173,'127.0.0.1',()=>console.log('Local: http://127.0.0.1:4173'));
+import {connectDatabase} from './db.mjs';
+import {createApp} from './api.mjs';
+import {assertLocalPrototype} from './auth-security.mjs';
+
+assertLocalPrototype();
+const pool=connectDatabase();
+try {
+  await pool.query('SELECT 1 FROM schema_migrations LIMIT 1');
+  const {app}=await createApp(pool);
+  app.listen(Number(process.env.PORT||4173),process.env.HOST||'127.0.0.1',()=>console.log(`Local prototype: ${process.env.APP_ORIGIN||'http://127.0.0.1:4173'} (staff MFA deferred; production blocked)`));
+}catch{
+  console.error('Startup failed. Check MySQL, SESSION_SECRET and migrations. See AUTH.md.');
+  await pool.end();process.exitCode=1;
+}
