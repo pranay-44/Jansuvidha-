@@ -2,6 +2,9 @@ export const languages = {en:'English',hi:'हिन्दी',mr:'मराठ�
 export const normalizeLanguage = value => typeof value==='string'&&Object.hasOwn(languages,value) ? value : 'en';
 // English source labels remain the stored values; only their presentation changes.
 const rows = [
+['Location pending','स्थान की जानकारी लंबित','स्थानाची माहिती प्रलंबित'],
+['mapped','मानचित्र पर','नकाशावर'],
+['Medical facilities','चिकित्सा सुविधाएँ','वैद्यकीय सुविधा'],
 ['Theme','थीम','थीम'],
 ['Light','हल्का','प्रकाशमय'],
 ['Dark','गहरा','गडद'],

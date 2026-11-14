@@ -1,0 +1,2502 @@
+{
+  "source_pages": 332,
+  "duplicate_source_pages": [
+    {
+      "source_pdf": "SRWWashrooms (1).pdf",
+      "page": 24,
+      "same_as": {
+        "source_pdf": "SRWWaterFacilities (1).pdf",
+        "page": 21
+      }
+    }
+  ],
+  "records": [
+    {
+      "facility_id": "THN-MED-B01-001",
+      "source_pdf": "SRW for medical facilities and hospitals .pdf",
+      "pages": [
+        1,
+        2
+      ],
+      "geotag_source_page": 1,
+      "coordinates": [
+        19.208753,
+        72.952856
+      ],
+      "action": "new_record",
+      "location_pending": false
+    },
+    {
+      "facility_id": "THN-MED-B01-003",
+      "source_pdf": "SRW for medical facilities and hospitals .pdf",
+      "pages": [
+        3,
+        4
+      ],
+      "geotag_source_page": 3,
+      "coordinates": [
+        19.208749,
+        72.952864
+      ],
+      "action": "new_record",
+      "location_pending": false
+    },
+    {
+      "facility_id": "THN-MED-B01-005",
+      "source_pdf": "SRW for medical facilities and hospitals .pdf",
+      "pages": [
+        5,
+        6
+      ],
+      "geotag_source_page": 5,
+      "coordinates": [
+        19.207914,
+        72.952653
+      ],
+      "action": "new_record",
+      "location_pending": false
+    },
+    {
+      "facility_id": "THN-MED-B01-007",
+      "source_pdf": "SRW for medical facilities and hospitals .pdf",
+      "pages": [
+        7
+      ],
+      "geotag_source_page": null,
+      "coordinates": null,
+      "action": "new_record",
+      "location_pending": true
+    },
+    {
+      "facility_id": "THN-MED-B01-008",
+      "source_pdf": "SRW for medical facilities and hospitals .pdf",
+      "pages": [
+        8
+      ],
+      "geotag_source_page": null,
+      "coordinates": null,
+      "action": "new_record",
+      "location_pending": true
+    },
+    {
+      "facility_id": "THN-MED-B01-009",
+      "source_pdf": "SRW for medical facilities and hospitals .pdf",
+      "pages": [
+        9,
+        10
+      ],
+      "geotag_source_page": 10,
+      "coordinates": [
+        19.20796,
+        72.9534
+      ],
+      "action": "new_record",
+      "location_pending": false
+    },
+    {
+      "facility_id": "THN-MED-B01-011",
+      "source_pdf": "SRW for medical facilities and hospitals .pdf",
+      "pages": [
+        11,
+        12
+      ],
+      "geotag_source_page": 11,
+      "coordinates": [
+        19.207928,
+        72.953402
+      ],
+      "action": "new_record",
+      "location_pending": false
+    },
+    {
+      "facility_id": "THN-MED-B01-013",
+      "source_pdf": "SRW for medical facilities and hospitals .pdf",
+      "pages": [
+        13,
+        14
+      ],
+      "geotag_source_page": 14,
+      "coordinates": [
+        19.208299,
+        72.95352
+      ],
+      "action": "new_record",
+      "location_pending": false
+    },
+    {
+      "facility_id": "THN-MED-B01-015",
+      "source_pdf": "SRW for medical facilities and hospitals .pdf",
+      "pages": [
+        15,
+        16
+      ],
+      "geotag_source_page": 15,
+      "coordinates": [
+        19.207693,
+        72.953681
+      ],
+      "action": "new_record",
+      "location_pending": false
+    },
+    {
+      "facility_id": "THN-MED-B01-017",
+      "source_pdf": "SRW for medical facilities and hospitals .pdf",
+      "pages": [
+        17,
+        18
+      ],
+      "geotag_source_page": 17,
+      "coordinates": [
+        19.20765,
+        72.954584
+      ],
+      "action": "new_record",
+      "location_pending": false
+    },
+    {
+      "facility_id": "THN-MED-B01-019",
+      "source_pdf": "SRW for medical facilities and hospitals .pdf",
+      "pages": [
+        19,
+        20
+      ],
+      "geotag_source_page": 20,
+      "coordinates": [
+        19.207618,
+        72.954578
+      ],
+      "action": "new_record",
+      "location_pending": false
+    },
+    {
+      "facility_id": "THN-MED-B01-021",
+      "source_pdf": "SRW for medical facilities and hospitals .pdf",
+      "pages": [
+        21,
+        22
+      ],
+      "geotag_source_page": 21,
+      "coordinates": [
+        19.207648,
+        72.954592
+      ],
+      "action": "new_record",
+      "location_pending": false
+    },
+    {
+      "facility_id": "THN-MED-B01-023",
+      "source_pdf": "SRW for medical facilities and hospitals .pdf",
+      "pages": [
+        23,
+        24
+      ],
+      "geotag_source_page": 23,
+      "coordinates": [
+        19.207639,
+        72.95459
+      ],
+      "action": "new_record",
+      "location_pending": false
+    },
+    {
+      "facility_id": "THN-MED-B01-025",
+      "source_pdf": "SRW for medical facilities and hospitals .pdf",
+      "pages": [
+        25,
+        26
+      ],
+      "geotag_source_page": 26,
+      "coordinates": [
+        19.207801,
+        72.954599
+      ],
+      "action": "new_record",
+      "location_pending": false
+    },
+    {
+      "facility_id": "THN-MED-B01-027",
+      "source_pdf": "SRW for medical facilities and hospitals .pdf",
+      "pages": [
+        27,
+        28
+      ],
+      "geotag_source_page": 28,
+      "coordinates": [
+        19.207691,
+        72.954604
+      ],
+      "action": "new_record",
+      "location_pending": false
+    },
+    {
+      "facility_id": "THN-MED-B01-029",
+      "source_pdf": "SRW for medical facilities and hospitals .pdf",
+      "pages": [
+        29,
+        30
+      ],
+      "geotag_source_page": 30,
+      "coordinates": [
+        19.207863,
+        72.9547
+      ],
+      "action": "new_record",
+      "location_pending": false
+    },
+    {
+      "facility_id": "THN-MED-B01-031",
+      "source_pdf": "SRW for medical facilities and hospitals .pdf",
+      "pages": [
+        31,
+        32
+      ],
+      "geotag_source_page": 31,
+      "coordinates": [
+        19.208034,
+        72.954954
+      ],
+      "action": "new_record",
+      "location_pending": false
+    },
+    {
+      "facility_id": "THN-MED-B01-033",
+      "source_pdf": "SRW for medical facilities and hospitals .pdf",
+      "pages": [
+        33,
+        34
+      ],
+      "geotag_source_page": 33,
+      "coordinates": [
+        19.208124,
+        72.955047
+      ],
+      "action": "new_record",
+      "location_pending": false
+    },
+    {
+      "facility_id": "THN-MED-B01-035",
+      "source_pdf": "SRW for medical facilities and hospitals .pdf",
+      "pages": [
+        35,
+        36
+      ],
+      "geotag_source_page": 36,
+      "coordinates": [
+        19.208124,
+        72.955047
+      ],
+      "action": "new_record",
+      "location_pending": false
+    },
+    {
+      "facility_id": "THN-MED-B01-037",
+      "source_pdf": "SRW for medical facilities and hospitals .pdf",
+      "pages": [
+        37,
+        38
+      ],
+      "geotag_source_page": 37,
+      "coordinates": [
+        19.207873,
+        72.955409
+      ],
+      "action": "new_record",
+      "location_pending": false
+    },
+    {
+      "facility_id": "THN-MED-B01-039",
+      "source_pdf": "SRW for medical facilities and hospitals .pdf",
+      "pages": [
+        39,
+        40
+      ],
+      "geotag_source_page": 39,
+      "coordinates": [
+        19.207848,
+        72.955422
+      ],
+      "action": "new_record",
+      "location_pending": false
+    },
+    {
+      "facility_id": "THN-MED-B01-041",
+      "source_pdf": "SRW for medical facilities and hospitals .pdf",
+      "pages": [
+        41,
+        42
+      ],
+      "geotag_source_page": 41,
+      "coordinates": [
+        19.20767,
+        72.955548
+      ],
+      "action": "new_record",
+      "location_pending": false
+    },
+    {
+      "facility_id": "THN-MED-B01-043",
+      "source_pdf": "SRW for medical facilities and hospitals .pdf",
+      "pages": [
+        43,
+        44
+      ],
+      "geotag_source_page": 44,
+      "coordinates": [
+        19.207648,
+        72.95558
+      ],
+      "action": "new_record",
+      "location_pending": false
+    },
+    {
+      "facility_id": "THN-MED-B01-045",
+      "source_pdf": "SRW for medical facilities and hospitals .pdf",
+      "pages": [
+        45,
+        46
+      ],
+      "geotag_source_page": 45,
+      "coordinates": [
+        19.207646,
+        72.955583
+      ],
+      "action": "new_record",
+      "location_pending": false
+    },
+    {
+      "facility_id": "THN-MED-B01-047",
+      "source_pdf": "SRW for medical facilities and hospitals .pdf",
+      "pages": [
+        47,
+        48
+      ],
+      "geotag_source_page": 48,
+      "coordinates": [
+        19.207504,
+        72.955798
+      ],
+      "action": "new_record",
+      "location_pending": false
+    },
+    {
+      "facility_id": "THN-MED-B01-049",
+      "source_pdf": "SRW for medical facilities and hospitals .pdf",
+      "pages": [
+        49,
+        50
+      ],
+      "geotag_source_page": 50,
+      "coordinates": [
+        19.207386,
+        72.955966
+      ],
+      "action": "new_record",
+      "location_pending": false
+    },
+    {
+      "facility_id": "THN-MED-B01-051",
+      "source_pdf": "SRW for medical facilities and hospitals .pdf",
+      "pages": [
+        51,
+        52
+      ],
+      "geotag_source_page": 52,
+      "coordinates": [
+        19.206862,
+        72.9567
+      ],
+      "action": "new_record",
+      "location_pending": false
+    },
+    {
+      "facility_id": "THN-MED-B01-053",
+      "source_pdf": "SRW for medical facilities and hospitals .pdf",
+      "pages": [
+        53,
+        54
+      ],
+      "geotag_source_page": 53,
+      "coordinates": [
+        19.207925,
+        72.957825
+      ],
+      "action": "new_record",
+      "location_pending": false
+    },
+    {
+      "facility_id": "THN-MED-B01-055",
+      "source_pdf": "SRW for medical facilities and hospitals .pdf",
+      "pages": [
+        55,
+        56
+      ],
+      "geotag_source_page": 55,
+      "coordinates": [
+        19.209561,
+        72.95684
+      ],
+      "action": "new_record",
+      "location_pending": false
+    },
+    {
+      "facility_id": "THN-MED-B01-057",
+      "source_pdf": "SRW for medical facilities and hospitals .pdf",
+      "pages": [
+        57,
+        58
+      ],
+      "geotag_source_page": 57,
+      "coordinates": [
+        19.211922,
+        72.955029
+      ],
+      "action": "new_record",
+      "location_pending": false
+    },
+    {
+      "facility_id": "THN-MED-B01-059",
+      "source_pdf": "SRW for medical facilities and hospitals .pdf",
+      "pages": [
+        59,
+        60
+      ],
+      "geotag_source_page": 60,
+      "coordinates": [
+        19.212044,
+        72.955009
+      ],
+      "action": "new_record",
+      "location_pending": false
+    },
+    {
+      "facility_id": "THN-MED-B01-061",
+      "source_pdf": "SRW for medical facilities and hospitals .pdf",
+      "pages": [
+        61,
+        62
+      ],
+      "geotag_source_page": 61,
+      "coordinates": [
+        19.209738,
+        72.956829
+      ],
+      "action": "new_record",
+      "location_pending": false
+    },
+    {
+      "facility_id": "THN-MED-B01-063",
+      "source_pdf": "SRW for medical facilities and hospitals .pdf",
+      "pages": [
+        63,
+        64
+      ],
+      "geotag_source_page": 64,
+      "coordinates": [
+        19.213284,
+        72.95477
+      ],
+      "action": "new_record",
+      "location_pending": false
+    },
+    {
+      "facility_id": "THN-MED-B01-065",
+      "source_pdf": "SRW for medical facilities and hospitals .pdf",
+      "pages": [
+        65,
+        66
+      ],
+      "geotag_source_page": 65,
+      "coordinates": [
+        19.212898,
+        72.954578
+      ],
+      "action": "new_record",
+      "location_pending": false
+    },
+    {
+      "facility_id": "THN-MED-B01-067",
+      "source_pdf": "SRW for medical facilities and hospitals .pdf",
+      "pages": [
+        67,
+        68
+      ],
+      "geotag_source_page": 67,
+      "coordinates": [
+        19.212912,
+        72.95458
+      ],
+      "action": "new_record",
+      "location_pending": false
+    },
+    {
+      "facility_id": "THN-MED-B03-001",
+      "source_pdf": "Health facility of Balkum+Kalher+Kasheli+Kapurbawdi+Majiwada.pdf",
+      "pages": [
+        1,
+        2
+      ],
+      "geotag_source_page": 1,
+      "coordinates": [
+        19.249663,
+        73.013255
+      ],
+      "action": "new_record",
+      "location_pending": false
+    },
+    {
+      "facility_id": "THN-MED-B03-003",
+      "source_pdf": "Health facility of Balkum+Kalher+Kasheli+Kapurbawdi+Majiwada.pdf",
+      "pages": [
+        3,
+        4
+      ],
+      "geotag_source_page": 3,
+      "coordinates": [
+        19.249761,
+        73.013364
+      ],
+      "action": "new_record",
+      "location_pending": false
+    },
+    {
+      "facility_id": "THN-MED-B03-005",
+      "source_pdf": "Health facility of Balkum+Kalher+Kasheli+Kapurbawdi+Majiwada.pdf",
+      "pages": [
+        5,
+        6
+      ],
+      "geotag_source_page": 5,
+      "coordinates": [
+        19.248398,
+        73.017582
+      ],
+      "action": "new_record",
+      "location_pending": false
+    },
+    {
+      "facility_id": "THN-MED-B03-007",
+      "source_pdf": "Health facility of Balkum+Kalher+Kasheli+Kapurbawdi+Majiwada.pdf",
+      "pages": [
+        7,
+        8
+      ],
+      "geotag_source_page": 7,
+      "coordinates": [
+        19.247688,
+        73.01796
+      ],
+      "action": "new_record",
+      "location_pending": false
+    },
+    {
+      "facility_id": "THN-MED-B03-009",
+      "source_pdf": "Health facility of Balkum+Kalher+Kasheli+Kapurbawdi+Majiwada.pdf",
+      "pages": [
+        9
+      ],
+      "geotag_source_page": 9,
+      "coordinates": [
+        19.247402,
+        73.017952
+      ],
+      "action": "new_record",
+      "location_pending": false
+    },
+    {
+      "facility_id": "THN-MED-B03-010",
+      "source_pdf": "Health facility of Balkum+Kalher+Kasheli+Kapurbawdi+Majiwada.pdf",
+      "pages": [
+        10,
+        11
+      ],
+      "geotag_source_page": 10,
+      "coordinates": [
+        19.246224,
+        73.017996
+      ],
+      "action": "new_record",
+      "location_pending": false
+    },
+    {
+      "facility_id": "THN-MED-B03-012",
+      "source_pdf": "Health facility of Balkum+Kalher+Kasheli+Kapurbawdi+Majiwada.pdf",
+      "pages": [
+        12,
+        13
+      ],
+      "geotag_source_page": 12,
+      "coordinates": [
+        19.246012,
+        73.018479
+      ],
+      "action": "new_record",
+      "location_pending": false
+    },
+    {
+      "facility_id": "THN-MED-B03-014",
+      "source_pdf": "Health facility of Balkum+Kalher+Kasheli+Kapurbawdi+Majiwada.pdf",
+      "pages": [
+        14,
+        15
+      ],
+      "geotag_source_page": 14,
+      "coordinates": [
+        19.241856,
+        73.01702
+      ],
+      "action": "new_record",
+      "location_pending": false
+    },
+    {
+      "facility_id": "THN-MED-B03-016",
+      "source_pdf": "Health facility of Balkum+Kalher+Kasheli+Kapurbawdi+Majiwada.pdf",
+      "pages": [
+        16,
+        17
+      ],
+      "geotag_source_page": 16,
+      "coordinates": [
+        19.235475,
+        73.011934
+      ],
+      "action": "new_record",
+      "location_pending": false
+    },
+    {
+      "facility_id": "THN-MED-B03-018",
+      "source_pdf": "Health facility of Balkum+Kalher+Kasheli+Kapurbawdi+Majiwada.pdf",
+      "pages": [
+        18,
+        19
+      ],
+      "geotag_source_page": 18,
+      "coordinates": [
+        19.237264,
+        73.009981
+      ],
+      "action": "new_record",
+      "location_pending": false
+    },
+    {
+      "facility_id": "THN-MED-B03-020",
+      "source_pdf": "Health facility of Balkum+Kalher+Kasheli+Kapurbawdi+Majiwada.pdf",
+      "pages": [
+        20,
+        21
+      ],
+      "geotag_source_page": 20,
+      "coordinates": [
+        19.238107,
+        73.009937
+      ],
+      "action": "new_record",
+      "location_pending": false
+    },
+    {
+      "facility_id": "THN-MED-B03-022",
+      "source_pdf": "Health facility of Balkum+Kalher+Kasheli+Kapurbawdi+Majiwada.pdf",
+      "pages": [
+        22,
+        23
+      ],
+      "geotag_source_page": 23,
+      "coordinates": [
+        19.249709,
+        73.013325
+      ],
+      "action": "new_record",
+      "location_pending": false
+    },
+    {
+      "facility_id": "THN-MED-B03-024",
+      "source_pdf": "Health facility of Balkum+Kalher+Kasheli+Kapurbawdi+Majiwada.pdf",
+      "pages": [
+        24,
+        25,
+        26
+      ],
+      "geotag_source_page": 24,
+      "coordinates": [
+        19.237999,
+        73.015785
+      ],
+      "action": "new_record",
+      "location_pending": false
+    },
+    {
+      "facility_id": "THN-MED-B03-027",
+      "source_pdf": "Health facility of Balkum+Kalher+Kasheli+Kapurbawdi+Majiwada.pdf",
+      "pages": [
+        27,
+        28
+      ],
+      "geotag_source_page": 27,
+      "coordinates": [
+        19.237947,
+        73.015756
+      ],
+      "action": "new_record",
+      "location_pending": false
+    },
+    {
+      "facility_id": "THN-MED-B03-029",
+      "source_pdf": "Health facility of Balkum+Kalher+Kasheli+Kapurbawdi+Majiwada.pdf",
+      "pages": [
+        29,
+        30
+      ],
+      "geotag_source_page": 29,
+      "coordinates": [
+        19.238805,
+        73.016168
+      ],
+      "action": "new_record",
+      "location_pending": false
+    },
+    {
+      "facility_id": "THN-MED-B03-031",
+      "source_pdf": "Health facility of Balkum+Kalher+Kasheli+Kapurbawdi+Majiwada.pdf",
+      "pages": [
+        31,
+        32
+      ],
+      "geotag_source_page": 31,
+      "coordinates": [
+        19.238356,
+        73.015989
+      ],
+      "action": "new_record",
+      "location_pending": false
+    },
+    {
+      "facility_id": "THN-MED-B03-033",
+      "source_pdf": "Health facility of Balkum+Kalher+Kasheli+Kapurbawdi+Majiwada.pdf",
+      "pages": [
+        33,
+        34
+      ],
+      "geotag_source_page": 33,
+      "coordinates": [
+        19.241727,
+        73.016798
+      ],
+      "action": "new_record",
+      "location_pending": false
+    },
+    {
+      "facility_id": "THN-MED-B03-035",
+      "source_pdf": "Health facility of Balkum+Kalher+Kasheli+Kapurbawdi+Majiwada.pdf",
+      "pages": [
+        35,
+        36
+      ],
+      "geotag_source_page": 35,
+      "coordinates": [
+        19.248391,
+        73.017516
+      ],
+      "action": "new_record",
+      "location_pending": false
+    },
+    {
+      "facility_id": "THN-MED-B03-037",
+      "source_pdf": "Health facility of Balkum+Kalher+Kasheli+Kapurbawdi+Majiwada.pdf",
+      "pages": [
+        37,
+        38
+      ],
+      "geotag_source_page": 37,
+      "coordinates": [
+        19.248913,
+        73.017783
+      ],
+      "action": "new_record",
+      "location_pending": false
+    },
+    {
+      "facility_id": "THN-MED-B03-039",
+      "source_pdf": "Health facility of Balkum+Kalher+Kasheli+Kapurbawdi+Majiwada.pdf",
+      "pages": [
+        39,
+        40
+      ],
+      "geotag_source_page": 39,
+      "coordinates": [
+        19.250014,
+        73.017743
+      ],
+      "action": "new_record",
+      "location_pending": false
+    },
+    {
+      "facility_id": "THN-MED-B03-041",
+      "source_pdf": "Health facility of Balkum+Kalher+Kasheli+Kapurbawdi+Majiwada.pdf",
+      "pages": [
+        41,
+        42
+      ],
+      "geotag_source_page": 41,
+      "coordinates": [
+        19.2415,
+        73.01649
+      ],
+      "action": "new_record",
+      "location_pending": false
+    },
+    {
+      "facility_id": "THN-MED-B03-043",
+      "source_pdf": "Health facility of Balkum+Kalher+Kasheli+Kapurbawdi+Majiwada.pdf",
+      "pages": [
+        43,
+        44
+      ],
+      "geotag_source_page": 44,
+      "coordinates": [
+        19.250904,
+        73.017857
+      ],
+      "action": "new_record",
+      "location_pending": false
+    },
+    {
+      "facility_id": "THN-MED-B03-045",
+      "source_pdf": "Health facility of Balkum+Kalher+Kasheli+Kapurbawdi+Majiwada.pdf",
+      "pages": [
+        45,
+        46
+      ],
+      "geotag_source_page": 46,
+      "coordinates": [
+        19.251849,
+        73.018658
+      ],
+      "action": "new_record",
+      "location_pending": false
+    },
+    {
+      "facility_id": "THN-MED-B03-047",
+      "source_pdf": "Health facility of Balkum+Kalher+Kasheli+Kapurbawdi+Majiwada.pdf",
+      "pages": [
+        47,
+        48
+      ],
+      "geotag_source_page": 47,
+      "coordinates": [
+        19.251086,
+        73.018074
+      ],
+      "action": "new_record",
+      "location_pending": false
+    },
+    {
+      "facility_id": "THN-MED-B03-049",
+      "source_pdf": "Health facility of Balkum+Kalher+Kasheli+Kapurbawdi+Majiwada.pdf",
+      "pages": [
+        49,
+        50
+      ],
+      "geotag_source_page": 49,
+      "coordinates": [
+        19.221676,
+        72.990686
+      ],
+      "action": "new_record",
+      "location_pending": false
+    },
+    {
+      "facility_id": "THN-MED-B03-051",
+      "source_pdf": "Health facility of Balkum+Kalher+Kasheli+Kapurbawdi+Majiwada.pdf",
+      "pages": [
+        51,
+        52
+      ],
+      "geotag_source_page": 51,
+      "coordinates": [
+        19.221999,
+        72.991614
+      ],
+      "action": "new_record",
+      "location_pending": false
+    },
+    {
+      "facility_id": "THN-MED-B03-053",
+      "source_pdf": "Health facility of Balkum+Kalher+Kasheli+Kapurbawdi+Majiwada.pdf",
+      "pages": [
+        53,
+        54
+      ],
+      "geotag_source_page": 53,
+      "coordinates": [
+        19.222991,
+        72.989164
+      ],
+      "action": "new_record",
+      "location_pending": false
+    },
+    {
+      "facility_id": "THN-MED-B03-055",
+      "source_pdf": "Health facility of Balkum+Kalher+Kasheli+Kapurbawdi+Majiwada.pdf",
+      "pages": [
+        55,
+        56
+      ],
+      "geotag_source_page": 56,
+      "coordinates": [
+        19.222191,
+        72.985864
+      ],
+      "action": "new_record",
+      "location_pending": false
+    },
+    {
+      "facility_id": "THN-MED-B03-057",
+      "source_pdf": "Health facility of Balkum+Kalher+Kasheli+Kapurbawdi+Majiwada.pdf",
+      "pages": [
+        57,
+        58
+      ],
+      "geotag_source_page": 58,
+      "coordinates": [
+        19.222121,
+        72.985778
+      ],
+      "action": "new_record",
+      "location_pending": false
+    },
+    {
+      "facility_id": "THN-MED-B03-059",
+      "source_pdf": "Health facility of Balkum+Kalher+Kasheli+Kapurbawdi+Majiwada.pdf",
+      "pages": [
+        59,
+        60
+      ],
+      "geotag_source_page": 59,
+      "coordinates": [
+        19.222058,
+        72.985636
+      ],
+      "action": "new_record",
+      "location_pending": false
+    },
+    {
+      "facility_id": "THN-MED-B03-061",
+      "source_pdf": "Health facility of Balkum+Kalher+Kasheli+Kapurbawdi+Majiwada.pdf",
+      "pages": [
+        61,
+        62
+      ],
+      "geotag_source_page": 61,
+      "coordinates": [
+        19.221537,
+        72.984783
+      ],
+      "action": "new_record",
+      "location_pending": false
+    },
+    {
+      "facility_id": "THN-MED-B03-063",
+      "source_pdf": "Health facility of Balkum+Kalher+Kasheli+Kapurbawdi+Majiwada.pdf",
+      "pages": [
+        63,
+        64
+      ],
+      "geotag_source_page": 63,
+      "coordinates": [
+        19.213982,
+        72.982459
+      ],
+      "action": "new_record",
+      "location_pending": false
+    },
+    {
+      "facility_id": "THN-MED-B03-065",
+      "source_pdf": "Health facility of Balkum+Kalher+Kasheli+Kapurbawdi+Majiwada.pdf",
+      "pages": [
+        65,
+        66
+      ],
+      "geotag_source_page": 65,
+      "coordinates": [
+        19.214447,
+        72.98141
+      ],
+      "action": "new_record",
+      "location_pending": false
+    },
+    {
+      "facility_id": "THN-MED-B03-067",
+      "source_pdf": "Health facility of Balkum+Kalher+Kasheli+Kapurbawdi+Majiwada.pdf",
+      "pages": [
+        67,
+        68
+      ],
+      "geotag_source_page": 67,
+      "coordinates": [
+        19.216535,
+        72.97837
+      ],
+      "action": "new_record",
+      "location_pending": false
+    },
+    {
+      "facility_id": "THN-MED-B03-069",
+      "source_pdf": "Health facility of Balkum+Kalher+Kasheli+Kapurbawdi+Majiwada.pdf",
+      "pages": [
+        69,
+        70,
+        71
+      ],
+      "geotag_source_page": 69,
+      "coordinates": [
+        19.217632,
+        72.980603
+      ],
+      "action": "new_record",
+      "location_pending": false
+    },
+    {
+      "facility_id": "THN-MED-B03-072",
+      "source_pdf": "Health facility of Balkum+Kalher+Kasheli+Kapurbawdi+Majiwada.pdf",
+      "pages": [
+        72,
+        73
+      ],
+      "geotag_source_page": 72,
+      "coordinates": [
+        19.219586,
+        72.990195
+      ],
+      "action": "new_record",
+      "location_pending": false
+    },
+    {
+      "facility_id": "THN-MED-B03-074",
+      "source_pdf": "Health facility of Balkum+Kalher+Kasheli+Kapurbawdi+Majiwada.pdf",
+      "pages": [
+        74,
+        75
+      ],
+      "geotag_source_page": 74,
+      "coordinates": [
+        19.218598,
+        72.990635
+      ],
+      "action": "new_record",
+      "location_pending": false
+    },
+    {
+      "facility_id": "THN-MED-B03-076",
+      "source_pdf": "Health facility of Balkum+Kalher+Kasheli+Kapurbawdi+Majiwada.pdf",
+      "pages": [
+        76,
+        77
+      ],
+      "geotag_source_page": 76,
+      "coordinates": [
+        19.219921,
+        72.990384
+      ],
+      "action": "new_record",
+      "location_pending": false
+    },
+    {
+      "facility_id": "THN-MED-B03-078",
+      "source_pdf": "Health facility of Balkum+Kalher+Kasheli+Kapurbawdi+Majiwada.pdf",
+      "pages": [
+        78,
+        79
+      ],
+      "geotag_source_page": 78,
+      "coordinates": [
+        19.219991,
+        72.99048
+      ],
+      "action": "new_record",
+      "location_pending": false
+    },
+    {
+      "facility_id": "THN-MED-B03-080",
+      "source_pdf": "Health facility of Balkum+Kalher+Kasheli+Kapurbawdi+Majiwada.pdf",
+      "pages": [
+        80,
+        81
+      ],
+      "geotag_source_page": 80,
+      "coordinates": [
+        19.219174,
+        72.991614
+      ],
+      "action": "new_record",
+      "location_pending": false
+    },
+    {
+      "facility_id": "THN-MED-B03-082",
+      "source_pdf": "Health facility of Balkum+Kalher+Kasheli+Kapurbawdi+Majiwada.pdf",
+      "pages": [
+        82,
+        83
+      ],
+      "geotag_source_page": 82,
+      "coordinates": [
+        19.248976,
+        73.012
+      ],
+      "action": "new_record",
+      "location_pending": false
+    },
+    {
+      "facility_id": "THN-WC-B02-001",
+      "source_pdf": "Washroom Facility, Preetam..pdf",
+      "pages": [
+        1,
+        2
+      ],
+      "geotag_source_page": 1,
+      "coordinates": [
+        19.248067,
+        73.013168
+      ],
+      "action": "new_record",
+      "location_pending": false
+    },
+    {
+      "facility_id": "THN-WC-B02-003",
+      "source_pdf": "Washroom Facility, Preetam..pdf",
+      "pages": [
+        3,
+        4
+      ],
+      "geotag_source_page": 3,
+      "coordinates": [
+        19.250983,
+        73.016123
+      ],
+      "action": "new_record",
+      "location_pending": false
+    },
+    {
+      "facility_id": "THN-WC-B02-005",
+      "source_pdf": "Washroom Facility, Preetam..pdf",
+      "pages": [
+        5,
+        6
+      ],
+      "geotag_source_page": 5,
+      "coordinates": [
+        19.187315,
+        72.977259
+      ],
+      "action": "new_record",
+      "location_pending": false
+    },
+    {
+      "facility_id": "THN-WC-B02-007",
+      "source_pdf": "Washroom Facility, Preetam..pdf",
+      "pages": [
+        7,
+        8
+      ],
+      "geotag_source_page": 7,
+      "coordinates": [
+        19.221902,
+        72.990649
+      ],
+      "action": "new_record",
+      "location_pending": false
+    },
+    {
+      "facility_id": "THN-WC-B02-009",
+      "source_pdf": "Washroom Facility, Preetam..pdf",
+      "pages": [
+        9,
+        10
+      ],
+      "geotag_source_page": 9,
+      "coordinates": [
+        19.222492,
+        72.989258
+      ],
+      "action": "new_record",
+      "location_pending": false
+    },
+    {
+      "facility_id": "THN-WC-B02-011",
+      "source_pdf": "Washroom Facility, Preetam..pdf",
+      "pages": [
+        11,
+        12
+      ],
+      "geotag_source_page": 11,
+      "coordinates": [
+        19.224806,
+        72.988801
+      ],
+      "action": "new_record",
+      "location_pending": false
+    },
+    {
+      "facility_id": "THN-WC-B02-013",
+      "source_pdf": "Washroom Facility, Preetam..pdf",
+      "pages": [
+        13,
+        14
+      ],
+      "geotag_source_page": 13,
+      "coordinates": [
+        19.229376,
+        72.986016
+      ],
+      "action": "new_record",
+      "location_pending": false
+    },
+    {
+      "facility_id": "THN-WC-B02-015",
+      "source_pdf": "Washroom Facility, Preetam..pdf",
+      "pages": [
+        15,
+        16
+      ],
+      "geotag_source_page": 15,
+      "coordinates": [
+        19.217708,
+        72.982332
+      ],
+      "action": "new_record",
+      "location_pending": false
+    },
+    {
+      "facility_id": "THN-WC-B02-017",
+      "source_pdf": "Washroom Facility, Preetam..pdf",
+      "pages": [
+        17,
+        18
+      ],
+      "geotag_source_page": 17,
+      "coordinates": [
+        19.215124,
+        72.983015
+      ],
+      "action": "new_record",
+      "location_pending": false
+    },
+    {
+      "facility_id": "THN-WC-B02-019",
+      "source_pdf": "Washroom Facility, Preetam..pdf",
+      "pages": [
+        19,
+        20
+      ],
+      "geotag_source_page": 19,
+      "coordinates": [
+        19.214301,
+        72.982569
+      ],
+      "action": "new_record",
+      "location_pending": false
+    },
+    {
+      "facility_id": "THN-WC-B02-021",
+      "source_pdf": "Washroom Facility, Preetam..pdf",
+      "pages": [
+        21,
+        22
+      ],
+      "geotag_source_page": 21,
+      "coordinates": [
+        19.215025,
+        72.978316
+      ],
+      "action": "new_record",
+      "location_pending": false
+    },
+    {
+      "facility_id": "THN-WC-B02-023",
+      "source_pdf": "Washroom Facility, Preetam..pdf",
+      "pages": [
+        23,
+        24
+      ],
+      "geotag_source_page": 23,
+      "coordinates": [
+        19.215767,
+        72.978146
+      ],
+      "action": "new_record",
+      "location_pending": false
+    },
+    {
+      "facility_id": "THN-WC-B02-025",
+      "source_pdf": "Washroom Facility, Preetam..pdf",
+      "pages": [
+        25,
+        26
+      ],
+      "geotag_source_page": 25,
+      "coordinates": [
+        19.219444,
+        72.983613
+      ],
+      "action": "new_record",
+      "location_pending": false
+    },
+    {
+      "facility_id": "THN-WC-B02-027",
+      "source_pdf": "Washroom Facility, Preetam..pdf",
+      "pages": [
+        27,
+        28
+      ],
+      "geotag_source_page": 27,
+      "coordinates": [
+        19.218625,
+        72.990659
+      ],
+      "action": "new_record",
+      "location_pending": false
+    },
+    {
+      "facility_id": "THN-WC-B02-029",
+      "source_pdf": "Washroom Facility, Preetam..pdf",
+      "pages": [
+        29,
+        30
+      ],
+      "geotag_source_page": 29,
+      "coordinates": [
+        19.219598,
+        72.991495
+      ],
+      "action": "new_record",
+      "location_pending": false
+    },
+    {
+      "facility_id": "THN-WC-B02-031",
+      "source_pdf": "Washroom Facility, Preetam..pdf",
+      "pages": [
+        31,
+        32
+      ],
+      "geotag_source_page": 31,
+      "coordinates": [
+        19.218932,
+        72.9916
+      ],
+      "action": "new_record",
+      "location_pending": false
+    },
+    {
+      "facility_id": "THN-WC-B02-033",
+      "source_pdf": "Washroom Facility, Preetam..pdf",
+      "pages": [
+        33,
+        34
+      ],
+      "geotag_source_page": 33,
+      "coordinates": [
+        19.21588,
+        72.991488
+      ],
+      "action": "new_record",
+      "location_pending": false
+    },
+    {
+      "facility_id": "THN-PARK-B04-001",
+      "source_pdf": "Park, Preetam.pdf",
+      "pages": [
+        1,
+        2
+      ],
+      "geotag_source_page": 2,
+      "coordinates": [
+        19.234645,
+        73.011032
+      ],
+      "action": "new_record",
+      "location_pending": false
+    },
+    {
+      "facility_id": "THN-PARK-B04-003",
+      "source_pdf": "Park, Preetam.pdf",
+      "pages": [
+        3,
+        4
+      ],
+      "geotag_source_page": 3,
+      "coordinates": [
+        19.215262,
+        72.982773
+      ],
+      "action": "new_record",
+      "location_pending": false
+    },
+    {
+      "facility_id": "THN-PARK-B04-005",
+      "source_pdf": "Park, Preetam.pdf",
+      "pages": [
+        5,
+        6
+      ],
+      "geotag_source_page": 5,
+      "coordinates": [
+        19.209958,
+        72.994194
+      ],
+      "action": "new_record",
+      "location_pending": false
+    },
+    {
+      "facility_id": "THN-PARK-B04-007",
+      "source_pdf": "Park, Preetam.pdf",
+      "pages": [
+        7,
+        8,
+        9
+      ],
+      "geotag_source_page": 7,
+      "coordinates": [
+        19.207875,
+        72.993591
+      ],
+      "action": "new_record",
+      "location_pending": false
+    },
+    {
+      "facility_id": "THN-LIB-B05-001",
+      "source_pdf": "Library, Preetam.pdf",
+      "pages": [
+        1,
+        2
+      ],
+      "geotag_source_page": 1,
+      "coordinates": [
+        19.247871,
+        73.017206
+      ],
+      "action": "new_record",
+      "location_pending": false
+    },
+    {
+      "facility_id": "THN-LIB-B05-003",
+      "source_pdf": "Library, Preetam.pdf",
+      "pages": [
+        3,
+        4
+      ],
+      "geotag_source_page": 3,
+      "coordinates": [
+        19.246246,
+        73.017814
+      ],
+      "action": "new_record",
+      "location_pending": false
+    },
+    {
+      "facility_id": "THN-WAT-B06-001",
+      "source_pdf": "Water Facility, Preetam.pdf",
+      "pages": [
+        1,
+        2
+      ],
+      "geotag_source_page": 1,
+      "coordinates": [
+        19.217849,
+        72.980085
+      ],
+      "action": "new_record",
+      "location_pending": false
+    },
+    {
+      "facility_id": "THN-WAT-B06-003",
+      "source_pdf": "Water Facility, Preetam.pdf",
+      "pages": [
+        3,
+        4
+      ],
+      "geotag_source_page": 3,
+      "coordinates": [
+        19.217717,
+        72.982297
+      ],
+      "action": "new_record",
+      "location_pending": false
+    },
+    {
+      "facility_id": "THN-WC-B07-001",
+      "source_pdf": "SRWWashrooms (1).pdf",
+      "pages": [
+        1,
+        2
+      ],
+      "geotag_source_page": 1,
+      "coordinates": [
+        19.202483,
+        72.975822
+      ],
+      "action": "new_record",
+      "location_pending": false
+    },
+    {
+      "facility_id": "THN-WC-B07-003",
+      "source_pdf": "SRWWashrooms (1).pdf",
+      "pages": [
+        3,
+        4
+      ],
+      "geotag_source_page": 3,
+      "coordinates": [
+        19.179691,
+        72.969737
+      ],
+      "action": "new_record",
+      "location_pending": false
+    },
+    {
+      "facility_id": "THN-WC-B07-005",
+      "source_pdf": "SRWWashrooms (1).pdf",
+      "pages": [
+        5,
+        6
+      ],
+      "geotag_source_page": 5,
+      "coordinates": [
+        19.179445,
+        72.971563
+      ],
+      "action": "new_record",
+      "location_pending": false
+    },
+    {
+      "facility_id": "THN-WC-B07-007",
+      "source_pdf": "SRWWashrooms (1).pdf",
+      "pages": [
+        7,
+        8
+      ],
+      "geotag_source_page": 7,
+      "coordinates": [
+        19.180719,
+        72.975831
+      ],
+      "action": "new_record",
+      "location_pending": false
+    },
+    {
+      "facility_id": "THN-WC-B07-009",
+      "source_pdf": "SRWWashrooms (1).pdf",
+      "pages": [
+        9,
+        10
+      ],
+      "geotag_source_page": 9,
+      "coordinates": [
+        19.187859,
+        72.980442
+      ],
+      "action": "new_record",
+      "location_pending": false
+    },
+    {
+      "facility_id": "THN-WC-B07-011",
+      "source_pdf": "SRWWashrooms (1).pdf",
+      "pages": [
+        11,
+        12
+      ],
+      "geotag_source_page": 11,
+      "coordinates": [
+        19.190083,
+        72.979932
+      ],
+      "action": "new_record",
+      "location_pending": false
+    },
+    {
+      "facility_id": "THN-WC-B07-013",
+      "source_pdf": "SRWWashrooms (1).pdf",
+      "pages": [
+        13
+      ],
+      "geotag_source_page": null,
+      "coordinates": null,
+      "action": "new_record",
+      "location_pending": true
+    },
+    {
+      "facility_id": "THN-WC-B07-014",
+      "source_pdf": "SRWWashrooms (1).pdf",
+      "pages": [
+        14,
+        15
+      ],
+      "geotag_source_page": 15,
+      "coordinates": [
+        19.19299,
+        72.981551
+      ],
+      "action": "new_record",
+      "location_pending": false
+    },
+    {
+      "facility_id": "THN-WC-B07-016",
+      "source_pdf": "SRWWashrooms (1).pdf",
+      "pages": [
+        16,
+        17
+      ],
+      "geotag_source_page": 16,
+      "coordinates": [
+        19.195472,
+        72.987135
+      ],
+      "action": "new_record",
+      "location_pending": false
+    },
+    {
+      "facility_id": "THN-WC-B07-018",
+      "source_pdf": "SRWWashrooms (1).pdf",
+      "pages": [
+        18,
+        19
+      ],
+      "geotag_source_page": 19,
+      "coordinates": [
+        19.200094,
+        72.964785
+      ],
+      "action": "new_record",
+      "location_pending": false
+    },
+    {
+      "facility_id": "THN-WC-B07-020",
+      "source_pdf": "SRWWashrooms (1).pdf",
+      "pages": [
+        20
+      ],
+      "geotag_source_page": null,
+      "coordinates": null,
+      "action": "new_record",
+      "location_pending": true
+    },
+    {
+      "facility_id": "THN-WC-B07-021",
+      "source_pdf": "SRWWashrooms (1).pdf",
+      "pages": [
+        21,
+        22
+      ],
+      "geotag_source_page": 21,
+      "coordinates": [
+        19.211488,
+        72.976566
+      ],
+      "action": "new_record",
+      "location_pending": false
+    },
+    {
+      "facility_id": "THN-WC-B07-023",
+      "source_pdf": "SRWWashrooms (1).pdf",
+      "pages": [
+        23
+      ],
+      "geotag_source_page": null,
+      "coordinates": null,
+      "action": "new_record",
+      "location_pending": true
+    },
+    {
+      "facility_id": "THN-WC-B07-025",
+      "source_pdf": "SRWWashrooms (1).pdf",
+      "pages": [
+        25,
+        26
+      ],
+      "geotag_source_page": 26,
+      "coordinates": [
+        19.238103,
+        72.984242
+      ],
+      "action": "new_record",
+      "location_pending": false
+    },
+    {
+      "facility_id": "THN-WC-B07-027",
+      "source_pdf": "SRWWashrooms (1).pdf",
+      "pages": [
+        27,
+        28
+      ],
+      "geotag_source_page": 27,
+      "coordinates": [
+        19.241471,
+        72.975836
+      ],
+      "action": "new_record",
+      "location_pending": false
+    },
+    {
+      "facility_id": "THN-WC-B07-029",
+      "source_pdf": "SRWWashrooms (1).pdf",
+      "pages": [
+        29,
+        30
+      ],
+      "geotag_source_page": 29,
+      "coordinates": [
+        19.233779,
+        72.976497
+      ],
+      "action": "new_record",
+      "location_pending": false
+    },
+    {
+      "facility_id": "THN-WC-B07-031",
+      "source_pdf": "SRWWashrooms (1).pdf",
+      "pages": [
+        31,
+        32
+      ],
+      "geotag_source_page": 31,
+      "coordinates": [
+        19.23625,
+        72.975476
+      ],
+      "action": "new_record",
+      "location_pending": false
+    },
+    {
+      "facility_id": "THN-WC-B07-033",
+      "source_pdf": "SRWWashrooms (1).pdf",
+      "pages": [
+        33,
+        34
+      ],
+      "geotag_source_page": 33,
+      "coordinates": [
+        19.229627,
+        72.976556
+      ],
+      "action": "new_record",
+      "location_pending": false
+    },
+    {
+      "facility_id": "THN-WC-B07-035",
+      "source_pdf": "SRWWashrooms (1).pdf",
+      "pages": [
+        35,
+        36
+      ],
+      "geotag_source_page": 35,
+      "coordinates": [
+        19.187433,
+        72.964218
+      ],
+      "action": "new_record",
+      "location_pending": false
+    },
+    {
+      "facility_id": "THN-WC-B07-037",
+      "source_pdf": "SRWWashrooms (1).pdf",
+      "pages": [
+        37,
+        38
+      ],
+      "geotag_source_page": 38,
+      "coordinates": [
+        19.177815,
+        72.969893
+      ],
+      "action": "new_record",
+      "location_pending": false
+    },
+    {
+      "facility_id": "THN-WC-B07-039",
+      "source_pdf": "SRWWashrooms (1).pdf",
+      "pages": [
+        39,
+        40
+      ],
+      "geotag_source_page": 39,
+      "coordinates": [
+        19.178702,
+        72.967852
+      ],
+      "action": "new_record",
+      "location_pending": false
+    },
+    {
+      "facility_id": "THN-WC-B07-041",
+      "source_pdf": "SRWWashrooms (1).pdf",
+      "pages": [
+        41,
+        42
+      ],
+      "geotag_source_page": 41,
+      "coordinates": [
+        19.181667,
+        72.97125
+      ],
+      "action": "new_record",
+      "location_pending": false
+    },
+    {
+      "facility_id": "THN-WC-B07-043",
+      "source_pdf": "SRWWashrooms (1).pdf",
+      "pages": [
+        43,
+        44
+      ],
+      "geotag_source_page": 43,
+      "coordinates": [
+        19.183817,
+        72.971155
+      ],
+      "action": "new_record",
+      "location_pending": false
+    },
+    {
+      "facility_id": "THN-WC-B07-045",
+      "source_pdf": "SRWWashrooms (1).pdf",
+      "pages": [
+        45,
+        46
+      ],
+      "geotag_source_page": 45,
+      "coordinates": [
+        19.185203,
+        72.974732
+      ],
+      "action": "new_record",
+      "location_pending": false
+    },
+    {
+      "facility_id": "THN-WC-B07-047",
+      "source_pdf": "SRWWashrooms (1).pdf",
+      "pages": [
+        47,
+        48
+      ],
+      "geotag_source_page": 47,
+      "coordinates": [
+        19.182422,
+        72.969423
+      ],
+      "action": "new_record",
+      "location_pending": false
+    },
+    {
+      "facility_id": "THN-WC-B07-049",
+      "source_pdf": "SRWWashrooms (1).pdf",
+      "pages": [
+        49,
+        50
+      ],
+      "geotag_source_page": 49,
+      "coordinates": [
+        19.192488,
+        72.978355
+      ],
+      "action": "new_record",
+      "location_pending": false
+    },
+    {
+      "facility_id": "THN-WAT-B08-001",
+      "source_pdf": "SRWWaterFacilities (1).pdf",
+      "pages": [
+        1,
+        2
+      ],
+      "geotag_source_page": 2,
+      "coordinates": [
+        19.19749,
+        72.971569
+      ],
+      "action": "new_record",
+      "location_pending": false
+    },
+    {
+      "facility_id": "THN-WAT-B08-003",
+      "source_pdf": "SRWWaterFacilities (1).pdf",
+      "pages": [
+        3,
+        4
+      ],
+      "geotag_source_page": 3,
+      "coordinates": [
+        19.197248,
+        72.96801
+      ],
+      "action": "new_record",
+      "location_pending": false
+    },
+    {
+      "facility_id": "THN-WAT-B08-005",
+      "source_pdf": "SRWWaterFacilities (1).pdf",
+      "pages": [
+        5,
+        6
+      ],
+      "geotag_source_page": 5,
+      "coordinates": [
+        19.186517,
+        72.976462
+      ],
+      "action": "new_record",
+      "location_pending": false
+    },
+    {
+      "facility_id": "THN-WAT-B08-007",
+      "source_pdf": "SRWWaterFacilities (1).pdf",
+      "pages": [
+        7,
+        8
+      ],
+      "geotag_source_page": 8,
+      "coordinates": [
+        19.191564,
+        72.975448
+      ],
+      "action": "new_record",
+      "location_pending": false
+    },
+    {
+      "facility_id": "THN-WAT-B08-009",
+      "source_pdf": "SRWWaterFacilities (1).pdf",
+      "pages": [
+        9,
+        10
+      ],
+      "geotag_source_page": 10,
+      "coordinates": [
+        19.202025,
+        72.975069
+      ],
+      "action": "new_record",
+      "location_pending": false
+    },
+    {
+      "facility_id": "THN-WAT-B08-011",
+      "source_pdf": "SRWWaterFacilities (1).pdf",
+      "pages": [
+        11,
+        12
+      ],
+      "geotag_source_page": 12,
+      "coordinates": [
+        19.181858,
+        72.976862
+      ],
+      "action": "new_record",
+      "location_pending": false
+    },
+    {
+      "facility_id": "THN-WAT-B08-013",
+      "source_pdf": "SRWWaterFacilities (1).pdf",
+      "pages": [
+        13,
+        14
+      ],
+      "geotag_source_page": 13,
+      "coordinates": [
+        19.184796,
+        72.979312
+      ],
+      "action": "new_record",
+      "location_pending": false
+    },
+    {
+      "facility_id": "THN-WAT-B08-015",
+      "source_pdf": "SRWWaterFacilities (1).pdf",
+      "pages": [
+        15,
+        16
+      ],
+      "geotag_source_page": 16,
+      "coordinates": [
+        19.191432,
+        72.976481
+      ],
+      "action": "new_record",
+      "location_pending": false
+    },
+    {
+      "facility_id": "THN-WAT-B08-017",
+      "source_pdf": "SRWWaterFacilities (1).pdf",
+      "pages": [
+        17,
+        18
+      ],
+      "geotag_source_page": 17,
+      "coordinates": [
+        19.19952,
+        72.96415
+      ],
+      "action": "new_record",
+      "location_pending": false
+    },
+    {
+      "facility_id": "THN-WAT-B08-019",
+      "source_pdf": "SRWWaterFacilities (1).pdf",
+      "pages": [
+        19,
+        20
+      ],
+      "geotag_source_page": 19,
+      "coordinates": [
+        19.209983,
+        72.97487
+      ],
+      "action": "new_record",
+      "location_pending": false
+    },
+    {
+      "facility_id": "THN-WAT-B08-021",
+      "source_pdf": "SRWWaterFacilities (1).pdf",
+      "pages": [
+        21,
+        22
+      ],
+      "geotag_source_page": 21,
+      "coordinates": [
+        19.215231,
+        72.977396
+      ],
+      "action": "new_record",
+      "location_pending": false
+    },
+    {
+      "facility_id": "THN-WAT-B08-023",
+      "source_pdf": "SRWWaterFacilities (1).pdf",
+      "pages": [
+        23,
+        24
+      ],
+      "geotag_source_page": 24,
+      "coordinates": [
+        19.237574,
+        72.979389
+      ],
+      "action": "new_record",
+      "location_pending": false
+    },
+    {
+      "facility_id": "THN-WAT-B08-025",
+      "source_pdf": "SRWWaterFacilities (1).pdf",
+      "pages": [
+        25,
+        26
+      ],
+      "geotag_source_page": 26,
+      "coordinates": [
+        19.235568,
+        72.977128
+      ],
+      "action": "new_record",
+      "location_pending": false
+    },
+    {
+      "facility_id": "THN-WAT-B08-027",
+      "source_pdf": "SRWWaterFacilities (1).pdf",
+      "pages": [
+        27,
+        28
+      ],
+      "geotag_source_page": 27,
+      "coordinates": [
+        19.179913,
+        72.969973
+      ],
+      "action": "new_record",
+      "location_pending": false
+    },
+    {
+      "facility_id": "THN-WAT-B08-029",
+      "source_pdf": "SRWWaterFacilities (1).pdf",
+      "pages": [
+        29,
+        30
+      ],
+      "geotag_source_page": 29,
+      "coordinates": [
+        19.186235,
+        72.979718
+      ],
+      "action": "new_record",
+      "location_pending": false
+    },
+    {
+      "facility_id": "THN-PARK-001",
+      "source_pdf": "SRWParks.pdf",
+      "pages": [
+        1,
+        2
+      ],
+      "geotag_source_page": 1,
+      "coordinates": [
+        19.199708,
+        72.969154
+      ],
+      "action": "existing_record_photos_added",
+      "location_pending": false
+    },
+    {
+      "facility_id": "THN-PARK-002",
+      "source_pdf": "SRWParks.pdf",
+      "pages": [
+        3,
+        4
+      ],
+      "geotag_source_page": 3,
+      "coordinates": [
+        19.201014,
+        72.97004
+      ],
+      "action": "existing_record_photos_added",
+      "location_pending": false
+    },
+    {
+      "facility_id": "THN-PARK-003",
+      "source_pdf": "SRWParks.pdf",
+      "pages": [
+        5,
+        6
+      ],
+      "geotag_source_page": 5,
+      "coordinates": [
+        19.19839,
+        72.979924
+      ],
+      "action": "existing_record_photos_added",
+      "location_pending": false
+    },
+    {
+      "facility_id": "THN-PARK-004",
+      "source_pdf": "SRWParks.pdf",
+      "pages": [
+        7,
+        8
+      ],
+      "geotag_source_page": 7,
+      "coordinates": [
+        19.196735,
+        72.980587
+      ],
+      "action": "existing_record_photos_added",
+      "location_pending": false
+    },
+    {
+      "facility_id": "THN-PARK-005",
+      "source_pdf": "SRWParks.pdf",
+      "pages": [
+        9,
+        10
+      ],
+      "geotag_source_page": 9,
+      "coordinates": [
+        19.194806,
+        72.981884
+      ],
+      "action": "existing_record_photos_added",
+      "location_pending": false
+    },
+    {
+      "facility_id": "THN-PARK-B09-011",
+      "source_pdf": "SRWParks.pdf",
+      "pages": [
+        11,
+        12
+      ],
+      "geotag_source_page": 11,
+      "coordinates": [
+        19.202062,
+        72.975321
+      ],
+      "action": "new_record",
+      "location_pending": false
+    },
+    {
+      "facility_id": "THN-PARK-B09-013",
+      "source_pdf": "SRWParks.pdf",
+      "pages": [
+        13,
+        14
+      ],
+      "geotag_source_page": 13,
+      "coordinates": [
+        19.181959,
+        72.982111
+      ],
+      "action": "new_record",
+      "location_pending": false
+    },
+    {
+      "facility_id": "THN-PARK-B09-015",
+      "source_pdf": "SRWParks.pdf",
+      "pages": [
+        15,
+        16
+      ],
+      "geotag_source_page": 15,
+      "coordinates": [
+        19.230168,
+        72.980086
+      ],
+      "action": "new_record",
+      "location_pending": false
+    },
+    {
+      "facility_id": "THN-PARK-B09-017",
+      "source_pdf": "SRWParks.pdf",
+      "pages": [
+        17,
+        18
+      ],
+      "geotag_source_page": 17,
+      "coordinates": [
+        19.22724,
+        72.988654
+      ],
+      "action": "new_record",
+      "location_pending": false
+    },
+    {
+      "facility_id": "THN-WC-B10-001",
+      "source_pdf": "washrooms07.pdf",
+      "pages": [
+        1,
+        2
+      ],
+      "geotag_source_page": 2,
+      "coordinates": [
+        19.175277,
+        72.951307
+      ],
+      "action": "new_record",
+      "location_pending": false
+    },
+    {
+      "facility_id": "THN-WC-B10-003",
+      "source_pdf": "washrooms07.pdf",
+      "pages": [
+        3,
+        4
+      ],
+      "geotag_source_page": 4,
+      "coordinates": [
+        19.187041,
+        72.953663
+      ],
+      "action": "new_record",
+      "location_pending": false
+    },
+    {
+      "facility_id": "THN-WC-B10-005",
+      "source_pdf": "washrooms07.pdf",
+      "pages": [
+        5,
+        6
+      ],
+      "geotag_source_page": 6,
+      "coordinates": [
+        19.191523,
+        72.94938
+      ],
+      "action": "new_record",
+      "location_pending": false
+    },
+    {
+      "facility_id": "THN-WC-B10-007",
+      "source_pdf": "washrooms07.pdf",
+      "pages": [
+        7,
+        8
+      ],
+      "geotag_source_page": 8,
+      "coordinates": [
+        19.189872,
+        72.951423
+      ],
+      "action": "new_record",
+      "location_pending": false
+    },
+    {
+      "facility_id": "THN-WC-B10-009",
+      "source_pdf": "washrooms07.pdf",
+      "pages": [
+        9,
+        10
+      ],
+      "geotag_source_page": 10,
+      "coordinates": [
+        19.192496,
+        72.951066
+      ],
+      "action": "new_record",
+      "location_pending": false
+    },
+    {
+      "facility_id": "THN-WC-B10-011",
+      "source_pdf": "washrooms07.pdf",
+      "pages": [
+        11,
+        12
+      ],
+      "geotag_source_page": 12,
+      "coordinates": [
+        19.1947,
+        72.948918
+      ],
+      "action": "new_record",
+      "location_pending": false
+    },
+    {
+      "facility_id": "THN-WC-B10-013",
+      "source_pdf": "washrooms07.pdf",
+      "pages": [
+        13,
+        14
+      ],
+      "geotag_source_page": 14,
+      "coordinates": [
+        19.200658,
+        72.94894
+      ],
+      "action": "new_record",
+      "location_pending": false
+    },
+    {
+      "facility_id": "THN-WC-B10-015",
+      "source_pdf": "washrooms07.pdf",
+      "pages": [
+        15,
+        16
+      ],
+      "geotag_source_page": 16,
+      "coordinates": [
+        19.204438,
+        72.952152
+      ],
+      "action": "new_record",
+      "location_pending": false
+    },
+    {
+      "facility_id": "THN-WC-B10-017",
+      "source_pdf": "washrooms07.pdf",
+      "pages": [
+        17,
+        18
+      ],
+      "geotag_source_page": 18,
+      "coordinates": [
+        19.221207,
+        72.954663
+      ],
+      "action": "new_record",
+      "location_pending": false
+    },
+    {
+      "facility_id": "THN-WC-B10-019",
+      "source_pdf": "washrooms07.pdf",
+      "pages": [
+        19,
+        20
+      ],
+      "geotag_source_page": 20,
+      "coordinates": [
+        19.220648,
+        72.960923
+      ],
+      "action": "new_record",
+      "location_pending": false
+    },
+    {
+      "facility_id": "THN-WC-B10-021",
+      "source_pdf": "washrooms07.pdf",
+      "pages": [
+        21,
+        22
+      ],
+      "geotag_source_page": 22,
+      "coordinates": [
+        19.220417,
+        72.970308
+      ],
+      "action": "new_record",
+      "location_pending": false
+    },
+    {
+      "facility_id": "THN-WC-B10-023",
+      "source_pdf": "washrooms07.pdf",
+      "pages": [
+        23,
+        24
+      ],
+      "geotag_source_page": 24,
+      "coordinates": [
+        19.218662,
+        72.972722
+      ],
+      "action": "new_record",
+      "location_pending": false
+    },
+    {
+      "facility_id": "THN-WC-B10-025",
+      "source_pdf": "washrooms07.pdf",
+      "pages": [
+        25,
+        26
+      ],
+      "geotag_source_page": 26,
+      "coordinates": [
+        19.200682,
+        72.949022
+      ],
+      "action": "new_record",
+      "location_pending": false
+    },
+    {
+      "facility_id": "THN-WC-B10-027",
+      "source_pdf": "washrooms07.pdf",
+      "pages": [
+        27,
+        28
+      ],
+      "geotag_source_page": 28,
+      "coordinates": [
+        19.218468,
+        72.969473
+      ],
+      "action": "new_record",
+      "location_pending": false
+    },
+    {
+      "facility_id": "THN-WC-B10-029",
+      "source_pdf": "washrooms07.pdf",
+      "pages": [
+        29,
+        30
+      ],
+      "geotag_source_page": 30,
+      "coordinates": [
+        19.220673,
+        72.960676
+      ],
+      "action": "new_record",
+      "location_pending": false
+    },
+    {
+      "facility_id": "THN-WC-B10-031",
+      "source_pdf": "washrooms07.pdf",
+      "pages": [
+        31,
+        32
+      ],
+      "geotag_source_page": 32,
+      "coordinates": [
+        19.212098,
+        72.960425
+      ],
+      "action": "new_record",
+      "location_pending": false
+    }
+  ]
+}

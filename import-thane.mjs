@@ -4,7 +4,7 @@ import { fileURLToPath } from 'node:url';
 import { parse } from 'csv-parse/sync';
 
 const root = dirname(fileURLToPath(import.meta.url));
-const types = { public_toilet: 'Public toilets', drinking_water: 'Drinking water', park: 'Parks' };
+const types = { public_toilet: 'Public toilets', drinking_water: 'Drinking water', park: 'Parks', medical_facility: 'Medical facilities', library: 'Libraries' };
 
 export function parseFacilities(csv) {
   const rows = parse(csv, { columns: true, bom: true, skip_empty_lines: true });
