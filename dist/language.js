@@ -2,6 +2,18 @@ export const languages = {en:'English',hi:'हिन्दी',mr:'मराठ�
 export const normalizeLanguage = value => typeof value==='string'&&Object.hasOwn(languages,value) ? value : 'en';
 // English source labels remain the stored values; only their presentation changes.
 const rows = [
+['Thane dataset · Verified amenities','ठाणे डेटा · सत्यापित सुविधाएँ','ठाणे माहिती · पडताळलेल्या सुविधा'],
+['Verified','सत्यापित','पडताळलेले'],
+['Verified amenities','सत्यापित सुविधाएँ','पडताळलेल्या सुविधा'],
+['Confirmed by project owner','परियोजना मालिक द्वारा पुष्टि','प्रकल्प मालकाने पुष्टी केली'],
+['Amenity verification pending','सुविधा सत्यापन लंबित','सुविधेची पडताळणी प्रलंबित'],
+['Share feedback','प्रतिक्रिया दें','अभिप्राय द्या'],
+['Submit feedback','प्रतिक्रिया जमा करें','अभिप्राय सादर करा'],
+['Reviews','समीक्षाएँ','अभिप्राय'],
+['No reviews yet. Be the first to share feedback.','अभी कोई समीक्षा नहीं। पहली प्रतिक्रिया दें।','अद्याप अभिप्राय नाहीत. पहिला अभिप्राय द्या.'],
+['Something wrong with this amenity? Let us know.','इस सुविधा में कोई समस्या है? हमें बताएँ।','या सुविधेत काही समस्या आहे? आम्हाला कळवा.'],
+['Please enter feedback and a rating from 1 to 5.','कृपया प्रतिक्रिया और 1 से 5 तक रेटिंग दें।','कृपया अभिप्राय आणि 1 ते 5 गुण द्या.'],
+['Feedback added to reviews and saved on this device.','प्रतिक्रिया समीक्षाओं में जोड़ी गई और इस डिवाइस पर सहेजी गई।','अभिप्राय यादीत जोडला आणि या उपकरणावर जतन केला.'],
 ['Location pending','स्थान की जानकारी लंबित','स्थानाची माहिती प्रलंबित'],
 ['mapped','मानचित्र पर','नकाशावर'],
 ['Medical facilities','चिकित्सा सुविधाएँ','वैद्यकीय सुविधा'],

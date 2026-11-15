@@ -15,7 +15,7 @@ export function parseFacilities(csv) {
     if (!id || !/^[A-Za-z0-9_-]+$/.test(id) || ids.has(id)) throw new Error(`Invalid or duplicate facility_id: ${id}`);
     ids.add(id);
     if (!row.name?.trim() || !Object.hasOwn(types, row.amenity_type)) throw new Error(`Missing name or unsupported amenity_type: ${id}`);
-    if (!['unverified', 'usable', 'partial', 'unusable'].includes(row.field_status)) throw new Error(`Invalid field_status: ${id}`);
+    if (!['unverified', 'verified', 'usable', 'partial', 'unusable'].includes(row.field_status)) throw new Error(`Invalid field_status: ${id}`);
     const coordinate = (key, limit) => {
       if (!row[key]?.trim()) return null;
       const value = Number(row[key]);

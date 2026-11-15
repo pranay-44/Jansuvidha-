@@ -41,3 +41,5 @@ header{height:auto;min-height:78px;gap:12px;padding-top:12px;padding-bottom:12px
 .street-map .leaflet-control-zoom a{background:#fff;color:#222}
 .street-map .leaflet-tooltip{background:#fff;color:#222;max-width:260px;white-space:normal}
 @media(max-width:850px){.street-map{height:430px}}
+
+.amenity-reviews{margin-top:28px}.amenity-reviews .audit p{white-space:pre-wrap;overflow-wrap:anywhere}

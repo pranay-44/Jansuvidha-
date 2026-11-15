@@ -2,7 +2,7 @@ import * as L from './vendor/leaflet/leaflet-src.esm.js';
 
 // Initial city-wide viewport, not an administrative boundary.
 const thaneBounds = [[19.10, 72.90], [19.34, 73.10]];
-const colors = { usable: '#267852', partial: '#ac721c', unusable: '#b64b3b', unverified: '#536b82' };
+const colors = { verified: '#267852', usable: '#267852', partial: '#ac721c', unusable: '#b64b3b', unverified: '#536b82' };
 const located = f => Number.isFinite(f.latitude) && Number.isFinite(f.longitude);
 
 export function createFacilityMap(container, message, onSelect) {

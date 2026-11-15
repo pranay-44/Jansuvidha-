@@ -34,3 +34,44 @@ const document={documentElement:{dataset:{}}};
 runInNewContext(themeScript,{document,localStorage:{getItem(){throw Error('Storage blocked')}}});
 assert.equal(document.documentElement.dataset.theme,'light');
 console.log('Passed: saved theme restoration, default theme, invalid preferences and blocked storage.');
+
+// Run the actual amenity handler without touching a user's stored reviews.
+const appSource=readFileSync(new URL('./dist/app.js',import.meta.url),'utf8');
+const detailSource=appSource.slice(appSource.indexOf('function facilityDetail('),appSource.indexOf('function analytics('));
+const elements={'#report-link':{},'#rating-form':{},'#amenity-reviews':{scrollIntoView(){}}};
+let card='',closed=false,saved=[],message='';
+const ratings=[];
+const ctx={facilities,ratings,Date,Number,String,
+  $:s=>elements[s],
+  esc:s=>String(s??'').replaceAll('&','&amp;').replaceAll('<','&lt;').replaceAll('>','&gt;').replaceAll('"','&quot;'),
+  show:html=>{card=html;},photoUrl:p=>p,options:a=>a.join(''),date:s=>s,refreshLanguage(){},
+  dialog:{close(){closed=true;}},toast:s=>{message=s;},
+  save:(_key,data)=>{saved=JSON.parse(JSON.stringify(data));return true;},
+  FormData:class{constructor(form){this.form=form;}get(key){return this.form[key];}}
+};
+runInNewContext(detailSource+';globalThis.openDetail=facilityDetail;',ctx);
+const first=facilities[0].id,second=facilities[1].id;
+ctx.openDetail(first);
+assert.match(card,/Report a problem/);
+assert.doesNotMatch(card,/CAAUI|Source record|Last field assessment|Review notes/);
+const submit=(feedback,rating='5')=>elements['#rating-form'].onsubmit({preventDefault(){},target:{feedback,rating,reset(){}}});
+submit('   ');submit('Invalid rating','6');
+assert.equal(ratings.length,0);
+submit('<img src=x onerror=alert(1)>');
+assert.equal(closed,false);
+assert.match(elements['#amenity-reviews'].innerHTML,/&lt;img/);
+assert.doesNotMatch(elements['#amenity-reviews'].innerHTML,/<img/);
+assert.equal(saved.length,1);
+submit('Newest review','4');
+assert.ok(elements['#amenity-reviews'].innerHTML.indexOf('Newest review')<elements['#amenity-reviews'].innerHTML.indexOf('&lt;img'));
+ctx.openDetail(second);
+assert.match(elements['#amenity-reviews'].innerHTML,/No reviews yet/);
+ratings.splice(0,ratings.length,...saved);
+ctx.openDetail(first);
+assert.match(elements['#amenity-reviews'].innerHTML,/Newest review/);
+ctx.save=()=>{message='Storage unavailable';return false;};
+submit('Session review');
+assert.equal(message,'Storage unavailable');
+assert.match(elements['#amenity-reviews'].innerHTML,/Session review/);
+assert.ok(facilities.every(f=>f.status==='verified'&&f.verified==='2026-11-15'&&f.verification_source.includes('Project owner')));
+console.log('Passed: verified amenities, immediate reviews, isolation, restored reviews, safe text, invalid feedback and storage failure.');
