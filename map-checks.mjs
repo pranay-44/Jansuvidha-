@@ -39,14 +39,15 @@ runInNewContext(code, context);
 const message = {};
 const controller = context.createFacilityMap({}, message, id => { calls.selected = id; });
 controller.update(facilities);
-assert.equal(calls.markers.length, facilities.length);
-facilities.forEach((f, i) => {
+const located = facilities.filter(f => Number.isFinite(f.latitude) && Number.isFinite(f.longitude));
+assert.equal(calls.markers.length, located.length);
+located.forEach((f, i) => {
   assert.equal(calls.markers[i].point[0], f.latitude);
   assert.equal(calls.markers[i].point[1], f.longitude);
 });
 calls.markers[0].click();
-assert.equal(calls.selected, facilities[0].facility_id);
-controller.focus(facilities[0].id);
+assert.equal(calls.selected, located[0].facility_id);
+controller.focus(located[0].id);
 assert.equal(calls.focus.zoom, 18);
 controller.update([facilities[0], { ...facilities[1], latitude: null }]);
 assert.equal(calls.markers.length, 1);

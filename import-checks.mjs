@@ -32,3 +32,29 @@ for (const f of facilities) {
   assert.equal(f.accessible, null);
 }
 console.log('Passed: repeat import, ID-based updates, retained records, quoted CSV, invalid input rejection, unknown values and every photo path.');
+
+for (const [amenity, type] of [['medical_facility', 'Medical facilities'], ['library', 'Libraries']]) {
+  const parsed = parseFacilities(header + row.replace(',park,', `,${amenity},`));
+  assert.equal(parsed[0].type, type);
+  const matches = filterFacilities({ type });
+  assert.ok(matches.length > 0);
+  assert.ok(matches.every(f => f.amenity_type === amenity));
+}
+const batch = JSON.parse(await readFile(new URL('./public/data/thane/import-2026-11-14.json', import.meta.url), 'utf8'));
+const pages = new Set();
+for (const record of batch.records) {
+  const facility = facilities.find(f => f.id === record.facility_id);
+  assert.ok(facility, `Missing batch record: ${record.facility_id}`);
+  assert.equal(facility.latitude === null || facility.longitude === null, record.location_pending);
+  for (const page of record.pages) {
+    const key = `${record.source_pdf}:${page}`;
+    assert.ok(!pages.has(key), `Duplicate source page: ${key}`);
+    pages.add(key);
+  }
+}
+for (const duplicate of batch.duplicate_source_pages) {
+  assert.ok(pages.has(`${duplicate.same_as.source_pdf}:${duplicate.same_as.page}`));
+  pages.add(`${duplicate.source_pdf}:${duplicate.page}`);
+}
+assert.equal(pages.size, batch.source_pages);
+console.log('Passed: medical/library categories, filters, source-page coverage and pending locations.');

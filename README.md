@@ -2,7 +2,13 @@
 
 Citizen, officer and administrator accounts now use a Node/Express backend with MySQL. Start with [AUTH.md](AUTH.md) for database setup, first-admin creation, login, invitations and recovery. Staff MFA is deferred; production startup is blocked. Use the Node-served web application for accounts.
 
-Responsive web and Android prototype based on the October 2026 PRD, now using 13 real Thane facility records and 64 supplied photos. Records are photo-documented, not independently field-verified. No reports are sent to a public authority.
+Responsive web and Android prototype based on the October 2026 PRD, now using 175 facility listings and 395 supplied photos. Records are photo-documented, not independently field-verified. No reports are sent to a public authority.
+
+The November 14 PDF batch adds 162 listings: medical facilities include hospitals, clinics, medical stores, diagnostics and related services under one category. Totals are 76 medical facilities, 64 public toilets, 20 drinking-water points, 13 parks and 2 libraries. Five previously imported parks retain their IDs and receive additional photos. One water-point photo repeated in a washroom PDF is classified as water and counted once.
+
+There are 170 mapped listings and five with location pending (two medical facilities and three toilets). Pending listings remain searchable but have no guessed pin. All map coordinates are unconfirmed photo-stamp coordinates. Shared-frontage medical services are recorded together where the photos do not establish separate premises. Descriptive names and OCR addresses need field confirmation.
+
+The page-to-record audit is `public/data/thane/import-2026-11-14.json`; it accounts for all 332 pages across the ten supplied PDFs. Source page references appear in facility details. The canonical CSV and extracted photos are sufficient for repeat imports; the PDFs and OCR tooling are not required at application startup.
 
 ## Thane dataset imports
 
