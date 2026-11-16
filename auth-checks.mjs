@@ -19,12 +19,13 @@ const oldEnv=process.env.NODE_ENV;process.env.NODE_ENV='production';assert.throw
 
 // This suite only uses the explicitly named test database, never the application database.
 process.env.MYSQL_DATABASE='jansuvidha_test';
+process.env.GOOGLE_CLIENT_ID='test-client';process.env.GOOGLE_CLIENT_SECRET='test-secret';
 const pool=connectDatabase();let server,store;
 const ids=[],departments=[],jurisdictions=[],complaints=[];
 const rateLimitNamespace=randomUUID();
 try {
   const connection=await pool.getConnection();try{await migrate(connection);}finally{connection.release();}
-  const {app,store:sessionStore}=await createApp(pool,{rateLimitNamespace});store=sessionStore;server=app.listen(0,'127.0.0.1');await once(server,'listening');const origin=`http://127.0.0.1:${server.address().port}`;
+  const {app,store:sessionStore}=await createApp(pool,{rateLimitNamespace,resolveIdentity:async(_provider,_config,code)=>({subject:code,name:'Test citizen'})});store=sessionStore;server=app.listen(0,'127.0.0.1');await once(server,'listening');const origin=`http://127.0.0.1:${server.address().port}`;
   process.env.APP_ORIGIN=origin;
   function client(){const cookies={},csrf={};let portal='citizen';return {
     async usePortal(next){portal=next;return this.request('/auth/session');},
@@ -32,21 +33,40 @@ try {
     if(path==='/auth/staff-login'&&portal!=='staff')await this.usePortal('staff');
     if(path==='/auth/login'&&portal!=='citizen')await this.usePortal('citizen');
     const started=performance.now();
-    const response=await fetch(origin+'/api'+path,{method,headers:{'Content-Type':'application/json','X-Portal':portal,Cookie:Object.values(cookies).join('; '),...(!omitCsrf&&csrf[portal]?{'X-CSRF-Token':csrf[portal]}:{})},...(body?{body:JSON.stringify(body)}:{})});
+    const response=await fetch(origin+'/api'+path,{redirect:'manual',method,headers:{'Content-Type':'application/json','X-Portal':portal,Cookie:Object.values(cookies).join('; '),...(!omitCsrf&&csrf[portal]?{'X-CSRF-Token':csrf[portal]}:{})},...(body?{body:JSON.stringify(body)}:{})});
     const setCookie=response.headers.getSetCookie();for(const value of setCookie){const pair=value.split(';')[0];cookies[pair.split('=')[0]]=pair;}
-    const data=await response.json();if(data.csrf)csrf[portal]=data.csrf;
+    const data=response.status===302?{redirect:response.headers.get('location')}:await response.json();if(data.csrf)csrf[portal]=data.csrf;
     if(path==='/auth/staff-login'&&response.status===200)console.log(`Successful ${data.user.role} HTTP sign-in: ${Math.round(performance.now()-started)} ms`);
     return {status:response.status,data,cookies:setCookie};
   }};}
   async function fresh(){const c=client();assert.equal((await c.request('/auth/session')).status,200);return c;}
   const suffix=randomUUID().slice(0,8),alice=await fresh(),bob=await fresh();
-  const register=(name,extra={})=>({username:name,password,confirmation:password,...extra});
-  const a=await alice.request('/auth/register',register('alice_'+suffix,{role:'ADMIN',department_id:randomUUID(),permissions:['all']}));assert.equal(a.status,201);ids.push(a.data.user.id);assert.equal(a.data.user.role,'CITIZEN');assert.equal(a.data.codes.length,8);assert.match(a.cookies.join(';'),/HttpOnly/i);assert.match(a.cookies.join(';'),/SameSite=Strict/i);
-  const b=await bob.request('/auth/register',register('bob_'+suffix));assert.equal(b.status,201);ids.push(b.data.user.id);
-  assert.equal((await bob.request('/auth/register',register('ALICE_'+suffix))).status,409);
-  const [stored]=await rows(pool,'SELECT * FROM users WHERE id=?',[ids[0]]);assert.match(stored.password_hash,/^\$argon2id\$/);assert.equal(stored.department_id,null);assert.notEqual(stored.id,stored.username);
-  const codes=await rows(pool,'SELECT token_hash FROM account_tokens WHERE user_id=?',[ids[0]]);assert.ok(codes.every(c=>!a.data.codes.includes(c.token_hash)));
-  const login=await fresh();assert.equal((await login.request('/auth/login',{identifier:'alice_'+suffix,password:'incorrect password'})).status,401);assert.equal((await login.request('/auth/login',{identifier:'ALICE_'+suffix,password})).status,200);
+  async function social(c,subject){
+    const start=await c.request('/auth/social/google/start',{});assert.equal(start.status,200);
+    const state=new URL(start.data.url).searchParams.get('state');
+    const callback=await c.request('/auth/social/google/callback?'+new URLSearchParams({state,code:subject}));
+    assert.equal(callback.data.redirect,'/#complaints');
+    return c.request('/auth/session');
+  }
+  assert.equal((await alice.request('/auth/register',{username:'legacy',password,confirmation:password,role:'ADMIN'})).status,410);
+  const a=await social(alice,'alice_'+suffix);ids.push(a.data.user.id);assert.equal(a.data.user.role,'CITIZEN');
+  const b=await social(bob,'bob_'+suffix);ids.push(b.data.user.id);
+  const [stored]=await rows(pool,'SELECT * FROM users WHERE id=?',[ids[0]]);assert.match(stored.password_hash,/^\$argon2id\$/);assert.equal(stored.department_id,null);
+  const login=await fresh();assert.equal((await social(login,'alice_'+suffix)).data.user.id,ids[0]);
+  for(const path of ['login','recover','recovery-codes'])assert.equal((await login.request('/auth/'+path,{password})).status,410);
+  assert.equal((await login.request('/auth/password',{current_password:password,password:newPassword,confirmation:newPassword})).status,403);
+  const invalid=await fresh();
+  assert.equal((await invalid.request('/auth/social/google/start',{},'POST',true)).status,403);
+  assert.equal((await invalid.request('/auth/social/facebook/start',{})).status,503);
+  assert.equal((await invalid.request('/auth/social/google/callback?state=wrong&code=bad')).data.redirect,'/#login/oauth-error');
+  const begin=await invalid.request('/auth/social/google/start',{}),state=new URL(begin.data.url).searchParams.get('state');
+  const callback='/auth/social/google/callback?'+new URLSearchParams({state,code:'alice_'+suffix});
+  assert.equal((await invalid.request(callback)).data.redirect,'/#complaints');
+  assert.equal((await invalid.request(callback)).data.redirect,'/#login/oauth-error');
+  await rows(pool,"UPDATE users SET status='DISABLED' WHERE id=?",[ids[1]]);
+  const disabled=await fresh(),disabledStart=await disabled.request('/auth/social/google/start',{});
+  assert.equal((await disabled.request('/auth/social/google/callback?'+new URLSearchParams({state:new URL(disabledStart.data.url).searchParams.get('state'),code:'bob_'+suffix}))).data.redirect,'/#login/oauth-error');
+  await rows(pool,"UPDATE users SET status='ACTIVE' WHERE id=?",[ids[1]]);
   assert.equal((await alice.request('/admin/officers')).status,403);assert.equal((await alice.request('/complaints',{},'POST',true)).status,403);
   const department=randomUUID(),jurisdiction=randomUUID(),otherDepartment=randomUUID();departments.push(department,otherDepartment);jurisdictions.push(jurisdiction);
   for(const id of departments)await rows(pool,'INSERT INTO departments(id,name) VALUES (?,?)',[id,'Department '+id]);await rows(pool,'INSERT INTO jurisdictions(id,name) VALUES (?,?)',[jurisdiction,'Jurisdiction '+suffix]);
@@ -85,29 +105,26 @@ try {
   assert.equal((await inviteClient.request('/auth/staff-login',{identifier:`invited-${suffix}@example.test`,password:newPassword})).status,200);
   const reset=await transaction(pool,db=>issueToken(db,pending.data.id,'STAFF_RESET'));const resetClient=await fresh();assert.equal((await resetClient.request('/auth/staff-reset',setPassword(reset))).status,200);assert.equal((await resetClient.request('/auth/staff-reset',setPassword(reset))).status,400);assert.equal((await inviteClient.request('/complaints')).status,401);
   const expired=await transaction(pool,db=>issueToken(db,pending.data.id,'STAFF_RESET'));await rows(pool,"UPDATE account_tokens SET expires_at=DATE_SUB(UTC_TIMESTAMP(),INTERVAL 1 MINUTE) WHERE user_id=? AND kind='STAFF_RESET'",[pending.data.id]);assert.equal((await resetClient.request('/auth/staff-reset',setPassword(expired))).status,400);
-  const recovery1=await fresh(),recovery2=await fresh(),recoveryBody={username:'alice_'+suffix,code:a.data.codes[0],password:newPassword,confirmation:newPassword};
-  const attempts=await Promise.all([recovery1.request('/auth/recover',recoveryBody),recovery2.request('/auth/recover',recoveryBody)]);assert.deepEqual(attempts.map(r=>r.status).sort(),[200,400]);assert.equal((await alice.request('/complaints')).status,401);assert.equal((await login.request('/complaints')).status,401);
-  assert.equal((await recovery1.request('/auth/login',{identifier:'alice_'+suffix,password:newPassword})).status,200);
-  assert.equal((await recovery1.request('/auth/recovery-codes',{current_password:'wrong'})).status,400);
-  const renewed=await recovery1.request('/auth/recovery-codes',{current_password:newPassword});assert.equal(renewed.data.codes.length,8);
-  assert.equal((await recovery2.request('/auth/recover',{...recoveryBody,code:a.data.codes[1]})).status,400);
-  const other=await fresh();assert.equal((await other.request('/auth/login',{identifier:'alice_'+suffix,password:newPassword})).status,200);
-  assert.equal((await recovery1.request('/auth/password',{current_password:newPassword,password,confirmation:password})).status,200);assert.equal((await other.request('/complaints')).status,401);assert.equal((await recovery1.request('/complaints')).status,200);
+  await rows(pool,'UPDATE users SET session_version=session_version+1 WHERE id=?',[ids[0]]);
+  assert.equal((await alice.request('/complaints')).status,401);
+  assert.equal((await login.request('/complaints')).status,401);
+  const recovery1=await fresh();await social(recovery1,'alice_'+suffix);
   const mfaFlag=process.env.ALLOW_LOCAL_STAFF_WITHOUT_MFA;process.env.ALLOW_LOCAL_STAFF_WITHOUT_MFA='false';assert.equal((await admin.c.request('/admin/officers')).status,403);process.env.ALLOW_LOCAL_STAFF_WITHOUT_MFA=mfaFlag;
   await recovery1.request('/auth/logout',{});assert.equal((await recovery1.request('/complaints')).status,401);
   let limited;const rateClient=await fresh();
-  for(let i=0;i<21;i++){limited=await rateClient.request('/auth/login',{identifier:'missing',password});if(limited.status===429)break;}
+  for(let i=0;i<21;i++){limited=await rateClient.request('/auth/staff-login',{identifier:'missing',password});if(limited.status===429)break;}
   assert.equal(limited.status,429);
-  console.log('Passed: Argon2id, username case/uniqueness, role injection, CSRF, login, citizen isolation, internal-note privacy, officer scope, admin boundaries, assignments, disabled sessions, invitation approval/reuse, reset expiry/reuse, concurrent single-use recovery, session revocation, password change, code replacement, MFA production guard and logout.');
+  console.log('Passed: Argon2id, username case/uniqueness, role injection, CSRF, login, citizen isolation, internal-note privacy, officer scope, admin boundaries, assignments, disabled sessions, invitation approval/reuse, reset expiry/reuse, social sign-in/return, rejected legacy endpoints, callback state/replay, disabled social accounts, session revocation, MFA production guard and logout.');
 }finally{
   if(server)await new Promise(resolve=>server.close(resolve));
   if(store)await store.close();
   // Delete only records created by this run. Existing test data is preserved.
   for(const id of complaints){await rows(pool,'DELETE FROM complaint_updates WHERE complaint_id=?',[id]);await rows(pool,'DELETE FROM complaints WHERE id=?',[id]);}
   for(const id of ids){await rows(pool,'DELETE FROM audit_logs WHERE actor_id=? OR target_id=?',[id,id]);await rows(pool,'DELETE FROM account_tokens WHERE user_id=?',[id]);}
+  for(const id of ids)await rows(pool,'DELETE FROM social_identities WHERE user_id=?',[id]);
   for(const id of ids)await rows(pool,'DELETE FROM users WHERE id=?',[id]);
   for(const id of departments)await rows(pool,'DELETE FROM departments WHERE id=?',[id]);
   for(const id of jurisdictions)await rows(pool,'DELETE FROM jurisdictions WHERE id=?',[id]);
-  for(const scope of ['register','login','password','recovery','tokens','complaints','invitations'])await rows(pool,'DELETE FROM auth_limits WHERE bucket=?',[digest(`${rateLimitNamespace}:${scope}:127.0.0.1`)]);
+  for(const scope of ['social-login','social-callback','register','login','password','recovery','tokens','complaints','invitations'])await rows(pool,'DELETE FROM auth_limits WHERE bucket=?',[digest(`${rateLimitNamespace}:${scope}:127.0.0.1`)]);
   await pool.end();
 }

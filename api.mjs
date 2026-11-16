@@ -3,16 +3,17 @@ import session from 'express-session';
 import createMySQLStore from 'express-mysql-session';
 import {Passport} from 'passport';
 import {Strategy} from 'passport-local';
+import {installSocialAuth,socialProviders} from './social-auth.mjs';
 import {randomUUID,timingSafeEqual} from 'node:crypto';
 import {rows,transaction} from './db.mjs';
-import {token,digest,hashPassword,verifyPassword,validatePassword,username,email,text,fail,canAccess,transitions,isPrivateIPv4} from './auth-security.mjs';
-import {audit,recoveryCodes,hasMail,deliverToken} from './accounts.mjs';
+import {token,digest,hashPassword,verifyPassword,validatePassword,email,text,fail,canAccess,transitions,isPrivateIPv4} from './auth-security.mjs';
+import {audit,hasMail,deliverToken} from './accounts.mjs';
 import {facilities} from './dist/data.js';
 
 const publicUser=u=>({id:u.id,role:u.role,username:u.username,name:u.name,official_email:u.official_email});
 const generic='Invalid credentials or account unavailable.';
 const regenerate=req=>new Promise((resolve,reject)=>req.session.regenerate(e=>e?reject(e):resolve()));
-export async function createApp(pool,{rateLimitNamespace=''}={}) {
+export async function createApp(pool,{rateLimitNamespace='',resolveIdentity}={}) {
   if(!process.env.SESSION_SECRET||process.env.SESSION_SECRET.length<32||process.env.SESSION_SECRET.startsWith('replace-')) throw Error('Configure a random SESSION_SECRET of at least 32 characters.');
   const app=express(),passport=new Passport();
   const store=new (createMySQLStore(session))({createDatabaseTable:false,clearExpired:true,expiration:8*60*60*1000},pool);
@@ -34,7 +35,7 @@ export async function createApp(pool,{rateLimitNamespace=''}={}) {
   });
   app.use((req,res,next)=>{res.set({'X-Content-Type-Options':'nosniff','Referrer-Policy':'no-referrer','X-Frame-Options':'DENY','Content-Security-Policy':"default-src 'self'; script-src 'self'; style-src 'self' 'unsafe-inline' https://fonts.googleapis.com; font-src 'self' https://fonts.gstatic.com; img-src 'self' data: https://tile.openstreetmap.org; connect-src 'self'; frame-ancestors 'none'; base-uri 'self'; form-action 'self'"});next();});
   app.use('/api',express.json({limit:'16kb'}));
-  const portalSessions=Object.fromEntries(['citizen','staff'].map(portal=>[portal,session({name:`js.${portal}.sid`,secret:process.env.SESSION_SECRET,store,resave:false,saveUninitialized:false,cookie:{httpOnly:true,secure:process.env.NODE_ENV==='production',sameSite:'strict',maxAge:8*60*60*1000}})]));
+  const portalSessions=Object.fromEntries(['citizen','staff'].map(portal=>[portal,session({name:`js.${portal}.sid`,secret:process.env.SESSION_SECRET,store,resave:false,saveUninitialized:false,cookie:{httpOnly:true,secure:process.env.NODE_ENV==='production',sameSite:portal==='citizen'?'lax':'strict',maxAge:8*60*60*1000}})]));
   app.use('/api',(req,res,next)=>{
     req.portal=req.get('X-Portal')||'citizen';
     if(!Object.hasOwn(portalSessions,req.portal))return next(Object.assign(Error('Unknown portal.'),{status:400}));
@@ -80,36 +81,27 @@ export async function createApp(pool,{rateLimitNamespace=''}={}) {
   });
   passport.use(new Strategy({usernameField:'identifier',passwordField:'password',passReqToCallback:true},async(req,identifier,password,done)=>{
     try{
-      const staff=req.path==='/api/auth/staff-login';
       const normalized=typeof identifier==='string'?identifier.trim().toLowerCase().slice(0,254):'';
-      const [u]=await rows(pool,staff?"SELECT * FROM users WHERE official_email=? AND role IN ('OFFICER','ADMIN')":"SELECT * FROM users WHERE username=? AND role='CITIZEN'",[normalized]);
+      const [u]=await rows(pool,"SELECT * FROM users WHERE official_email=? AND role IN ('OFFICER','ADMIN')",[normalized]);
       const valid=typeof password==='string'&&password.length<=512&&await verifyPassword(u?.password_hash||dummy,password);
       done(null,valid&&u?.status==='ACTIVE'?u:false);
     }catch(e){done(e);}
   }));
-  app.get('/api/auth/session',(req,res)=>res.json({user:req.user?publicUser(req.user):null,csrf:req.session.csrf,localPrototype:true}));
-  app.post('/api/auth/register',limit('register',10),async(req,res)=>{
-    if(req.portal!=='citizen')fail(403,'Use citizen registration.');
-    const name=username(req.body.username);await validatePassword(req.body.password,req.body.confirmation);
-    const hash=await hashPassword(req.body.password),id=randomUUID();
-    const codes=await transaction(pool,async db=>{
-      // Never read a public request's role, department, jurisdiction or permissions.
-      await rows(db,"INSERT INTO users(id,role,username,password_hash,status) VALUES (?,'CITIZEN',?,?,'ACTIVE')",[id,name,hash]);
-      await audit(db,id,'REGISTER','user',id);return recoveryCodes(db,id);
-    });
-    const [u]=await rows(pool,'SELECT * FROM users WHERE id=?',[id]);await signedIn(req,u);res.status(201).json({user:publicUser(u),csrf:req.session.csrf,codes});
-  });
-  app.post(['/api/auth/login','/api/auth/staff-login'],limit('login',20),(req,res,next)=>{
+  installSocialAuth(app,pool,{limit,signedIn,resolveIdentity});
+  app.get('/api/auth/session',(req,res)=>res.json({user:req.user?publicUser(req.user):null,csrf:req.session.csrf,providers:socialProviders(),localPrototype:true}));
+  app.post(['/api/auth/register','/api/auth/login','/api/auth/recover','/api/auth/recovery-codes'],(req,res)=>res.status(410).json({message:'Citizens now sign in with Google or Facebook.'}));
+  app.post('/api/auth/staff-login',limit('login',20),(req,res,next)=>{
+    if(req.portal!=='staff')return next(Object.assign(Error('Use the staff portal.'),{status:403}));
     passport.authenticate('local',{session:false},async(error,u)=>{
       try{
-        if(error) throw error;if(!u) fail(401,generic);
-        if(u.role!=='CITIZEN'&&(process.env.NODE_ENV==='production'||process.env.ALLOW_LOCAL_STAFF_WITHOUT_MFA!=='true')) fail(403,'Staff MFA is required. See local setup instructions.');
+        if(error) throw error;if(!u||u.role==='CITIZEN') fail(401,generic);
+        if(process.env.NODE_ENV==='production'||process.env.ALLOW_LOCAL_STAFF_WITHOUT_MFA!=='true') fail(403,'Staff MFA is required. See local setup instructions.');
         await signedIn(req,u);await audit(pool,u.id,'LOGIN','user',u.id);res.json({user:publicUser(u),csrf:req.session.csrf});
       }catch(e){next(e);}
     })(req,res,next);
   });
   app.post('/api/auth/logout',async(req,res)=>{await new Promise((resolve,reject)=>req.session.destroy(e=>e?reject(e):resolve()));res.clearCookie(`js.${req.portal}.sid`,{path:'/'}).json({ok:true});});
-  app.post('/api/auth/password',authenticated,limit('password',10),async(req,res)=>{
+  app.post('/api/auth/password',roles('OFFICER','ADMIN'),limit('password',10),async(req,res)=>{
     await validatePassword(req.body.password,req.body.confirmation);const hash=await hashPassword(req.body.password);
     const u=await write(req,async(db,u)=>{
       if(typeof req.body.current_password!=='string'||!await verifyPassword(u.password_hash,req.body.current_password)) fail(400,'Current password is incorrect.');
@@ -117,21 +109,6 @@ export async function createApp(pool,{rateLimitNamespace=''}={}) {
       await rows(db,"DELETE FROM account_tokens WHERE user_id=? AND kind='STAFF_RESET'",[u.id]);
       await audit(db,u.id,'PASSWORD_CHANGED','user',u.id);return {...u,session_version:u.session_version+1};
     });await signedIn(req,u);res.json({ok:true,csrf:req.session.csrf});
-  });
-  app.post('/api/auth/recovery-codes',citizen,limit('password',10),async(req,res)=>{
-    const codes=await write(req,async(db,u)=>{
-      if(typeof req.body.current_password!=='string'||!await verifyPassword(u.password_hash,req.body.current_password)) fail(400,'Current password is incorrect.');
-      await audit(db,u.id,'RECOVERY_CODES_REGENERATED','user',u.id);return recoveryCodes(db,u.id);
-    });res.json({codes});
-  });
-  app.post('/api/auth/recover',limit('recovery',10),async(req,res)=>{
-    const name=username(req.body.username),code=text(req.body.code,100);await validatePassword(req.body.password,req.body.confirmation);const hash=await hashPassword(req.body.password);
-    await transaction(pool,async db=>{
-      const [u]=await rows(db,"SELECT * FROM users WHERE username=? AND role='CITIZEN' FOR UPDATE",[name]);if(!u||u.status!=='ACTIVE') fail(400,generic);
-      const result=await rows(db,"UPDATE account_tokens SET used_at=UTC_TIMESTAMP(3) WHERE user_id=? AND kind='RECOVERY' AND token_hash=? AND used_at IS NULL",[u.id,digest(code)]);
-      if(result.affectedRows!==1) fail(400,generic);
-      await rows(db,'UPDATE users SET password_hash=?,session_version=session_version+1 WHERE id=?',[hash,u.id]);await audit(db,u.id,'PASSWORD_RECOVERED','user',u.id);
-    });res.json({ok:true});
   });
   app.post('/api/auth/staff-forgot',limit('recovery',10),async(req,res)=>{
     const address=email(req.body.email);if(!hasMail()) fail(503,'Email is not configured. For local testing use npm run auth:dev-link.');

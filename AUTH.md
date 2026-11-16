@@ -1,3 +1,7 @@
+# Citizen login update
+
+Citizens now use Google and Facebook only. Follow [SOCIAL_AUTH_SETUP.md](SOCIAL_AUTH_SETUP.md). The older citizen password/recovery instructions below are historical and no longer supported; staff instructions still apply. Existing citizen data is preserved but needs an explicit account-linking migration for access through social login.
+
 # Citizen and government accounts
 
 This is one Node/Express application with one MySQL application database. The separate `jansuvidha_test` database is used only by automated tests. The existing map, dataset, theme and language controls remain available. Complaints now use authenticated backend storage; old browser demo complaints are neither imported nor deleted.

@@ -6,7 +6,7 @@ import {runInNewContext} from 'node:vm';
 const source=readFileSync(new URL('./dist/account.js',import.meta.url),'utf8')
   .replace("import {facilities} from './data.js';",'const facilities=[];')
   .replaceAll('export function ','function ').replaceAll('export async function ','async function ');
-for(const [role,route] of [['OFFICER','government'],['ADMIN','government'],['CITIZEN','complaints']]){
+for(const [role,route] of [['OFFICER','government'],['ADMIN','government']]){
   for(const initial of [route,role==='CITIZEN'?'login':'staff-login']){
     let signedIn=false;
     const requests=[],button={disabled:false},output={textContent:''};
@@ -37,7 +37,7 @@ for(const [role,route] of [['OFFICER','government'],['ADMIN','government'],['CIT
     assert.equal(location.hash,'#'+route,'Sign-in navigates to the role dashboard');
   }
 }
-console.log('Passed: citizen/officer/admin sign-in on existing dashboard URLs, separate login redirects, and no unused inbox catalog request.');
+console.log('Passed: officer/admin sign-in on existing dashboard URLs, separate login redirects, and no unused inbox catalog request.');
 for(const [name,message] of [['TimeoutError',/15 seconds/],['TypeError',/Cannot reach/]]){
   const context={AbortSignal,document:{},fetch:async(_path,options)=>{
     assert.ok(options.signal,'Requests must have a timeout signal');
@@ -67,3 +67,26 @@ console.log('Passed: stalled and disconnected requests show actionable errors.')
   assert.equal(typeof form.onsubmit,'function');
 }
 console.log('Passed: citizen complaint form is available with default routing selected.');
+
+for(const enabled of [false,true]){
+  const main={innerHTML:''},buttons={google:{},facebook:{}},output={textContent:''};
+  const elements={'#main':main,'.profile':{},'#signin-google':buttons.google,'#signin-facebook':buttons.facebook,'#social-message':output};
+  let destination;
+  const context={AbortSignal,document:{querySelector:s=>elements[s]||null},location:{assign:url=>{destination=url;}},fetch:async(path,options)=>{
+    assert.equal(options.headers['X-Portal'],'citizen');
+    if(path==='/api/auth/session')return {ok:true,json:async()=>({user:null,csrf:'csrf',providers:{google:enabled,facebook:enabled}})};
+    assert.match(path,/social\/(google|facebook)\/start$/);
+    assert.equal(options.method,'POST');assert.equal(options.headers['X-CSRF-Token'],'csrf');
+    return {ok:true,json:async()=>({url:'https://provider.example/authorize'})};
+  }};
+  runInNewContext(source+';globalThis.renderAccount=renderAccount;',context);
+  for(const page of ['login','register','recover']){
+    await context.renderAccount(page);
+    assert.match(main.innerHTML,/Continue with Google/);assert.match(main.innerHTML,/Continue with Facebook/);
+    assert.doesNotMatch(main.innerHTML,/type="password"|name="username"/);
+  }
+  if(enabled){await buttons.google.onclick();assert.equal(destination,'https://provider.example/authorize');await buttons.facebook.onclick();}
+  else {assert.equal(buttons.google.onclick,undefined);assert.match(main.innerHTML,/disabled/);}
+  await context.renderAccount('login','oauth-error');assert.match(main.innerHTML,/could not be completed/);
+}
+console.log('Passed: social-only citizen pages, provider readiness, CSRF-protected redirects and callback errors.');

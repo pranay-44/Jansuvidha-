@@ -2,7 +2,7 @@ import {facilities} from './data.js';
 
 const esc=value=>String(value??'').replace(/[&<>"']/g,c=>({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[c]));
 const $=s=>document.querySelector(s);
-let csrf,user,routeVersion=0,portal='citizen';
+let csrf,user,routeVersion=0,portal='citizen',providers={};
 const staffRoutes=new Set(['government','staff-login','staff-forgot','staff-reset','invitation','staff-account','officers','catalog','audit']);
 const routes=new Set(['login','register','recover','staff-login','staff-forgot','invitation','staff-reset','account','staff-account','complaints','government','officers','catalog','audit']);
 const dashboard=()=>user?.role==='CITIZEN'?'complaints':'government';
@@ -22,7 +22,7 @@ async function api(path,body,method=body?'POST':'GET') {
   if(!response.ok)throw Error(data.message||'Request failed.');
   return data;
 }
-function profile(){const p=$('.profile');p.innerHTML=`<span class="avatar">${user?esc(user.role[0]):'J'}</span><div>${user?esc(user.username||user.name):'Thane workspace'}<small><a href="#${user?(portal==='staff'?'staff-account':'account'):(portal==='staff'?'staff-login':'login')}">${user?'Account settings':portal==='staff'?'Staff sign in':'Citizen sign in'}</a></small></div>`;}
+function profile(){const p=$('.profile');p.innerHTML=`<span class="avatar">${user?esc(user.role[0]):'J'}</span><div>${user?esc(user.name||user.username):'Thane workspace'}<small><a href="#${user?(portal==='staff'?'staff-account':'account'):(portal==='staff'?'staff-login':'login')}">${user?'Account settings':portal==='staff'?'Staff sign in':'Citizen sign in'}</a></small></div>`;}
 const field=(label,name,type='text',extra='')=>`<label>${label}<input name="${name}" type="${type}" required ${extra}></label>`;
 const passwords=()=>field('New password','password','password','minlength="15" maxlength="256" autocomplete="new-password"')+field('Confirm password','confirmation','password','autocomplete="new-password"')+'<p class="note">Use 15–128 characters. Long passphrases, password managers and pasting are supported.</p>';
 const select=(label,name,items,current='')=>`<label>${label}<select name="${name}" required><option value="">Choose ${label.toLowerCase()}</option>${items.map(i=>`<option value="${esc(i.id)}" ${i.id===current?'selected':''}>${esc(i.name)}</option>`).join('')}</select></label>`;
@@ -38,16 +38,24 @@ function bind(id,handler) {
   };
 }
 function logout(){if($('#logout'))$('#logout').onclick=async()=>{try{await api('/auth/logout',{});user=null;csrf=null;profile();location.hash=portal==='staff'?'staff-login':'login';}catch(e){$('#account-notice').textContent=e.message;}};}
-function showCodes(codes){
-  $('#main').innerHTML=header('Save your recovery codes','These codes are shown only once. Store them somewhere private.')+`<section class="panel auth-card"><p class="warning">If you lose both your password and these codes, you may lose access to your account. Each code works once. Newly generated codes replace all previous codes.</p><textarea id="saved-codes" aria-label="Recovery codes" rows="9" readonly spellcheck="false" autocomplete="off"></textarea><div class="form-actions"><button class="button" id="copy-codes">Copy codes</button><button class="button" id="download-codes">Download codes</button><a class="button primary" href="#complaints">I have saved my codes</a></div><p role="status" id="copy-status"></p></section>`;
-  $('#saved-codes').value=codes.join('\n');
-  $('#copy-codes').onclick=async()=>{try{await navigator.clipboard.writeText(codes.join('\n'));$('#copy-status').textContent='Copied. Keep these codes private.';}catch{$('#saved-codes').select();$('#copy-status').textContent='Select and copy the codes manually.';}};
-  $('#download-codes').onclick=()=>{const url=URL.createObjectURL(new Blob([`JanSuvidha recovery codes — ${user?.username||''}\nKeep private. Each code is single-use.\n\n${codes.join('\n')}`],{type:'text/plain'})),a=document.createElement('a');a.href=url;a.download='jansuvidha-recovery-codes.txt';a.click();setTimeout(()=>URL.revokeObjectURL(url),1000);};
+function citizenLogin(error=false){
+  $('#main').innerHTML=header('Citizen sign in','Create an account or sign in with Google or Facebook.')+`<section class="panel auth-card social-login"><h2>Welcome to JanSuvidha</h2><p>Use the same provider each time to access your complaints.</p><div class="social-buttons">${['google','facebook'].map(provider=>`<button class="button" id="signin-${provider}" ${providers[provider]?'':'disabled'}>Continue with ${provider==='google'?'Google':'Facebook'}</button>`).join('')}</div>${!providers.google||!providers.facebook?'<p class="note">Sign-in options that are unavailable are still being set up. Please try again later.</p>':''}<p id="social-message" role="status" aria-live="polite">${error?'Sign-in was cancelled or could not be completed. Please try again.':''}</p><p class="note">Your first sign-in creates a citizen account. JanSuvidha never receives your Google or Facebook password.</p><a href="#staff-login">Officer / administrator sign in</a></section>`;
+  for(const provider of ['google','facebook']){
+    const button=$('#signin-'+provider);
+    if(!providers[provider])continue;
+    button.onclick=async()=>{
+      const version=routeVersion;
+      button.disabled=true;$('#social-message').textContent='Opening sign in…';
+      try{const result=await api('/auth/social/'+provider+'/start',{});if(version===routeVersion)location.assign(result.url);}
+      catch(error){if(version===routeVersion){$('#social-message').textContent=error.message;button.disabled=false;}}
+    };
+  }
 }
 function loginPage(staff){
-  $('#main').innerHTML=header(staff?'Government portal sign in':'Citizen sign in',staff?'Officers and administrators sign in with their official email.':'Sign in to submit complaints and track their progress.')+`<section class="panel auth-card">${staff?'<p class="warning">Local prototype: staff MFA is not implemented. Production access is blocked.</p>':''}${form('login-form',field(staff?'Official email':'Username','identifier',staff?'email':'text','autocomplete="username"')+field('Password','password','password','autocomplete="current-password"'),'Sign in')}<div class="account-links"><a href="#${staff?'staff-forgot':'recover'}">Forgot password?</a>${staff?'<a href="#login">Citizen sign in</a>':'<a href="#register">Create citizen account</a><a href="#staff-login">Officer / administrator sign in</a>'}</div></section>`;
+  if(!staff){citizenLogin();return;}
+  $('#main').innerHTML=header('Government portal sign in','Officers and administrators sign in with their official email.')+`<section class="panel auth-card"><p class="warning">Local prototype: staff MFA is not implemented. Production access is blocked.</p>${form('login-form',field('Official email','identifier','email','autocomplete="username"')+field('Password','password','password','autocomplete="current-password"'),'Sign in')}<div class="account-links"><a href="#staff-forgot">Forgot password?</a><a href="#login">Citizen sign in</a></div></section>`;
   bind('#login-form',async data=>{
-    const result=await api(staff?'/auth/staff-login':'/auth/login',data);user=result.user;profile();
+    const result=await api('/auth/staff-login',data);user=result.user;profile();
     const target=dashboard();
     // Render directly on success; do not depend on a hashchange event to finish login.
     history.replaceState(null,'','#'+target);
@@ -55,25 +63,26 @@ function loginPage(staff){
   });
 }
 function publicPage(page,secret){
-  if(page==='login'||page==='staff-login'){loginPage(page==='staff-login');return;}
-  const titles={register:'Create your citizen account',recover:'Recover your citizen account','staff-forgot':'Staff password recovery',invitation:'Set up your officer account','staff-reset':'Reset your staff password'};
-  let body='';
-  if(page==='register'||page==='recover')body+=field('Username','username','text','minlength="3" maxlength="32" pattern="[A-Za-z0-9_]{3,32}" autocomplete="username"')+'<p class="note">3–32 letters, numbers or underscores. Usernames are not case-sensitive. No email, phone or real name is required.</p>';
-  if(page==='recover')body+=field('Single-use recovery code','code','text','autocomplete="off" spellcheck="false"')+'<p class="warning">Losing both your password and recovery codes may mean losing access. There is no email, SMS or security-question recovery for citizens.</p>';
-  if(page==='staff-forgot')body+=field('Official email','email','email','autocomplete="username"');else body+=passwords();
-  $('#main').innerHTML=header(titles[page],'Use a password you do not use elsewhere.')+`<section class="panel auth-card">${form('public-form',body,page==='register'?'Create account':page==='staff-forgot'?'Send reset link':'Save new password')}<p><a href="#${page.startsWith('staff')||page==='invitation'?'staff-login':'login'}">Back to sign in</a></p></section>`;
+  if(['login','register','recover'].includes(page)){citizenLogin(secret==='oauth-error');return;}
+  if(page==='staff-login'){loginPage(true);return;}
+  const titles={'staff-forgot':'Staff password recovery',invitation:'Set up your officer account','staff-reset':'Reset your staff password'};
+  const body=page==='staff-forgot'?field('Official email','email','email','autocomplete="username"'):passwords();
+  $('#main').innerHTML=header(titles[page],'Use a password you do not use elsewhere.')+`<section class="panel auth-card">${form('public-form',body,page==='staff-forgot'?'Send reset link':'Save new password')}<p><a href="#staff-login">Back to sign in</a></p></section>`;
   bind('#public-form',async(data,output,element)=>{
     const result=await api('/auth/'+page,{...data,...(secret?{token:secret}:{})});
     element.reset();
-    if(page==='register'){user=result.user;profile();showCodes(result.codes);return;}
     output.textContent=page==='invitation'?'Password saved. Your administrator must approve the account before you can sign in.':result.message||'Password saved. Sign in with your new password. Existing sessions have been revoked.';
     if(secret){history.replaceState(null,'',`#${page==='invitation'?'staff-login':'staff-reset'}`);element.querySelector('button').hidden=true;}
   });
 }
 function accountPage(){
-  $('#main').innerHTML=header('Account settings',`Signed in as ${esc(user.username||user.name)} · ${esc(user.role)}`)+links()+`<p id="account-notice" role="status"></p><div class="two-col"><section class="panel"><h2>Change password</h2>${form('password-form',field('Current password','current_password','password','autocomplete="current-password"')+passwords(),'Change password')}</section>${user.role==='CITIZEN'?`<section class="panel"><h2>Replace recovery codes</h2><p>This invalidates all previous codes. Verify your password to continue.</p>${form('codes-form',field('Current password','current_password','password','autocomplete="current-password"'),'Generate new codes')}</section>`:'<section class="panel"><h2>Staff account</h2><p>Official email: '+esc(user.official_email)+'</p><p class="warning">Staff MFA is deferred in this local prototype. Production startup is blocked.</p></section>'}</div>`;
+  if(user.role==='CITIZEN'){
+    $('#main').innerHTML=header('Account settings',`Signed in as ${esc(user.name||user.username)}`)+links()+`<p id="account-notice" role="status"></p><section class="panel"><h2>Google and Facebook sign-in</h2><p>Manage your password and account recovery directly with your sign-in provider. Use the same provider to return to this citizen account.</p></section>`;
+    logout();return;
+  }
+  $('#main').innerHTML=header('Account settings',`Signed in as ${esc(user.name||user.username)} · ${esc(user.role)}`)+links()+`<p id="account-notice" role="status"></p><div class="two-col"><section class="panel"><h2>Change password</h2>${form('password-form',field('Current password','current_password','password','autocomplete="current-password"')+passwords(),'Change password')}</section><section class="panel"><h2>Staff account</h2><p>Official email: ${esc(user.official_email)}</p><p class="warning">Staff MFA is deferred in this local prototype. Production startup is blocked.</p></section></div>`;
   bind('#password-form',async(data,output,element)=>{await api('/auth/password',data);element.reset();output.textContent='Password changed. Your other sessions have been revoked.';});
-  bind('#codes-form',async data=>showCodes((await api('/auth/recovery-codes',data)).codes));logout();
+  logout();
 }
 async function complaintPage(page,action,id,version){
   const staff=user.role!=='CITIZEN';
@@ -116,7 +125,7 @@ export async function renderAccount(page,action,id){
   portal=staffRoutes.has(page)?'staff':'citizen';user=null;csrf=null;profile();
   const version=++routeVersion;$('#main').innerHTML='<section class="panel" role="status">Loading account services…</section>';
   try{
-    const result=await api('/auth/session');if(version!==routeVersion)return;user=result.user;profile();
+    const result=await api('/auth/session');if(version!==routeVersion)return;user=result.user;providers=result.providers||{};profile();
     if(['login','register','recover','staff-login','staff-forgot','invitation','staff-reset'].includes(page)){publicPage(page,action);return;}
     if(!user){loginPage(portal==='staff');return;}
     if(page==='account'||page==='staff-account'){accountPage();return;}

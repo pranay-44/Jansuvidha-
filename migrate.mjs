@@ -6,7 +6,7 @@ export async function migrate(db) {
   const [lock] = await rows(db, "SELECT GET_LOCK('jansuvidha-migrations', 10) AS acquired");
   if (!lock.acquired) throw Error('Another migration is running.');
   try {
-    for (const version of ['001-accounts','002-pilot-routing']) {
+    for (const version of ['001-accounts','002-pilot-routing','003-social-identities']) {
       if ((await rows(db, 'SELECT version FROM schema_migrations WHERE version=?', [version])).length) continue;
       const sql = await readFile(new URL(`./migrations/${version}.sql`, import.meta.url), 'utf8');
       for (const statement of sql.split(';').filter(s => s.trim())) await db.query(statement);

@@ -1,6 +1,6 @@
 # JanSuvidha foundation
 
-Citizen, officer and administrator accounts now use a Node/Express backend with MySQL. Start with [AUTH.md](AUTH.md) for database setup, first-admin creation, login, invitations and recovery. Staff MFA is deferred; production startup is blocked. Use the Node-served web application for accounts.
+Citizen, officer and administrator accounts now use a Node/Express backend with MySQL. For citizen Google/Facebook sign-in, see [SOCIAL_AUTH_SETUP.md](SOCIAL_AUTH_SETUP.md). Start with [AUTH.md](AUTH.md) for database setup, first-admin creation, login, invitations and recovery. Staff MFA is deferred; production startup is blocked. Use the Node-served web application for accounts.
 
 Responsive web and Android prototype based on the October 2026 PRD, now using 175 facility listings and 395 supplied photos. All 175 existing amenities were marked verified on November 15, 2026, based on the project owner’s confirmation. This does not assign usability scores or supply missing coordinates. No reports are sent to a public authority.
 
@@ -60,7 +60,7 @@ Dependencies: `@capacitor/core` and `@capacitor/android` provide Android packagi
 
 The generated `android/` project uses Capacitor 8, Android SDK 36 and minimum Android API 24. Install Android Studio 2025.2.1 or newer, SDK Platform 36, SDK Build Tools and Platform Tools through its SDK Manager. Use a compatible Gradle JDK (JDK 21 or the compatible JDK bundled with Android Studio). See the [official environment guide](https://capacitorjs.com/docs/getting-started/environment-setup).
 
-Run `npm run android:sync`, then `npm run android:open`. Select an emulator or a USB-debugging-enabled device in Android Studio and run the app. Sync again after every change to `dist/`. The packaged app does not require the development web server.
+Run `npm run android:open`; this now syncs the latest web code, dataset and photos before opening Android Studio. Select an emulator or USB-debugging-enabled device and run the app. `npm run android:run` refreshes imported data before Capacitor syncs and runs it. `npm run android:sync` finishes with a byte-for-byte asset check; rerun it after edits while Android Studio is already open. The bundled map, photos, filters, themes and local reviews do not require the Node server (street tiles still need internet). Accounts and server-backed complaints require a reachable backend; see ANDROID_STATUS.md.
 
 To build a debug APK from PowerShell with an installed JDK and the default Windows SDK location:
 
