@@ -39,3 +39,7 @@ Before activating accounts on Android:
 Google/Facebook must not be forced through an embedded WebView login. This update synchronizes the current app; it does not claim that native provider login or a hosted backend is already configured.
 
 The amenity data and photos are bundled. Street-map tiles require internet. Browser reviews and Android reviews are separate device-local storage, not a shared review database.
+
+## Android Studio launcher
+
+`android:open` reads the optional, Git-ignored `.env.android.local`. On this computer it points `CAPACITOR_ANDROID_STUDIO_PATH` to `C:/Program Files/Android/Android Studio2/bin/studio64.exe`. The default `Android Studio` folder has an incomplete installation and cannot launch. On another computer, omit this file to use Capacitor detection, or set the variable to that computer’s working IDE.

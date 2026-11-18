@@ -21,7 +21,7 @@
     "check": "npm run lint && npm test",
     "analyze": "node analysis.mjs",
     "android:sync": "cap sync android",
-    "android:open": "cap open android",
+    "android:open": "node --env-file-if-exists=.env.android.local node_modules/@capacitor/cli/bin/capacitor open android",
     "android:run": "cap run android --no-sync",
     "data:import": "node import-thane.mjs",
     "prestart": "npm run map:assets && npm run data:import",
