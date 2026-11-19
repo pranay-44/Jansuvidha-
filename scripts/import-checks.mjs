@@ -1,11 +1,11 @@
 import assert from 'node:assert/strict';
 import { readFile, stat } from 'node:fs/promises';
 import { parseFacilities, upsertFacilities } from './import-thane.mjs';
-import { facilities, filterFacilities, score } from './dist/data.js';
+import { facilities, filterFacilities, score } from '../dist/data.js';
 
-const csv = await readFile(new URL('./public/data/thane/Thane_facilities.csv', import.meta.url), 'utf8');
+const csv = await readFile(new URL('../public/data/thane/Thane_facilities.csv', import.meta.url), 'utf8');
 const incoming = parseFacilities(csv);
-const imported = JSON.parse(await readFile(new URL('./public/data/thane/facilities.json', import.meta.url), 'utf8'));
+const imported = JSON.parse(await readFile(new URL('../public/data/thane/facilities.json', import.meta.url), 'utf8'));
 assert.deepEqual(upsertFacilities(imported, incoming), imported);
 assert.deepEqual(upsertFacilities(imported, incoming), upsertFacilities(upsertFacilities(imported, incoming), incoming));
 const changed = { ...incoming[0], name: 'Updated name, with a comma' };
@@ -24,8 +24,8 @@ assert.ok(facilities.every(f => f.id === f.facility_id && !/^F\d+$/.test(f.id)))
 assert.equal(filterFacilities({query: incoming[0].facility_id}).length, 1);
 for (const f of facilities) {
   for (const path of f.photos) {
-    assert.ok((await stat(new URL('./public/data/thane/' + path, import.meta.url))).isFile());
-    assert.ok((await stat(new URL('./dist/data/thane/' + path, import.meta.url))).isFile());
+    assert.ok((await stat(new URL('../public/data/thane/' + path, import.meta.url))).isFile());
+    assert.ok((await stat(new URL('../dist/data/thane/' + path, import.meta.url))).isFile());
   }
   if (!f.verified_at) assert.equal(f.verified, null);
   assert.equal(score(f.scores), null);
@@ -40,7 +40,7 @@ for (const [amenity, type] of [['medical_facility', 'Medical facilities'], ['lib
   assert.ok(matches.length > 0);
   assert.ok(matches.every(f => f.amenity_type === amenity));
 }
-const batch = JSON.parse(await readFile(new URL('./public/data/thane/import-2026-11-14.json', import.meta.url), 'utf8'));
+const batch = JSON.parse(await readFile(new URL('../public/data/thane/import-2026-11-14.json', import.meta.url), 'utf8'));
 const pages = new Set();
 for (const record of batch.records) {
   const facility = facilities.find(f => f.id === record.facility_id);

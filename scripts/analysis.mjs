@@ -1,5 +1,5 @@
 import { mean, median, standardDeviation } from 'simple-statistics';
-import { facilities, score } from './dist/data.js';
+import { facilities, score } from '../dist/data.js';
 
 // Analyze the same rounded facility scores displayed by the application.
 // Missing assessments are excluded, rather than treated as zero.

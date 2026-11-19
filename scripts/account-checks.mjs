@@ -3,7 +3,7 @@ import {readFileSync} from 'node:fs';
 import {runInNewContext} from 'node:vm';
 
 // Exercise the actual login form handler, including sign-in on a dashboard URL.
-const source=readFileSync(new URL('./dist/account.js',import.meta.url),'utf8')
+const source=readFileSync(new URL('../dist/account.js',import.meta.url),'utf8')
   .replace("import {facilities} from './data.js';",'const facilities=[];')
   .replaceAll('export function ','function ').replaceAll('export async function ','async function ');
 for(const [role,route] of [['OFFICER','government'],['ADMIN','government']]){

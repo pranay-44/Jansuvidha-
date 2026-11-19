@@ -1,11 +1,11 @@
-import {busStopDetails} from './dist/bus-stops.js';
+import {busStopDetails} from '../dist/bus-stops.js';
 import assert from 'node:assert/strict';
 import {readFileSync} from 'node:fs';
 import {runInNewContext} from 'node:vm';
-import {facilities,filterFacilities,score} from './dist/data.js';
-import {translate} from './dist/language.js';
-const source=readFileSync(new URL('./dist/app.js',import.meta.url),'utf8');
-const batch=JSON.parse(readFileSync(new URL('./public/data/thane/import-2026-11-19.json',import.meta.url),'utf8'));
+import {facilities,filterFacilities,score} from '../dist/data.js';
+import {translate} from '../dist/language.js';
+const source=readFileSync(new URL('../dist/app.js',import.meta.url),'utf8');
+const batch=JSON.parse(readFileSync(new URL('../public/data/thane/import-2026-11-19.json',import.meta.url),'utf8'));
 const seen=new Set();
 for(const r of batch.records){
  const f=facilities.find(f=>f.id===r.facility_id);assert.ok(f);

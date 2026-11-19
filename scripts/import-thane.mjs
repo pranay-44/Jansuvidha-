@@ -3,7 +3,7 @@ import { resolve, dirname } from 'node:path';
 import { fileURLToPath } from 'node:url';
 import { parse } from 'csv-parse/sync';
 
-const root = dirname(fileURLToPath(import.meta.url));
+const root = dirname(dirname(fileURLToPath(import.meta.url)));
 const types = { public_toilet: 'Public toilets', drinking_water: 'Drinking water', park: 'Parks', medical_facility: 'Medical facilities', library: 'Libraries' };
 
 export function parseFacilities(csv) {

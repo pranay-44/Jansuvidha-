@@ -1,8 +1,8 @@
 import assert from 'node:assert/strict';
 import {readFileSync} from 'node:fs';
 import {runInNewContext} from 'node:vm';
-import {score,filterFacilities,facilities} from './dist/data.js';
-import {languages,normalizeLanguage,translate,translations} from './dist/language.js';
+import {score,filterFacilities,facilities} from '../dist/data.js';
+import {languages,normalizeLanguage,translate,translations} from '../dist/language.js';
 assert.equal(score([]),null);
 assert.equal(score([100,null,undefined,0]),50);
 assert.equal(filterFacilities({ward:'Ward unknown'}).length,facilities.filter(f=>!f.ward).length);
@@ -24,7 +24,7 @@ assert.equal(translate('Demo complaint JS-12345678 saved.','hi'),'डेमो �
 assert.equal(translate('Unrecognised text','hi'),'Unrecognised text');
 assert.equal(translate('constructor','hi'),'constructor');
 console.log('Passed: supported languages, invalid preference fallback, translation coverage, composed labels and dynamic messages.');
-const themeScript=readFileSync(new URL('./dist/theme.js',import.meta.url),'utf8');
+const themeScript=readFileSync(new URL('../dist/theme.js',import.meta.url),'utf8');
 for(const [stored,expected] of [[null,'light'],['"dark"','dark'],['"light"','light'],['"invalid"','light'],['broken JSON','light'],['{}','light']]){
   const document={documentElement:{dataset:{}}};
   runInNewContext(themeScript,{document,localStorage:{getItem:()=>stored}});
@@ -36,7 +36,7 @@ assert.equal(document.documentElement.dataset.theme,'light');
 console.log('Passed: saved theme restoration, default theme, invalid preferences and blocked storage.');
 
 // Run the actual amenity handler without touching a user's stored reviews.
-const appSource=readFileSync(new URL('./dist/app.js',import.meta.url),'utf8');
+const appSource=readFileSync(new URL('../dist/app.js',import.meta.url),'utf8');
 const detailSource=appSource.slice(appSource.indexOf('function facilityDetail('),appSource.indexOf('function analytics('));
 const elements={'#report-link':{},'#rating-form':{},'#amenity-reviews':{scrollIntoView(){}}};
 let card='',closed=false,saved=[],message='';

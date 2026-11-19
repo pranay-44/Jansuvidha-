@@ -3,7 +3,7 @@ import {readFile,readdir} from 'node:fs/promises';
 import {join,dirname} from 'node:path';
 import {fileURLToPath} from 'node:url';
 
-const root=dirname(fileURLToPath(import.meta.url));
+const root=dirname(dirname(fileURLToPath(import.meta.url)));
 const packaged=join(root,'android/app/src/main/assets/public');
 let count=0;
 async function check(folder=''){

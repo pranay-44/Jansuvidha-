@@ -14,7 +14,7 @@ Open the existing JanSuvidha project folder. From its terminal:
 
 ```powershell
 python bus-pipeline/pipeline.py
-node import-bus.mjs
+node scripts/import-bus.mjs
 npm test
 npm run bus:test
 npm run android:sync

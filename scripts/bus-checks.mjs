@@ -1,12 +1,12 @@
 import assert from 'node:assert/strict';
 import {readFileSync} from 'node:fs';
 import {runInNewContext} from 'node:vm';
-import {facilities,filterFacilities,score,busStops} from './dist/data.js';
+import {facilities,filterFacilities,score,busStops} from '../dist/data.js';
 import {parseBusStops} from './import-bus.mjs';
-import {busStopDetails} from './dist/bus-stops.js';
-import {translate} from './dist/language.js';
+import {busStopDetails} from '../dist/bus-stops.js';
+import {translate} from '../dist/language.js';
 const read=p=>readFileSync(new URL(p,import.meta.url),'utf8');
-const geo=JSON.parse(read('./public/data/bus/thane_bus_stops.geojson'));
+const geo=JSON.parse(read('../public/data/bus/thane_bus_stops.geojson'));
 assert.deepEqual(parseBusStops(geo),busStops);
 assert.ok(busStops.length>0);
 assert.equal(filterFacilities({type:'Bus stops'}).length,busStops.length);
@@ -27,7 +27,7 @@ for(const id of ['#thane-map','#map-message','#city-view','#facility-view','#cou
 const chips=['All amenities','Bus stops','Parks'].map(type=>({dataset:{type},classList:{toggle(){}},setAttribute(){}}));
 const main={innerHTML:'',querySelectorAll(selector){return selector==='[data-type]'?chips:selector==='input,select'?[elements.get('#search')]:[];}};
 const ctx={main,searchTimer:undefined,setTimeout:fn=>{pending.set(++timerId,fn);return timerId;},clearTimeout:id=>pending.delete(id),$:id=>{assert.ok(elements.has(id),id);return elements.get(id);},intro:()=>'',stats:()=>'',facilities,filterFacilities,score,translate,language:'en',esc,badge:()=>'',date:s=>s,busStopDetails,refreshLanguage(){},facilityDetail(){},createFacilityMap:()=>({update:items=>{mapped=items;mapUpdates++},cityView(){},showFacilities(){}})};
-const source=read('./dist/app.js');
+const source=read('../dist/app.js');
 runInNewContext(source.slice(source.indexOf('function mapPage()'),source.indexOf('function show('))+';mapPage();',ctx);
 chips[1].onclick();assert.equal(mapped.length,busStops.length);
 const visibleIds=()=>[...elements.get('#facilities').innerHTML.matchAll(/data-facility="([^"]+)"/g)].map(m=>m[1]);

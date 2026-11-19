@@ -35,7 +35,7 @@ The interface belongs to this project; base-map data and online tiles are provid
 
 Visible attribution and browser caching follow the [OpenStreetMap tile usage policy](https://operations.osmfoundation.org/policies/tiles/). No tile prefetch or offline city download is implemented. Public tile service availability is best-effort; for production traffic or offline maps, use a suitable hosted or self-hosted tile service and update the URL/attribution in `dist/facility-map.js`.
 
-`map-checks.mjs` tests the map adapter's coordinate mapping, filtered markers, selection, focus, empty results, tile-error messaging and cleanup without fetching tiles. It is not a visual browser test.
+`scripts/map-checks.mjs` tests the map adapter's coordinate mapping, filtered markers, selection, focus, empty results, tile-error messaging and cleanup without fetching tiles. It is not a visual browser test.
 
 Validation: `npm run check` covers repeat imports, ID-based updates, retained rows, CSV quoting, malformed values, unknown assessments and every photo path. `npm run analyze` summarizes the imported records; unassessed scores remain null.
 
@@ -54,7 +54,7 @@ Use Node.js 24 LTS and npm. Run `npm ci` after cloning to install the locked dep
 | `npm run android:open` | Open the native project in Android Studio |
 | `npm run android:run` | Deploy to a connected Android device or emulator |
 
-Dependencies: `@capacitor/core` and `@capacitor/android` provide Android packaging; `@capacitor/cli` manages the native project; ESLint, `@eslint/js` and `globals` provide code analysis; `simple-statistics` powers the Node-based sample data report in `analysis.mjs`. The report excludes missing assessments and uses the same rounded scores as the app. It does not read reports saved in browser storage. No Python environment is needed for this setup.
+Dependencies: `@capacitor/core` and `@capacitor/android` provide Android packaging; `@capacitor/cli` manages the native project; ESLint, `@eslint/js` and `globals` provide code analysis; `simple-statistics` powers the Node-based sample data report in `scripts/analysis.mjs`. The report excludes missing assessments and uses the same rounded scores as the app. It does not read reports saved in browser storage. No Python environment is needed for this setup.
 
 ### Android setup
 
@@ -90,7 +90,7 @@ At setup, npm reported eight moderate advisories in transitive development depen
 
 ## Files
 
-`dist/index.html` is the app shell; `dist/style.css` holds presentation; `dist/data.js` contains sample fixtures and pure scoring/filtering functions; `dist/app.js` contains the screen workflows. `server.mjs` starts the local Express/MySQL application. `api.mjs` implements authentication and permissions; `dist/account.js` contains account and complaint screens.
+`dist/index.html` is the app shell; `dist/style.css` holds presentation; `dist/data.js` contains sample fixtures and pure scoring/filtering functions; `dist/app.js` contains the screen workflows. `scripts/server.mjs` starts the local Express/MySQL application. `scripts/api.mjs` implements authentication and permissions; `dist/account.js` contains account and complaint screens.
 
 ## Next implementation
 

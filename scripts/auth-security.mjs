@@ -44,5 +44,5 @@ export function assertLocalPrototype() {
   if (process.env.NODE_ENV === 'production') throw Error('Production startup blocked: staff MFA enrollment, verification and recovery must be implemented first.');
   const host=process.env.HOST||'127.0.0.1';
   if(process.env.PRESENTATION_MODE==='true'&&process.env.NODE_ENV==='development'&&isPrivateIPv4(host))return;
-  if (!['127.0.0.1','localhost','::1'].includes(host)) throw Error('Use loopback or npm run presentation on a private network. Public deployment requires staff MFA.');
+  if (!['127.0.0.1','localhost','::1'].includes(host)) throw Error('Use a loopback address. Public deployment requires staff MFA.');
 }

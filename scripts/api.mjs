@@ -8,7 +8,7 @@ import {randomUUID,timingSafeEqual} from 'node:crypto';
 import {rows,transaction} from './db.mjs';
 import {token,digest,hashPassword,verifyPassword,validatePassword,email,text,fail,canAccess,transitions,isPrivateIPv4} from './auth-security.mjs';
 import {audit,hasMail,deliverToken} from './accounts.mjs';
-import {facilities} from './dist/data.js';
+import {facilities} from '../dist/data.js';
 
 const publicUser=u=>({id:u.id,role:u.role,username:u.username,name:u.name,official_email:u.official_email});
 const generic='Invalid credentials or account unavailable.';

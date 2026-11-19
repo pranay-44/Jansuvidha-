@@ -6,7 +6,7 @@ import {migrate} from './migrate.mjs';
 import {createApp} from './api.mjs';
 import {hashPassword,verifyPassword,username,validatePassword,assertLocalPrototype,digest} from './auth-security.mjs';
 import {issueToken} from './accounts.mjs';
-import {facilities} from './dist/data.js';
+import {facilities} from '../dist/data.js';
 
 const password='A long unique test passphrase 924!',newPassword='A different long test passphrase 743!';
 assert.equal(username(' Mixed_CASE '),'mixed_case');

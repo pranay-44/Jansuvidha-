@@ -25,7 +25,7 @@ export function parseBusStops(collection){
   });
 }
 export async function importBusStops(){
-  const source=new URL('./public/data/bus/',import.meta.url),dest=new URL('./dist/data/bus/',import.meta.url);
+  const source=new URL('../public/data/bus/',import.meta.url),dest=new URL('../dist/data/bus/',import.meta.url);
   const collection=JSON.parse(await readFile(new URL('thane_bus_stops.geojson',source),'utf8'));
   const stops=parseBusStops(collection);
   await mkdir(dest,{recursive:true});
