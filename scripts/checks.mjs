@@ -74,5 +74,5 @@ submit('Session review');
 assert.equal(message,'Storage unavailable');
 assert.match(elements['#amenity-reviews'].innerHTML,/Session review/);
 assert.ok(facilities.filter(f=>!f.id.includes('-N19-')&&f.type!=='Bus stops').every(f=>f.status==='verified'&&f.verified==='2026-11-15'&&f.verification_source.includes('Project owner')));
-assert.ok(facilities.filter(f=>f.id.includes('-N19-')).every(f=>f.status==='unverified'&&f.verified===null));
+assert.ok(facilities.filter(f=>f.id.includes('-N19-')).every(f=>f.status==='verified'&&f.verified==='2026-11-19'&&f.verification_basis==='project_owner_approval'));
 console.log('Passed: verified amenities, immediate reviews, isolation, restored reviews, safe text, invalid feedback and storage failure.');

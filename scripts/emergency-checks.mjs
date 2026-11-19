@@ -10,7 +10,8 @@ const seen=new Set();
 for(const r of batch.records){
  const f=facilities.find(f=>f.id===r.facility_id);assert.ok(f);
  if(r.action==='new_record'){
-  assert.equal(f.status,'unverified');assert.equal(f.verified,null);
+  assert.equal(f.status,'verified');assert.equal(f.verified,'2026-11-19');
+  assert.equal(f.verification_basis,'project_owner_approval');
   assert.equal(f.latitude===null||f.longitude===null,r.location_pending);
   if(r.coordinates)assert.deepEqual([f.latitude,f.longitude],r.coordinates);
  }

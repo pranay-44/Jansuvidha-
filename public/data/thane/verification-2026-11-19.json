@@ -1,0 +1,472 @@
+{
+  "date": "2026-11-19",
+  "basis": "Project owner approval; not a new field survey",
+  "counts": {
+    "medical_facility": 66,
+    "public_toilet": 18,
+    "park": 3,
+    "drinking_water": 5
+  },
+  "records": [
+    {
+      "id": "THN-MED-N19-D01-001",
+      "name": "Balaji Medical",
+      "type": "medical_facility"
+    },
+    {
+      "id": "THN-MED-N19-D01-003",
+      "name": "Shreenagar Medical and General Stores",
+      "type": "medical_facility"
+    },
+    {
+      "id": "THN-MED-N19-D01-005",
+      "name": "Mavis Medical and General Stores",
+      "type": "medical_facility"
+    },
+    {
+      "id": "THN-MED-N19-D01-007",
+      "name": "Life Line Medical and General Stores",
+      "type": "medical_facility"
+    },
+    {
+      "id": "THN-MED-N19-D01-009",
+      "name": "Zeno Health - Shree Nagar",
+      "type": "medical_facility"
+    },
+    {
+      "id": "THN-MED-N19-D01-011",
+      "name": "Shiv Medical and General Stores",
+      "type": "medical_facility"
+    },
+    {
+      "id": "THN-MED-N19-D01-013",
+      "name": "Madan Medical and General Stores",
+      "type": "medical_facility"
+    },
+    {
+      "id": "THN-MED-N19-D01-015",
+      "name": "Matoshree Gangubai Sambhaji Shinde Hospital",
+      "type": "medical_facility"
+    },
+    {
+      "id": "THN-MED-N19-D01-017",
+      "name": "Ramdev Medical",
+      "type": "medical_facility"
+    },
+    {
+      "id": "THN-MED-N19-D01-019",
+      "name": "Generic Aadhaar - Kisan Nagar",
+      "type": "medical_facility"
+    },
+    {
+      "id": "THN-MED-N19-D01-021",
+      "name": "Girika Drug House",
+      "type": "medical_facility"
+    },
+    {
+      "id": "THN-MED-N19-D01-023",
+      "name": "Ambika Medical and General Stores",
+      "type": "medical_facility"
+    },
+    {
+      "id": "THN-MED-N19-D01-025",
+      "name": "Ashok Medical Stores",
+      "type": "medical_facility"
+    },
+    {
+      "id": "THN-MED-N19-D01-027",
+      "name": "National Medical and General Stores",
+      "type": "medical_facility"
+    },
+    {
+      "id": "THN-MED-N19-D01-029",
+      "name": "Sanjivani Medical",
+      "type": "medical_facility"
+    },
+    {
+      "id": "THN-MED-N19-D01-031",
+      "name": "Yashodhan Super Speciality Hospital",
+      "type": "medical_facility"
+    },
+    {
+      "id": "THN-MED-N19-D01-033",
+      "name": "Apollo Pharmacy - 33 Ahinsa Marg",
+      "type": "medical_facility"
+    },
+    {
+      "id": "THN-MED-N19-D01-039",
+      "name": "Wellness Forever - Devdaya Nagar",
+      "type": "medical_facility"
+    },
+    {
+      "id": "THN-MED-N19-D01-041",
+      "name": "New Prime Chemist",
+      "type": "medical_facility"
+    },
+    {
+      "id": "THN-MED-N19-D01-043",
+      "name": "Wellness Forever - Samata Nagar",
+      "type": "medical_facility"
+    },
+    {
+      "id": "THN-MED-N19-D01-045",
+      "name": "Tripti Hospital",
+      "type": "medical_facility"
+    },
+    {
+      "id": "THN-MED-N19-D01-047",
+      "name": "Yashodhan Medico",
+      "type": "medical_facility"
+    },
+    {
+      "id": "THN-MED-N19-D01-049",
+      "name": "Vedant Sahyadri Chemist and Druggist",
+      "type": "medical_facility"
+    },
+    {
+      "id": "THN-MED-N19-D01-051",
+      "name": "Vedant Hospital",
+      "type": "medical_facility"
+    },
+    {
+      "id": "THN-MED-N19-D01-053",
+      "name": "Krishna Medico",
+      "type": "medical_facility"
+    },
+    {
+      "id": "THN-MED-N19-D01-055",
+      "name": "Sahyadri Pharmacy - Vartak Nagar",
+      "type": "medical_facility"
+    },
+    {
+      "id": "THN-MED-N19-D01-057",
+      "name": "Kamal Medical and General Stores",
+      "type": "medical_facility"
+    },
+    {
+      "id": "THN-MED-N19-D01-059",
+      "name": "A One Medico",
+      "type": "medical_facility"
+    },
+    {
+      "id": "THN-WC-N19-D02-001",
+      "name": "Public toilet - Unnathi Gardens",
+      "type": "public_toilet"
+    },
+    {
+      "id": "THN-WC-N19-D02-003",
+      "name": "Public toilet - Perera Nagar",
+      "type": "public_toilet"
+    },
+    {
+      "id": "THN-WC-N19-D02-005",
+      "name": "A/C Public Toilet - Pokhran Road No. 1",
+      "type": "public_toilet"
+    },
+    {
+      "id": "THN-WC-N19-D02-007",
+      "name": "Public toilet - Shastri Nagar",
+      "type": "public_toilet"
+    },
+    {
+      "id": "THN-WC-N19-D02-009",
+      "name": "Public toilet - Shastri Nagar",
+      "type": "public_toilet"
+    },
+    {
+      "id": "THN-WC-N19-D02-011",
+      "name": "Public toilet - Ahinsa Marg, Savarkar Nagar",
+      "type": "public_toilet"
+    },
+    {
+      "id": "THN-WC-N19-D02-013",
+      "name": "Public toilet - Shastri Nagar",
+      "type": "public_toilet"
+    },
+    {
+      "id": "THN-WC-N19-D02-015",
+      "name": "Public toilet - Shastri Nagar",
+      "type": "public_toilet"
+    },
+    {
+      "id": "THN-WC-N19-D02-017",
+      "name": "Public toilet - Location pending",
+      "type": "public_toilet"
+    },
+    {
+      "id": "THN-MED-N19-D03-001",
+      "name": "Sanjivani Multispeciality Hospital",
+      "type": "medical_facility"
+    },
+    {
+      "id": "THN-MED-N19-D03-003",
+      "name": "Akruti Health City Hospital",
+      "type": "medical_facility"
+    },
+    {
+      "id": "THN-MED-N19-D03-005",
+      "name": "Prince Medical and General Store",
+      "type": "medical_facility"
+    },
+    {
+      "id": "THN-MED-N19-D03-007",
+      "name": "Aarya Hospital",
+      "type": "medical_facility"
+    },
+    {
+      "id": "THN-MED-N19-D03-009",
+      "name": "Unnati Hospital ICU and Trauma Care Center",
+      "type": "medical_facility"
+    },
+    {
+      "id": "THN-MED-N19-D03-013",
+      "name": "Navjeevan Hospital",
+      "type": "medical_facility"
+    },
+    {
+      "id": "THN-MED-N19-D03-015",
+      "name": "Friends Chemist",
+      "type": "medical_facility"
+    },
+    {
+      "id": "THN-MED-N19-D03-017",
+      "name": "Perfect 32 Speciality Dental Care Clinic",
+      "type": "medical_facility"
+    },
+    {
+      "id": "THN-MED-N19-D03-019",
+      "name": "Wellness Forever - Dhokali",
+      "type": "medical_facility"
+    },
+    {
+      "id": "THN-MED-N19-D03-021",
+      "name": "Superspeciality Eye Hospital - Everest World",
+      "type": "medical_facility"
+    },
+    {
+      "id": "THN-MED-N19-D03-023",
+      "name": "Smylift Dental / Dr. Deherkar Dental Clinic",
+      "type": "medical_facility"
+    },
+    {
+      "id": "THN-MED-N19-D03-025",
+      "name": "Shree Nakoda Medicals",
+      "type": "medical_facility"
+    },
+    {
+      "id": "THN-MED-N19-D03-027",
+      "name": "Apollo Pharmacy - Highland Park",
+      "type": "medical_facility"
+    },
+    {
+      "id": "THN-MED-N19-D03-029",
+      "name": "Sangam Medical - Yashaswi Nagar",
+      "type": "medical_facility"
+    },
+    {
+      "id": "THN-MED-N19-D03-031",
+      "name": "Dhanwantari Hospital",
+      "type": "medical_facility"
+    },
+    {
+      "id": "THN-MED-N19-D03-033",
+      "name": "Sangam Medical - Subhash Nagar",
+      "type": "medical_facility"
+    },
+    {
+      "id": "THN-MED-N19-D03-035",
+      "name": "Dr. Clove Dental Clinic",
+      "type": "medical_facility"
+    },
+    {
+      "id": "THN-MED-N19-D03-037",
+      "name": "Jeevan Care Hospital",
+      "type": "medical_facility"
+    },
+    {
+      "id": "THN-MED-N19-D03-040",
+      "name": "Apollo Pharmacy - Waghbil",
+      "type": "medical_facility"
+    },
+    {
+      "id": "THN-MED-N19-D03-042",
+      "name": "Zeno Health - Kavesar",
+      "type": "medical_facility"
+    },
+    {
+      "id": "THN-MED-N19-D03-044",
+      "name": "Naira Dental Care / Optic Eye Plus",
+      "type": "medical_facility"
+    },
+    {
+      "id": "THN-MED-N19-D03-046",
+      "name": "Dhanvantari Dental and Ayurvedic Clinic",
+      "type": "medical_facility"
+    },
+    {
+      "id": "THN-MED-N19-D03-048",
+      "name": "Healthcare Medico",
+      "type": "medical_facility"
+    },
+    {
+      "id": "THN-MED-N19-D03-050",
+      "name": "Siddhivinayak Nursing Home Hospital",
+      "type": "medical_facility"
+    },
+    {
+      "id": "THN-MED-N19-D03-052",
+      "name": "Samarth Krupa Medical and General Stores",
+      "type": "medical_facility"
+    },
+    {
+      "id": "THN-MED-N19-D03-054",
+      "name": "Gore Optician",
+      "type": "medical_facility"
+    },
+    {
+      "id": "THN-MED-N19-D03-056",
+      "name": "Apollo Pharmacy - Kasarvadavali",
+      "type": "medical_facility"
+    },
+    {
+      "id": "THN-MED-N19-D03-058",
+      "name": "Zeno Health - Kasarvadavali",
+      "type": "medical_facility"
+    },
+    {
+      "id": "THN-MED-N19-D03-060",
+      "name": "Prerna Eye Hospital / Priya Diagnostic Centre",
+      "type": "medical_facility"
+    },
+    {
+      "id": "THN-MED-N19-D03-062",
+      "name": "Dr. Pallavi Eye and Retina Clinic and Laser Centre",
+      "type": "medical_facility"
+    },
+    {
+      "id": "THN-MED-N19-D03-064",
+      "name": "Solaris Hospital",
+      "type": "medical_facility"
+    },
+    {
+      "id": "THN-MED-N19-D03-067",
+      "name": "Fortune Plus Hospital",
+      "type": "medical_facility"
+    },
+    {
+      "id": "THN-MED-N19-D03-069",
+      "name": "Jijai Women's Hospital",
+      "type": "medical_facility"
+    },
+    {
+      "id": "THN-MED-N19-D03-071",
+      "name": "Dhanlaxmi Chemist and Druggist",
+      "type": "medical_facility"
+    },
+    {
+      "id": "THN-MED-N19-D03-073",
+      "name": "Rakesh Medical",
+      "type": "medical_facility"
+    },
+    {
+      "id": "THN-MED-N19-D03-075",
+      "name": "Pet Clinic - Mahavir Kalpavruksha",
+      "type": "medical_facility"
+    },
+    {
+      "id": "THN-MED-N19-D03-077",
+      "name": "Disha Eye Hospital / Dr. Parab Hospital",
+      "type": "medical_facility"
+    },
+    {
+      "id": "THN-MED-N19-D03-079",
+      "name": "Dr. Jyotsna Jagtap ENT Hospital",
+      "type": "medical_facility"
+    },
+    {
+      "id": "THN-WC-N19-D04-001",
+      "name": "Public toilet - Saikrupa, Purna",
+      "type": "public_toilet"
+    },
+    {
+      "id": "THN-WC-N19-D04-004",
+      "name": "Public toilet - Ghodbunder Road, Sai Nagar",
+      "type": "public_toilet"
+    },
+    {
+      "id": "THN-WC-N19-D04-006",
+      "name": "Public toilet - Mahalaxmi Tower, Kasarvadavali",
+      "type": "public_toilet"
+    },
+    {
+      "id": "THN-WC-N19-D04-008",
+      "name": "Public toilet - Kasarvadavali Road",
+      "type": "public_toilet"
+    },
+    {
+      "id": "THN-WC-N19-D04-011",
+      "name": "Public toilet - Vihang Valley Phase 1",
+      "type": "public_toilet"
+    },
+    {
+      "id": "THN-WC-N19-D04-013",
+      "name": "Public toilet - Haware City Road",
+      "type": "public_toilet"
+    },
+    {
+      "id": "THN-WC-N19-D04-015",
+      "name": "Public toilet - Near Tieten Medicity Hospital",
+      "type": "public_toilet"
+    },
+    {
+      "id": "THN-WC-N19-D04-017",
+      "name": "Public toilet - Kolshet Naka",
+      "type": "public_toilet"
+    },
+    {
+      "id": "THN-WC-N19-D04-019",
+      "name": "Public toilet - HP petrol pump, Kolshet Road",
+      "type": "public_toilet"
+    },
+    {
+      "id": "THN-PARK-N19-D05-001",
+      "name": "Garden - Balkum Road",
+      "type": "park"
+    },
+    {
+      "id": "THN-PARK-N19-D05-003",
+      "name": "Open ground - Kavesar",
+      "type": "park"
+    },
+    {
+      "id": "THN-PARK-N19-D05-005",
+      "name": "Open ground - Opposite Atlas Towers",
+      "type": "park"
+    },
+    {
+      "id": "THN-WAT-N19-D06-001",
+      "name": "Drinking water point - Saikrupa, Purna",
+      "type": "drinking_water"
+    },
+    {
+      "id": "THN-WAT-N19-D06-004",
+      "name": "Drinking water point - Ashapura Mandir",
+      "type": "drinking_water"
+    },
+    {
+      "id": "THN-WAT-N19-D06-006",
+      "name": "Drinking water point - Petrol pump, Ghodbunder Road",
+      "type": "drinking_water"
+    },
+    {
+      "id": "THN-WAT-N19-D06-008",
+      "name": "Drinking water point - Kasarvadavali Road",
+      "type": "drinking_water"
+    },
+    {
+      "id": "THN-WAT-N19-D06-010",
+      "name": "Drinking water point - HP petrol pump, Kolshet Road",
+      "type": "drinking_water"
+    }
+  ]
+}
