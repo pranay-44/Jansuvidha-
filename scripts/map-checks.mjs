@@ -18,7 +18,9 @@ const map = {
 };
 const layer = { addTo() { return this; }, clearLayers() { calls.markers = []; }, removeLayer(marker) { calls.markers=calls.markers.filter(m=>m!==marker); } };
 const tiles = { addTo() { return this; }, on(event, handler) { calls.handlers[event] = handler; return this; } };
+let canvasMethods;
 const L = {
+  Canvas:{prototype:{_updateCircle(){}},extend(methods){canvasMethods=methods;return class {};}},
   map: (container,options) => {assert.equal(options.preferCanvas,true);return map;}, layerGroup: () => layer, latLngBounds: points => points,
   tileLayer: (url, options) => { calls.tiles = { url, options }; return tiles; },
   divIcon: options => options,
@@ -32,7 +34,7 @@ const L = {
     return marker;
   },
 };
-const context = { L, document: { createElement: () => ({}) }, ResizeObserver: class {
+const context = { L, Path2D:class {constructor(path){this.path=path;}}, document: { createElement: () => ({}) }, ResizeObserver: class {
   observe() {} disconnect() { calls.disconnected = true; }
 } };
 const code = readFileSync(new URL('../dist/facility-map.js', import.meta.url),'utf8').replace(/^import .*;\r?\n/, '').replace('export function', 'function');
@@ -46,6 +48,22 @@ located.forEach((f, i) => {
   assert.equal(calls.markers[i].point[0], f.latitude);
   assert.equal(calls.markers[i].point[1], f.longitude);
 });
+const typeIcons=new Map();
+located.forEach((f,i)=>{
+  const options=calls.markers[i].options;
+  assert.ok(options.renderer);
+  assert.ok(options.amenityIcon.path);
+  typeIcons.set(f.type,options.amenityIcon.path);
+  if(f.type==='Bus stops')assert.equal(options.fillColor,f.on_highway?'#dc2626':'#2563eb');
+});
+assert.equal(new Set(typeIcons.values()).size,6,'Each category needs a distinct symbol');
+let draws=0,saves=0,restores=0;
+const canvas={_drawing:true,_ctx:{save(){saves++},restore(){restores++},translate(){},stroke(){draws++}}};
+const point={_empty:()=>false,_point:{x:10,y:20},options:calls.markers[0].options};
+canvasMethods._updateCircle.call(canvas,point);
+assert.equal(draws,1);assert.equal(saves,restores);
+canvas._drawing=false;canvasMethods._updateCircle.call(canvas,point);assert.equal(draws,1);
+canvas._drawing=true;point._empty=()=>true;canvasMethods._updateCircle.call(canvas,point);assert.equal(draws,1);
 const firstMarker=calls.markers[0];
 const allocated=calls.allocations;
 controller.update(facilities);

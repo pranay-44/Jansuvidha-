@@ -97,3 +97,12 @@ At setup, npm reported eight moderate advisories in transitive development depen
 Confirm wards, entrance coordinates and scoring methodology for the Thane pilot. The requested Node/MySQL authentication, complaint permissions and auditing are implemented. Add production staff MFA and evidence uploads before deployment. React/Vite migration can accompany that integration; the current interface uses browser modules with bundled Leaflet. Add full type-specific checklists, validated scoring/version history, OTP, GPS, notifications, staff-only notes, SLA handling, moderation, PWA/offline support and staff/analytics translations. Only the account/complaint features documented in AUTH.md are backed by active server APIs.
 
 Local storage is a single-device demo convenience, not secure multi-user persistence. Do not enter real personal information. Google Fonts is optional; system fonts work if unavailable.
+
+
+### Bus listing policy and category symbols — 19 November 2026
+
+The application importer excludes OSM-BUS-13195950511 (Infinity IT park main gate) and OSM-BUS-13195950512 (N.N.P plot 1,2). Raw OSM research exports remain unchanged. These exclusions persist when the importer runs again.
+
+At the project owner's request, a bus stop is marked Verified unless it has BOTH no recorded name and no recorded route association. This is project listing approval, not evidence of a field survey. The importer records verification_basis accordingly. Current app totals: 1,171 stops, 1,104 Verified, 67 Unverified.
+
+Highway bus stops use red (#dc2626); other bus stops use blue (#2563eb), independent of verification. All six amenity categories have distinct vector pictograms drawn on Leaflet's shared canvas. The map legend identifies them. Marker reuse, debounced search and 40-card pagination are retained.

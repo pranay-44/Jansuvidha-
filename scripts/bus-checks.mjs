@@ -8,7 +8,22 @@ import {translate} from '../dist/language.js';
 const read=p=>readFileSync(new URL(p,import.meta.url),'utf8');
 const geo=JSON.parse(read('../public/data/bus/thane_bus_stops.geojson'));
 assert.deepEqual(parseBusStops(geo),busStops);
-assert.ok(busStops.length>0);
+assert.equal(busStops.length,geo.features.length-2);
+assert.ok(!busStops.some(s=>['OSM-BUS-13195950511','OSM-BUS-13195950512'].includes(s.id)));
+for(const stop of busStops){
+ const original=geo.features.find(f=>f.properties.id===stop.id).properties;
+ const expected=Boolean(original.name?.trim()||original.routes_known);
+ assert.equal(Boolean(stop.verified),expected);
+ assert.equal(stop.status,expected?'verified':'unverified');
+ assert.equal(stop.verification_basis,expected?'project_owner_rule':'unnamed_and_no_route_association');
+}
+// Exercise all four combinations, regardless of current OSM coverage.
+for(const name of ['', 'Named stop'])for(const routes of [[],['1']]){
+ const feature=structuredClone(geo.features[0]);
+ Object.assign(feature.properties,{name,routes,routes_known:routes.length>0});
+ const [stop]=parseBusStops({type:'FeatureCollection',features:[feature]});
+ assert.equal(Boolean(stop.verified),Boolean(name||routes.length));
+}
 assert.equal(filterFacilities({type:'Bus stops'}).length,busStops.length);
 const known=busStops.find(s=>s.routes_known),unknown=busStops.find(s=>!s.routes_known);
 const esc=s=>String(s??'').replace(/[&<>"']/g,c=>({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[c]));

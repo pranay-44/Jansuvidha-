@@ -3,6 +3,8 @@ import {readFile,writeFile,mkdir,cp} from 'node:fs/promises';
 import {fileURLToPath} from 'node:url';
 import {resolve} from 'node:path';
 
+// Project exclusions persist across data refreshes; raw OSM research data is retained.
+const excludedStops=new Set(['OSM-BUS-13195950511','OSM-BUS-13195950512']);
 export function parseBusStops(collection){
   assert.equal(collection.type,'FeatureCollection');
   const ids=new Set();
@@ -14,15 +16,19 @@ export function parseBusStops(collection){
     assert.ok(Array.isArray(p.routes)&&p.routes.every(r=>typeof r==='string'));
     assert.equal(p.routes_known,p.routes.length>0);
     assert.ok(Array.isArray(p.route_details));
+    // Owner rule (2026-11-19): only unnamed stops without route associations remain unverified.
+    const verified=Boolean(p.name?.trim()||p.routes_known);
     // Keep research-only routes, memberships and merge metadata in GeoJSON, not browser memory.
     return {id:p.id,facility_id:p.id,name:p.name||'Unnamed bus stop',
       address:p.address,address_source:p.address_source,heading:p.heading,heading_source:p.heading_source,
       on_highway:p.on_highway,routes_known:p.routes_known,
       latitude,longitude,type:'Bus stops',amenity_type:'bus_stop',amenity_subtype:'bus_stop',
-      ward:null,locality:p.road||'',status:'unverified',field_status:'unverified',verified:null,verified_at:'',
+      ward:null,locality:p.road||'',status:verified?'verified':'unverified',field_status:verified?'verified':'unverified',
+      verified:verified?'2026-11-19':null,verified_at:verified?'2026-11-19':'',
+      verification_basis:verified?'project_owner_rule':'unnamed_and_no_route_association',
       hours:null,accessible:null,water:null,free:null,scores:[],photos:[],cover_photo_path:'',photo_count:0,
       location_source:'OpenStreetMap',source_url:`https://www.openstreetmap.org/node/${p.osm_node_id}`};
-  });
+  }).filter(stop=>!excludedStops.has(stop.id));
 }
 export async function importBusStops(){
   const source=new URL('../public/data/bus/',import.meta.url),dest=new URL('../dist/data/bus/',import.meta.url);
