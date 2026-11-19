@@ -1,3 +1,19 @@
+## Bus-stop display simplified
+
+Removed route lists, route filtering and unknown-route messages from the web and Android source. All 1,173 bus stops remain, with names, addresses and estimated directions. Source route data remains available to the ETL for duplicate matching and research. Rebuild/install the APK after sync to update a device.
+
+## Bus stops update — 19 November 2026
+
+Added 1,173 OpenStreetMap bus stops within the configurable Thane-area research bounding box. The combined app now contains 1,440 amenities. Bus cards display name, address/nearest-road estimate, heading and known routes instead of photos. The Bus stops category has a route selector; highway-proximity and other bus stops use distinct colours. Existing emergency contacts remain intact.
+
+Validation passed: the project test suite, 11 Python pipeline tests and a 615-file Android asset comparison. All 1,193 original OSM stop nodes are accounted for exactly once after 20 merges. Cached inputs, exports and a standalone HTML demo are available; see bus-pipeline/README.md. Browser layout verification was blocked by the in-app browser's local connection failure. Rebuild and install the APK to update an existing device. No hosted deployment or APK installation was performed.
+
+## 19 November 2026 update
+
+The shared web source and Android assets now include 267 amenities (261 mapped, six awaiting coordinates) and 590 photos. This update adds 92 unverified facilities from six PDFs and photos for two existing facilities; the prior 175 owner-verified records retain their verification. The map toolbar now has a wider search and red Emergency contact dropdown with five services and six separate `tel:` links. Hindi and Marathi labels are included.
+
+`npm test` covers this import and menu. `npm run android:sync` passed the byte-for-byte asset check. This updates Android project assets; rebuild/install the APK to update an existing phone installation. A live phone-dialer handoff was not exercised. The in-app browser could not reach the local preview server.
+
 # Android update — 16 November 2026
 
 The Android project uses the same `dist/` source as the web app. Its bundled files have been synced and compared byte-for-byte against that source.

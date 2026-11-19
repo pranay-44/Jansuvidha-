@@ -19,7 +19,7 @@ assert.throws(() => parseFacilities(header + row + row), /duplicate facility_id/
 assert.throws(() => parseFacilities(header + row.replace('0,19,72,', '1,19,72,../photo.jpg')), /Unsafe photo path/);
 assert.throws(() => parseFacilities(header + row.replace(',19,', ',not-a-number,')), /Invalid latitude/);
 assert.equal(parseFacilities(header + row.replace('Name, with a comma', 'Name\nwith a comma'))[0].name, 'Name\nwith a comma');
-assert.equal(facilities.length, imported.length);
+assert.equal(facilities.filter(f=>f.type!=='Bus stops').length, imported.length);
 assert.ok(facilities.every(f => f.id === f.facility_id && !/^F\d+$/.test(f.id)));
 assert.equal(filterFacilities({query: incoming[0].facility_id}).length, 1);
 for (const f of facilities) {

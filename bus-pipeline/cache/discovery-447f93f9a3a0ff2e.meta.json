@@ -1,0 +1,1 @@
+{"query": "[out:json][timeout:90];relation[route=bus](19.12,72.88,19.34,73.08);out tags;", "endpoint": "https://overpass-api.de/api/interpreter", "imported_from": "initial-discovery.json"}

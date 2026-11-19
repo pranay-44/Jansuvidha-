@@ -1,0 +1,12 @@
+{
+  "total_stops": 1173,
+  "stops_on_highways": 472,
+  "stops_without_routes": 680,
+  "stops_without_name": 129,
+  "source_nodes": 1193,
+  "merged_nodes": 20,
+  "nearby_pairs_kept_separate": 474,
+  "tmt_relations": 75,
+  "selected_relations": 257,
+  "unknown_headings": 176
+}

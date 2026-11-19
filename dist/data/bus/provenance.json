@@ -1,0 +1,49 @@
+{
+  "generated_at": "2026-11-19T11:42:34.236058+00:00",
+  "config": {
+    "bbox": [
+      19.12,
+      72.88,
+      19.34,
+      73.08
+    ],
+    "merge_distance_m": 6,
+    "stop_position_attach_m": 15,
+    "road_snap_distance_m": 45,
+    "minimum_side_offset_m": 1.5,
+    "road_ambiguity_m": 1,
+    "heading_tolerance_degrees": 30,
+    "highway_distance_m": 30,
+    "review_distance_m": 40,
+    "highway_classes": [
+      "trunk",
+      "primary"
+    ],
+    "road_classes": [
+      "motorway",
+      "motorway_link",
+      "trunk",
+      "trunk_link",
+      "primary",
+      "primary_link",
+      "secondary",
+      "secondary_link",
+      "tertiary",
+      "tertiary_link",
+      "residential",
+      "unclassified",
+      "service",
+      "living_street"
+    ],
+    "tmt_pattern": "thane|t[. ]*m[. ]*t",
+    "include_other_operators": true,
+    "endpoints": [
+      "https://overpass-api.de/api/interpreter",
+      "https://overpass.kumi.systems/api/interpreter"
+    ],
+    "request_timeout_seconds": 210,
+    "retries": 3
+  },
+  "license": "OpenStreetMap contributors, ODbL 1.0",
+  "coverage": "All eligible mapped OSM nodes in the configured bounding box; not a complete official city inventory."
+}

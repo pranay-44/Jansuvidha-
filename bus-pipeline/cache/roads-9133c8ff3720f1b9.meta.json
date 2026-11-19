@@ -1,0 +1,1 @@
+{"query": "[out:json][timeout:180];way[highway~\"^(motorway|motorway_link|trunk|trunk_link|primary|primary_link|secondary|secondary_link|tertiary|tertiary_link|residential|unclassified|service|living_street)$\"](19.118,72.878,19.342,73.082);out geom;", "endpoint": "https://overpass-api.de/api/interpreter", "imported_from": "roads.json"}

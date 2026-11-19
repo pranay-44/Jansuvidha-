@@ -1,0 +1,4119 @@
+{
+  "tag_counts": [
+    {
+      "network": "",
+      "operator": "BEST Undertaking",
+      "count": 1
+    },
+    {
+      "network": "",
+      "operator": "",
+      "count": 2
+    },
+    {
+      "network": "LTD",
+      "operator": "BEST",
+      "count": 2
+    },
+    {
+      "network": "Thane Municipal Transport",
+      "operator": "Thane Municipal Transport",
+      "count": 60
+    },
+    {
+      "network": "Thane Municipal Transport",
+      "operator": "Thane Muncipal Transport",
+      "count": 15
+    },
+    {
+      "network": "BEST",
+      "operator": "The Brihanmumbai Electric Supply & Transport Undertaking",
+      "count": 177
+    }
+  ],
+  "relations": [
+    {
+      "type": "relation",
+      "id": 1530764,
+      "tags": {
+        "name": "AS 13",
+        "operator": "BEST Undertaking",
+        "ref": "A 13",
+        "route": "bus",
+        "type": "route"
+      }
+    },
+    {
+      "type": "relation",
+      "id": 5682478,
+      "tags": {
+        "name": "iit",
+        "route": "bus",
+        "type": "route"
+      }
+    },
+    {
+      "type": "relation",
+      "id": 6903687,
+      "tags": {
+        "from": "Vikhroli Depot",
+        "name": "500 LTD Airoli Bus Station",
+        "network": "LTD",
+        "operator": "BEST",
+        "ref": "500",
+        "route": "bus",
+        "to": "Airoli Bus Station",
+        "type": "route"
+      }
+    },
+    {
+      "type": "relation",
+      "id": 6920651,
+      "tags": {
+        "from": "Airoli Bus Station",
+        "name": "500 LTD Vikhroli Depot",
+        "network": "LTD",
+        "operator": "BEST",
+        "ref": "500",
+        "route": "bus",
+        "to": "Vikhroli Depot",
+        "type": "route"
+      }
+    },
+    {
+      "type": "relation",
+      "id": 12794472,
+      "tags": {
+        "from": "Tikujini Wadi",
+        "name": "Bus 56: Tikujini Wadi → Thane Station (W)",
+        "network": "Thane Municipal Transport",
+        "network:en": "Thane Municipal Transport",
+        "network:hi": "ठाणे नगरपालिका परिवहन",
+        "network:wikidata": "Q7710243",
+        "operator": "Thane Municipal Transport",
+        "public_transport:version": "2",
+        "ref": "56",
+        "route": "bus",
+        "to": "Thane Station (W)",
+        "type": "route"
+      }
+    },
+    {
+      "type": "relation",
+      "id": 12795911,
+      "tags": {
+        "from": "Thane Station (W)",
+        "name": "Bus 56: Thane Station (W) → Tikujini Wadi",
+        "network": "Thane Municipal Transport",
+        "network:en": "Thane Municipal Transport",
+        "network:hi": "ठाणे नगरपालिका परिवहन",
+        "network:wikidata": "Q7710243",
+        "operator": "Thane Municipal Transport",
+        "public_transport:version": "2",
+        "ref": "56",
+        "route": "bus",
+        "to": "Tikujini Wadi",
+        "type": "route"
+      }
+    },
+    {
+      "type": "relation",
+      "id": 12796449,
+      "tags": {
+        "from": "Pawar Nagar",
+        "name": "Bus 12: Pawar Nagar → Thane Station (W)",
+        "network": "Thane Municipal Transport",
+        "network:en": "Thane Municipal Transport",
+        "network:hi": "ठाणे नगरपालिका परिवहन",
+        "network:wikidata": "Q7710243",
+        "operator": "Thane Muncipal Transport",
+        "public_transport:version": "2",
+        "ref": "12",
+        "route": "bus",
+        "to": "Thane Station (W)",
+        "type": "route"
+      }
+    },
+    {
+      "type": "relation",
+      "id": 12796528,
+      "tags": {
+        "from": "Thane Station (W)",
+        "name": "Bus 12: Thane Station (W) → Pawar Nagar",
+        "network": "Thane Municipal Transport",
+        "network:en": "Thane Municipal Transport",
+        "network:hi": "ठाणे नगरपालिका परिवहन",
+        "network:wikidata": "Q7710243",
+        "operator": "Thane Municipal Transport",
+        "public_transport:version": "2",
+        "ref": "12",
+        "route": "bus",
+        "to": "Pawar Nagar",
+        "type": "route"
+      }
+    },
+    {
+      "type": "relation",
+      "id": 12798049,
+      "tags": {
+        "from": "Thane Station (W)",
+        "name": "Bus 62: Thane Station (W) → Brahmand",
+        "network": "Thane Municipal Transport",
+        "network:en": "Thane Municipal Transport",
+        "network:hi": "ठाणे नगरपालिका परिवहन",
+        "network:wikidata": "Q7710243",
+        "network:wikipedia": "hi:ठाणे नगरपालिका परिवहन",
+        "operator": "Thane Municipal Transport",
+        "public_transport:version": "2",
+        "ref": "62",
+        "route": "bus",
+        "to": "Brahmand",
+        "type": "route"
+      }
+    },
+    {
+      "type": "relation",
+      "id": 12798050,
+      "tags": {
+        "from": "Hiranandani Meadows",
+        "name": "Bus 59: Hiranandani Meadows→ Thane Station (W)",
+        "network": "Thane Municipal Transport",
+        "network:en": "Thane Municipal Transport",
+        "network:hi": "ठाणे नगरपालिका परिवहन",
+        "network:wikidata": "Q7710243",
+        "operator": "Thane Muncipal Transport",
+        "public_transport:version": "2",
+        "ref": "59",
+        "route": "bus",
+        "to": "Thane Station (W)",
+        "type": "route"
+      }
+    },
+    {
+      "type": "relation",
+      "id": 12798051,
+      "tags": {
+        "from": "Thane Station (W)",
+        "name": "Bus 59 Thane Station (W) → Hiranandani Meadows",
+        "network": "Thane Municipal Transport",
+        "network:en": "Thane Municipal Transport",
+        "network:hi": "ठाणे नगरपालिका परिवहन",
+        "network:wikidata": "Q7710243",
+        "operator": "Thane Municipal Transport",
+        "public_transport:version": "2",
+        "ref": "59",
+        "route": "bus",
+        "to": "Hiranandani Meadows",
+        "type": "route"
+      }
+    },
+    {
+      "type": "relation",
+      "id": 12802331,
+      "tags": {
+        "from": "Vrindavan Society",
+        "name": "Bus 6: Vrindavan Society →Wagle Bus Depot",
+        "network": "Thane Municipal Transport",
+        "network:en": "Thane Municipal Transport",
+        "network:hi": "ठाणे नगरपालिका परिवहन",
+        "network:wikidata": "Q7710243",
+        "operator": "Thane Municipal Transport",
+        "public_transport:version": "2",
+        "ref": "6",
+        "route": "bus",
+        "to": "Wagle Bus Depot",
+        "type": "route",
+        "via": "Thane Station (W)"
+      }
+    },
+    {
+      "type": "relation",
+      "id": 12802343,
+      "tags": {
+        "from": "Brahmand",
+        "name": "Bus 62: Brahmand →Thane Station (W)",
+        "network": "Thane Municipal Transport",
+        "network:en": "Thane Municipal Transport",
+        "network:hi": "ठाणे नगरपालिका परिवहन",
+        "network:wikidata": "Q7710243",
+        "operator": "Thane Muncipal Transport",
+        "public_transport:version": "2",
+        "ref": "62",
+        "route": "bus",
+        "to": "Thane Station (W)",
+        "type": "route"
+      }
+    },
+    {
+      "type": "relation",
+      "id": 12802876,
+      "tags": {
+        "from": "Wagle Bus Depot",
+        "name": "Bus 6: Wagle Bus Depot → Vrindavan Society",
+        "network": "Thane Municipal Transport",
+        "network:en": "Thane Municipal Transport",
+        "network:hi": "ठाणे नगरपालिका परिवहन",
+        "network:wikidata": "Q7710243",
+        "operator": "Thane Municipal Transport",
+        "public_transport:version": "2",
+        "ref": "6",
+        "route": "bus",
+        "to": "Vrindavan Society",
+        "type": "route",
+        "via": "Thane Railway Station"
+      }
+    },
+    {
+      "type": "relation",
+      "id": 12803588,
+      "tags": {
+        "from": "Thane Station (W)",
+        "name": "Bus 10: Thane Station (W) → Neelkanth Heights",
+        "network": "Thane Municipal Transport",
+        "network:en": "Thane Municipal Transport",
+        "network:hi": "ठाणे नगरपालिका परिवहन",
+        "network:wikidata": "Q7710243",
+        "operator": "Thane Municipal Transport",
+        "public_transport:version": "2",
+        "ref": "10",
+        "route": "bus",
+        "to": "Neelkanth Heights",
+        "type": "route",
+        "via": "Upvan Lake"
+      }
+    },
+    {
+      "type": "relation",
+      "id": 12803595,
+      "tags": {
+        "from": "Neelkanth Heights",
+        "name": "Bus 10: Neelkanth Heights → Thane Station (W)",
+        "network": "Thane Municipal Transport",
+        "network:en": "Thane Municipal Transport",
+        "network:hi": "ठाणे नगरपालिका परिवहन",
+        "network:wikidata": "Q7710243",
+        "operator": "Thane Muncipal Transport",
+        "public_transport:version": "2",
+        "ref": "10",
+        "route": "bus",
+        "to": "Thane Station (W)",
+        "type": "route",
+        "via": "Upvan Lake"
+      }
+    },
+    {
+      "type": "relation",
+      "id": 12803598,
+      "tags": {
+        "from": "Thane Station (W)",
+        "name": "Bus 7: Thane Station (W) → Siddhachal",
+        "network": "Thane Municipal Transport",
+        "network:en": "Thane Municipal Transport",
+        "network:hi": "ठाणे नगरपालिका परिवहन",
+        "network:wikidata": "Q7710243",
+        "operator": "Thane Municipal Transport",
+        "public_transport:version": "2",
+        "ref": "7",
+        "route": "bus",
+        "to": "Siddhachal",
+        "type": "route"
+      }
+    },
+    {
+      "type": "relation",
+      "id": 12803600,
+      "tags": {
+        "from": "Siddhachal",
+        "name": "Bus 7: Siddhachal → Thane Station (W)",
+        "network": "Thane Municipal Transport",
+        "network:en": "Thane Municipal Transport",
+        "network:hi": "ठाणे नगरपालिका परिवहन",
+        "network:wikidata": "Q7710243",
+        "operator": "Thane Muncipal Transport",
+        "public_transport:version": "2",
+        "ref": "7",
+        "route": "bus",
+        "to": "Thane Station (W)",
+        "type": "route"
+      }
+    },
+    {
+      "type": "relation",
+      "id": 12804005,
+      "tags": {
+        "from": "Thane Station (W)",
+        "name": "Bus 13: Thane Station (W) → Kalwa Depot",
+        "network": "Thane Municipal Transport",
+        "network:en": "Thane Municipal Transport",
+        "network:hi": "ठाणे नगरपालिका परिवहन",
+        "network:wikidata": "Q7710243",
+        "operator": "Thane Municipal Transport",
+        "public_transport:version": "2",
+        "ref": "13",
+        "route": "bus",
+        "to": "Kalwa Depot",
+        "type": "route"
+      }
+    },
+    {
+      "type": "relation",
+      "id": 12804007,
+      "tags": {
+        "from": "Kalwa Depot",
+        "name": "Bus 13: Kalwa Depot → Thane Station (W)",
+        "network": "Thane Municipal Transport",
+        "network:en": "Thane Municipal Transport",
+        "network:hi": "ठाणे नगरपालिका परिवहन",
+        "network:wikidata": "Q7710243",
+        "operator": "Thane Muncipal Transport",
+        "public_transport:version": "2",
+        "ref": "13",
+        "route": "bus",
+        "to": "Thane Station (W)",
+        "type": "route"
+      }
+    },
+    {
+      "type": "relation",
+      "id": 12804934,
+      "tags": {
+        "from": "Kasarvadavali Naka",
+        "name": "Bus 54: Kasarvadavali Naka→ Thane Station (W)",
+        "network": "Thane Municipal Transport",
+        "network:en": "Thane Municipal Transport",
+        "network:hi": "ठाणे नगरपालिका परिवहन",
+        "network:wikidata": "Q7710243",
+        "operator": "Thane Municipal Transport",
+        "public_transport:version": "2",
+        "ref": "54",
+        "route": "bus",
+        "to": "Thane Station (W)",
+        "type": "route"
+      }
+    },
+    {
+      "type": "relation",
+      "id": 12804935,
+      "tags": {
+        "from": "Thane Station (W)",
+        "name": "Bus 54: Thane Station (W) → Kasarvadavali Naka",
+        "network": "Thane Municipal Transport",
+        "network:en": "Thane Municipal Transport",
+        "network:hi": "ठाणे नगरपालिका परिवहन",
+        "network:wikidata": "Q7710243",
+        "operator": "Thane Municipal Transport",
+        "public_transport:version": "2",
+        "ref": "54",
+        "route": "bus",
+        "to": "Kasarvadavali Naka",
+        "type": "route"
+      }
+    },
+    {
+      "type": "relation",
+      "id": 12804937,
+      "tags": {
+        "from": "Waghbil Village",
+        "name": "Bus 51: Waghbil Village→ Thane Station (W)",
+        "network": "Thane Municipal Transport",
+        "network:en": "Thane Municipal Transport",
+        "network:hi": "ठाणे नगरपालिका परिवहन",
+        "network:wikidata": "Q7710243",
+        "operator": "Thane Municipal Transport",
+        "public_transport:version": "2",
+        "ref": "51",
+        "route": "bus",
+        "to": "Thane Station (W)",
+        "type": "route"
+      }
+    },
+    {
+      "type": "relation",
+      "id": 12804938,
+      "tags": {
+        "from": "Thane Station (W)",
+        "name": "Bus 61: Thane Station (W) → Hawre City",
+        "network": "Thane Municipal Transport",
+        "network:en": "Thane Municipal Transport",
+        "network:hi": "ठाणे नगरपालिका परिवहन",
+        "network:wikidata": "Q7710243",
+        "operator": "Thane Municipal Transport",
+        "public_transport:version": "2",
+        "ref": "61",
+        "route": "bus",
+        "to": "Hawre City",
+        "type": "route"
+      }
+    },
+    {
+      "type": "relation",
+      "id": 12804939,
+      "tags": {
+        "from": "Thane Station (W)",
+        "name": "Bus 51: Thane Station (W) → Waghbil Village",
+        "network": "Thane Municipal Transport",
+        "network:en": "Thane Municipal Transport",
+        "network:hi": "ठाणे नगरपालिका परिवहन",
+        "network:wikidata": "Q7710243",
+        "operator": "Thane Municipal Transport",
+        "public_transport:version": "2",
+        "ref": "51",
+        "route": "bus",
+        "to": "Waghbil Village",
+        "type": "route"
+      }
+    },
+    {
+      "type": "relation",
+      "id": 12804940,
+      "tags": {
+        "from": "Hawre City",
+        "name": "Bus 61: Hawre City → Thane Station (W)",
+        "network": "Thane Municipal Transport",
+        "network:en": "Thane Municipal Transport",
+        "network:hi": "ठाणे नगरपालिका परिवहन",
+        "network:wikidata": "Q7710243",
+        "operator": "Thane Municipal Transport",
+        "public_transport:version": "2",
+        "ref": "61",
+        "route": "bus",
+        "to": "Thane Station (W)",
+        "type": "route"
+      }
+    },
+    {
+      "type": "relation",
+      "id": 12804994,
+      "tags": {
+        "from": "Kolshet Bus Depot",
+        "name": "Bus 95: Kolshet Bus Depot →Thane Station (W)",
+        "network": "Thane Municipal Transport",
+        "network:en": "Thane Municipal Transport",
+        "network:hi": "ठाणे नगरपालिका परिवहन",
+        "network:wikidata": "Q7710243",
+        "operator": "Thane Muncipal Transport",
+        "public_transport:version": "2",
+        "ref": "95",
+        "route": "bus",
+        "to": "Thane Station (W)",
+        "type": "route"
+      }
+    },
+    {
+      "type": "relation",
+      "id": 12805763,
+      "tags": {
+        "from": "Thane Station (W)",
+        "name": "Bus 34: Thane Station (W) → Gawand Baug (Upvan)",
+        "network": "Thane Municipal Transport",
+        "network:en": "Thane Municipal Transport",
+        "network:hi": "ठाणे नगरपालिका परिवहन",
+        "network:wikidata": "Q7710243",
+        "operator": "Thane Municipal Transport",
+        "public_transport:version": "2",
+        "ref": "34",
+        "route": "bus",
+        "to": "Gawand Baug (Upvan)",
+        "type": "route"
+      }
+    },
+    {
+      "type": "relation",
+      "id": 12805765,
+      "tags": {
+        "from": "Gawand Baug (Upvan)",
+        "name": "Bus 34: Gawand Baug (Upvan) → Thane Station (W)",
+        "network": "Thane Municipal Transport",
+        "network:en": "Thane Municipal Transport",
+        "network:hi": "ठाणे नगरपालिका परिवहन",
+        "network:wikidata": "Q7710243",
+        "operator": "Thane Muncipal Transport",
+        "public_transport:version": "2",
+        "ref": "34",
+        "route": "bus",
+        "to": "Thane Station (W)",
+        "type": "route"
+      }
+    },
+    {
+      "type": "relation",
+      "id": 12807047,
+      "tags": {
+        "from": "Thane Station (W)",
+        "name": "Bus 16: Thane Station (W) → Yeoor",
+        "network": "Thane Municipal Transport",
+        "network:en": "Thane Municipal Transport",
+        "network:hi": "ठाणे नगरपालिका परिवहन",
+        "network:wikidata": "Q7710243",
+        "operator": "Thane Municipal Transport",
+        "public_transport:version": "2",
+        "ref": "16",
+        "route": "bus",
+        "to": "Yeoor",
+        "type": "route",
+        "via": "Upvan Lake"
+      }
+    },
+    {
+      "type": "relation",
+      "id": 12807048,
+      "tags": {
+        "from": "Yeoor",
+        "name": "Bus 16: Yeoor → Thane Station (W)",
+        "network": "Thane Municipal Transport",
+        "network:en": "Thane Municipal Transport",
+        "network:hi": "ठाणे नगरपालिका परिवहन",
+        "network:wikidata": "Q7710243",
+        "operator": "Thane Muncipal Transport",
+        "public_transport:version": "2",
+        "ref": "16",
+        "route": "bus",
+        "to": "Thane Station (W)",
+        "type": "route"
+      }
+    },
+    {
+      "type": "relation",
+      "id": 12811583,
+      "tags": {
+        "from": "Thane Station (W)",
+        "name": "Bus 92: Thane Station (W) → Runwal Garden City",
+        "network": "Thane Municipal Transport",
+        "network:en": "Thane Municipal Transport",
+        "network:hi": "ठाणे नगरपालिका परिवहन",
+        "network:wikidata": "Q7710243",
+        "operator": "Thane Municipal Transport",
+        "public_transport:version": "2",
+        "ref": "92",
+        "route": "bus",
+        "to": "Runwal Garden CIty",
+        "type": "route"
+      }
+    },
+    {
+      "type": "relation",
+      "id": 12811585,
+      "tags": {
+        "from": "Runwal Garden City",
+        "name": "Bus 92: Runwal Garden City → Thane Station (W)",
+        "network": "Thane Municipal Transport",
+        "network:en": "Thane Municipal Transport",
+        "network:hi": "ठाणे नगरपालिका परिवहन",
+        "network:wikidata": "Q7710243",
+        "operator": "Thane Municipal Transport",
+        "public_transport:version": "2",
+        "ref": "92",
+        "route": "bus",
+        "to": "Thane Station (W)",
+        "type": "route"
+      }
+    },
+    {
+      "type": "relation",
+      "id": 14626973,
+      "tags": {
+        "fee": "yes",
+        "from": "Rabodi",
+        "name": "Bus 2: Rabodi => Thane Station (W)",
+        "network": "Thane Municipal Transport",
+        "network:en": "Thane Municipal Transport",
+        "network:hi": "ठाणे नगरपालिका परिवहन",
+        "network:wikidata": "Q7710243",
+        "operator": "Thane Municipal Transport",
+        "public_transport:version": "2",
+        "ref": "2",
+        "roundtrip": "no",
+        "route": "bus",
+        "to": "Thane Station (W)",
+        "type": "route"
+      }
+    },
+    {
+      "type": "relation",
+      "id": 14626974,
+      "tags": {
+        "from": "Thane Station (W)",
+        "name": "Bus 2: Thane Station => Rabodi",
+        "network": "Thane Municipal Transport",
+        "network:en": "Thane Municipal Transport",
+        "network:hi": "ठाणे नगरपालिका परिवहन",
+        "network:wikidata": "Q7710243",
+        "operator": "Thane Municipal Transport",
+        "public_transport:version": "2",
+        "ref": "2",
+        "roundtrip": "no",
+        "route": "bus",
+        "to": "Rabodi",
+        "type": "route"
+      }
+    },
+    {
+      "type": "relation",
+      "id": 14626976,
+      "tags": {
+        "from": "Thane Station",
+        "name": "Bus 8: Thane Station (W) → Shashtri Nagar",
+        "network": "Thane Municipal Transport",
+        "network:en": "Thane Municipal Transport",
+        "network:hi": "ठाणे नगरपालिका परिवहन",
+        "network:wikidata": "Q7710243",
+        "operator": "Thane Municipal Transport",
+        "ref": "8",
+        "route": "bus",
+        "to": "Shashtri Nagar",
+        "type": "route"
+      }
+    },
+    {
+      "type": "relation",
+      "id": 14626977,
+      "tags": {
+        "from": "Shashtri Nagar",
+        "name": "Bus 8: Shashtri Nagar →Thane Station (W)",
+        "network": "Thane Municipal Transport",
+        "network:en": "Thane Municipal Transport",
+        "network:hi": "ठाणे नगरपालिका परिवहन",
+        "network:wikidata": "Q7710243",
+        "operator": "Thane Municipal Transport",
+        "ref": "8",
+        "route": "bus",
+        "to": "Thane Station (W)",
+        "type": "route"
+      }
+    },
+    {
+      "type": "relation",
+      "id": 14627106,
+      "tags": {
+        "from": "Shivai Nagar",
+        "name": "Bus 9: Shivai Nagar → Thane Station (W)",
+        "network": "Thane Municipal Transport",
+        "network:en": "Thane Municipal Transport",
+        "network:hi": "ठाणे नगरपालिका परिवहन",
+        "network:wikidata": "Q7710243",
+        "operator": "Thane Municipal Transport",
+        "ref": "9",
+        "route": "bus",
+        "to": "Thane Station (W)",
+        "type": "route"
+      }
+    },
+    {
+      "type": "relation",
+      "id": 14627107,
+      "tags": {
+        "from": "Thane Station (W)",
+        "name": "Bus 9: Thane Station (W) → Shivai Nagar",
+        "network": "Thane Municipal Transport",
+        "network:en": "Thane Municipal Transport",
+        "network:hi": "ठाणे नगरपालिका परिवहन",
+        "network:wikidata": "Q7710243",
+        "operator": "Thane Municipal Transport",
+        "ref": "9",
+        "route": "bus",
+        "to": "Shivai Nagar",
+        "type": "route"
+      }
+    },
+    {
+      "type": "relation",
+      "id": 14631483,
+      "tags": {
+        "from": "Majiwada Gaon",
+        "name": "Bus 27: Majiwada Gaon → Thane Station (W)",
+        "network": "Thane Municipal Transport",
+        "network:en": "Thane Municipal Transport",
+        "network:hi": "ठाणे नगरपालिका परिवहन",
+        "network:wikidata": "Q7710243",
+        "operator": "Thane Municipal Transport",
+        "public_transport:version": "2",
+        "ref": "27",
+        "route": "bus",
+        "to": "Thane Station (W)",
+        "type": "route"
+      }
+    },
+    {
+      "type": "relation",
+      "id": 14631484,
+      "tags": {
+        "from": "Thane Station (W)",
+        "name": "Bus 27: Thane Station (W) → Majiwada Gaon",
+        "network": "Thane Municipal Transport",
+        "network:en": "Thane Municipal Transport",
+        "network:hi": "ठाणे नगरपालिका परिवहन",
+        "network:wikidata": "Q7710243",
+        "operator": "Thane Municipal Transport",
+        "public_transport:version": "2",
+        "ref": "27",
+        "route": "bus",
+        "to": "Majiwada Gaon",
+        "type": "route"
+      }
+    },
+    {
+      "type": "relation",
+      "id": 14631485,
+      "tags": {
+        "from": "Lokmanya Nagar",
+        "name": "Bus 23: Lokmanya Nagar → Thane Station (W)",
+        "network": "Thane Municipal Transport",
+        "network:en": "Thane Municipal Transport",
+        "network:hi": "ठाणे नगरपालिका परिवहन",
+        "network:wikidata": "Q7710243",
+        "operator": "Thane Municipal Transport",
+        "public_transport:version": "2",
+        "ref": "23",
+        "route": "bus",
+        "to": "Thane Station (W)",
+        "type": "route"
+      }
+    },
+    {
+      "type": "relation",
+      "id": 14631486,
+      "tags": {
+        "from": "Thane Station (W)",
+        "name": "Bus 23: Thane Station (W) → Lokmanya Nagar",
+        "network": "Thane Municipal Transport",
+        "network:en": "Thane Municipal Transport",
+        "network:hi": "ठाणे नगरपालिका परिवहन",
+        "network:wikidata": "Q7710243",
+        "operator": "Thane Municipal Transport",
+        "public_transport:version": "2",
+        "ref": "23",
+        "route": "bus",
+        "to": "Lokmanya Nagar",
+        "type": "route"
+      }
+    },
+    {
+      "type": "relation",
+      "id": 14631487,
+      "tags": {
+        "from": "Kajuwadi",
+        "name": "Bus 20: Kajuwadi → Thane Station (W)",
+        "network": "Thane Municipal Transport",
+        "network:en": "Thane Municipal Transport",
+        "network:hi": "ठाणे नगरपालिका परिवहन",
+        "network:wikidata": "Q7710243",
+        "operator": "Thane Municipal Transport",
+        "public_transport:version": "2",
+        "ref": "20",
+        "route": "bus",
+        "to": "Thane Station (W)",
+        "type": "route",
+        "via": "#Thane;#Geopune"
+      }
+    },
+    {
+      "type": "relation",
+      "id": 14631488,
+      "tags": {
+        "from": "Thane Station (W)",
+        "name": "Bus 20: Thane Station (W) → Kajuwadi",
+        "network": "Thane Municipal Transport",
+        "network:en": "Thane Municipal Transport",
+        "network:hi": "ठाणे नगरपालिका परिवहन",
+        "network:wikidata": "Q7710243",
+        "operator": "Thane Municipal Transport",
+        "public_transport:version": "2",
+        "ref": "20",
+        "route": "bus",
+        "to": "Kajuwadi",
+        "type": "route",
+        "via": "#Busroute;#ThaneMunicipalTransport;#Geopune"
+      }
+    },
+    {
+      "type": "relation",
+      "id": 14635084,
+      "tags": {
+        "from": "Thane Station (W)",
+        "name": "Bus 40: Thane Station (W) → Kharegaon",
+        "network": "Thane Municipal Transport",
+        "network:en": "Thane Municipal Transport",
+        "network:hi": "ठाणे नगरपालिका परिवहन",
+        "network:wikidata": "Q7710243",
+        "operator": "Thane Municipal Transport",
+        "public_transport:version": "2",
+        "ref": "40",
+        "route": "bus",
+        "to": "Kharegaon",
+        "type": "route"
+      }
+    },
+    {
+      "type": "relation",
+      "id": 14635085,
+      "tags": {
+        "from": "Kharegaon",
+        "name": "Bus 40: Kharegaon → Thane Station (W)",
+        "network": "Thane Municipal Transport",
+        "network:en": "Thane Municipal Transport",
+        "network:hi": "ठाणे नगरपालिका परिवहन",
+        "network:wikidata": "Q7710243",
+        "operator": "Thane Municipal Transport",
+        "public_transport:version": "2",
+        "ref": "40",
+        "route": "bus",
+        "to": "Thane Station (W)",
+        "type": "route"
+      }
+    },
+    {
+      "type": "relation",
+      "id": 14635086,
+      "tags": {
+        "from": "Thane Station (W)",
+        "name": "Bus 39: Thane Station (W) → Raghukul Society",
+        "network": "Thane Municipal Transport",
+        "network:en": "Thane Municipal Transport",
+        "network:hi": "ठाणे नगरपालिका परिवहन",
+        "network:wikidata": "Q7710243",
+        "operator": "Thane Municipal Transport",
+        "public_transport:version": "2",
+        "ref": "39",
+        "route": "bus",
+        "to": "Raghukul Society",
+        "type": "route"
+      }
+    },
+    {
+      "type": "relation",
+      "id": 14635087,
+      "tags": {
+        "from": "Raghukul Society",
+        "name": "Bus 39: Raghukul Society → Thane Station (W)",
+        "network": "Thane Municipal Transport",
+        "network:en": "Thane Municipal Transport",
+        "network:hi": "ठाणे नगरपालिका परिवहन",
+        "network:wikidata": "Q7710243",
+        "operator": "Thane Muncipal Transport",
+        "public_transport:version": "2",
+        "ref": "39",
+        "route": "bus",
+        "to": "Thane Station (W)",
+        "type": "route"
+      }
+    },
+    {
+      "type": "relation",
+      "id": 14635088,
+      "tags": {
+        "from": "Lokmanya Nagar",
+        "name": "Bus 36: Lokmanya Nagar → Kharegaon",
+        "network": "Thane Municipal Transport",
+        "network:en": "Thane Municipal Transport",
+        "network:hi": "ठाणे नगरपालिका परिवहन",
+        "network:wikidata": "Q7710243",
+        "operator": "Thane Municipal Transport",
+        "public_transport:version": "2",
+        "ref": "36",
+        "route": "bus",
+        "to": "Kharegaon",
+        "type": "route"
+      }
+    },
+    {
+      "type": "relation",
+      "id": 14635089,
+      "tags": {
+        "from": "Kharegaon",
+        "name": "Bus 36: Kharegaon → Lokmanya Nagar",
+        "network": "Thane Municipal Transport",
+        "network:en": "Thane Municipal Transport",
+        "network:hi": "ठाणे नगरपालिका परिवहन",
+        "network:wikidata": "Q7710243",
+        "operator": "Thane Municipal Transport",
+        "public_transport:version": "2",
+        "ref": "36",
+        "route": "bus",
+        "to": "Lokmanya Nagar",
+        "type": "route"
+      }
+    },
+    {
+      "type": "relation",
+      "id": 15607914,
+      "tags": {
+        "from": "Thane Station (W)",
+        "name": "Bus 95: Thane Station (W) → Kolshet",
+        "network": "Thane Municipal Transport",
+        "network:en": "Thane Municipal Transport",
+        "network:hi": "ठाणे नगरपालिका परिवहन",
+        "network:wikidata": "Q7710243",
+        "operator": "Thane Municipal Transport",
+        "public_transport:version": "2",
+        "ref": "95",
+        "route": "bus",
+        "to": "Manorama Nagar",
+        "type": "route"
+      }
+    },
+    {
+      "type": "relation",
+      "id": 15607915,
+      "tags": {
+        "from": "Thane Station (W)",
+        "name": "Bus 96: Thane Station (W) → Manorama Nagar",
+        "network": "Thane Municipal Transport",
+        "network:en": "Thane Municipal Transport",
+        "network:hi": "ठाणे नगरपालिका परिवहन",
+        "network:wikidata": "Q7710243",
+        "operator": "Thane Municipal Transport",
+        "public_transport:version": "2",
+        "ref": "96",
+        "route": "bus",
+        "to": "Manorama Nagar",
+        "type": "route"
+      }
+    },
+    {
+      "type": "relation",
+      "id": 15607916,
+      "tags": {
+        "from": "Manorama Nagar",
+        "name": "Bus 96: Manorama Nagar →Thane Station (W)",
+        "network": "Thane Municipal Transport",
+        "network:en": "Thane Municipal Transport",
+        "network:hi": "ठाणे नगरपालिका परिवहन",
+        "network:wikidata": "Q7710243",
+        "operator": "Thane Muncipal Transport",
+        "public_transport:version": "2",
+        "ref": "96",
+        "route": "bus",
+        "to": "Thane Station (W)",
+        "type": "route"
+      }
+    },
+    {
+      "type": "relation",
+      "id": 15607917,
+      "tags": {
+        "from": "Thane Station (W)",
+        "name": "Bus 112: Thane Station (W) → Lodha",
+        "network": "Thane Municipal Transport",
+        "network:en": "Thane Municipal Transport",
+        "network:hi": "ठाणे नगरपालिका परिवहन",
+        "network:wikidata": "Q7710243",
+        "operator": "Thane Municipal Transport",
+        "public_transport:version": "2",
+        "ref": "112",
+        "route": "bus",
+        "to": "Lodha",
+        "type": "route"
+      }
+    },
+    {
+      "type": "relation",
+      "id": 15607918,
+      "tags": {
+        "from": "Lodha",
+        "name": "Bus 112: Lodha → Thane Station (W)",
+        "network": "Thane Municipal Transport",
+        "network:en": "Thane Municipal Transport",
+        "network:hi": "ठाणे नगरपालिका परिवहन",
+        "network:wikidata": "Q7710243",
+        "operator": "Thane Municipal Transport",
+        "public_transport:version": "2",
+        "ref": "112",
+        "route": "bus",
+        "to": "Thane Station (W)",
+        "type": "route"
+      }
+    },
+    {
+      "type": "relation",
+      "id": 15607919,
+      "tags": {
+        "from": "Dadlani Park",
+        "name": "Bus 93: Dadlani Park → Thane Station (W)",
+        "network": "Thane Municipal Transport",
+        "network:en": "Thane Municipal Transport",
+        "network:hi": "ठाणे नगरपालिका परिवहन",
+        "network:wikidata": "Q7710243",
+        "operator": "Thane Municipal Transport",
+        "public_transport:version": "2",
+        "ref": "93",
+        "route": "bus",
+        "to": "Thane Station (W)",
+        "type": "route"
+      }
+    },
+    {
+      "type": "relation",
+      "id": 15607920,
+      "tags": {
+        "fixme": "route incorrect",
+        "from": "Thane Station (W)",
+        "name": "Bus 93: Thane Station (W) → Dadlani Park",
+        "network": "Thane Municipal Transport",
+        "network:en": "Thane Municipal Transport",
+        "network:hi": "ठाणे नगरपालिका परिवहन",
+        "network:wikidata": "Q7710243",
+        "operator": "Thane Municipal Transport",
+        "public_transport:version": "2",
+        "ref": "93",
+        "route": "bus",
+        "to": "Dadlani Park",
+        "type": "route"
+      }
+    },
+    {
+      "type": "relation",
+      "id": 15607921,
+      "tags": {
+        "from": "Bhaiandar Pada",
+        "name": "Bus 53: Bhaiandar Pada→ Thane Station (W)",
+        "network": "Thane Municipal Transport",
+        "network:en": "Thane Municipal Transport",
+        "network:hi": "ठाणे नगरपालिका परिवहन",
+        "network:wikidata": "Q7710243",
+        "operator": "Thane Municipal Transport",
+        "public_transport:version": "2",
+        "ref": "53",
+        "route": "bus",
+        "to": "Thane Station (W)",
+        "type": "route"
+      }
+    },
+    {
+      "type": "relation",
+      "id": 15607922,
+      "tags": {
+        "from": "Thane Station (W)",
+        "name": "Bus 53: Thane Station (W) → Bhaiandar Pada",
+        "network": "Thane Municipal Transport",
+        "network:en": "Thane Municipal Transport",
+        "network:hi": "ठाणे नगरपालिका परिवहन",
+        "network:wikidata": "Q7710243",
+        "operator": "Thane Municipal Transport",
+        "public_transport:version": "2",
+        "ref": "53",
+        "route": "bus",
+        "to": "Bhaiandar Pada",
+        "type": "route"
+      }
+    },
+    {
+      "type": "relation",
+      "id": 15607997,
+      "tags": {
+        "from": "Highland Haven",
+        "name": "Bus 45: Highland Haven → Thane Station (W)",
+        "network": "Thane Municipal Transport",
+        "network:en": "Thane Municipal Transport",
+        "network:hi": "ठाणे नगरपालिका परिवहन",
+        "network:wikidata": "Q7710243",
+        "operator": "Thane Municipal Transport",
+        "public_transport:version": "2",
+        "ref": "45",
+        "route": "bus",
+        "to": "Thane Station (W)",
+        "type": "route"
+      }
+    },
+    {
+      "type": "relation",
+      "id": 15607998,
+      "tags": {
+        "from": "Thane Station (W)",
+        "name": "Bus 45: Thane Station (W) → Highland Haven",
+        "network": "Thane Municipal Transport",
+        "network:en": "Thane Municipal Transport",
+        "network:hi": "ठाणे नगरपालिका परिवहन",
+        "network:wikidata": "Q7710243",
+        "operator": "Thane Municipal Transport",
+        "public_transport:version": "2",
+        "ref": "45",
+        "route": "bus",
+        "to": "Highland Haven",
+        "type": "route"
+      }
+    },
+    {
+      "type": "relation",
+      "id": 15608262,
+      "tags": {
+        "from": "Kisan Nagar",
+        "name": "Bus 22: Kisan Nagar → Thane Station (W)",
+        "network": "Thane Municipal Transport",
+        "network:en": "Thane Municipal Transport",
+        "network:hi": "ठाणे नगरपालिका परिवहन",
+        "network:wikidata": "Q7710243",
+        "operator": "Thane Municipal Transport",
+        "public_transport:version": "2",
+        "ref": "23",
+        "route": "bus",
+        "to": "Thane Station (W)",
+        "type": "route"
+      }
+    },
+    {
+      "type": "relation",
+      "id": 15608263,
+      "tags": {
+        "from": "Thane Station (W)",
+        "name": "Bus 22: Thane Station (W) → Kisan Nagar",
+        "network": "Thane Municipal Transport",
+        "network:en": "Thane Municipal Transport",
+        "network:hi": "ठाणे नगरपालिका परिवहन",
+        "network:wikidata": "Q7710243",
+        "operator": "Thane Municipal Transport",
+        "public_transport:version": "2",
+        "ref": "22",
+        "route": "bus",
+        "to": "Kisan Nagar",
+        "type": "route"
+      }
+    },
+    {
+      "type": "relation",
+      "id": 15608971,
+      "tags": {
+        "from": "Borivali Station (E)",
+        "name": "Bus 65: Borivali Station (E) → Thane Station (E)",
+        "network": "Thane Municipal Transport",
+        "network:en": "Thane Municipal Transport",
+        "network:hi": "ठाणे नगरपालिका परिवहन",
+        "network:wikidata": "Q7710243",
+        "operator": "Thane Muncipal Transport",
+        "public_transport:version": "2",
+        "ref": "65",
+        "route": "bus",
+        "to": "Thane Station (E)",
+        "type": "route"
+      }
+    },
+    {
+      "type": "relation",
+      "id": 15608973,
+      "tags": {
+        "from": "Hiranandani Estate",
+        "name": "Bus 126: Hiranandani → BKC",
+        "public_transport:version": "2",
+        "ref": "126",
+        "route": "bus",
+        "to": "BKC",
+        "type": "route"
+      }
+    },
+    {
+      "type": "relation",
+      "id": 15609583,
+      "tags": {
+        "from": "Thane Station (E)",
+        "name": "Bus 65: Thane Station (E) → Borivali Station (E)",
+        "network": "Thane Municipal Transport",
+        "network:en": "Thane Municipal Transport",
+        "network:hi": "ठाणे नगरपालिका परिवहन",
+        "network:wikidata": "Q7710243",
+        "operator": "Thane Muncipal Transport",
+        "public_transport:version": "2",
+        "ref": "65",
+        "route": "bus",
+        "to": "Borivali Station (E)",
+        "type": "route"
+      }
+    },
+    {
+      "type": "relation",
+      "id": 15610346,
+      "tags": {
+        "from": "Anand Nagar Depot",
+        "name": "Bus 63: Anand Nagar Depot → Thane Station (W)",
+        "network": "Thane Municipal Transport",
+        "network:en": "Thane Municipal Transport",
+        "network:hi": "ठाणे नगरपालिका परिवहन",
+        "network:wikidata": "Q7710243",
+        "operator": "Thane Municipal Transport",
+        "public_transport:version": "2",
+        "ref": "63",
+        "route": "bus",
+        "to": "Thane Station (W)",
+        "type": "route"
+      }
+    },
+    {
+      "type": "relation",
+      "id": 15610347,
+      "tags": {
+        "from": "Thane Station (W)",
+        "name": "Bus 63: Thane Station (W) → Anand Nagar Depot",
+        "network": "Thane Municipal Transport",
+        "network:en": "Thane Municipal Transport",
+        "network:hi": "ठाणे नगरपालिका परिवहन",
+        "network:wikidata": "Q7710243",
+        "operator": "Thane Municipal Transport",
+        "public_transport:version": "2",
+        "ref": "63",
+        "route": "bus",
+        "to": "Anand Nagar Depot",
+        "type": "route"
+      }
+    },
+    {
+      "type": "relation",
+      "id": 15610348,
+      "tags": {
+        "from": "Mira Road Station",
+        "name": "Bus 58: Mira Road Station→ Lokmanya Nagar",
+        "network": "Thane Municipal Transport",
+        "network:en": "Thane Municipal Transport",
+        "network:hi": "ठाणे नगरपालिका परिवहन",
+        "network:wikidata": "Q7710243",
+        "operator": "Thane Municipal Transport",
+        "public_transport:version": "2",
+        "ref": "58",
+        "route": "bus",
+        "to": "Lokmanya Nagar",
+        "type": "route",
+        "via": "Thane Station (W)"
+      }
+    },
+    {
+      "type": "relation",
+      "id": 15610349,
+      "tags": {
+        "from": "Lokmanya Nagar",
+        "name": "Bus 58: Lokmanya Nagar → Mira Road Station",
+        "network": "Thane Municipal Transport",
+        "network:en": "Thane Municipal Transport",
+        "network:hi": "ठाणे नगरपालिका परिवहन",
+        "network:wikidata": "Q7710243",
+        "operator": "Thane Muncipal Transport",
+        "public_transport:version": "2",
+        "ref": "58",
+        "route": "bus",
+        "to": "Mira Road Station",
+        "type": "route",
+        "via": "Thane Station (W)"
+      }
+    },
+    {
+      "type": "relation",
+      "id": 15634323,
+      "tags": {
+        "from": "Thane Station (W)",
+        "name": "Bus 146: Thane Station (W) → Gholai Nagar",
+        "network": "Thane Municipal Transport",
+        "network:en": "Thane Municipal Transport",
+        "network:hi": "ठाणे नगरपालिका परिवहन",
+        "network:wikidata": "Q7710243",
+        "operator": "Thane Municipal Transport",
+        "public_transport:version": "2",
+        "ref": "146",
+        "route": "bus",
+        "to": "Gholai Nagar",
+        "type": "route"
+      }
+    },
+    {
+      "type": "relation",
+      "id": 15634324,
+      "tags": {
+        "from": "Gholai Nagar",
+        "name": "Bus 146: Gholai Nagar → Thane Station (W)",
+        "network": "Thane Municipal Transport",
+        "network:en": "Thane Municipal Transport",
+        "network:hi": "ठाणे नगरपालिका परिवहन",
+        "network:wikidata": "Q7710243",
+        "operator": "Thane Muncipal Transport",
+        "public_transport:version": "2",
+        "ref": "146",
+        "route": "bus",
+        "to": "Thane Station (W)",
+        "type": "route"
+      }
+    },
+    {
+      "type": "relation",
+      "id": 15634325,
+      "tags": {
+        "fixme": "unknown route no",
+        "from": "Kausa Hospital",
+        "name": "Bus xx: Kausa Hospital → Mumbra Station",
+        "network": "Thane Municipal Transport",
+        "network:en": "Thane Municipal Transport",
+        "network:hi": "ठाणे नगरपालिका परिवहन",
+        "network:wikidata": "Q7710243",
+        "operator": "Thane Municipal Transport",
+        "public_transport:version": "2",
+        "ref": "xx",
+        "route": "bus",
+        "to": "Mumbra Station",
+        "type": "route"
+      }
+    },
+    {
+      "type": "relation",
+      "id": 16785252,
+      "tags": {
+        "fixme": "find route number",
+        "from": "Diva Railway Station",
+        "name": "Bus **: Diva Railway Station → Dombivli Railway Station",
+        "network": "Thane Municipal Transport",
+        "network:en": "Thane Municipal Transport",
+        "network:hi": "ठाणे नगरपालिका परिवहन",
+        "network:wikidata": "Q7710243",
+        "operator": "Thane Municipal Transport",
+        "route": "bus",
+        "to": "Dombivli Railway Station",
+        "type": "route"
+      }
+    },
+    {
+      "type": "relation",
+      "id": 16785253,
+      "tags": {
+        "fixme": "find route no",
+        "from": "Dombivli Railway Station",
+        "name": "Bus **: Dombivli Railway Station → Diva Railway Station",
+        "network": "Thane Municipal Transport",
+        "network:en": "Thane Municipal Transport",
+        "network:hi": "ठाणे नगरपालिका परिवहन",
+        "network:wikidata": "Q7710243",
+        "operator": "Thane Municipal Transport",
+        "route": "bus",
+        "to": "Diva Railway Station",
+        "type": "route"
+      }
+    },
+    {
+      "type": "relation",
+      "id": 16907838,
+      "tags": {
+        "from": "Vihar Lake",
+        "name": "Bus 25LTDX: Vihar Lake => Prabodhankar Thakare Udyan Sewri",
+        "network": "BEST",
+        "operator": "The Brihanmumbai Electric Supply & Transport Undertaking",
+        "public_transport:version": "2",
+        "ref": "25LTDX",
+        "route": "bus",
+        "to": "Prabodhankar Thakare Udyan Sewri",
+        "type": "route"
+      }
+    },
+    {
+      "type": "relation",
+      "id": 16907839,
+      "tags": {
+        "from": "Prabodhankar Thakare Udyan Sewri",
+        "name": "Bus 25LTDX: Prabodhankar Thakare Udyan Sewri => Vihar Lake",
+        "network": "BEST",
+        "operator": "The Brihanmumbai Electric Supply & Transport Undertaking",
+        "public_transport:version": "2",
+        "ref": "25LTDX",
+        "route": "bus",
+        "to": "Vihar Lake",
+        "type": "route"
+      }
+    },
+    {
+      "type": "relation",
+      "id": 16908048,
+      "tags": {
+        "from": "Vaishali Nagar Mulund",
+        "name": "Bus 27: Vaishali Nagar Mulund => Rani Lakshmibai Chowk",
+        "network": "BEST",
+        "operator": "The Brihanmumbai Electric Supply & Transport Undertaking",
+        "public_transport:version": "2",
+        "ref": "27",
+        "route": "bus",
+        "to": "Rani Lakshmibai Chowk",
+        "type": "route"
+      }
+    },
+    {
+      "type": "relation",
+      "id": 16908049,
+      "tags": {
+        "from": "Rani Lakshmibai Chowk",
+        "name": "Bus 27: Rani Lakshmibai Chowk => Vaishali Nagar Mulund",
+        "network": "BEST",
+        "operator": "The Brihanmumbai Electric Supply & Transport Undertaking",
+        "public_transport:version": "2",
+        "ref": "27",
+        "route": "bus",
+        "to": "Vaishali Nagar Mulund",
+        "type": "route"
+      }
+    },
+    {
+      "type": "relation",
+      "id": 16914615,
+      "tags": {
+        "from": "SEEPZ Village",
+        "name": "Bus 35: SEEPZ Village => Com. P.K. Kurne Chowk",
+        "network": "BEST",
+        "operator": "The Brihanmumbai Electric Supply & Transport Undertaking",
+        "public_transport:version": "2",
+        "ref": "35",
+        "route": "bus",
+        "to": "Com. P.K. Kurne Chowk",
+        "type": "route"
+      }
+    },
+    {
+      "type": "relation",
+      "id": 16914616,
+      "tags": {
+        "from": "Com. P.K. Kurne Chowk",
+        "name": "Bus 35: Com. P.K. Kurne Chowk => SEEPZ Village",
+        "network": "BEST",
+        "operator": "The Brihanmumbai Electric Supply & Transport Undertaking",
+        "public_transport:version": "2",
+        "ref": "35",
+        "route": "bus",
+        "to": "SEEPZ Village",
+        "type": "route"
+      }
+    },
+    {
+      "type": "relation",
+      "id": 17009676,
+      "tags": {
+        "from": "Dadlani Park Thane W",
+        "name": "Bus C-42: Dadlani Park Thane W => Rani Lakshmibai Chowk",
+        "network": "BEST",
+        "operator": "The Brihanmumbai Electric Supply & Transport Undertaking",
+        "public_transport:version": "2",
+        "ref": "C-42",
+        "route": "bus",
+        "to": "Rani Lakshmibai Chowk",
+        "type": "route"
+      }
+    },
+    {
+      "type": "relation",
+      "id": 17009677,
+      "tags": {
+        "from": "Rani Lakshmibai Chowk",
+        "name": "Bus C-42: Rani Lakshmibai Chowk => Dadlani Park Thane W",
+        "network": "BEST",
+        "operator": "The Brihanmumbai Electric Supply & Transport Undertaking",
+        "public_transport:version": "2",
+        "ref": "C-42",
+        "route": "bus",
+        "to": "Dadlani Park Thane W",
+        "type": "route"
+      }
+    },
+    {
+      "type": "relation",
+      "id": 17013534,
+      "tags": {
+        "from": "Airoli Bus Station",
+        "name": "Bus C-54: Airoli Bus Station => Worli Depot",
+        "network": "BEST",
+        "operator": "The Brihanmumbai Electric Supply & Transport Undertaking",
+        "public_transport:version": "2",
+        "ref": "C-54",
+        "route": "bus",
+        "to": "Worli Depot",
+        "type": "route"
+      }
+    },
+    {
+      "type": "relation",
+      "id": 17013535,
+      "tags": {
+        "from": "Worli Depot",
+        "name": "Bus C-54: Worli Depot => Airoli Bus Station",
+        "network": "BEST",
+        "operator": "The Brihanmumbai Electric Supply & Transport Undertaking",
+        "public_transport:version": "2",
+        "ref": "C-54",
+        "route": "bus",
+        "to": "Airoli Bus Station",
+        "type": "route"
+      }
+    },
+    {
+      "type": "relation",
+      "id": 17013786,
+      "tags": {
+        "from": "Mira Road Station E",
+        "name": "Bus C-61: Mira Road Station E => Mulund Depot",
+        "network": "BEST",
+        "operator": "The Brihanmumbai Electric Supply & Transport Undertaking",
+        "public_transport:version": "2",
+        "ref": "C-61",
+        "route": "bus",
+        "to": "Mulund Depot",
+        "type": "route"
+      }
+    },
+    {
+      "type": "relation",
+      "id": 17013787,
+      "tags": {
+        "from": "Mulund Depot",
+        "name": "Bus C-61: Mulund Depot => Mira Road Station E",
+        "network": "BEST",
+        "operator": "The Brihanmumbai Electric Supply & Transport Undertaking",
+        "public_transport:version": "2",
+        "ref": "C-61",
+        "route": "bus",
+        "to": "Mira Road Station E",
+        "type": "route"
+      }
+    },
+    {
+      "type": "relation",
+      "id": 17017898,
+      "tags": {
+        "from": "Mira Road Station",
+        "name": "Bus C-71: Mira Road Station => Mahim Bus Station",
+        "network": "BEST",
+        "operator": "The Brihanmumbai Electric Supply & Transport Undertaking",
+        "public_transport:version": "2",
+        "ref": "C-71",
+        "route": "bus",
+        "to": "Mahim Bus Station",
+        "type": "route"
+      }
+    },
+    {
+      "type": "relation",
+      "id": 17017899,
+      "tags": {
+        "from": "Mahim Bus Station",
+        "name": "Bus C-71: Mahim Bus Station => Mira Road Station",
+        "network": "BEST",
+        "operator": "The Brihanmumbai Electric Supply & Transport Undertaking",
+        "public_transport:version": "2",
+        "ref": "C-71",
+        "route": "bus",
+        "to": "Mira Road Station",
+        "type": "route"
+      }
+    },
+    {
+      "type": "relation",
+      "id": 17019858,
+      "tags": {
+        "from": "Bhayander Station E",
+        "name": "Bus A-72: Bhayander Station E => Rani Lakshmibai Chowk",
+        "network": "BEST",
+        "operator": "The Brihanmumbai Electric Supply & Transport Undertaking",
+        "public_transport:version": "2",
+        "ref": "A-72",
+        "route": "bus",
+        "to": "Rani Lakshmibai Chowk",
+        "type": "route"
+      }
+    },
+    {
+      "type": "relation",
+      "id": 17019859,
+      "tags": {
+        "from": "Rani Lakshmibai Chowk",
+        "name": "Bus A-72: Rani Lakshmibai Chowk => Bhayander Station E",
+        "network": "BEST",
+        "operator": "The Brihanmumbai Electric Supply & Transport Undertaking",
+        "public_transport:version": "2",
+        "ref": "A-72",
+        "route": "bus",
+        "to": "Bhayander Station E",
+        "type": "route"
+      }
+    },
+    {
+      "type": "relation",
+      "id": 17231766,
+      "tags": {
+        "from": "Kannamwar Nagar",
+        "name": "Bus A-185: Kannamwar Nagar => Agarkar Chowk",
+        "network": "BEST",
+        "operator": "The Brihanmumbai Electric Supply & Transport Undertaking",
+        "public_transport:version": "2",
+        "ref": "A-185",
+        "route": "bus",
+        "to": "Agarkar Chowk",
+        "type": "route"
+      }
+    },
+    {
+      "type": "relation",
+      "id": 17231767,
+      "tags": {
+        "from": "Agarkar Chowk",
+        "name": "Bus A-185: Agarkar Chowk => Kannamwar Nagar",
+        "network": "BEST",
+        "operator": "The Brihanmumbai Electric Supply & Transport Undertaking",
+        "public_transport:version": "2",
+        "ref": "A-185",
+        "route": "bus",
+        "to": "Kannamwar Nagar",
+        "type": "route"
+      }
+    },
+    {
+      "type": "relation",
+      "id": 17231810,
+      "tags": {
+        "from": "Vihar Lake",
+        "name": "Bus A-186: Vihar Lake => Agarkar Chowk",
+        "network": "BEST",
+        "operator": "The Brihanmumbai Electric Supply & Transport Undertaking",
+        "public_transport:version": "2",
+        "ref": "A-186",
+        "route": "bus",
+        "to": "Agarkar Chowk",
+        "type": "route"
+      }
+    },
+    {
+      "type": "relation",
+      "id": 17231811,
+      "tags": {
+        "from": "Agarkar Chowk",
+        "name": "Bus A-186: Agarkar Chowk => Vihar Lake",
+        "network": "BEST",
+        "operator": "The Brihanmumbai Electric Supply & Transport Undertaking",
+        "public_transport:version": "2",
+        "ref": "A-186",
+        "route": "bus",
+        "to": "Vihar Lake",
+        "type": "route"
+      }
+    },
+    {
+      "type": "relation",
+      "id": 17231835,
+      "tags": {
+        "from": "Kanheri Caves",
+        "name": "Bus A-188: Kanheri Caves => Borivali Station E",
+        "network": "BEST",
+        "operator": "The Brihanmumbai Electric Supply & Transport Undertaking",
+        "public_transport:version": "2",
+        "ref": "A-188",
+        "route": "bus",
+        "to": "Borivali Station E",
+        "type": "route"
+      }
+    },
+    {
+      "type": "relation",
+      "id": 17231836,
+      "tags": {
+        "from": "Borivali Station E",
+        "name": "Bus A-188: Borivali Station E => Kanheri Caves",
+        "network": "BEST",
+        "operator": "The Brihanmumbai Electric Supply & Transport Undertaking",
+        "public_transport:version": "2",
+        "ref": "A-188",
+        "route": "bus",
+        "to": "Kanheri Caves",
+        "type": "route"
+      }
+    },
+    {
+      "type": "relation",
+      "id": 17372759,
+      "tags": {
+        "from": "Maharana Pratap Chowk Mulund",
+        "name": "Bus C-302: Maharana Pratap Chowk Mulund => Rani Lakshmibai Chowk",
+        "network": "BEST",
+        "operator": "The Brihanmumbai Electric Supply & Transport Undertaking",
+        "public_transport:version": "2",
+        "ref": "C-302",
+        "route": "bus",
+        "to": "Rani Lakshmibai Chowk",
+        "type": "route"
+      }
+    },
+    {
+      "type": "relation",
+      "id": 17372760,
+      "tags": {
+        "from": "Rani Lakshmibai Chowk",
+        "name": "Bus C-302: Rani Lakshmibai Chowk => Maharana Pratap Chowk Mulund",
+        "network": "BEST",
+        "operator": "The Brihanmumbai Electric Supply & Transport Undertaking",
+        "public_transport:version": "2",
+        "ref": "C-302",
+        "route": "bus",
+        "to": "Maharana Pratap Chowk Mulund",
+        "type": "route"
+      }
+    },
+    {
+      "type": "relation",
+      "id": 17372788,
+      "tags": {
+        "from": "Mulund Railway Station W",
+        "name": "Bus 303: Mulund Railway Station W => Bandra Bus Station E",
+        "network": "BEST",
+        "operator": "The Brihanmumbai Electric Supply & Transport Undertaking",
+        "public_transport:version": "2",
+        "ref": "303",
+        "route": "bus",
+        "to": "Bandra Bus Station E",
+        "type": "route"
+      }
+    },
+    {
+      "type": "relation",
+      "id": 17372789,
+      "tags": {
+        "from": "Bandra Bus Station E",
+        "name": "Bus 303: Bandra Bus Station E => Mulund Railway Station W",
+        "network": "BEST",
+        "operator": "The Brihanmumbai Electric Supply & Transport Undertaking",
+        "public_transport:version": "2",
+        "ref": "303",
+        "route": "bus",
+        "to": "Mulund Railway Station W",
+        "type": "route"
+      }
+    },
+    {
+      "type": "relation",
+      "id": 17376404,
+      "tags": {
+        "from": "Vaishali Nagar Mulund",
+        "name": "Bus 307: Vaishali Nagar Mulund => Marol Depot",
+        "network": "BEST",
+        "operator": "The Brihanmumbai Electric Supply & Transport Undertaking",
+        "public_transport:version": "2",
+        "ref": "307",
+        "route": "bus",
+        "to": "Marol Depot",
+        "type": "route"
+      }
+    },
+    {
+      "type": "relation",
+      "id": 17376405,
+      "tags": {
+        "from": "Marol Depot",
+        "name": "Bus 307: Marol Depot => Vaishali Nagar Mulund",
+        "network": "BEST",
+        "operator": "The Brihanmumbai Electric Supply & Transport Undertaking",
+        "public_transport:version": "2",
+        "ref": "307",
+        "route": "bus",
+        "to": "Vaishali Nagar Mulund",
+        "type": "route"
+      }
+    },
+    {
+      "type": "relation",
+      "id": 17395541,
+      "tags": {
+        "from": "Majas Depot",
+        "name": "Bus 319: Majas Depot => Kurla Bus Station W",
+        "network": "BEST",
+        "operator": "The Brihanmumbai Electric Supply & Transport Undertaking",
+        "public_transport:version": "2",
+        "ref": "319",
+        "route": "bus",
+        "to": "Kurla Bus Station W",
+        "type": "route"
+      }
+    },
+    {
+      "type": "relation",
+      "id": 17395542,
+      "tags": {
+        "from": "Kurla Bus Station W",
+        "name": "Bus 319: Kurla Bus Station W => Majas Depot",
+        "network": "BEST",
+        "operator": "The Brihanmumbai Electric Supply & Transport Undertaking",
+        "public_transport:version": "2",
+        "ref": "319",
+        "route": "bus",
+        "to": "Majas Depot",
+        "type": "route"
+      }
+    },
+    {
+      "type": "relation",
+      "id": 17395552,
+      "tags": {
+        "from": "Filter Pada",
+        "name": "Bus 320: Filter Pada => Kurla Bus Station W",
+        "network": "BEST",
+        "operator": "The Brihanmumbai Electric Supply & Transport Undertaking",
+        "public_transport:version": "2",
+        "ref": "320",
+        "route": "bus",
+        "to": "Kurla Bus Station W",
+        "type": "route"
+      }
+    },
+    {
+      "type": "relation",
+      "id": 17395553,
+      "tags": {
+        "from": "Kurla Bus Station W",
+        "name": "Bus 320: Kurla Bus Station W => Filter Pada",
+        "network": "BEST",
+        "operator": "The Brihanmumbai Electric Supply & Transport Undertaking",
+        "public_transport:version": "2",
+        "ref": "320",
+        "route": "bus",
+        "to": "Filter Pada",
+        "type": "route"
+      }
+    },
+    {
+      "type": "relation",
+      "id": 17400023,
+      "tags": {
+        "from": "Shivshahi Prakalp",
+        "name": "Bus 326: Shivshahi Prakalp => Kurla Bus Station W",
+        "network": "BEST",
+        "operator": "The Brihanmumbai Electric Supply & Transport Undertaking",
+        "public_transport:version": "2",
+        "ref": "326",
+        "route": "bus",
+        "to": "Kurla Bus Station W",
+        "type": "route"
+      }
+    },
+    {
+      "type": "relation",
+      "id": 17400024,
+      "tags": {
+        "from": "Kurla Bus Station W",
+        "name": "Bus 326: Kurla Bus Station W => Shivshahi Prakalp",
+        "network": "BEST",
+        "operator": "The Brihanmumbai Electric Supply & Transport Undertaking",
+        "public_transport:version": "2",
+        "ref": "326",
+        "route": "bus",
+        "to": "Shivshahi Prakalp",
+        "type": "route"
+      }
+    },
+    {
+      "type": "relation",
+      "id": 17402757,
+      "tags": {
+        "from": "Shivshahi Prakalp",
+        "name": "Bus 327: Shivshahi Prakalp => Goregaon Station E",
+        "network": "BEST",
+        "operator": "The Brihanmumbai Electric Supply & Transport Undertaking",
+        "public_transport:version": "2",
+        "ref": "327",
+        "route": "bus",
+        "to": "Goregaon Station E",
+        "type": "route"
+      }
+    },
+    {
+      "type": "relation",
+      "id": 17402758,
+      "tags": {
+        "from": "Goregaon Station E",
+        "name": "Bus 327: Goregaon Station E => Shivshahi Prakalp",
+        "network": "BEST",
+        "operator": "The Brihanmumbai Electric Supply & Transport Undertaking",
+        "public_transport:version": "2",
+        "ref": "327",
+        "route": "bus",
+        "to": "Shivshahi Prakalp",
+        "type": "route"
+      }
+    },
+    {
+      "type": "relation",
+      "id": 17403312,
+      "tags": {
+        "from": "Marol Depot",
+        "name": "Bus 334: Marol Depot => Ghatkopar Railway Station W",
+        "network": "BEST",
+        "operator": "The Brihanmumbai Electric Supply & Transport Undertaking",
+        "public_transport:version": "2",
+        "ref": "334",
+        "route": "bus",
+        "to": "Ghatkopar Railway Station W",
+        "type": "route"
+      }
+    },
+    {
+      "type": "relation",
+      "id": 17403313,
+      "tags": {
+        "from": "Ghatkopar Railway Station W",
+        "name": "Bus 334: Ghatkopar Railway Station W => Marol Depot",
+        "network": "BEST",
+        "operator": "The Brihanmumbai Electric Supply & Transport Undertaking",
+        "public_transport:version": "2",
+        "ref": "334",
+        "route": "bus",
+        "to": "Marol Depot",
+        "type": "route"
+      }
+    },
+    {
+      "type": "relation",
+      "id": 17403314,
+      "tags": {
+        "from": "Marol Depot",
+        "name": "Bus A-334: Marol Depot => Ghatkopar Railway Station W",
+        "network": "BEST",
+        "operator": "The Brihanmumbai Electric Supply & Transport Undertaking",
+        "public_transport:version": "2",
+        "ref": "A-334",
+        "route": "bus",
+        "to": "Ghatkopar Railway Station W",
+        "type": "route"
+      }
+    },
+    {
+      "type": "relation",
+      "id": 17403315,
+      "tags": {
+        "from": "Ghatkopar Railway Station W",
+        "name": "Bus A-334: Ghatkopar Railway Station W => Marol Depot",
+        "network": "BEST",
+        "operator": "The Brihanmumbai Electric Supply & Transport Undertaking",
+        "public_transport:version": "2",
+        "ref": "A-334",
+        "route": "bus",
+        "to": "Marol Depot",
+        "type": "route"
+      }
+    },
+    {
+      "type": "relation",
+      "id": 17405926,
+      "tags": {
+        "from": "Goregaon Station E",
+        "name": "Bus A-341: Goregaon Station E => Antop Hill",
+        "network": "BEST",
+        "operator": "The Brihanmumbai Electric Supply & Transport Undertaking",
+        "public_transport:version": "2",
+        "ref": "A-341",
+        "route": "bus",
+        "to": "Antop Hill",
+        "type": "route"
+      }
+    },
+    {
+      "type": "relation",
+      "id": 17405927,
+      "tags": {
+        "from": "Antop Hill",
+        "name": "Bus A-341: Antop Hilll => Goregaon Station E",
+        "network": "BEST",
+        "operator": "The Brihanmumbai Electric Supply & Transport Undertaking",
+        "public_transport:version": "2",
+        "ref": "A-341",
+        "route": "bus",
+        "to": "Goregaon Station E",
+        "type": "route"
+      }
+    },
+    {
+      "type": "relation",
+      "id": 17405955,
+      "tags": {
+        "from": "Dadasaheb Phalke Chitranagri",
+        "name": "Bus 343: Dadasaheb Phalke Chitranagri => Goregaon Station E",
+        "network": "BEST",
+        "operator": "The Brihanmumbai Electric Supply & Transport Undertaking",
+        "public_transport:version": "2",
+        "ref": "343",
+        "route": "bus",
+        "to": "Goregaon Station E",
+        "type": "route"
+      }
+    },
+    {
+      "type": "relation",
+      "id": 17405956,
+      "tags": {
+        "from": "Goregaon Station E",
+        "name": "Bus 343: Goregaon Station E => Dadasaheb Phalke Chitranagri",
+        "network": "BEST",
+        "operator": "The Brihanmumbai Electric Supply & Transport Undertaking",
+        "public_transport:version": "2",
+        "ref": "343",
+        "route": "bus",
+        "to": "Dadasaheb Phalke Chitranagri",
+        "type": "route"
+      }
+    },
+    {
+      "type": "relation",
+      "id": 17405994,
+      "tags": {
+        "from": "Shivshahi Prakalp",
+        "name": "Bus 346: Shivshahi Prakalp => Goregaon Station E",
+        "network": "BEST",
+        "operator": "The Brihanmumbai Electric Supply & Transport Undertaking",
+        "public_transport:version": "2",
+        "ref": "346",
+        "route": "bus",
+        "to": "Goregaon Station E",
+        "type": "route"
+      }
+    },
+    {
+      "type": "relation",
+      "id": 17405995,
+      "tags": {
+        "from": "Goregaon Station E",
+        "name": "Bus 346: Goregaon Station E => Shivshahi Prakalp",
+        "network": "BEST",
+        "operator": "The Brihanmumbai Electric Supply & Transport Undertaking",
+        "public_transport:version": "2",
+        "ref": "346",
+        "route": "bus",
+        "to": "Shivshahi Prakalp",
+        "type": "route"
+      }
+    },
+    {
+      "type": "relation",
+      "id": 17408472,
+      "tags": {
+        "from": "Kannamwar Nagar",
+        "name": "Bus 354: Kannamwar Nagar => Worli Depot",
+        "network": "BEST",
+        "operator": "The Brihanmumbai Electric Supply & Transport Undertaking",
+        "public_transport:version": "2",
+        "ref": "354",
+        "route": "bus",
+        "to": "Worli Depot",
+        "type": "route"
+      }
+    },
+    {
+      "type": "relation",
+      "id": 17408473,
+      "tags": {
+        "from": "Worli Depot",
+        "name": "Bus 354: Worli Depot => Kannamwar Nagar",
+        "network": "BEST",
+        "operator": "The Brihanmumbai Electric Supply & Transport Undertaking",
+        "public_transport:version": "2",
+        "ref": "354",
+        "route": "bus",
+        "to": "Kannamwar Nagar",
+        "type": "route"
+      }
+    },
+    {
+      "type": "relation",
+      "id": 17462669,
+      "tags": {
+        "from": "Mulund Depot",
+        "name": "Bus A-368: Mulund Depot => Prabodhankar Thakare Udyan Sewri",
+        "network": "BEST",
+        "operator": "The Brihanmumbai Electric Supply & Transport Undertaking",
+        "public_transport:version": "2",
+        "ref": "A-368",
+        "route": "bus",
+        "to": "Prabodhankar Thakare Udyan Sewri",
+        "type": "route"
+      }
+    },
+    {
+      "type": "relation",
+      "id": 17462670,
+      "tags": {
+        "from": "Prabodhankar Thakare Udyan Sewri",
+        "name": "Bus A-368: Prabodhankar Thakare Udyan Sewri => Mulund Depot",
+        "network": "BEST",
+        "operator": "The Brihanmumbai Electric Supply & Transport Undertaking",
+        "public_transport:version": "2",
+        "ref": "A-368",
+        "route": "bus",
+        "to": "Mulund Depot",
+        "type": "route"
+      }
+    },
+    {
+      "type": "relation",
+      "id": 17487159,
+      "tags": {
+        "from": "Mulund Depot",
+        "name": "Bus A-370: Kelkar College => Mhada Colony Mulund East",
+        "network": "BEST",
+        "operator": "The Brihanmumbai Electric Supply & Transport Undertaking",
+        "public_transport:version": "2",
+        "ref": "A-370",
+        "route": "bus",
+        "to": "Mhada Colony Mulund East",
+        "type": "route"
+      }
+    },
+    {
+      "type": "relation",
+      "id": 17487160,
+      "tags": {
+        "from": "Mhada Colony Mulund East",
+        "name": "Bus A-370: Mhada Colony Mulund East => Kelkar College",
+        "network": "BEST",
+        "operator": "The Brihanmumbai Electric Supply & Transport Undertaking",
+        "public_transport:version": "2",
+        "ref": "A-370",
+        "route": "bus",
+        "to": "Mulund Depot",
+        "type": "route"
+      }
+    },
+    {
+      "type": "relation",
+      "id": 17489677,
+      "tags": {
+        "from": "Vaishali Nagar",
+        "name": "Bus A-373: Vaishali Nagar => Mahul Village",
+        "network": "BEST",
+        "operator": "The Brihanmumbai Electric Supply & Transport Undertaking",
+        "public_transport:version": "2",
+        "ref": "A-373",
+        "route": "bus",
+        "to": "Mahul Village",
+        "type": "route"
+      }
+    },
+    {
+      "type": "relation",
+      "id": 17489678,
+      "tags": {
+        "from": "Mahul Village",
+        "name": "Bus A-373: Mahul Village => Vaishali Nagar",
+        "network": "BEST",
+        "operator": "The Brihanmumbai Electric Supply & Transport Undertaking",
+        "public_transport:version": "2",
+        "ref": "A-373",
+        "route": "bus",
+        "to": "Vaishali Nagar",
+        "type": "route"
+      }
+    },
+    {
+      "type": "relation",
+      "id": 17493771,
+      "tags": {
+        "from": "Sahar Cargo Complex",
+        "name": "Bus A-382: Sahar Cargo Complex => Anushakti Nagar Bus Station",
+        "network": "BEST",
+        "operator": "The Brihanmumbai Electric Supply & Transport Undertaking",
+        "public_transport:version": "2",
+        "ref": "A-382",
+        "route": "bus",
+        "to": "Anushakti Nagar Bus Station",
+        "type": "route"
+      }
+    },
+    {
+      "type": "relation",
+      "id": 17493772,
+      "tags": {
+        "from": "Anushakti Nagar Bus Station",
+        "name": "Bus A-382: Anushakti Nagar Bus Station => Sahar Cargo Complex",
+        "network": "BEST",
+        "operator": "The Brihanmumbai Electric Supply & Transport Undertaking",
+        "public_transport:version": "2",
+        "ref": "A-382",
+        "route": "bus",
+        "to": "Sahar Cargo Complex",
+        "type": "route"
+      }
+    },
+    {
+      "type": "relation",
+      "id": 17496903,
+      "tags": {
+        "from": "Khindipada",
+        "name": "Bus A-391: Khindipada => Mulund Railway Station W",
+        "network": "BEST",
+        "operator": "The Brihanmumbai Electric Supply & Transport Undertaking",
+        "public_transport:version": "2",
+        "ref": "A-391",
+        "route": "bus",
+        "to": "Mulund Railway Station W",
+        "type": "route"
+      }
+    },
+    {
+      "type": "relation",
+      "id": 17496904,
+      "tags": {
+        "from": "Mulund Railway Station W",
+        "name": "Bus A-391: Mulund Railway Station W => Khindipada",
+        "network": "BEST",
+        "operator": "The Brihanmumbai Electric Supply & Transport Undertaking",
+        "public_transport:version": "2",
+        "ref": "A-391",
+        "route": "bus",
+        "to": "Khindipada",
+        "type": "route"
+      }
+    },
+    {
+      "type": "relation",
+      "id": 17496955,
+      "tags": {
+        "from": "Majas Depot",
+        "name": "Bus 392: Majas Depot => Vikhroli Depot",
+        "network": "BEST",
+        "operator": "The Brihanmumbai Electric Supply & Transport Undertaking",
+        "public_transport:version": "2",
+        "ref": "392",
+        "route": "bus",
+        "to": "Vikhroli Depot",
+        "type": "route"
+      }
+    },
+    {
+      "type": "relation",
+      "id": 17496956,
+      "tags": {
+        "from": "Vikhroli Depot",
+        "name": "Bus 392: Vikhroli Depot => Majas Depot",
+        "network": "BEST",
+        "operator": "The Brihanmumbai Electric Supply & Transport Undertaking",
+        "public_transport:version": "2",
+        "ref": "392",
+        "route": "bus",
+        "to": "Majas Depot",
+        "type": "route"
+      }
+    },
+    {
+      "type": "relation",
+      "id": 17496969,
+      "tags": {
+        "from": "Kannamwar Nagar",
+        "name": "Bus A-394: Kannamwar Nagar => Vikhroli Bus Station E",
+        "network": "BEST",
+        "operator": "The Brihanmumbai Electric Supply & Transport Undertaking",
+        "public_transport:version": "2",
+        "ref": "A-394",
+        "route": "bus",
+        "to": "Vikhroli Bus Station E",
+        "type": "route"
+      }
+    },
+    {
+      "type": "relation",
+      "id": 17496970,
+      "tags": {
+        "from": "Vikhroli Bus Station E",
+        "name": "Bus A-394: Vikhroli Bus Station E => Kannamwar Nagar",
+        "network": "BEST",
+        "operator": "The Brihanmumbai Electric Supply & Transport Undertaking",
+        "public_transport:version": "2",
+        "ref": "A-394",
+        "route": "bus",
+        "to": "Kannamwar Nagar",
+        "type": "route"
+      }
+    },
+    {
+      "type": "relation",
+      "id": 17497037,
+      "tags": {
+        "from": "Mulund W Check Naka",
+        "name": "Bus A-396: Mulund W Check Naka => Agarkar Chowk",
+        "network": "BEST",
+        "operator": "The Brihanmumbai Electric Supply & Transport Undertaking",
+        "public_transport:version": "2",
+        "ref": "A-396",
+        "route": "bus",
+        "to": "Agarkar Chowk",
+        "type": "route"
+      }
+    },
+    {
+      "type": "relation",
+      "id": 17497038,
+      "tags": {
+        "from": "Agarkar Chowk",
+        "name": "Bus A-396: Agarkar Chowk => Mulund W Check Naka",
+        "network": "BEST",
+        "operator": "The Brihanmumbai Electric Supply & Transport Undertaking",
+        "public_transport:version": "2",
+        "ref": "A-396",
+        "route": "bus",
+        "to": "Mulund W Check Naka",
+        "type": "route"
+      }
+    },
+    {
+      "type": "relation",
+      "id": 17497765,
+      "tags": {
+        "from": "Kannamwar Nagar Building 124",
+        "name": "Bus A-397: Kannamwar Nagar Building 124 => Vikhroli Bus Station E",
+        "network": "BEST",
+        "operator": "The Brihanmumbai Electric Supply & Transport Undertaking",
+        "public_transport:version": "2",
+        "ref": "A-397",
+        "route": "bus",
+        "to": "Vikhroli Bus Station E",
+        "type": "route"
+      }
+    },
+    {
+      "type": "relation",
+      "id": 17497766,
+      "tags": {
+        "from": "Vikhroli Bus Station E",
+        "name": "Bus A-397: Vikhroli Bus Station E => Kannamwar Nagar Building 124",
+        "network": "BEST",
+        "operator": "The Brihanmumbai Electric Supply & Transport Undertaking",
+        "public_transport:version": "2",
+        "ref": "A-397",
+        "route": "bus",
+        "to": "Kannamwar Nagar Building 124",
+        "type": "route"
+      }
+    },
+    {
+      "type": "relation",
+      "id": 17497817,
+      "tags": {
+        "from": "Mulund W Check Naka",
+        "name": "Bus 398LTD: Mulund W Check Naka => Dindoshi Depot",
+        "network": "BEST",
+        "operator": "The Brihanmumbai Electric Supply & Transport Undertaking",
+        "public_transport:version": "2",
+        "ref": "398LTD",
+        "route": "bus",
+        "to": "Dindoshi Depot",
+        "type": "route"
+      }
+    },
+    {
+      "type": "relation",
+      "id": 17497818,
+      "tags": {
+        "from": "Dindoshi Depot",
+        "name": "Bus 398LTD: Dindoshi Depot => Mulund W Check Naka",
+        "network": "BEST",
+        "operator": "The Brihanmumbai Electric Supply & Transport Undertaking",
+        "public_transport:version": "2",
+        "ref": "398LTD",
+        "route": "bus",
+        "to": "Mulund W Check Naka",
+        "type": "route"
+      }
+    },
+    {
+      "type": "relation",
+      "id": 17497861,
+      "tags": {
+        "from": "Marathon Chowk",
+        "name": "Bus 399LTD: Marathon Chowk => Trombay",
+        "network": "BEST",
+        "operator": "The Brihanmumbai Electric Supply & Transport Undertaking",
+        "public_transport:version": "2",
+        "ref": "399LTD",
+        "route": "bus",
+        "to": "Trombay",
+        "type": "route"
+      }
+    },
+    {
+      "type": "relation",
+      "id": 17497862,
+      "tags": {
+        "from": "Trombay",
+        "name": "Bus 399LTD: Trombay => Marathon Chowk",
+        "network": "BEST",
+        "operator": "The Brihanmumbai Electric Supply & Transport Undertaking",
+        "public_transport:version": "2",
+        "ref": "399LTD",
+        "route": "bus",
+        "to": "Marathon Chowk",
+        "type": "route"
+      }
+    },
+    {
+      "type": "relation",
+      "id": 17497869,
+      "tags": {
+        "from": "Vaishali Nagar",
+        "name": "Bus A-401: Vaishali Nagar => Mulund Railway Station W",
+        "network": "BEST",
+        "operator": "The Brihanmumbai Electric Supply & Transport Undertaking",
+        "public_transport:version": "2",
+        "ref": "A-401",
+        "route": "bus",
+        "to": "Mulund Railway Station W",
+        "type": "route"
+      }
+    },
+    {
+      "type": "relation",
+      "id": 17497870,
+      "tags": {
+        "from": "Mulund Railway Station W",
+        "name": "Bus A-401: Mulund Railway Station W => Vaishali Nagar",
+        "network": "BEST",
+        "operator": "The Brihanmumbai Electric Supply & Transport Undertaking",
+        "public_transport:version": "2",
+        "ref": "A-401",
+        "route": "bus",
+        "to": "Vaishali Nagar",
+        "type": "route"
+      }
+    },
+    {
+      "type": "relation",
+      "id": 17497876,
+      "tags": {
+        "from": "Vaishali Nagar",
+        "name": "Bus A-402: Vaishali Nagar => Mulund Railway Station W",
+        "network": "BEST",
+        "operator": "The Brihanmumbai Electric Supply & Transport Undertaking",
+        "public_transport:version": "2",
+        "ref": "A-402",
+        "route": "bus",
+        "to": "Mulund Railway Station W",
+        "type": "route"
+      }
+    },
+    {
+      "type": "relation",
+      "id": 17497877,
+      "tags": {
+        "from": "Mulund Railway Station W",
+        "name": "Bus A-402: Mulund Railway Station W => Vaishali Nagar",
+        "network": "BEST",
+        "operator": "The Brihanmumbai Electric Supply & Transport Undertaking",
+        "public_transport:version": "2",
+        "ref": "A-402",
+        "route": "bus",
+        "to": "Vaishali Nagar",
+        "type": "route"
+      }
+    },
+    {
+      "type": "relation",
+      "id": 17502050,
+      "tags": {
+        "from": "Mhada Colony Mulund East",
+        "name": "Bus A-403: Mhada Colony Mulund East => Agarkar Chowk",
+        "network": "BEST",
+        "operator": "The Brihanmumbai Electric Supply & Transport Undertaking",
+        "public_transport:version": "2",
+        "ref": "A-403",
+        "route": "bus",
+        "to": "Agarkar Chowk",
+        "type": "route"
+      }
+    },
+    {
+      "type": "relation",
+      "id": 17502051,
+      "tags": {
+        "from": "Agarkar Chowk",
+        "name": "Bus A-403: Agarkar Chowk => Mhada Colony Mulund East",
+        "network": "BEST",
+        "operator": "The Brihanmumbai Electric Supply & Transport Undertaking",
+        "public_transport:version": "2",
+        "ref": "A-403",
+        "route": "bus",
+        "to": "Mhada Colony Mulund East",
+        "type": "route"
+      }
+    },
+    {
+      "type": "relation",
+      "id": 17502123,
+      "tags": {
+        "from": "Yogi Hill",
+        "name": "Bus A-405: Yogi Hill => Mulund Railway Station W",
+        "network": "BEST",
+        "operator": "The Brihanmumbai Electric Supply & Transport Undertaking",
+        "public_transport:version": "2",
+        "ref": "A-405",
+        "route": "bus",
+        "to": "Mulund Railway Station W",
+        "type": "route"
+      }
+    },
+    {
+      "type": "relation",
+      "id": 17502124,
+      "tags": {
+        "from": "Mulund Railway Station W",
+        "name": "Bus A-405: Mulund Railway Station W => Yogi Hill",
+        "network": "BEST",
+        "operator": "The Brihanmumbai Electric Supply & Transport Undertaking",
+        "public_transport:version": "2",
+        "ref": "A-405",
+        "route": "bus",
+        "to": "Yogi Hill",
+        "type": "route"
+      }
+    },
+    {
+      "type": "relation",
+      "id": 17502597,
+      "tags": {
+        "from": "Sahar Cargo Complex",
+        "name": "Bus A-409: Sahar Cargo Complex => Mulund Depot",
+        "network": "BEST",
+        "operator": "The Brihanmumbai Electric Supply & Transport Undertaking",
+        "public_transport:version": "2",
+        "ref": "A-409",
+        "route": "bus",
+        "to": "Mulund Depot",
+        "type": "route"
+      }
+    },
+    {
+      "type": "relation",
+      "id": 17502598,
+      "tags": {
+        "from": "Mulund Depot",
+        "name": "Bus A-409: Mulund Depot => Sahar Cargo Complex",
+        "network": "BEST",
+        "operator": "The Brihanmumbai Electric Supply & Transport Undertaking",
+        "public_transport:version": "2",
+        "ref": "A-409",
+        "route": "bus",
+        "to": "Sahar Cargo Complex",
+        "type": "route"
+      }
+    },
+    {
+      "type": "relation",
+      "id": 17559684,
+      "tags": {
+        "from": "Ghati Pada",
+        "name": "Bus A-412: Ghati Pada => Mulund Railway Station W",
+        "network": "BEST",
+        "operator": "The Brihanmumbai Electric Supply & Transport Undertaking",
+        "public_transport:version": "2",
+        "ref": "A-412",
+        "route": "bus",
+        "to": "Mulund Railway Station W",
+        "type": "route"
+      }
+    },
+    {
+      "type": "relation",
+      "id": 17559685,
+      "tags": {
+        "from": "Mulund Railway Station W",
+        "name": "Bus A-412: Mulund Railway Station W => Ghati Pada",
+        "network": "BEST",
+        "operator": "The Brihanmumbai Electric Supply & Transport Undertaking",
+        "public_transport:version": "2",
+        "ref": "A-412",
+        "route": "bus",
+        "to": "Ghati Pada",
+        "type": "route"
+      }
+    },
+    {
+      "type": "relation",
+      "id": 17559729,
+      "tags": {
+        "from": "Nahur Bus Station",
+        "name": "Bus A-414: Nahur Bus Station => Mulund Railway Station W",
+        "network": "BEST",
+        "operator": "The Brihanmumbai Electric Supply & Transport Undertaking",
+        "public_transport:version": "2",
+        "ref": "A-414",
+        "route": "bus",
+        "to": "Mulund Railway Station W",
+        "type": "route"
+      }
+    },
+    {
+      "type": "relation",
+      "id": 17559730,
+      "tags": {
+        "from": "Mulund Railway Station W",
+        "name": "Bus A-414: Mulund Railway Station W => Nahur Bus Station",
+        "network": "BEST",
+        "operator": "The Brihanmumbai Electric Supply & Transport Undertaking",
+        "public_transport:version": "2",
+        "ref": "A-414",
+        "route": "bus",
+        "to": "Nahur Bus Station",
+        "type": "route"
+      }
+    },
+    {
+      "type": "relation",
+      "id": 17735466,
+      "tags": {
+        "from": "Vikhroli Depot",
+        "name": "Bus 422: Vikhroli Depot => Bandra Bus Station W",
+        "network": "BEST",
+        "operator": "The Brihanmumbai Electric Supply & Transport Undertaking",
+        "public_transport:version": "2",
+        "ref": "422",
+        "route": "bus",
+        "to": "Bandra Bus Station W",
+        "type": "route"
+      }
+    },
+    {
+      "type": "relation",
+      "id": 17735467,
+      "tags": {
+        "from": "Bandra Bus Station (W)",
+        "name": "Bus 422: Bandra Bus Station (W) => Vikhroli Depot",
+        "network": "BEST",
+        "operator": "The Brihanmumbai Electric Supply & Transport Undertaking",
+        "public_transport:version": "2",
+        "ref": "422",
+        "route": "bus",
+        "to": "Vikhroli Depot",
+        "type": "route"
+      }
+    },
+    {
+      "type": "relation",
+      "id": 17735525,
+      "tags": {
+        "from": "Mulund Railway Station W",
+        "name": "Bus 424: Mulund Railway Station W => Oshiwara Depot",
+        "network": "BEST",
+        "operator": "The Brihanmumbai Electric Supply & Transport Undertaking",
+        "public_transport:version": "2",
+        "ref": "424",
+        "route": "bus",
+        "to": "Oshiwara Depot",
+        "type": "route"
+      }
+    },
+    {
+      "type": "relation",
+      "id": 17735526,
+      "tags": {
+        "from": "Oshiwara Depot",
+        "name": "Bus 424: Oshiwara Depot => Mulund Railway Station W",
+        "network": "BEST",
+        "operator": "The Brihanmumbai Electric Supply & Transport Undertaking",
+        "public_transport:version": "2",
+        "ref": "424",
+        "route": "bus",
+        "to": "Mulund Railway Station W",
+        "type": "route"
+      }
+    },
+    {
+      "type": "relation",
+      "id": 17736695,
+      "tags": {
+        "from": "Chhatrapati Shivaji Maharaj Talao",
+        "name": "Bus 425: Chhatrapati Shivaji Maharaj Talao => Vesava - Yari Road Bus Station",
+        "network": "BEST",
+        "operator": "The Brihanmumbai Electric Supply & Transport Undertaking",
+        "public_transport:version": "2",
+        "ref": "425",
+        "route": "bus",
+        "to": "Vesava - Yari Road Bus Station",
+        "type": "route"
+      }
+    },
+    {
+      "type": "relation",
+      "id": 17736696,
+      "tags": {
+        "from": "Vesava - Yari Road Bus Station",
+        "name": "Bus 425: Vesava - Yari Road Bus Station => Chhatrapati Shivaji Maharaj Talao",
+        "network": "BEST",
+        "operator": "The Brihanmumbai Electric Supply & Transport Undertaking",
+        "public_transport:version": "2",
+        "ref": "425",
+        "route": "bus",
+        "to": "Chhatrapati Shivaji Maharaj Talao",
+        "type": "route"
+      }
+    },
+    {
+      "type": "relation",
+      "id": 17736710,
+      "tags": {
+        "from": "Filter Pada",
+        "name": "Bus 426: Filter Pada => Vidyavihar Bus Station",
+        "network": "BEST",
+        "operator": "The Brihanmumbai Electric Supply & Transport Undertaking",
+        "public_transport:version": "2",
+        "ref": "426",
+        "route": "bus",
+        "to": "Vidyavihar Bus Station",
+        "type": "route"
+      }
+    },
+    {
+      "type": "relation",
+      "id": 17736711,
+      "tags": {
+        "from": "Vidyavihar Bus Station",
+        "name": "Bus 426: Vidyavihar Bus Station => Filter Pada",
+        "network": "BEST",
+        "operator": "The Brihanmumbai Electric Supply & Transport Undertaking",
+        "public_transport:version": "2",
+        "ref": "426",
+        "route": "bus",
+        "to": "Filter Pada",
+        "type": "route"
+      }
+    },
+    {
+      "type": "relation",
+      "id": 17736716,
+      "tags": {
+        "from": "Filter Pada",
+        "name": "Bus A-427: Filter Pada => Ghatkopar Bus Station",
+        "network": "BEST",
+        "operator": "The Brihanmumbai Electric Supply & Transport Undertaking",
+        "public_transport:version": "2",
+        "ref": "A-427",
+        "route": "bus",
+        "to": "Ghatkopar Bus Station",
+        "type": "route"
+      }
+    },
+    {
+      "type": "relation",
+      "id": 17736717,
+      "tags": {
+        "from": "Ghatkopar Bus Station",
+        "name": "Bus A-427: Ghatkopar Bus Station => Filter Pada",
+        "network": "BEST",
+        "operator": "The Brihanmumbai Electric Supply & Transport Undertaking",
+        "public_transport:version": "2",
+        "ref": "A-427",
+        "route": "bus",
+        "to": "Filter Pada",
+        "type": "route"
+      }
+    },
+    {
+      "type": "relation",
+      "id": 17736747,
+      "tags": {
+        "from": "Chhatrapati Shivaji Maharaj Talao",
+        "name": "Bus 428: Chhatrapati Shivaji Maharaj Talao => Sadbhakti Mandir",
+        "network": "BEST",
+        "operator": "The Brihanmumbai Electric Supply & Transport Undertaking",
+        "public_transport:version": "2",
+        "ref": "428",
+        "route": "bus",
+        "to": "Sadbhakti Mandir",
+        "type": "route"
+      }
+    },
+    {
+      "type": "relation",
+      "id": 17736748,
+      "tags": {
+        "from": "Sadbhakti Mandir",
+        "name": "Bus 428 Sadbhakti Mandir => Chhatrapati Shivaji Maharaj Talao",
+        "network": "BEST",
+        "operator": "The Brihanmumbai Electric Supply & Transport Undertaking",
+        "public_transport:version": "2",
+        "ref": "428",
+        "route": "bus",
+        "to": "Chhatrapati Shivaji Maharaj Talao",
+        "type": "route"
+      }
+    },
+    {
+      "type": "relation",
+      "id": 17747138,
+      "tags": {
+        "from": "Bamandaya Pada",
+        "name": "Bus A-434: Bamandaya Pada => Agarkar Chowk",
+        "network": "BEST",
+        "operator": "The Brihanmumbai Electric Supply & Transport Undertaking",
+        "public_transport:version": "2",
+        "ref": "A-434",
+        "route": "bus",
+        "to": "Agarkar Chowk",
+        "type": "route"
+      }
+    },
+    {
+      "type": "relation",
+      "id": 17747139,
+      "tags": {
+        "from": "Agarkar Chowk",
+        "name": "Bus A-434: Agarkar Chowk => Bamandaya Pada",
+        "network": "BEST",
+        "operator": "The Brihanmumbai Electric Supply & Transport Undertaking",
+        "public_transport:version": "2",
+        "ref": "A-434",
+        "route": "bus",
+        "to": "Bamandaya Pada",
+        "type": "route"
+      }
+    },
+    {
+      "type": "relation",
+      "id": 17764523,
+      "tags": {
+        "from": "Bamandaya Pada",
+        "name": "Bus A-443: Bamandaya Pada => Agarkar Chowk",
+        "network": "BEST",
+        "operator": "The Brihanmumbai Electric Supply & Transport Undertaking",
+        "public_transport:version": "2",
+        "ref": "A-443",
+        "route": "bus",
+        "to": "Agarkar Chowk",
+        "type": "route"
+      }
+    },
+    {
+      "type": "relation",
+      "id": 17764524,
+      "tags": {
+        "from": "Agarkar Chowk",
+        "name": "Bus A-443: Agarkar Chowk => Bamandaya Pada",
+        "network": "BEST",
+        "operator": "The Brihanmumbai Electric Supply & Transport Undertaking",
+        "public_transport:version": "2",
+        "ref": "A-443",
+        "route": "bus",
+        "to": "Bamandaya Pada",
+        "type": "route"
+      }
+    },
+    {
+      "type": "relation",
+      "id": 17764537,
+      "tags": {
+        "from": "Bamandaya Pada",
+        "name": "Bus 446: Bamandaya Pada => Kurla Bus Station W",
+        "network": "BEST",
+        "operator": "The Brihanmumbai Electric Supply & Transport Undertaking",
+        "public_transport:version": "2",
+        "ref": "446",
+        "route": "bus",
+        "to": "Kurla Bus Station W",
+        "type": "route"
+      }
+    },
+    {
+      "type": "relation",
+      "id": 17764538,
+      "tags": {
+        "from": "Kurla Bus Station W",
+        "name": "Bus 446: Kurla Bus Station W => Bamandaya Pada",
+        "network": "BEST",
+        "operator": "The Brihanmumbai Electric Supply & Transport Undertaking",
+        "public_transport:version": "2",
+        "ref": "446",
+        "route": "bus",
+        "to": "Bamandaya Pada",
+        "type": "route"
+      }
+    },
+    {
+      "type": "relation",
+      "id": 17769347,
+      "tags": {
+        "from": "Adarsh Nagar",
+        "name": "Bus A-451: Adarsh Nagar => Goregaon Station E",
+        "network": "BEST",
+        "operator": "The Brihanmumbai Electric Supply & Transport Undertaking",
+        "public_transport:version": "2",
+        "ref": "A-451",
+        "route": "bus",
+        "to": "Goregaon Station E",
+        "type": "route"
+      }
+    },
+    {
+      "type": "relation",
+      "id": 17769348,
+      "tags": {
+        "from": "Goregaon Station E",
+        "name": "Bus A-451: Goregaon Station E => Adarsh Nagar",
+        "network": "BEST",
+        "operator": "The Brihanmumbai Electric Supply & Transport Undertaking",
+        "public_transport:version": "2",
+        "ref": "A-451",
+        "route": "bus",
+        "to": "Adarsh Nagar",
+        "type": "route"
+      }
+    },
+    {
+      "type": "relation",
+      "id": 17769522,
+      "tags": {
+        "from": "Lokmanya Nagar Thane",
+        "name": "Bus A-453: Lokmanya Nagar Thane => Ghatkopar Bus Station",
+        "network": "BEST",
+        "operator": "The Brihanmumbai Electric Supply & Transport Undertaking",
+        "public_transport:version": "2",
+        "ref": "A-453",
+        "route": "bus",
+        "to": "Ghatkopar Bus Station",
+        "type": "route"
+      }
+    },
+    {
+      "type": "relation",
+      "id": 17769523,
+      "tags": {
+        "from": "Ghatkopar Bus Station",
+        "name": "Bus A-453: Ghatkopar Bus Station => Lokmanya Nagar Thane",
+        "network": "BEST",
+        "operator": "The Brihanmumbai Electric Supply & Transport Undertaking",
+        "public_transport:version": "2",
+        "ref": "A-453",
+        "route": "bus",
+        "to": "Lokmanya Nagar Thane",
+        "type": "route"
+      }
+    },
+    {
+      "type": "relation",
+      "id": 17769639,
+      "tags": {
+        "from": "Mantri Park",
+        "name": "Bus 454: Mantri Park => Seven Bungalows Bus Depot",
+        "network": "BEST",
+        "operator": "The Brihanmumbai Electric Supply & Transport Undertaking",
+        "public_transport:version": "2",
+        "ref": "454",
+        "route": "bus",
+        "to": "Seven Bungalows Bus Depot",
+        "type": "route"
+      }
+    },
+    {
+      "type": "relation",
+      "id": 17769640,
+      "tags": {
+        "from": "Seven Bungalows Bus Depot",
+        "name": "Bus 454: Seven Bungalows Bus Depot => Mantri Park",
+        "network": "BEST",
+        "operator": "The Brihanmumbai Electric Supply & Transport Undertaking",
+        "public_transport:version": "2",
+        "ref": "454",
+        "route": "bus",
+        "to": "Mantri Park",
+        "type": "route"
+      }
+    },
+    {
+      "type": "relation",
+      "id": 17773797,
+      "tags": {
+        "from": "Malvani Depot",
+        "name": "Bus A-456: Malvani Depot => Malvani Depot (Ring Route)",
+        "network": "BEST",
+        "operator": "The Brihanmumbai Electric Supply & Transport Undertaking",
+        "public_transport:version": "2",
+        "ref": "A-456",
+        "route": "bus",
+        "to": "Malvani Depot",
+        "type": "route"
+      }
+    },
+    {
+      "type": "relation",
+      "id": 17773850,
+      "tags": {
+        "from": "Mulund Railway Station W",
+        "name": "Bus 459LTD: Mulund Railway Station W => Malvani Depot",
+        "network": "BEST",
+        "operator": "The Brihanmumbai Electric Supply & Transport Undertaking",
+        "public_transport:version": "2",
+        "ref": "459LTD",
+        "route": "bus",
+        "to": "Malvani Depot",
+        "type": "route"
+      }
+    },
+    {
+      "type": "relation",
+      "id": 17773851,
+      "tags": {
+        "from": "Malvani Depot",
+        "name": "Bus 459LTD: Malvani Depot => Mulund Railway Station W",
+        "network": "BEST",
+        "operator": "The Brihanmumbai Electric Supply & Transport Undertaking",
+        "public_transport:version": "2",
+        "ref": "459LTD",
+        "route": "bus",
+        "to": "Mulund Railway Station W",
+        "type": "route"
+      }
+    },
+    {
+      "type": "relation",
+      "id": 17774098,
+      "tags": {
+        "from": "Mulund Railway Station W",
+        "name": "Bus 460LTD: Mulund Railway Station W => Gorai Depot",
+        "network": "BEST",
+        "operator": "The Brihanmumbai Electric Supply & Transport Undertaking",
+        "public_transport:version": "2",
+        "ref": "460LTD",
+        "route": "bus",
+        "to": "Gorai Depot",
+        "type": "route"
+      }
+    },
+    {
+      "type": "relation",
+      "id": 17774099,
+      "tags": {
+        "from": "Gorai Depot",
+        "name": "Bus 460LTD: Gorai Depot => Mulund Railway Station W",
+        "network": "BEST",
+        "operator": "The Brihanmumbai Electric Supply & Transport Undertaking",
+        "public_transport:version": "2",
+        "ref": "460LTD",
+        "route": "bus",
+        "to": "Mulund Railway Station W",
+        "type": "route"
+      }
+    },
+    {
+      "type": "relation",
+      "id": 17774129,
+      "tags": {
+        "from": "Mulund West Check Naka",
+        "name": "Bus 461LTD: Mulund West Check Naka => Prabodhankar Thakare Nagar Bus Station",
+        "network": "BEST",
+        "operator": "The Brihanmumbai Electric Supply & Transport Undertaking",
+        "public_transport:version": "2",
+        "ref": "461LTD",
+        "route": "bus",
+        "to": "Prabodhankar Thakare Nagar Bus Station",
+        "type": "route"
+      }
+    },
+    {
+      "type": "relation",
+      "id": 17774130,
+      "tags": {
+        "from": "Prabodhankar Thakare Nagar Bus Station",
+        "name": "Bus 461LTD: Prabodhankar Thakare Nagar Bus Station => Mulund West Check Naka",
+        "network": "BEST",
+        "operator": "The Brihanmumbai Electric Supply & Transport Undertaking",
+        "public_transport:version": "2",
+        "ref": "461LTD",
+        "route": "bus",
+        "to": "Mulund West Check Naka",
+        "type": "route"
+      }
+    },
+    {
+      "type": "relation",
+      "id": 17778785,
+      "tags": {
+        "from": "Oshiwara Depot",
+        "name": "Bus 464LTD: Oshiwara Depot => Ghatkopar Bus Station",
+        "network": "BEST",
+        "operator": "The Brihanmumbai Electric Supply & Transport Undertaking",
+        "public_transport:version": "2",
+        "ref": "464LTD",
+        "route": "bus",
+        "to": "Ghatkopar Bus Station",
+        "type": "route"
+      }
+    },
+    {
+      "type": "relation",
+      "id": 17778786,
+      "tags": {
+        "from": "Ghatkopar Bus Station",
+        "name": "Bus 464LTD: Ghatkopar Bus Station => Oshiwara Depot",
+        "network": "BEST",
+        "operator": "The Brihanmumbai Electric Supply & Transport Undertaking",
+        "public_transport:version": "2",
+        "ref": "464LTD",
+        "route": "bus",
+        "to": "Oshiwara Depot",
+        "type": "route"
+      }
+    },
+    {
+      "type": "relation",
+      "id": 17780603,
+      "tags": {
+        "from": "Maharana Pratap Chowk",
+        "name": "Bus 469LTD: Maharana Pratap Chowk => Oshiwara Depot",
+        "network": "BEST",
+        "operator": "The Brihanmumbai Electric Supply & Transport Undertaking",
+        "public_transport:version": "2",
+        "ref": "469LTD",
+        "route": "bus",
+        "to": "Oshiwara Depot",
+        "type": "route"
+      }
+    },
+    {
+      "type": "relation",
+      "id": 17780604,
+      "tags": {
+        "from": "Oshiwara Depot",
+        "name": "Bus 469LTD: Oshiwara Depot => Maharana Pratap Chowk",
+        "network": "BEST",
+        "operator": "The Brihanmumbai Electric Supply & Transport Undertaking",
+        "public_transport:version": "2",
+        "ref": "469LTD",
+        "route": "bus",
+        "to": "Maharana Pratap Chowk",
+        "type": "route"
+      }
+    },
+    {
+      "type": "relation",
+      "id": 17780657,
+      "tags": {
+        "from": "Borivali Station E",
+        "name": "Bus 478LTD: Borivali Station E => Vikhroli Depot",
+        "network": "BEST",
+        "operator": "The Brihanmumbai Electric Supply & Transport Undertaking",
+        "public_transport:version": "2",
+        "ref": "478LTD",
+        "route": "bus",
+        "to": "Vikhroli Depot",
+        "type": "route"
+      }
+    },
+    {
+      "type": "relation",
+      "id": 17780658,
+      "tags": {
+        "from": "Vikhroli Depot",
+        "name": "Bus 478LTD: Vikhroli Depot => Borivali Station E",
+        "network": "BEST",
+        "operator": "The Brihanmumbai Electric Supply & Transport Undertaking",
+        "public_transport:version": "2",
+        "ref": "478LTD",
+        "route": "bus",
+        "to": "Borivali Station E",
+        "type": "route"
+      }
+    },
+    {
+      "type": "relation",
+      "id": 17780842,
+      "tags": {
+        "from": "Mhada Colony Mulund East",
+        "name": "Bus A-484: Mhada Colony Mulund East => Pawar Nagar Bus Station Thane",
+        "network": "BEST",
+        "operator": "The Brihanmumbai Electric Supply & Transport Undertaking",
+        "public_transport:version": "2",
+        "ref": "A-484",
+        "route": "bus",
+        "to": "Pawar Nagar Bus Station Thane",
+        "type": "route"
+      }
+    },
+    {
+      "type": "relation",
+      "id": 17780843,
+      "tags": {
+        "from": "Mhada Colony Mulund East",
+        "name": "Bus A-484: Mhada Colony Mulund East => Pawar Nagar Bus Station Thane",
+        "network": "BEST",
+        "operator": "The Brihanmumbai Electric Supply & Transport Undertaking",
+        "public_transport:version": "2",
+        "ref": "A-484",
+        "route": "bus",
+        "to": "Pawar Nagar Bus Station Thane",
+        "type": "route"
+      }
+    },
+    {
+      "type": "relation",
+      "id": 17800322,
+      "tags": {
+        "from": "Dindoshi Depot",
+        "name": "Bus 489LTD: Dindoshi Depot => Shivaji Nagar Depot",
+        "network": "BEST",
+        "operator": "The Brihanmumbai Electric Supply & Transport Undertaking",
+        "public_transport:version": "2",
+        "ref": "489LTD",
+        "route": "bus",
+        "to": "Shivaji Nagar Depot",
+        "type": "route"
+      }
+    },
+    {
+      "type": "relation",
+      "id": 17800323,
+      "tags": {
+        "from": "Shivaji Nagar Depot",
+        "name": "Bus 489LTD: Shivaji Nagar Depot => Dindoshi Depot",
+        "network": "BEST",
+        "operator": "The Brihanmumbai Electric Supply & Transport Undertaking",
+        "public_transport:version": "2",
+        "ref": "489LTD",
+        "route": "bus",
+        "to": "Dindoshi Depot",
+        "type": "route"
+      }
+    },
+    {
+      "type": "relation",
+      "id": 17800409,
+      "tags": {
+        "from": "Bhoomi Acres Thane",
+        "name": "Bus 492: Bhoomi Acres Thane => Majas Depot",
+        "network": "BEST",
+        "operator": "The Brihanmumbai Electric Supply & Transport Undertaking",
+        "public_transport:version": "2",
+        "ref": "492",
+        "route": "bus",
+        "to": "Majas Depot",
+        "type": "route"
+      }
+    },
+    {
+      "type": "relation",
+      "id": 17800410,
+      "tags": {
+        "from": "Majas Depot",
+        "name": "Bus 492: Majas Depot => Bhoomi Acres Thane",
+        "network": "BEST",
+        "operator": "The Brihanmumbai Electric Supply & Transport Undertaking",
+        "public_transport:version": "2",
+        "ref": "492",
+        "route": "bus",
+        "to": "Bhoomi Acres Thane",
+        "type": "route"
+      }
+    },
+    {
+      "type": "relation",
+      "id": 17804678,
+      "tags": {
+        "from": "Mulund West Check Naka",
+        "name": "Bus A-493: Mulund West Check Naka => Anushakti Nagar Bus Station",
+        "network": "BEST",
+        "operator": "The Brihanmumbai Electric Supply & Transport Undertaking",
+        "public_transport:version": "2",
+        "ref": "A-493",
+        "route": "bus",
+        "to": "Anushakti Nagar Bus Station",
+        "type": "route"
+      }
+    },
+    {
+      "type": "relation",
+      "id": 17804679,
+      "tags": {
+        "from": "Anushakti Nagar Bus Station",
+        "name": "Bus A-493: Anushakti Nagar Bus Station => Mulund West Check Naka",
+        "network": "BEST",
+        "operator": "The Brihanmumbai Electric Supply & Transport Undertaking",
+        "public_transport:version": "2",
+        "ref": "A-493",
+        "route": "bus",
+        "to": "Mulund West Check Naka",
+        "type": "route"
+      }
+    },
+    {
+      "type": "relation",
+      "id": 17804698,
+      "tags": {
+        "from": "Ghatkopar Bus Station",
+        "name": "Bus A-494: Ghatkopar Bus Station => Reti Bunder Kalwa",
+        "network": "BEST",
+        "operator": "The Brihanmumbai Electric Supply & Transport Undertaking",
+        "public_transport:version": "2",
+        "ref": "A-494",
+        "route": "bus",
+        "to": "Reti Bunder Kalwa",
+        "type": "route"
+      }
+    },
+    {
+      "type": "relation",
+      "id": 17804701,
+      "tags": {
+        "from": "Reti Bunder Kalwa",
+        "name": "Bus A-494: Reti Bunder Kalwa => Ghatkopar Bus Station",
+        "network": "BEST",
+        "operator": "The Brihanmumbai Electric Supply & Transport Undertaking",
+        "public_transport:version": "2",
+        "ref": "A-494",
+        "route": "bus",
+        "to": "Ghatkopar Bus Station",
+        "type": "route"
+      }
+    },
+    {
+      "type": "relation",
+      "id": 17804758,
+      "tags": {
+        "from": "Marathon Chowk",
+        "name": "Bus 496LTD: Marathon Chowk => Agarkar Chowk",
+        "network": "BEST",
+        "operator": "The Brihanmumbai Electric Supply & Transport Undertaking",
+        "public_transport:version": "2",
+        "ref": "496LTD",
+        "route": "bus",
+        "to": "Agarkar Chowk",
+        "type": "route"
+      }
+    },
+    {
+      "type": "relation",
+      "id": 17804759,
+      "tags": {
+        "from": "Agarkar Chowk",
+        "name": "Bus 496LTD: Agarkar Chowk => Marathon Chowk",
+        "network": "BEST",
+        "operator": "The Brihanmumbai Electric Supply & Transport Undertaking",
+        "public_transport:version": "2",
+        "ref": "496LTD",
+        "route": "bus",
+        "to": "Marathon Chowk",
+        "type": "route"
+      }
+    },
+    {
+      "type": "relation",
+      "id": 17829500,
+      "tags": {
+        "from": "Borivali Station E",
+        "name": "Bus 498LTD: Borivali Station E => Sangharsh Nagar Chandivali",
+        "network": "BEST",
+        "operator": "The Brihanmumbai Electric Supply & Transport Undertaking",
+        "public_transport:version": "2",
+        "ref": "498LTD",
+        "route": "bus",
+        "to": "Sangharsh Nagar Chandivali",
+        "type": "route"
+      }
+    },
+    {
+      "type": "relation",
+      "id": 17831439,
+      "tags": {
+        "from": "Vrindavan Society Thane",
+        "name": "Bus A-499: Vrindavan Society Thane => Ghatkopar Bus Station",
+        "network": "BEST",
+        "operator": "The Brihanmumbai Electric Supply & Transport Undertaking",
+        "public_transport:version": "2",
+        "ref": "A-499",
+        "route": "bus",
+        "to": "Ghatkopar Bus Station",
+        "type": "route"
+      }
+    },
+    {
+      "type": "relation",
+      "id": 17831440,
+      "tags": {
+        "from": "Ghatkopar Bus Station",
+        "name": "Bus A-499: Ghatkopar Bus Station => Vrindavan Society Thane",
+        "network": "BEST",
+        "operator": "The Brihanmumbai Electric Supply & Transport Undertaking",
+        "public_transport:version": "2",
+        "ref": "A-499",
+        "route": "bus",
+        "to": "Vrindavan Society Thane",
+        "type": "route"
+      }
+    },
+    {
+      "type": "relation",
+      "id": 17834732,
+      "tags": {
+        "from": "Airoli Bus Station",
+        "name": "Bus 501LTD: Airoli Bus Station => Kurla Bus Station E",
+        "network": "BEST",
+        "operator": "The Brihanmumbai Electric Supply & Transport Undertaking",
+        "public_transport:version": "2",
+        "ref": "501LTD",
+        "route": "bus",
+        "to": "Kurla Bus Station E",
+        "type": "route"
+      }
+    },
+    {
+      "type": "relation",
+      "id": 17834733,
+      "tags": {
+        "from": "Kurla Bus Station E",
+        "name": "Bus 501LTD: Kurla Bus Station E => Airoli Bus Station",
+        "network": "BEST",
+        "operator": "The Brihanmumbai Electric Supply & Transport Undertaking",
+        "public_transport:version": "2",
+        "ref": "501LTD",
+        "route": "bus",
+        "to": "Airoli Bus Station",
+        "type": "route"
+      }
+    },
+    {
+      "type": "relation",
+      "id": 17906132,
+      "tags": {
+        "from": "Nerul Bus Station",
+        "name": "Bus 512LTD: Nerul Bus Station => Mulund West Check Naka",
+        "network": "BEST",
+        "operator": "The Brihanmumbai Electric Supply & Transport Undertaking",
+        "public_transport:version": "2",
+        "ref": "512LTD",
+        "route": "bus",
+        "to": "Mulund West Check Naka",
+        "type": "route"
+      }
+    },
+    {
+      "type": "relation",
+      "id": 17906133,
+      "tags": {
+        "from": "Mulund West Check Naka",
+        "name": "Bus 512LTD: Mulund West Check Naka => Nerul Bus Station",
+        "network": "BEST",
+        "operator": "The Brihanmumbai Electric Supply & Transport Undertaking",
+        "public_transport:version": "2",
+        "ref": "512LTD",
+        "route": "bus",
+        "to": "Nerul Bus Station",
+        "type": "route"
+      }
+    },
+    {
+      "type": "relation",
+      "id": 17906487,
+      "tags": {
+        "from": "Airoli Bus Station",
+        "name": "Bus 523LTD: Airoli Bus Station => Dindoshi Depot",
+        "network": "BEST",
+        "operator": "The Brihanmumbai Electric Supply & Transport Undertaking",
+        "public_transport:version": "2",
+        "ref": "523LTD",
+        "route": "bus",
+        "to": "Dindoshi Depot",
+        "type": "route"
+      }
+    },
+    {
+      "type": "relation",
+      "id": 17906488,
+      "tags": {
+        "from": "Dindoshi Depot",
+        "name": "Bus 523LTD: Dindoshi Depot => Airoli Bus Station",
+        "network": "BEST",
+        "operator": "The Brihanmumbai Electric Supply & Transport Undertaking",
+        "public_transport:version": "2",
+        "ref": "523LTD",
+        "route": "bus",
+        "to": "Airoli Bus Station",
+        "type": "route"
+      }
+    },
+    {
+      "type": "relation",
+      "id": 17906499,
+      "tags": {
+        "from": "Borivali Station E",
+        "name": "Bus 524LTD: Borivali Station E => Ghatkopar Bus Station",
+        "network": "BEST",
+        "operator": "The Brihanmumbai Electric Supply & Transport Undertaking",
+        "public_transport:version": "2",
+        "ref": "524LTD",
+        "route": "bus",
+        "to": "Ghatkopar Bus Station",
+        "type": "route"
+      }
+    },
+    {
+      "type": "relation",
+      "id": 17906500,
+      "tags": {
+        "from": "Ghatkopar Bus Station",
+        "name": "Bus 524LTD: Ghatkopar Bus Station => Borivali Station E",
+        "network": "BEST",
+        "operator": "The Brihanmumbai Electric Supply & Transport Undertaking",
+        "public_transport:version": "2",
+        "ref": "524LTD",
+        "route": "bus",
+        "to": "Borivali Station E",
+        "type": "route"
+      }
+    },
+    {
+      "type": "relation",
+      "id": 17906550,
+      "tags": {
+        "from": "Vashi Railway Station",
+        "name": "Bus 525LTD: Vashi Railway Station => Majas Depot",
+        "network": "BEST",
+        "operator": "The Brihanmumbai Electric Supply & Transport Undertaking",
+        "public_transport:version": "2",
+        "ref": "525LTD",
+        "route": "bus",
+        "to": "Majas Depot",
+        "type": "route"
+      }
+    },
+    {
+      "type": "relation",
+      "id": 17906551,
+      "tags": {
+        "from": "Majas Depot",
+        "name": "Bus 525LTD: Majas Depot => Vashi Railway Station",
+        "network": "BEST",
+        "operator": "The Brihanmumbai Electric Supply & Transport Undertaking",
+        "public_transport:version": "2",
+        "ref": "525LTD",
+        "route": "bus",
+        "to": "Vashi Railway Station",
+        "type": "route"
+      }
+    },
+    {
+      "type": "relation",
+      "id": 17925386,
+      "tags": {
+        "from": "Airoli Bus Station",
+        "name": "Bus 545LTD: Airoli Bus Station => Agarkar Chowk",
+        "network": "BEST",
+        "operator": "The Brihanmumbai Electric Supply & Transport Undertaking",
+        "public_transport:version": "2",
+        "ref": "545LTD",
+        "route": "bus",
+        "to": "Agarkar Chowk",
+        "type": "route"
+      }
+    },
+    {
+      "type": "relation",
+      "id": 17925387,
+      "tags": {
+        "from": "Agarkar Chowk",
+        "name": "Bus 545LTD: Agarkar Chowk => Airoli Bus Station",
+        "network": "BEST",
+        "operator": "The Brihanmumbai Electric Supply & Transport Undertaking",
+        "public_transport:version": "2",
+        "ref": "545LTD",
+        "route": "bus",
+        "to": "Airoli Bus Station",
+        "type": "route"
+      }
+    },
+    {
+      "type": "relation",
+      "id": 17925626,
+      "tags": {
+        "from": "Kanjur Marg Station W",
+        "name": "Bus 602: Kanjur Marg Station W => Hiranandani Powai Bus Station",
+        "network": "BEST",
+        "operator": "The Brihanmumbai Electric Supply & Transport Undertaking",
+        "public_transport:version": "2",
+        "ref": "602",
+        "route": "bus",
+        "to": "Hiranandani Powai Bus Station",
+        "type": "route"
+      }
+    },
+    {
+      "type": "relation",
+      "id": 17925627,
+      "tags": {
+        "from": "Hiranandani Powai Bus Station",
+        "name": "Bus 602: Hiranandani Powai Bus Station => Kanjur Marg Station W",
+        "network": "BEST",
+        "operator": "The Brihanmumbai Electric Supply & Transport Undertaking",
+        "public_transport:version": "2",
+        "ref": "602",
+        "route": "bus",
+        "to": "Kanjur Marg Station W",
+        "type": "route"
+      }
+    },
+    {
+      "type": "relation",
+      "id": 17925631,
+      "tags": {
+        "from": "Amrut Nagar",
+        "name": "Bus 603: Amrut Nagar => Amrut Nagar (Ring Route)",
+        "network": "BEST",
+        "operator": "The Brihanmumbai Electric Supply & Transport Undertaking",
+        "public_transport:version": "2",
+        "ref": "603",
+        "route": "bus",
+        "to": "Amrut Nagar",
+        "type": "route"
+      }
+    },
+    {
+      "type": "relation",
+      "id": 17926945,
+      "tags": {
+        "from": "Bhandup Station W",
+        "name": "Bus 604: Bhandup Station W => Kanjur Marg Station W",
+        "network": "BEST",
+        "operator": "The Brihanmumbai Electric Supply & Transport Undertaking",
+        "public_transport:version": "2",
+        "ref": "604",
+        "route": "bus",
+        "to": "Kanjur Marg Station W",
+        "type": "route"
+      }
+    },
+    {
+      "type": "relation",
+      "id": 17926946,
+      "tags": {
+        "from": "Kanjur Marg Station W",
+        "name": "Bus 604: Kanjur Marg Station W => Bhandup Station W",
+        "network": "BEST",
+        "operator": "The Brihanmumbai Electric Supply & Transport Undertaking",
+        "public_transport:version": "2",
+        "ref": "604",
+        "route": "bus",
+        "to": "Bhandup Station W",
+        "type": "route"
+      }
+    },
+    {
+      "type": "relation",
+      "id": 17926963,
+      "tags": {
+        "from": "Tembipada",
+        "name": "Bus 605: Tembipada => Bhandup Station W",
+        "network": "BEST",
+        "operator": "The Brihanmumbai Electric Supply & Transport Undertaking",
+        "public_transport:version": "2",
+        "ref": "605",
+        "route": "bus",
+        "to": "Bhandup Station W",
+        "type": "route"
+      }
+    },
+    {
+      "type": "relation",
+      "id": 17926964,
+      "tags": {
+        "from": "Bhandup Station W",
+        "name": "Bus 605: Bhandup Station W => Tembipada",
+        "network": "BEST",
+        "operator": "The Brihanmumbai Electric Supply & Transport Undertaking",
+        "public_transport:version": "2",
+        "ref": "605",
+        "route": "bus",
+        "to": "Tembipada",
+        "type": "route"
+      }
+    },
+    {
+      "type": "relation",
+      "id": 17926968,
+      "tags": {
+        "from": "Bhandup Station W",
+        "name": "Bus 606: Bhandup Station W => Bhandup Station W (Ring Route)",
+        "network": "BEST",
+        "operator": "The Brihanmumbai Electric Supply & Transport Undertaking",
+        "public_transport:version": "2",
+        "ref": "606",
+        "route": "bus",
+        "to": "Tembipada",
+        "type": "route"
+      }
+    },
+    {
+      "type": "relation",
+      "id": 17929500,
+      "tags": {
+        "from": "Bhandup Station W",
+        "name": "Bus 607: Bhandup Station W => Bhandup Station W (Ring Route)",
+        "network": "BEST",
+        "operator": "The Brihanmumbai Electric Supply & Transport Undertaking",
+        "public_transport:version": "2",
+        "ref": "607",
+        "route": "bus",
+        "to": "Tembipada",
+        "type": "route"
+      }
+    },
+    {
+      "type": "relation",
+      "id": 17929505,
+      "tags": {
+        "from": "Hanuman Nagar",
+        "name": "Bus 608: Hanuman Nagar => Kanjur Marg Station W",
+        "network": "BEST",
+        "operator": "The Brihanmumbai Electric Supply & Transport Undertaking",
+        "public_transport:version": "2",
+        "ref": "608",
+        "route": "bus",
+        "to": "Kanjur Marg Station W",
+        "type": "route"
+      }
+    },
+    {
+      "type": "relation",
+      "id": 17929506,
+      "tags": {
+        "from": "Kanjur Marg Station W",
+        "name": "Bus 608: Kanjur Marg Station W => Hanuman Nagar",
+        "network": "BEST",
+        "operator": "The Brihanmumbai Electric Supply & Transport Undertaking",
+        "public_transport:version": "2",
+        "ref": "608",
+        "route": "bus",
+        "to": "Hanuman Nagar",
+        "type": "route"
+      }
+    },
+    {
+      "type": "relation",
+      "id": 17929517,
+      "tags": {
+        "from": "Hanuman Nagar",
+        "name": "Bus 612: Hanuman Nagar => Bhandup Station W",
+        "network": "BEST",
+        "operator": "The Brihanmumbai Electric Supply & Transport Undertaking",
+        "public_transport:version": "2",
+        "ref": "612",
+        "route": "bus",
+        "to": "Bhandup Station W",
+        "type": "route"
+      }
+    },
+    {
+      "type": "relation",
+      "id": 17929518,
+      "tags": {
+        "from": "Bhandup Station W",
+        "name": "Bus 612: Bhandup Station W => Hanuman Nagar",
+        "network": "BEST",
+        "operator": "The Brihanmumbai Electric Supply & Transport Undertaking",
+        "public_transport:version": "2",
+        "ref": "612",
+        "route": "bus",
+        "to": "Hanuman Nagar",
+        "type": "route"
+      }
+    },
+    {
+      "type": "relation",
+      "id": 17932412,
+      "tags": {
+        "from": "Goregaon Station E",
+        "name": "Bus A-646: Goregaon Station E => Goregaon Station E (Ring Route)",
+        "network": "BEST",
+        "operator": "The Brihanmumbai Electric Supply & Transport Undertaking",
+        "public_transport:version": "2",
+        "ref": "A-646",
+        "route": "bus",
+        "to": "Goregaon Station E",
+        "type": "route"
+      }
+    },
+    {
+      "type": "relation",
+      "id": 17932424,
+      "tags": {
+        "from": "Shivshahi Prakalp",
+        "name": "Bus A-647: Shivshahi Prakalp => Goregaon Check Naka 1",
+        "network": "BEST",
+        "operator": "The Brihanmumbai Electric Supply & Transport Undertaking",
+        "public_transport:version": "2",
+        "ref": "A-647",
+        "route": "bus",
+        "to": "Goregaon Check Naka 1",
+        "type": "route"
+      }
+    },
+    {
+      "type": "relation",
+      "id": 17932425,
+      "tags": {
+        "from": "Goregaon Check Naka 1",
+        "name": "Bus A-647: Goregaon Check Naka 1 => Shivshahi Prakalp",
+        "network": "BEST",
+        "operator": "The Brihanmumbai Electric Supply & Transport Undertaking",
+        "public_transport:version": "2",
+        "ref": "A-647",
+        "route": "bus",
+        "to": "Shivshahi Prakalp",
+        "type": "route"
+      }
+    },
+    {
+      "type": "relation",
+      "id": 17938666,
+      "tags": {
+        "from": "Mulund Railway Station W",
+        "name": "Bus A-691: Mulund Railway Station W => Mulund Railway Station W (Ring Route)",
+        "network": "BEST",
+        "operator": "The Brihanmumbai Electric Supply & Transport Undertaking",
+        "public_transport:version": "2",
+        "ref": "A-691",
+        "route": "bus",
+        "to": "Mulund Railway Station W",
+        "type": "route"
+      }
+    },
+    {
+      "type": "relation",
+      "id": 17938723,
+      "tags": {
+        "from": "Magathane Depot",
+        "name": "Bus A-702: Magathane Depot => Ghodbandar Village",
+        "network": "BEST",
+        "operator": "The Brihanmumbai Electric Supply & Transport Undertaking",
+        "public_transport:version": "2",
+        "ref": "A-702",
+        "route": "bus",
+        "to": "Ghodbandar Village",
+        "type": "route"
+      }
+    },
+    {
+      "type": "relation",
+      "id": 17944295,
+      "tags": {
+        "from": "Ghodbandar Village",
+        "name": "Bus A-702: Ghodbandar Village => Magathane Depot",
+        "network": "BEST",
+        "operator": "The Brihanmumbai Electric Supply & Transport Undertaking",
+        "public_transport:version": "2",
+        "ref": "A-702",
+        "route": "bus",
+        "to": "Magathane Depot",
+        "type": "route"
+      }
+    },
+    {
+      "type": "relation",
+      "id": 17944306,
+      "tags": {
+        "from": "Samata Nagar Bus Station",
+        "name": "Bus A-701: Samata Nagar Bus Station => Samata Nagar Bus Station (Ring Route)",
+        "network": "BEST",
+        "operator": "The Brihanmumbai Electric Supply & Transport Undertaking",
+        "public_transport:version": "2",
+        "ref": "A-701",
+        "route": "bus",
+        "to": "Samata Nagar Bus Station",
+        "type": "route"
+      }
+    },
+    {
+      "type": "relation",
+      "id": 17944335,
+      "tags": {
+        "from": "Samata Nagar Bus Station",
+        "name": "Bus A-703: Samata Nagar Bus Station => Samata Nagar Bus Station (Ring Route)",
+        "network": "BEST",
+        "operator": "The Brihanmumbai Electric Supply & Transport Undertaking",
+        "public_transport:version": "2",
+        "ref": "A-703",
+        "route": "bus",
+        "to": "Samata Nagar Bus Station",
+        "type": "route"
+      }
+    },
+    {
+      "type": "relation",
+      "id": 17947241,
+      "tags": {
+        "from": "Western Park",
+        "name": "Bus 705LTD: Western Park => Dindoshi Depot",
+        "network": "BEST",
+        "operator": "The Brihanmumbai Electric Supply & Transport Undertaking",
+        "public_transport:version": "2",
+        "ref": "705LTD",
+        "route": "bus",
+        "to": "Dindoshi Depot",
+        "type": "route"
+      }
+    },
+    {
+      "type": "relation",
+      "id": 17947242,
+      "tags": {
+        "from": "Dindoshi Depot",
+        "name": "Bus 705LTD: Dindoshi Depot => Western Park",
+        "network": "BEST",
+        "operator": "The Brihanmumbai Electric Supply & Transport Undertaking",
+        "public_transport:version": "2",
+        "ref": "705LTD",
+        "route": "bus",
+        "to": "Western Park",
+        "type": "route"
+      }
+    },
+    {
+      "type": "relation",
+      "id": 17947249,
+      "tags": {
+        "from": "Bhayander Station E",
+        "name": "Bus 706LTD: Bhayander Station E => Marol Depot",
+        "network": "BEST",
+        "operator": "The Brihanmumbai Electric Supply & Transport Undertaking",
+        "public_transport:version": "2",
+        "ref": "706LTD",
+        "route": "bus",
+        "to": "Marol Depot",
+        "type": "route"
+      }
+    },
+    {
+      "type": "relation",
+      "id": 17947250,
+      "tags": {
+        "from": "Marol Depot",
+        "name": "Bus 706LTD: Marol Depot => Bhayander Station E",
+        "network": "BEST",
+        "operator": "The Brihanmumbai Electric Supply & Transport Undertaking",
+        "public_transport:version": "2",
+        "ref": "706LTD",
+        "route": "bus",
+        "to": "Bhayander Station E",
+        "type": "route"
+      }
+    },
+    {
+      "type": "relation",
+      "id": 17947260,
+      "tags": {
+        "from": "Bhayander Station E",
+        "name": "Bus 707LTD: Bhayander Station E => Oshiwara Depot",
+        "network": "BEST",
+        "operator": "The Brihanmumbai Electric Supply & Transport Undertaking",
+        "public_transport:version": "2",
+        "ref": "707LTD",
+        "route": "bus",
+        "to": "Oshiwara Depot",
+        "type": "route"
+      }
+    },
+    {
+      "type": "relation",
+      "id": 17947261,
+      "tags": {
+        "from": "Oshiwara Depot",
+        "name": "Bus 707LTD: Oshiwara Depot => Bhayander Station E",
+        "network": "BEST",
+        "operator": "The Brihanmumbai Electric Supply & Transport Undertaking",
+        "public_transport:version": "2",
+        "ref": "707LTD",
+        "route": "bus",
+        "to": "Bhayander Station E",
+        "type": "route"
+      }
+    },
+    {
+      "type": "relation",
+      "id": 17947265,
+      "tags": {
+        "from": "Bhayander Station E",
+        "name": "Bus 709LTD: Bhayander Station E => Magathane Depot",
+        "network": "BEST",
+        "operator": "The Brihanmumbai Electric Supply & Transport Undertaking",
+        "public_transport:version": "2",
+        "ref": "709LTD",
+        "route": "bus",
+        "to": "Magathane Depot",
+        "type": "route"
+      }
+    },
+    {
+      "type": "relation",
+      "id": 17947266,
+      "tags": {
+        "from": "Magathane Depot",
+        "name": "Bus 709LTD: Magathane Depot => Bhayander Station E",
+        "network": "BEST",
+        "operator": "The Brihanmumbai Electric Supply & Transport Undertaking",
+        "public_transport:version": "2",
+        "ref": "709LTD",
+        "route": "bus",
+        "to": "Bhayander Station E",
+        "type": "route"
+      }
+    },
+    {
+      "type": "relation",
+      "id": 20604487,
+      "tags": {
+        "fee": "yes",
+        "from": "Thane Station (W)",
+        "name": "Bus 1: Thane Station (W) => Vrindavan Society",
+        "network": "Thane Municipal Transport",
+        "network:en": "Thane Municipal Transport",
+        "network:hi": "ठाणे नगरपालिका परिवहन",
+        "network:wikidata": "Q7710243",
+        "operator": "Thane Municipal Transport",
+        "public_transport:version": "2",
+        "ref": "1",
+        "roundtrip": "no",
+        "route": "bus",
+        "to": "Vrindavan Society",
+        "type": "route"
+      }
+    },
+    {
+      "type": "relation",
+      "id": 20604488,
+      "tags": {
+        "fee": "yes",
+        "from": "Vrindavan Society",
+        "name": "Bus 1: Vrindavan Society => Thane Station (W)",
+        "network": "Thane Municipal Transport",
+        "network:en": "Thane Municipal Transport",
+        "network:hi": "ठाणे नगरपालिका परिवहन",
+        "network:wikidata": "Q7710243",
+        "operator": "Thane Municipal Transport",
+        "public_transport:version": "2",
+        "ref": "1",
+        "roundtrip": "no",
+        "route": "bus",
+        "to": "Thane Station (W)",
+        "type": "route"
+      }
+    },
+    {
+      "type": "relation",
+      "id": 20605947,
+      "tags": {
+        "fee": "yes",
+        "from": "Thane Station (W)",
+        "name": "Bus 3: Thane Station (W) => Lokmanya Nagar Bus Depot",
+        "network": "Thane Municipal Transport",
+        "network:en": "Thane Municipal Transport",
+        "network:hi": "ठाणे नगरपालिका परिवहन",
+        "network:wikidata": "Q7710243",
+        "operator": "Thane Municipal Transport",
+        "public_transport:version": "2",
+        "ref": "3",
+        "roundtrip": "no",
+        "route": "bus",
+        "to": "Lokmanya Nagar Bus Depot",
+        "type": "route"
+      }
+    },
+    {
+      "type": "relation",
+      "id": 20605948,
+      "tags": {
+        "fee": "yes",
+        "from": "Lokmanya Nagar Bus Depot",
+        "name": "Bus 3: Lokmanya Nagar Bus Depot => Thane Station (W)",
+        "network": "Thane Municipal Transport",
+        "network:en": "Thane Municipal Transport",
+        "network:hi": "ठाणे नगरपालिका परिवहन",
+        "network:wikidata": "Q7710243",
+        "operator": "Thane Municipal Transport",
+        "public_transport:version": "2",
+        "ref": "3",
+        "roundtrip": "no",
+        "route": "bus",
+        "to": "Thane Station (W)",
+        "type": "route"
+      }
+    }
+  ]
+}

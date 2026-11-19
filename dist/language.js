@@ -2,6 +2,24 @@ export const languages = {en:'English',hi:'हिन्दी',mr:'मराठ�
 export const normalizeLanguage = value => typeof value==='string'&&Object.hasOwn(languages,value) ? value : 'en';
 // English source labels remain the stored values; only their presentation changes.
 const rows = [
+['Previous','पिछला','मागील'],
+['Next','अगला','पुढील'],
+['Bus stops','बस स्टॉप','बस थांबे'],
+['Bus route','बस मार्ग','बस मार्ग'],
+['All bus routes','सभी बस मार्ग','सर्व बस मार्ग'],
+['Routes not known yet','मार्ग अभी ज्ञात नहीं हैं','मार्ग अद्याप माहीत नाहीत'],
+['Bus routes not known yet','बस मार्ग अभी ज्ञात नहीं हैं','बस मार्ग अद्याप माहीत नाहीत'],
+['Unnamed bus stop','बिना नाम का बस स्टॉप','नाव नसलेला बस थांबा'],
+['Address:','पता:','पत्ता:'],
+['Direction:','दिशा:','दिशा:'],
+['Buses:','बसें:','बस:'],
+['Emergency contact','आपातकालीन संपर्क','आपत्कालीन संपर्क'],
+['Emergency helplines','आपातकालीन हेल्पलाइन','आपत्कालीन हेल्पलाइन'],
+['Women helpline','महिला हेल्पलाइन','महिला हेल्पलाइन'],
+['Police helpline','पुलिस हेल्पलाइन','पोलीस हेल्पलाइन'],
+['National ambulance service','राष्ट्रीय एम्बुलेंस सेवा','राष्ट्रीय रुग्णवाहिका सेवा'],
+['Integrated helpline','एकीकृत हेल्पलाइन','एकात्मिक हेल्पलाइन'],
+['Fire helpline','अग्निशमन हेल्पलाइन','अग्निशमन हेल्पलाइन'],
 ['Thane dataset · Verified amenities','ठाणे डेटा · सत्यापित सुविधाएँ','ठाणे माहिती · पडताळलेल्या सुविधा'],
 ['Verified','सत्यापित','पडताळलेले'],
 ['Verified amenities','सत्यापित सुविधाएँ','पडताळलेल्या सुविधा'],
@@ -158,11 +176,11 @@ export function localize(root,language){
   const walker=document.createTreeWalker(root,NodeFilter.SHOW_TEXT);
   while(walker.nextNode()){
     const node=walker.currentNode;
-    if(!node.parentElement.closest('[translate="no"],script,style,textarea'))node.textContent=remember(node,'text',node.textContent);
+    if(!node.parentElement.closest('[translate="no"],script,style,textarea')){const value=remember(node,'text',node.textContent);if(node.textContent!==value)node.textContent=value;}
   }
   root.querySelectorAll('[aria-label],[placeholder]').forEach(element=>{
     if(element.closest('[translate="no"]'))return;
-    for(const attr of ['aria-label','placeholder'])if(element.hasAttribute(attr))element.setAttribute(attr,remember(element,attr,element.getAttribute(attr)));
+    for(const attr of ['aria-label','placeholder'])if(element.hasAttribute(attr)){const value=remember(element,attr,element.getAttribute(attr));if(element.getAttribute(attr)!==value)element.setAttribute(attr,value);}
   });
   root.querySelectorAll('time[datetime]').forEach(element=>element.textContent=new Date(element.dateTime).toLocaleDateString(`${language}-IN`,{day:'numeric',month:'short',year:'numeric'}));
 }

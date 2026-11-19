@@ -1,0 +1,1419 @@
+{
+  "source_pages": 195,
+  "records": [
+    {
+      "facility_id": "THN-MED-N19-D01-001",
+      "source_pdf": "medical facilities 07.pdf",
+      "pages": [
+        1,
+        2
+      ],
+      "coordinates": [
+        19.189853,
+        72.94836
+      ],
+      "geotag_source_page": 2,
+      "action": "new_record",
+      "location_pending": false
+    },
+    {
+      "facility_id": "THN-MED-N19-D01-003",
+      "source_pdf": "medical facilities 07.pdf",
+      "pages": [
+        3,
+        4
+      ],
+      "coordinates": [
+        19.189923,
+        72.947376
+      ],
+      "geotag_source_page": 4,
+      "action": "new_record",
+      "location_pending": false
+    },
+    {
+      "facility_id": "THN-MED-N19-D01-005",
+      "source_pdf": "medical facilities 07.pdf",
+      "pages": [
+        5,
+        6
+      ],
+      "coordinates": [
+        19.190048,
+        72.94675
+      ],
+      "geotag_source_page": 6,
+      "action": "new_record",
+      "location_pending": false
+    },
+    {
+      "facility_id": "THN-MED-N19-D01-007",
+      "source_pdf": "medical facilities 07.pdf",
+      "pages": [
+        7,
+        8
+      ],
+      "coordinates": [
+        19.190055,
+        72.946768
+      ],
+      "geotag_source_page": 8,
+      "action": "new_record",
+      "location_pending": false
+    },
+    {
+      "facility_id": "THN-MED-N19-D01-009",
+      "source_pdf": "medical facilities 07.pdf",
+      "pages": [
+        9,
+        10
+      ],
+      "coordinates": [
+        19.189808,
+        72.946553
+      ],
+      "geotag_source_page": 10,
+      "action": "new_record",
+      "location_pending": false
+    },
+    {
+      "facility_id": "THN-MED-N19-D01-011",
+      "source_pdf": "medical facilities 07.pdf",
+      "pages": [
+        11,
+        12
+      ],
+      "coordinates": [
+        19.190267,
+        72.944365
+      ],
+      "geotag_source_page": 12,
+      "action": "new_record",
+      "location_pending": false
+    },
+    {
+      "facility_id": "THN-MED-N19-D01-013",
+      "source_pdf": "medical facilities 07.pdf",
+      "pages": [
+        13,
+        14
+      ],
+      "coordinates": [
+        19.1898,
+        72.944965
+      ],
+      "geotag_source_page": 14,
+      "action": "new_record",
+      "location_pending": false
+    },
+    {
+      "facility_id": "THN-MED-N19-D01-015",
+      "source_pdf": "medical facilities 07.pdf",
+      "pages": [
+        15,
+        16
+      ],
+      "coordinates": [
+        19.189433,
+        72.944825
+      ],
+      "geotag_source_page": 16,
+      "action": "new_record",
+      "location_pending": false
+    },
+    {
+      "facility_id": "THN-MED-N19-D01-017",
+      "source_pdf": "medical facilities 07.pdf",
+      "pages": [
+        17,
+        18
+      ],
+      "coordinates": [
+        19.201839,
+        72.953706
+      ],
+      "geotag_source_page": 18,
+      "action": "new_record",
+      "location_pending": false
+    },
+    {
+      "facility_id": "THN-MED-N19-D01-019",
+      "source_pdf": "medical facilities 07.pdf",
+      "pages": [
+        19,
+        20
+      ],
+      "coordinates": [
+        19.190145,
+        72.950255
+      ],
+      "geotag_source_page": 20,
+      "action": "new_record",
+      "location_pending": false
+    },
+    {
+      "facility_id": "THN-MED-N19-D01-021",
+      "source_pdf": "medical facilities 07.pdf",
+      "pages": [
+        21,
+        22
+      ],
+      "coordinates": [
+        19.190208,
+        72.950375
+      ],
+      "geotag_source_page": 22,
+      "action": "new_record",
+      "location_pending": false
+    },
+    {
+      "facility_id": "THN-MED-N19-D01-023",
+      "source_pdf": "medical facilities 07.pdf",
+      "pages": [
+        23,
+        24
+      ],
+      "coordinates": [
+        19.190278,
+        72.950409
+      ],
+      "geotag_source_page": 24,
+      "action": "new_record",
+      "location_pending": false
+    },
+    {
+      "facility_id": "THN-MED-N19-D01-025",
+      "source_pdf": "medical facilities 07.pdf",
+      "pages": [
+        25,
+        26
+      ],
+      "coordinates": [
+        19.190377,
+        72.950486
+      ],
+      "geotag_source_page": 26,
+      "action": "new_record",
+      "location_pending": false
+    },
+    {
+      "facility_id": "THN-MED-N19-D01-027",
+      "source_pdf": "medical facilities 07.pdf",
+      "pages": [
+        27,
+        28
+      ],
+      "coordinates": [
+        19.190681,
+        72.950818
+      ],
+      "geotag_source_page": 28,
+      "action": "new_record",
+      "location_pending": false
+    },
+    {
+      "facility_id": "THN-MED-N19-D01-029",
+      "source_pdf": "medical facilities 07.pdf",
+      "pages": [
+        29,
+        30
+      ],
+      "coordinates": [
+        19.206223,
+        72.954237
+      ],
+      "geotag_source_page": 30,
+      "action": "new_record",
+      "location_pending": false
+    },
+    {
+      "facility_id": "THN-MED-N19-D01-031",
+      "source_pdf": "medical facilities 07.pdf",
+      "pages": [
+        31,
+        32
+      ],
+      "coordinates": [
+        19.208153,
+        72.954895
+      ],
+      "geotag_source_page": 32,
+      "action": "new_record",
+      "location_pending": false
+    },
+    {
+      "facility_id": "THN-MED-N19-D01-033",
+      "source_pdf": "medical facilities 07.pdf",
+      "pages": [
+        33,
+        34
+      ],
+      "coordinates": [
+        19.208108,
+        72.954935
+      ],
+      "geotag_source_page": 34,
+      "action": "new_record",
+      "location_pending": false
+    },
+    {
+      "facility_id": "THN-MED-B01-053",
+      "source_pdf": "medical facilities 07.pdf",
+      "pages": [
+        35,
+        36
+      ],
+      "coordinates": [
+        19.207845,
+        72.957852
+      ],
+      "geotag_source_page": 36,
+      "action": "existing_record_photos_added",
+      "location_pending": false
+    },
+    {
+      "facility_id": "THN-MED-B01-063",
+      "source_pdf": "medical facilities 07.pdf",
+      "pages": [
+        37,
+        38
+      ],
+      "coordinates": [
+        19.213148,
+        72.95465
+      ],
+      "geotag_source_page": 38,
+      "action": "existing_record_photos_added",
+      "location_pending": false
+    },
+    {
+      "facility_id": "THN-MED-N19-D01-039",
+      "source_pdf": "medical facilities 07.pdf",
+      "pages": [
+        39,
+        40
+      ],
+      "coordinates": [
+        19.216135,
+        72.958577
+      ],
+      "geotag_source_page": 40,
+      "action": "new_record",
+      "location_pending": false
+    },
+    {
+      "facility_id": "THN-MED-N19-D01-041",
+      "source_pdf": "medical facilities 07.pdf",
+      "pages": [
+        41,
+        42
+      ],
+      "coordinates": [
+        19.214202,
+        72.958837
+      ],
+      "geotag_source_page": 42,
+      "action": "new_record",
+      "location_pending": false
+    },
+    {
+      "facility_id": "THN-MED-N19-D01-043",
+      "source_pdf": "medical facilities 07.pdf",
+      "pages": [
+        43,
+        44
+      ],
+      "coordinates": [
+        19.209025,
+        72.960585
+      ],
+      "geotag_source_page": 44,
+      "action": "new_record",
+      "location_pending": false
+    },
+    {
+      "facility_id": "THN-MED-N19-D01-045",
+      "source_pdf": "medical facilities 07.pdf",
+      "pages": [
+        45,
+        46
+      ],
+      "coordinates": [
+        19.216078,
+        72.95878
+      ],
+      "geotag_source_page": 46,
+      "action": "new_record",
+      "location_pending": false
+    },
+    {
+      "facility_id": "THN-MED-N19-D01-047",
+      "source_pdf": "medical facilities 07.pdf",
+      "pages": [
+        47,
+        48
+      ],
+      "coordinates": [
+        19.211223,
+        72.96101
+      ],
+      "geotag_source_page": 48,
+      "action": "new_record",
+      "location_pending": false
+    },
+    {
+      "facility_id": "THN-MED-N19-D01-049",
+      "source_pdf": "medical facilities 07.pdf",
+      "pages": [
+        49,
+        50
+      ],
+      "coordinates": [
+        19.209247,
+        72.961493
+      ],
+      "geotag_source_page": 50,
+      "action": "new_record",
+      "location_pending": false
+    },
+    {
+      "facility_id": "THN-MED-N19-D01-051",
+      "source_pdf": "medical facilities 07.pdf",
+      "pages": [
+        51,
+        52
+      ],
+      "coordinates": [
+        19.209252,
+        72.961477
+      ],
+      "geotag_source_page": 52,
+      "action": "new_record",
+      "location_pending": false
+    },
+    {
+      "facility_id": "THN-MED-N19-D01-053",
+      "source_pdf": "medical facilities 07.pdf",
+      "pages": [
+        53,
+        54
+      ],
+      "coordinates": [
+        19.209407,
+        72.96235
+      ],
+      "geotag_source_page": 54,
+      "action": "new_record",
+      "location_pending": false
+    },
+    {
+      "facility_id": "THN-MED-N19-D01-055",
+      "source_pdf": "medical facilities 07.pdf",
+      "pages": [
+        55,
+        56
+      ],
+      "coordinates": [
+        19.210415,
+        72.96162
+      ],
+      "geotag_source_page": 56,
+      "action": "new_record",
+      "location_pending": false
+    },
+    {
+      "facility_id": "THN-MED-N19-D01-057",
+      "source_pdf": "medical facilities 07.pdf",
+      "pages": [
+        57,
+        58
+      ],
+      "coordinates": [
+        19.221327,
+        72.958857
+      ],
+      "geotag_source_page": 58,
+      "action": "new_record",
+      "location_pending": false
+    },
+    {
+      "facility_id": "THN-MED-N19-D01-059",
+      "source_pdf": "medical facilities 07.pdf",
+      "pages": [
+        59,
+        60
+      ],
+      "coordinates": [
+        19.216825,
+        72.972312
+      ],
+      "geotag_source_page": 60,
+      "action": "new_record",
+      "location_pending": false
+    },
+    {
+      "facility_id": "THN-WC-N19-D02-001",
+      "source_pdf": "washrooms.pdf",
+      "pages": [
+        1,
+        2
+      ],
+      "coordinates": [
+        19.215113,
+        72.958476
+      ],
+      "geotag_source_page": 1,
+      "action": "new_record",
+      "location_pending": false
+    },
+    {
+      "facility_id": "THN-WC-N19-D02-003",
+      "source_pdf": "washrooms.pdf",
+      "pages": [
+        3,
+        4
+      ],
+      "coordinates": [
+        19.214623,
+        72.957722
+      ],
+      "geotag_source_page": 4,
+      "action": "new_record",
+      "location_pending": false
+    },
+    {
+      "facility_id": "THN-WC-N19-D02-005",
+      "source_pdf": "washrooms.pdf",
+      "pages": [
+        5,
+        6
+      ],
+      "coordinates": [
+        19.21445,
+        72.956374
+      ],
+      "geotag_source_page": 6,
+      "action": "new_record",
+      "location_pending": false
+    },
+    {
+      "facility_id": "THN-WC-N19-D02-007",
+      "source_pdf": "washrooms.pdf",
+      "pages": [
+        7,
+        8
+      ],
+      "coordinates": [
+        19.214469,
+        72.956315
+      ],
+      "geotag_source_page": 7,
+      "action": "new_record",
+      "location_pending": false
+    },
+    {
+      "facility_id": "THN-WC-N19-D02-009",
+      "source_pdf": "washrooms.pdf",
+      "pages": [
+        9,
+        10
+      ],
+      "coordinates": [
+        19.213594,
+        72.954734
+      ],
+      "geotag_source_page": 9,
+      "action": "new_record",
+      "location_pending": false
+    },
+    {
+      "facility_id": "THN-WC-N19-D02-011",
+      "source_pdf": "washrooms.pdf",
+      "pages": [
+        11,
+        12
+      ],
+      "coordinates": [
+        19.208753,
+        72.952856
+      ],
+      "geotag_source_page": 11,
+      "action": "new_record",
+      "location_pending": false
+    },
+    {
+      "facility_id": "THN-WC-N19-D02-013",
+      "source_pdf": "washrooms.pdf",
+      "pages": [
+        13,
+        14
+      ],
+      "coordinates": [
+        19.212161,
+        72.955061
+      ],
+      "geotag_source_page": 13,
+      "action": "new_record",
+      "location_pending": false
+    },
+    {
+      "facility_id": "THN-WC-N19-D02-015",
+      "source_pdf": "washrooms.pdf",
+      "pages": [
+        15,
+        16
+      ],
+      "coordinates": [
+        19.21349,
+        72.954909
+      ],
+      "geotag_source_page": 15,
+      "action": "new_record",
+      "location_pending": false
+    },
+    {
+      "facility_id": "THN-WC-N19-D02-017",
+      "source_pdf": "washrooms.pdf",
+      "pages": [
+        17,
+        18
+      ],
+      "coordinates": null,
+      "geotag_source_page": null,
+      "action": "new_record",
+      "location_pending": true
+    },
+    {
+      "facility_id": "THN-MED-N19-D03-001",
+      "source_pdf": "Health Facility 2, Preetam.pdf",
+      "pages": [
+        1,
+        2
+      ],
+      "coordinates": [
+        19.25745,
+        73.025961
+      ],
+      "geotag_source_page": 1,
+      "action": "new_record",
+      "location_pending": false
+    },
+    {
+      "facility_id": "THN-MED-N19-D03-003",
+      "source_pdf": "Health Facility 2, Preetam.pdf",
+      "pages": [
+        3,
+        4
+      ],
+      "coordinates": [
+        19.252888,
+        73.021823
+      ],
+      "geotag_source_page": 3,
+      "action": "new_record",
+      "location_pending": false
+    },
+    {
+      "facility_id": "THN-MED-N19-D03-005",
+      "source_pdf": "Health Facility 2, Preetam.pdf",
+      "pages": [
+        5,
+        6
+      ],
+      "coordinates": [
+        19.252788,
+        73.021543
+      ],
+      "geotag_source_page": 5,
+      "action": "new_record",
+      "location_pending": false
+    },
+    {
+      "facility_id": "THN-MED-N19-D03-007",
+      "source_pdf": "Health Facility 2, Preetam.pdf",
+      "pages": [
+        7,
+        8
+      ],
+      "coordinates": [
+        19.241885,
+        73.017002
+      ],
+      "geotag_source_page": 7,
+      "action": "new_record",
+      "location_pending": false
+    },
+    {
+      "facility_id": "THN-MED-N19-D03-009",
+      "source_pdf": "Health Facility 2, Preetam.pdf",
+      "pages": [
+        9,
+        10,
+        11,
+        12
+      ],
+      "coordinates": [
+        19.234785,
+        73.0127
+      ],
+      "geotag_source_page": 9,
+      "action": "new_record",
+      "location_pending": false
+    },
+    {
+      "facility_id": "THN-MED-N19-D03-013",
+      "source_pdf": "Health Facility 2, Preetam.pdf",
+      "pages": [
+        13,
+        14
+      ],
+      "coordinates": [
+        19.228486,
+        72.982404
+      ],
+      "geotag_source_page": 13,
+      "action": "new_record",
+      "location_pending": false
+    },
+    {
+      "facility_id": "THN-MED-N19-D03-015",
+      "source_pdf": "Health Facility 2, Preetam.pdf",
+      "pages": [
+        15,
+        16
+      ],
+      "coordinates": [
+        19.22862,
+        72.982507
+      ],
+      "geotag_source_page": 15,
+      "action": "new_record",
+      "location_pending": false
+    },
+    {
+      "facility_id": "THN-MED-N19-D03-017",
+      "source_pdf": "Health Facility 2, Preetam.pdf",
+      "pages": [
+        17,
+        18
+      ],
+      "coordinates": [
+        19.228699,
+        72.982627
+      ],
+      "geotag_source_page": 17,
+      "action": "new_record",
+      "location_pending": false
+    },
+    {
+      "facility_id": "THN-MED-N19-D03-019",
+      "source_pdf": "Health Facility 2, Preetam.pdf",
+      "pages": [
+        19,
+        20
+      ],
+      "coordinates": [
+        19.228891,
+        72.982652
+      ],
+      "geotag_source_page": 19,
+      "action": "new_record",
+      "location_pending": false
+    },
+    {
+      "facility_id": "THN-MED-N19-D03-021",
+      "source_pdf": "Health Facility 2, Preetam.pdf",
+      "pages": [
+        21,
+        22
+      ],
+      "coordinates": [
+        19.229485,
+        72.984046
+      ],
+      "geotag_source_page": 21,
+      "action": "new_record",
+      "location_pending": false
+    },
+    {
+      "facility_id": "THN-MED-N19-D03-023",
+      "source_pdf": "Health Facility 2, Preetam.pdf",
+      "pages": [
+        23,
+        24
+      ],
+      "coordinates": [
+        19.229721,
+        72.984383
+      ],
+      "geotag_source_page": 23,
+      "action": "new_record",
+      "location_pending": false
+    },
+    {
+      "facility_id": "THN-MED-N19-D03-025",
+      "source_pdf": "Health Facility 2, Preetam.pdf",
+      "pages": [
+        25,
+        26
+      ],
+      "coordinates": [
+        19.231493,
+        72.986326
+      ],
+      "geotag_source_page": 25,
+      "action": "new_record",
+      "location_pending": false
+    },
+    {
+      "facility_id": "THN-MED-N19-D03-027",
+      "source_pdf": "Health Facility 2, Preetam.pdf",
+      "pages": [
+        27,
+        28
+      ],
+      "coordinates": [
+        19.22393,
+        72.981906
+      ],
+      "geotag_source_page": 27,
+      "action": "new_record",
+      "location_pending": false
+    },
+    {
+      "facility_id": "THN-MED-N19-D03-029",
+      "source_pdf": "Health Facility 2, Preetam.pdf",
+      "pages": [
+        29,
+        30
+      ],
+      "coordinates": [
+        19.221117,
+        72.982552
+      ],
+      "geotag_source_page": 29,
+      "action": "new_record",
+      "location_pending": false
+    },
+    {
+      "facility_id": "THN-MED-N19-D03-031",
+      "source_pdf": "Health Facility 2, Preetam.pdf",
+      "pages": [
+        31,
+        32
+      ],
+      "coordinates": [
+        19.242718,
+        73.0169
+      ],
+      "geotag_source_page": 31,
+      "action": "new_record",
+      "location_pending": false
+    },
+    {
+      "facility_id": "THN-MED-N19-D03-033",
+      "source_pdf": "Health Facility 2, Preetam.pdf",
+      "pages": [
+        33,
+        34
+      ],
+      "coordinates": [
+        19.214005,
+        72.977276
+      ],
+      "geotag_source_page": 33,
+      "action": "new_record",
+      "location_pending": false
+    },
+    {
+      "facility_id": "THN-MED-N19-D03-035",
+      "source_pdf": "Health Facility 2, Preetam.pdf",
+      "pages": [
+        35,
+        36
+      ],
+      "coordinates": [
+        19.25465,
+        72.973044
+      ],
+      "geotag_source_page": 35,
+      "action": "new_record",
+      "location_pending": false
+    },
+    {
+      "facility_id": "THN-MED-N19-D03-037",
+      "source_pdf": "Health Facility 2, Preetam.pdf",
+      "pages": [
+        37,
+        38,
+        39
+      ],
+      "coordinates": [
+        19.254671,
+        72.973062
+      ],
+      "geotag_source_page": 37,
+      "action": "new_record",
+      "location_pending": false
+    },
+    {
+      "facility_id": "THN-MED-N19-D03-040",
+      "source_pdf": "Health Facility 2, Preetam.pdf",
+      "pages": [
+        40,
+        41
+      ],
+      "coordinates": [
+        19.255654,
+        72.973328
+      ],
+      "geotag_source_page": 40,
+      "action": "new_record",
+      "location_pending": false
+    },
+    {
+      "facility_id": "THN-MED-N19-D03-042",
+      "source_pdf": "Health Facility 2, Preetam.pdf",
+      "pages": [
+        42,
+        43
+      ],
+      "coordinates": [
+        19.256792,
+        72.973615
+      ],
+      "geotag_source_page": 42,
+      "action": "new_record",
+      "location_pending": false
+    },
+    {
+      "facility_id": "THN-MED-N19-D03-044",
+      "source_pdf": "Health Facility 2, Preetam.pdf",
+      "pages": [
+        44,
+        45
+      ],
+      "coordinates": [
+        19.2569,
+        72.973648
+      ],
+      "geotag_source_page": 44,
+      "action": "new_record",
+      "location_pending": false
+    },
+    {
+      "facility_id": "THN-MED-N19-D03-046",
+      "source_pdf": "Health Facility 2, Preetam.pdf",
+      "pages": [
+        46,
+        47
+      ],
+      "coordinates": [
+        19.257328,
+        72.973499
+      ],
+      "geotag_source_page": 46,
+      "action": "new_record",
+      "location_pending": false
+    },
+    {
+      "facility_id": "THN-MED-N19-D03-048",
+      "source_pdf": "Health Facility 2, Preetam.pdf",
+      "pages": [
+        48,
+        49
+      ],
+      "coordinates": [
+        19.256026,
+        72.973792
+      ],
+      "geotag_source_page": 48,
+      "action": "new_record",
+      "location_pending": false
+    },
+    {
+      "facility_id": "THN-MED-N19-D03-050",
+      "source_pdf": "Health Facility 2, Preetam.pdf",
+      "pages": [
+        50,
+        51
+      ],
+      "coordinates": [
+        19.270647,
+        72.966006
+      ],
+      "geotag_source_page": 50,
+      "action": "new_record",
+      "location_pending": false
+    },
+    {
+      "facility_id": "THN-MED-N19-D03-052",
+      "source_pdf": "Health Facility 2, Preetam.pdf",
+      "pages": [
+        52,
+        53
+      ],
+      "coordinates": [
+        19.270767,
+        72.966334
+      ],
+      "geotag_source_page": 52,
+      "action": "new_record",
+      "location_pending": false
+    },
+    {
+      "facility_id": "THN-MED-N19-D03-054",
+      "source_pdf": "Health Facility 2, Preetam.pdf",
+      "pages": [
+        54,
+        55
+      ],
+      "coordinates": [
+        19.270873,
+        72.966472
+      ],
+      "geotag_source_page": 54,
+      "action": "new_record",
+      "location_pending": false
+    },
+    {
+      "facility_id": "THN-MED-N19-D03-056",
+      "source_pdf": "Health Facility 2, Preetam.pdf",
+      "pages": [
+        56,
+        57
+      ],
+      "coordinates": [
+        19.271371,
+        72.96757
+      ],
+      "geotag_source_page": 56,
+      "action": "new_record",
+      "location_pending": false
+    },
+    {
+      "facility_id": "THN-MED-N19-D03-058",
+      "source_pdf": "Health Facility 2, Preetam.pdf",
+      "pages": [
+        58,
+        59
+      ],
+      "coordinates": [
+        19.271709,
+        72.968293
+      ],
+      "geotag_source_page": 58,
+      "action": "new_record",
+      "location_pending": false
+    },
+    {
+      "facility_id": "THN-MED-N19-D03-060",
+      "source_pdf": "Health Facility 2, Preetam.pdf",
+      "pages": [
+        60,
+        61
+      ],
+      "coordinates": [
+        19.27115,
+        72.966969
+      ],
+      "geotag_source_page": 60,
+      "action": "new_record",
+      "location_pending": false
+    },
+    {
+      "facility_id": "THN-MED-N19-D03-062",
+      "source_pdf": "Health Facility 2, Preetam.pdf",
+      "pages": [
+        62,
+        63
+      ],
+      "coordinates": [
+        19.26916,
+        72.966026
+      ],
+      "geotag_source_page": 62,
+      "action": "new_record",
+      "location_pending": false
+    },
+    {
+      "facility_id": "THN-MED-N19-D03-064",
+      "source_pdf": "Health Facility 2, Preetam.pdf",
+      "pages": [
+        64,
+        65,
+        66
+      ],
+      "coordinates": [
+        19.267902,
+        72.966667
+      ],
+      "geotag_source_page": 64,
+      "action": "new_record",
+      "location_pending": false
+    },
+    {
+      "facility_id": "THN-MED-N19-D03-067",
+      "source_pdf": "Health Facility 2, Preetam.pdf",
+      "pages": [
+        67,
+        68
+      ],
+      "coordinates": [
+        19.266402,
+        72.967257
+      ],
+      "geotag_source_page": 67,
+      "action": "new_record",
+      "location_pending": false
+    },
+    {
+      "facility_id": "THN-MED-N19-D03-069",
+      "source_pdf": "Health Facility 2, Preetam.pdf",
+      "pages": [
+        69,
+        70
+      ],
+      "coordinates": [
+        19.266261,
+        72.967375
+      ],
+      "geotag_source_page": 69,
+      "action": "new_record",
+      "location_pending": false
+    },
+    {
+      "facility_id": "THN-MED-N19-D03-071",
+      "source_pdf": "Health Facility 2, Preetam.pdf",
+      "pages": [
+        71,
+        72
+      ],
+      "coordinates": [
+        19.263907,
+        72.968531
+      ],
+      "geotag_source_page": 72,
+      "action": "new_record",
+      "location_pending": false
+    },
+    {
+      "facility_id": "THN-MED-N19-D03-073",
+      "source_pdf": "Health Facility 2, Preetam.pdf",
+      "pages": [
+        73,
+        74
+      ],
+      "coordinates": [
+        19.263279,
+        72.965675
+      ],
+      "geotag_source_page": 73,
+      "action": "new_record",
+      "location_pending": false
+    },
+    {
+      "facility_id": "THN-MED-N19-D03-075",
+      "source_pdf": "Health Facility 2, Preetam.pdf",
+      "pages": [
+        75,
+        76
+      ],
+      "coordinates": [
+        19.268453,
+        72.96108
+      ],
+      "geotag_source_page": 75,
+      "action": "new_record",
+      "location_pending": false
+    },
+    {
+      "facility_id": "THN-MED-N19-D03-077",
+      "source_pdf": "Health Facility 2, Preetam.pdf",
+      "pages": [
+        77,
+        78
+      ],
+      "coordinates": [
+        19.270155,
+        72.965007
+      ],
+      "geotag_source_page": 77,
+      "action": "new_record",
+      "location_pending": false
+    },
+    {
+      "facility_id": "THN-MED-N19-D03-079",
+      "source_pdf": "Health Facility 2, Preetam.pdf",
+      "pages": [
+        79,
+        80
+      ],
+      "coordinates": [
+        19.219236,
+        72.978336
+      ],
+      "geotag_source_page": 79,
+      "action": "new_record",
+      "location_pending": false
+    },
+    {
+      "facility_id": "THN-WC-N19-D04-001",
+      "source_pdf": "Washroom Facility 2, Preetam.pdf",
+      "pages": [
+        1,
+        2,
+        3
+      ],
+      "coordinates": [
+        19.257078,
+        73.026003
+      ],
+      "geotag_source_page": 1,
+      "action": "new_record",
+      "location_pending": false
+    },
+    {
+      "facility_id": "THN-WC-N19-D04-004",
+      "source_pdf": "Washroom Facility 2, Preetam.pdf",
+      "pages": [
+        4,
+        5
+      ],
+      "coordinates": [
+        19.269122,
+        72.965228
+      ],
+      "geotag_source_page": 4,
+      "action": "new_record",
+      "location_pending": false
+    },
+    {
+      "facility_id": "THN-WC-N19-D04-006",
+      "source_pdf": "Washroom Facility 2, Preetam.pdf",
+      "pages": [
+        6,
+        7
+      ],
+      "coordinates": [
+        19.270807,
+        72.96785
+      ],
+      "geotag_source_page": 6,
+      "action": "new_record",
+      "location_pending": false
+    },
+    {
+      "facility_id": "THN-WC-N19-D04-008",
+      "source_pdf": "Washroom Facility 2, Preetam.pdf",
+      "pages": [
+        8,
+        9,
+        10
+      ],
+      "coordinates": [
+        19.271016,
+        72.968417
+      ],
+      "geotag_source_page": 8,
+      "action": "new_record",
+      "location_pending": false
+    },
+    {
+      "facility_id": "THN-WC-N19-D04-011",
+      "source_pdf": "Washroom Facility 2, Preetam.pdf",
+      "pages": [
+        11,
+        12
+      ],
+      "coordinates": [
+        19.264175,
+        72.961631
+      ],
+      "geotag_source_page": 11,
+      "action": "new_record",
+      "location_pending": false
+    },
+    {
+      "facility_id": "THN-WC-N19-D04-013",
+      "source_pdf": "Washroom Facility 2, Preetam.pdf",
+      "pages": [
+        13,
+        14
+      ],
+      "coordinates": [
+        19.264238,
+        72.961029
+      ],
+      "geotag_source_page": 13,
+      "action": "new_record",
+      "location_pending": false
+    },
+    {
+      "facility_id": "THN-WC-N19-D04-015",
+      "source_pdf": "Washroom Facility 2, Preetam.pdf",
+      "pages": [
+        15,
+        16
+      ],
+      "coordinates": [
+        19.271487,
+        72.962978
+      ],
+      "geotag_source_page": 15,
+      "action": "new_record",
+      "location_pending": false
+    },
+    {
+      "facility_id": "THN-WC-N19-D04-017",
+      "source_pdf": "Washroom Facility 2, Preetam.pdf",
+      "pages": [
+        17,
+        18
+      ],
+      "coordinates": [
+        19.21866,
+        72.978462
+      ],
+      "geotag_source_page": 17,
+      "action": "new_record",
+      "location_pending": false
+    },
+    {
+      "facility_id": "THN-WC-N19-D04-019",
+      "source_pdf": "Washroom Facility 2, Preetam.pdf",
+      "pages": [
+        19,
+        20
+      ],
+      "coordinates": [
+        19.21957,
+        72.978285
+      ],
+      "geotag_source_page": 19,
+      "action": "new_record",
+      "location_pending": false
+    },
+    {
+      "facility_id": "THN-PARK-N19-D05-001",
+      "source_pdf": "Park 2, Preetam.pdf",
+      "pages": [
+        1,
+        2
+      ],
+      "coordinates": [
+        19.221596,
+        72.99392
+      ],
+      "geotag_source_page": 1,
+      "action": "new_record",
+      "location_pending": false
+    },
+    {
+      "facility_id": "THN-PARK-N19-D05-003",
+      "source_pdf": "Park 2, Preetam.pdf",
+      "pages": [
+        3,
+        4
+      ],
+      "coordinates": [
+        19.258628,
+        72.973174
+      ],
+      "geotag_source_page": 3,
+      "action": "new_record",
+      "location_pending": false
+    },
+    {
+      "facility_id": "THN-PARK-N19-D05-005",
+      "source_pdf": "Park 2, Preetam.pdf",
+      "pages": [
+        5,
+        6
+      ],
+      "coordinates": [
+        19.263522,
+        72.962592
+      ],
+      "geotag_source_page": 5,
+      "action": "new_record",
+      "location_pending": false
+    },
+    {
+      "facility_id": "THN-WAT-N19-D06-001",
+      "source_pdf": "Water Facility2, Preetam.pdf",
+      "pages": [
+        1,
+        2,
+        3
+      ],
+      "coordinates": [
+        19.257139,
+        73.02609
+      ],
+      "geotag_source_page": 1,
+      "action": "new_record",
+      "location_pending": false
+    },
+    {
+      "facility_id": "THN-WAT-N19-D06-004",
+      "source_pdf": "Water Facility2, Preetam.pdf",
+      "pages": [
+        4,
+        5
+      ],
+      "coordinates": [
+        19.215604,
+        72.978106
+      ],
+      "geotag_source_page": 4,
+      "action": "new_record",
+      "location_pending": false
+    },
+    {
+      "facility_id": "THN-WAT-N19-D06-006",
+      "source_pdf": "Water Facility2, Preetam.pdf",
+      "pages": [
+        6,
+        7
+      ],
+      "coordinates": [
+        19.269112,
+        72.96524
+      ],
+      "geotag_source_page": 6,
+      "action": "new_record",
+      "location_pending": false
+    },
+    {
+      "facility_id": "THN-WAT-N19-D06-008",
+      "source_pdf": "Water Facility2, Preetam.pdf",
+      "pages": [
+        8,
+        9
+      ],
+      "coordinates": [
+        19.270614,
+        72.965691
+      ],
+      "geotag_source_page": 8,
+      "action": "new_record",
+      "location_pending": false
+    },
+    {
+      "facility_id": "THN-WAT-N19-D06-010",
+      "source_pdf": "Water Facility2, Preetam.pdf",
+      "pages": [
+        10,
+        11
+      ],
+      "coordinates": [
+        19.219572,
+        72.978335
+      ],
+      "geotag_source_page": 10,
+      "action": "new_record",
+      "location_pending": false
+    }
+  ]
+}

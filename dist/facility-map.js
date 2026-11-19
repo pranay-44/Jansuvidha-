@@ -6,7 +6,7 @@ const colors = { verified: '#267852', usable: '#267852', partial: '#ac721c', unu
 const located = f => Number.isFinite(f.latitude) && Number.isFinite(f.longitude);
 
 export function createFacilityMap(container, message, onSelect) {
-  const map = L.map(container, { minZoom: 9, maxZoom: 19, scrollWheelZoom: false });
+  const map = L.map(container, { minZoom: 9, maxZoom: 19, scrollWheelZoom: false, preferCanvas: true });
   const cityView = () => map.fitBounds(thaneBounds, { padding: [12, 12] });
   cityView();
   const tiles = L.tileLayer('https://tile.openstreetmap.org/{z}/{x}/{y}.png', {
@@ -21,38 +21,41 @@ export function createFacilityMap(container, message, onSelect) {
     message.textContent = 'Street tiles could not load. Check your internet connection. Facility details remain available.';
   });
   tiles.on('load', () => {
-    if (!failedTiles) message.textContent = 'Zoom in for roads and buildings. Facility pins use unconfirmed photo coordinates.';
+    if (!failedTiles) message.textContent = 'Zoom in for roads and buildings. Facility pins use photo coordinates or OpenStreetMap locations; field verification is needed.';
   });
   const layer = L.layerGroup().addTo(map);
   const markers = new Map();
+  let activeIds = new Set();
   const observer = new ResizeObserver(() => map.invalidateSize({ pan: false }));
   observer.observe(container);
   return {
     update(facilities) {
-      layer.clearLayers();
-      markers.clear();
-      facilities.filter(located).forEach(f => {
-        const icon = L.divIcon({
-          className: 'facility-marker',
-          html: `<span style="background:${colors[f.status] ?? colors.unverified}"></span>`,
-          iconSize: [28, 36], iconAnchor: [14, 34],
-        });
-        const marker = L.marker([f.latitude, f.longitude], { icon, title: f.name, alt: f.name, keyboard: true });
-        const label = document.createElement('span');
-        label.textContent = `${f.name} · ${f.facility_id}`;
-        marker.bindTooltip(label).on('click', () => onSelect(f.id)).addTo(layer);
-        markers.set(f.id, marker);
-      });
+      const wanted=facilities.filter(located);
+      const nextIds=new Set(wanted.map(f=>f.id));
+      for(const id of activeIds)if(!nextIds.has(id))layer.removeLayer(markers.get(id));
+      for(const f of wanted){
+        let marker=markers.get(f.id);
+        if(!marker){
+          const color=f.type==='Bus stops'?(f.on_highway?'#b45309':'#2563eb'):(colors[f.status]??colors.unverified);
+          // Canvas avoids a separate DOM icon for every stop. Keyboard access is provided by the paginated list.
+          marker=L.circleMarker([f.latitude,f.longitude],{radius:7,color:'#fff',weight:1.5,fillColor:color,fillOpacity:.9});
+          marker.bindTooltip(()=>{const label=document.createElement('span');label.textContent=`${f.name} · ${f.facility_id}`;return label;});
+          marker.on('click',()=>onSelect(f.id));
+          markers.set(f.id,marker);
+        }
+        if(!activeIds.has(f.id))marker.addTo(layer);
+      }
+      activeIds=nextIds;
     },
     focus(id) {
       const marker = markers.get(id);
-      if (marker) map.setView(marker.getLatLng(), 18);
+      if (marker && activeIds.has(id)) map.setView(marker.getLatLng(), 18);
     },
     cityView,
     showFacilities() {
-      const points = [...markers.values()].map(marker => marker.getLatLng());
+      const points = [...activeIds].map(id => markers.get(id).getLatLng());
       if (points.length) map.fitBounds(L.latLngBounds(points), { padding: [32, 32], maxZoom: 17 });
     },
-    destroy() { observer.disconnect(); map.remove(); },
+    destroy() { observer.disconnect(); map.remove(); markers.clear(); activeIds.clear(); },
   };
 }

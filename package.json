@@ -16,14 +16,14 @@
     "auth:bootstrap": "node --env-file=.env auth-cli.mjs bootstrap",
     "auth:dev-link": "node --env-file=.env auth-cli.mjs dev-link",
     "test:auth": "node --env-file=.env auth-checks.mjs",
-    "test": "node checks.mjs && node import-checks.mjs && node map-checks.mjs && node account-checks.mjs && node presentation-checks.mjs && node social-auth-checks.mjs",
+    "test": "node checks.mjs && node emergency-checks.mjs && node bus-checks.mjs && node import-checks.mjs && node map-checks.mjs && node account-checks.mjs && node presentation-checks.mjs && node social-auth-checks.mjs",
     "lint": "eslint .",
     "check": "npm run lint && npm test",
     "analyze": "node analysis.mjs",
     "android:sync": "cap sync android",
     "android:open": "node --env-file-if-exists=.env.android.local node_modules/@capacitor/cli/bin/capacitor open android",
     "android:run": "cap run android --no-sync",
-    "data:import": "node import-thane.mjs",
+    "data:import": "node import-thane.mjs && node import-bus.mjs",
     "prestart": "npm run map:assets && npm run data:import",
     "predev": "npm run map:assets && npm run data:import",
     "preandroid:sync": "npm run map:assets && npm run data:import",
@@ -31,7 +31,10 @@
     "postandroid:sync": "node android-checks.mjs",
     "android:check": "node android-checks.mjs",
     "preandroid:open": "npm run android:sync",
-    "preandroid:run": "npm run android:sync"
+    "preandroid:run": "npm run android:sync",
+    "bus:fetch": "python bus-pipeline/pipeline.py",
+    "bus:import": "node import-bus.mjs",
+    "bus:test": "python bus-pipeline/test_pipeline.py"
   },
   "dependencies": {
     "@capacitor/android": "^8.6.0",

@@ -1,0 +1,475 @@
+﻿first,second,first_name,second_name,distance_m,reason,first_side,second_side,first_way,second_way
+OSM-BUS-317914119,OSM-BUS-8789746257,Talao Pali,Talao Pali,30.64,outside merge distance,left,left,950015367,949441300
+OSM-BUS-317914119,OSM-BUS-10054380640,Talao Pali,,35.95,outside merge distance,left,unknown,950015367,949441300
+OSM-BUS-317914119,OSM-BUS-10054380641,Talao Pali,,4.4,side unknown,left,unknown,950015367,950015367
+OSM-BUS-340363219,OSM-BUS-340363221,,Thane Station (W),7.3,outside merge distance,unknown,left,151861338,949350234
+OSM-BUS-414595018,OSM-BUS-1960733668,Shishu Gyan Mandir,,24.91,outside merge distance,left,unknown,185467446,185467446
+OSM-BUS-414595059,OSM-BUS-1960733138,Vandana Cinema,Vandana Cinema,11.41,outside merge distance,unknown,unknown,1098641727,950285085
+OSM-BUS-414726600,OSM-BUS-1960733580,R.T.O,R.T.O,18.34,outside merge distance,left,left,1031318264,1507908359
+OSM-BUS-414726600,OSM-BUS-10251478085,R.T.O,R. T. O/ Central Jail,21.73,outside merge distance,left,left,1031318264,1507908359
+OSM-BUS-414726600,OSM-BUS-10251478086,R.T.O,R. T. O/ Central Jail,20.21,outside merge distance,left,unknown,1031318264,1031318264
+OSM-BUS-414727658,OSM-BUS-10054380632,Holy Cross,Holy Cross,21.2,outside merge distance,unknown,right,35374839,213074000
+OSM-BUS-414729200,OSM-BUS-2228293285,Oswal Park,Oswal Park,22.65,outside merge distance,left,right,949487862,949497794
+OSM-BUS-414730041,OSM-BUS-8450022933,Khewra Circle,Khewra Circle,17.3,outside merge distance,unknown,unknown,787907600,787907599
+OSM-BUS-414731201,OSM-BUS-1235720619,,Waghbil Naka,9.9,outside merge distance,unknown,left,1314335503,1314335503
+OSM-BUS-414731201,OSM-BUS-1960735568,,,27.01,outside merge distance,unknown,unknown,1314335503,950196936
+OSM-BUS-414731201,OSM-BUS-8792348026,,Waghbil Naka,32.49,outside merge distance,unknown,left,1314335503,1314335504
+OSM-BUS-443526121,OSM-BUS-10251547847,Neelkanth Heights,,8.78,outside merge distance,left,unknown,912440677,185467559
+OSM-BUS-1027917064,OSM-BUS-8592800211,Goodluck Company,Goodluck Company,36.92,outside merge distance,unknown,left,35375404,1505030042
+OSM-BUS-1182363540,OSM-BUS-7366287341,Dhokali Naka,Dhokali Naka,28.45,outside merge distance,left,left,1154686021,951426928
+OSM-BUS-1182363597,OSM-BUS-7331361903,Air Force,Air Force,37.5,outside merge distance,unknown,unknown,1190758210,784746961
+OSM-BUS-1184122848,OSM-BUS-1960733505,Makhamali Talaav,Makhamali Talaav,12.13,outside merge distance,unknown,unknown,185467339,185467346
+OSM-BUS-1184124335,OSM-BUS-10054380671,Gaondevi,,3.28,side unknown,left,unknown,102529794,102529794
+OSM-BUS-1235720534,OSM-BUS-8792348027,Dongaripada,Dongaripada,31.05,outside merge distance,left,left,950196935,241234446
+OSM-BUS-1235720534,OSM-BUS-10251547856,Dongaripada,,19.45,outside merge distance,left,unknown,950196935,950196937
+OSM-BUS-1235720534,OSM-BUS-10251547857,Dongaripada,,7.63,outside merge distance,left,unknown,950196935,950196935
+OSM-BUS-1235720619,OSM-BUS-1960735568,Waghbil Naka,,34.16,outside merge distance,left,unknown,1314335503,950196936
+OSM-BUS-1235720619,OSM-BUS-8792348026,Waghbil Naka,Waghbil Naka,34.94,outside merge distance,left,left,1314335503,1314335504
+OSM-BUS-1235755695,OSM-BUS-4233541797,"Brahmand Phase 1,2",,13.29,outside merge distance,left,unknown,107533643,107533643
+OSM-BUS-1235755695,OSM-BUS-7366182530,"Brahmand Phase 1,2","Brahmand Phase 1,2",28.11,outside merge distance,left,left,107533643,787891100
+OSM-BUS-1235755737,OSM-BUS-10251521069,Azad Nagar,Azad Nagar,20.84,outside merge distance,right,left,1124055784,1124055784
+OSM-BUS-1235813947,OSM-BUS-8792348019,,Mulla Bagh,26.44,outside merge distance,unknown,left,241241312,1460434865
+OSM-BUS-1235813947,OSM-BUS-8792348032,,Mulla Bagh,39.55,outside merge distance,unknown,left,241241312,241241312
+OSM-BUS-1582079842,OSM-BUS-10247438211,Rutu Estate / Municipal Commissioner House,Rutu Estate / Municipal Commissioner House,25.03,outside merge distance,left,left,1154760969,1298802325
+OSM-BUS-1643413992,OSM-BUS-7280128605,Pawar Nagar,Pawar Nagar,12.12,outside merge distance,unknown,unknown,923439437,185467460
+OSM-BUS-1665625974,OSM-BUS-10054380639,Civil Hospital,,11.85,outside merge distance,left,unknown,49592058,49592058
+OSM-BUS-1855295815,OSM-BUS-1960734604,Devdaya Nagar,Devdaya Nagar,29.86,outside merge distance,left,left,1509699293,1509699292
+OSM-BUS-1855295815,OSM-BUS-10054429279,Devdaya Nagar,,24.39,outside merge distance,left,unknown,1509699293,1509699292
+OSM-BUS-1960733532,OSM-BUS-10054380656,Nitin Junction,,5.8,side unknown,left,unknown,1013245951,1013245951
+OSM-BUS-1960733580,OSM-BUS-10251478085,R.T.O,R. T. O/ Central Jail,7.9,outside merge distance,left,left,1507908359,1507908359
+OSM-BUS-1960733580,OSM-BUS-10251478086,R.T.O,R. T. O/ Central Jail,22.69,outside merge distance,left,unknown,1507908359,1031318264
+OSM-BUS-1960733585,OSM-BUS-10054380656,Nitin Company,,34.49,outside merge distance,left,unknown,1013058275,1013245951
+OSM-BUS-1960733587,OSM-BUS-10054380638,Civil Hospital,,17.09,outside merge distance,right,unknown,185467894,185467894
+OSM-BUS-1960733860,OSM-BUS-10054429284,Khopat,,7.58,outside merge distance,left,unknown,554135533,554135533
+OSM-BUS-1960734104,OSM-BUS-13777995066,Desai Bangla,Desai Bangla,14.6,outside merge distance,right,left,931947037,931947037
+OSM-BUS-1960734126,OSM-BUS-13777995068,Rabodi Police Station,Rabodi Police Station,7.9,outside merge distance,right,left,931947037,931947037
+OSM-BUS-1960734604,OSM-BUS-10054429279,Devdaya Nagar,,5.63,side unknown,left,unknown,1509699292,1509699292
+OSM-BUS-1960734730,OSM-BUS-7398051783,Subhash Nagar,Subhash Nagar,22.05,outside merge distance,left,unknown,949487862,949497794
+OSM-BUS-1960734936,OSM-BUS-1960734940,Jawahar Nagar,Jawahar Nagar,23.38,outside merge distance,unknown,unknown,185467304,779615082
+OSM-BUS-1960735183,OSM-BUS-8790154387,Lok Puram,Lok Puram,25.21,outside merge distance,unknown,unknown,762428423,779615083
+OSM-BUS-1960735568,OSM-BUS-8792348026,,Waghbil Naka,17.83,outside merge distance,unknown,left,950196936,1314335504
+OSM-BUS-1960735576,OSM-BUS-2493682475,,,8.06,outside merge distance,unknown,unknown,1314335497,949743665
+OSM-BUS-1960735576,OSM-BUS-8792348024,,Panchamrit,18.06,outside merge distance,unknown,left,1314335497,1457062065
+OSM-BUS-1960735576,OSM-BUS-8792348025,,Panchamrit,22.88,outside merge distance,unknown,right,1314335497,1103629206
+OSM-BUS-1960735579,OSM-BUS-8792348022,,Vijay Garden / D-Mart,14.11,outside merge distance,unknown,left,925821774,1457062065
+OSM-BUS-1960735584,OSM-BUS-5982461354,,,13.18,outside merge distance,unknown,unknown,949743663,916572166
+OSM-BUS-2227587456,OSM-BUS-8794902864,,Highland Park,16.55,outside merge distance,unknown,left,951426926,951426926
+OSM-BUS-2227587456,OSM-BUS-8794902865,,Highland Park,20.16,outside merge distance,unknown,left,951426926,1190804915
+OSM-BUS-2227587456,OSM-BUS-10251547848,,,18.8,outside merge distance,unknown,unknown,951426926,1190804915
+OSM-BUS-2227587632,OSM-BUS-4367380311,Runwal Garden City,Runwal Garden City,10.37,outside merge distance,unknown,unknown,915942596,915942597
+OSM-BUS-2227588945,OSM-BUS-8792348032,,Mulla Bagh,31.67,outside merge distance,unknown,left,241504207,241241312
+OSM-BUS-2228292225,OSM-BUS-13777995067,Shreerang Society,Shreerang Society,6.74,outside merge distance,right,left,931947037,931947037
+OSM-BUS-2228429124,OSM-BUS-4585364193,Ramchandra Nagar 1,Ramchandra Nagar 1,14.03,outside merge distance,unknown,unknown,213092274,1098378175
+OSM-BUS-2230881380,OSM-BUS-6017561979,Namdev Wadi,Namdev Wadi,12.69,outside merge distance,unknown,unknown,213377729,950052827
+OSM-BUS-2319202487,OSM-BUS-2319202488,Dr. Babasaheb Ambedkar Udyan/Powai Gardens,Dr. Babasaheb Ambedkar Udyan/Powai Gardens,31.95,outside merge distance,left,left,99848629,99848631
+OSM-BUS-2319202489,OSM-BUS-10310554330,Dr. Babasaheb Ambedkar Udyan/Powai Gardens,,36.65,outside merge distance,left,left,1265526460,1265526460
+OSM-BUS-2319202489,OSM-BUS-10310554339,Dr. Babasaheb Ambedkar Udyan/Powai Gardens,,25.17,outside merge distance,left,left,1265526460,1265526460
+OSM-BUS-2319202489,OSM-BUS-10310554351,Dr. Babasaheb Ambedkar Udyan/Powai Gardens,Doctor Ambedkar Park,13.88,outside merge distance,left,left,1265526460,1265526460
+OSM-BUS-2319202490,OSM-BUS-10289597032,Dr. Babasaheb Ambedkar Udyan/Powai Gardens,,8.08,outside merge distance,left,left,1492109139,1492109139
+OSM-BUS-2493682475,OSM-BUS-8792348024,,Panchamrit,26.08,outside merge distance,unknown,left,949743665,1457062065
+OSM-BUS-2493682475,OSM-BUS-8792348025,,Panchamrit,16.18,outside merge distance,unknown,right,949743665,1103629206
+OSM-BUS-2898961177,OSM-BUS-8790099250,Hiranandani Meadows,Hiranandani Meadows,24.07,outside merge distance,left,left,779615083,762428423
+OSM-BUS-2902100495,OSM-BUS-2902101571,Muchhala College,Muchhala College,13.98,outside merge distance,unknown,unknown,950196934,949743664
+OSM-BUS-3229537290,OSM-BUS-5707923621,Gavan Pada,Palm Acres Society,13.55,outside merge distance,right,left,1525161171,1525161171
+OSM-BUS-3229537290,OSM-BUS-12860494334,Gavan Pada,Gavan Pada,31.92,outside merge distance,right,left,1525161171,1525161171
+OSM-BUS-3229537297,OSM-BUS-4211040737,Mulund Station (East),Mulund Station (East),30.38,outside merge distance,left,right,49591851,49591929
+OSM-BUS-3263024864,OSM-BUS-3931917826,Sawarkar Nagar,Sawarkar Nagar,14.57,outside merge distance,left,right,235944248,235944248
+OSM-BUS-3263030022,OSM-BUS-13780208477,Yashodham Nagar,Yashodham Nagar,24.68,outside merge distance,left,right,151528955,235944248
+OSM-BUS-3263030022,OSM-BUS-13780208481,Yashodham Nagar,Yashodham Nagar,12.04,outside merge distance,left,right,151528955,151528955
+OSM-BUS-3263043839,OSM-BUS-3263043840,Road Number 16,Road Number 16,30.21,outside merge distance,left,left,151866546,1504804293
+OSM-BUS-3554037797,OSM-BUS-10253292687,ishwar nagar stop,,37.79,outside merge distance,unknown,left,1479969122,1056950637
+OSM-BUS-3930284458,OSM-BUS-3930284459,Tilak Nagar Junction,Bradma Company,9.68,outside merge distance,right,left,213092246,213092246
+OSM-BUS-3930284460,OSM-BUS-3930284461,Ambika Nagar,Ambika Nagar,16.63,outside merge distance,left,right,1568726271,950052824
+OSM-BUS-3930284465,OSM-BUS-13780208474,Kamgar Hospital,Kamgar Hospital,10.89,outside merge distance,unknown,right,37815498,37815498
+OSM-BUS-3930284465,OSM-BUS-13780208475,Kamgar Hospital,Kamgar Naka,36.31,outside merge distance,unknown,left,37815498,1098378172
+OSM-BUS-3931942705,OSM-BUS-3931942706,Agriculture,Agriculture,17.85,outside merge distance,right,left,1530540939,1530540939
+OSM-BUS-4158101551,OSM-BUS-4270149192,Manpada,Manpada,36.85,outside merge distance,left,left,241241315,241241313
+OSM-BUS-4158101551,OSM-BUS-12591896952,Manpada,Manpada,20.7,outside merge distance,left,unknown,241241315,1509477447
+OSM-BUS-4211040735,OSM-BUS-4211040736,Hospital,Hospital,11.68,outside merge distance,left,right,49591929,49591929
+OSM-BUS-4211040739,OSM-BUS-4211040740,,,7.34,outside merge distance,right,right,49591851,49591851
+OSM-BUS-4211040742,OSM-BUS-4211040743,,,5.53,different or unknown road way,unknown,right,1525079265,1525079266
+OSM-BUS-4211040744,OSM-BUS-4211040745,,,12.88,outside merge distance,left,right,220589495,220589495
+OSM-BUS-4233541797,OSM-BUS-7366182530,,"Brahmand Phase 1,2",17.34,outside merge distance,unknown,left,107533643,787891100
+OSM-BUS-4233541816,OSM-BUS-10251521072,Brahmand Phase 6,Brahmand Phase 6,22.66,outside merge distance,unknown,right,107533642,107533642
+OSM-BUS-4233856092,OSM-BUS-13780208473,Bhawani Nagar,Bhawani Nagar,30.59,outside merge distance,left,right,37815498,37815498
+OSM-BUS-4367377476,OSM-BUS-8794902863,Kavyadhara,Kavyadhara,25.92,outside merge distance,unknown,right,787900398,599564358
+OSM-BUS-4367741661,OSM-BUS-6618393200,Sainath Nagar,Sainath Nagar,36.92,outside merge distance,left,right,1174219712,1464347490
+OSM-BUS-4367741685,OSM-BUS-8614581204,Hawre City / Boriwade Gaon,Hawre City / Boriwade Gaon,37.29,outside merge distance,left,left,916572181,600184243
+OSM-BUS-4576708592,OSM-BUS-10250511734,Jai Shastri Nagar,Jai Shastri Nagar,23.61,outside merge distance,left,left,1479986404,617781928
+OSM-BUS-4576710994,OSM-BUS-10775838857,Highland Park,Highland Park,18.82,outside merge distance,left,left,617781928,1480777203
+OSM-BUS-4576736692,OSM-BUS-10250511728,Mahatma Jyotiba Phule Chowk,,16.66,outside merge distance,left,left,1479491300,617781926
+OSM-BUS-4576758098,OSM-BUS-10250511722,Amar Nagar,Amar Nagar,31.7,outside merge distance,right,left,1120186019,1120186019
+OSM-BUS-4577337990,OSM-BUS-10250511724,Powai Chowk,Powai Chowk,27.85,outside merge distance,right,left,124606635,124606635
+OSM-BUS-4583539494,OSM-BUS-10250511717,Sri Chhatrapati Shivaji Maharaj Chowk,Sri Chhatrapati Shivaji Maharaj Chowk,12.35,outside merge distance,right,left,124606632,124606632
+OSM-BUS-4583566290,OSM-BUS-12852198168,Agra Road,Agra Road,17.41,outside merge distance,left,left,634122566,780247592
+OSM-BUS-4585386592,OSM-BUS-10059370053,Teen Petrol Pump,Teen Petrol Pump,15.58,outside merge distance,unknown,left,725401379,725401378
+OSM-BUS-4624034480,OSM-BUS-4644026822,Sector 5-Airoli,Sector 5-Airoli,16.56,outside merge distance,left,left,830825360,830825362
+OSM-BUS-4624034480,OSM-BUS-4663156492,Sector 5-Airoli,Airoli Sec 6 Bus Stand,37.46,outside merge distance,left,left,830825360,830825362
+OSM-BUS-4624034480,OSM-BUS-4663197890,Sector 5-Airoli,Airoli Sec 6 Bus Stand,39.86,outside merge distance,left,left,830825360,830825360
+OSM-BUS-4624034480,OSM-BUS-4625570697,Sector 5-Airoli,Sector 5-Airoli,9.87,outside merge distance,left,unknown,830825360,830825360
+OSM-BUS-4624037612,OSM-BUS-4625570692,Nahur Railway Station,Nahur Railway Station,11.64,outside merge distance,unknown,right,652568424,652568424
+OSM-BUS-4624037612,OSM-BUS-4644026840,Nahur Railway Station,Nahur Railway Station,9.23,outside merge distance,unknown,right,652568424,1120064758
+OSM-BUS-4624037619,OSM-BUS-4644026843,Mulund-Goregaon Link Road,Mulund-Goregaon Link Road,32.88,outside merge distance,left,left,469042936,652568425
+OSM-BUS-4624037619,OSM-BUS-4625570690,Mulund-Goregaon Link Road,Mulund-Goregaon Link Road,3.71,side unknown,left,unknown,469042936,469042936
+OSM-BUS-4624037619,OSM-BUS-4644026842,Mulund-Goregaon Link Road,Mulund-Goregaon Link Road,22.02,outside merge distance,left,unknown,469042936,652568425
+OSM-BUS-4624037634,OSM-BUS-4644026846,Ceat Company,Ceat Company,5.44,opposite road sides,left,right,151581373,151581373
+OSM-BUS-4624037634,OSM-BUS-4625570578,Ceat Company,Ceat Company,2.63,side unknown,left,unknown,151581373,151581373
+OSM-BUS-4624037638,OSM-BUS-4644026847,Nahur Railway St.,Nahur Railway St.,8.56,outside merge distance,left,right,151581373,151581373
+OSM-BUS-4624037638,OSM-BUS-4625570691,Nahur Railway St.,Nahur Railway Station,6.21,outside merge distance,left,unknown,151581373,151581373
+OSM-BUS-4624037642,OSM-BUS-4644026848,Bhandup Village (W),Bhandup Village (W),2.55,different or unknown road way,unknown,unknown,151581373,151581617
+OSM-BUS-4624037642,OSM-BUS-4625570575,Bhandup Village (W),Bhandup Village (W),1.07,different or unknown road way,unknown,unknown,151581373,124864448
+OSM-BUS-4624037656,OSM-BUS-4644026856,Bhandup St (W),Bhandup St (W),1.87,side unknown,unknown,unknown,1207065694,1207065694
+OSM-BUS-4624037656,OSM-BUS-4625570574,Bhandup St (W),Bhandup Station (W),0.91,different names,unknown,unknown,1207065694,1207065694
+OSM-BUS-4624037657,OSM-BUS-4625570587,Janata Market Bhandup,Janata Market Bhandup,7.24,outside merge distance,left,unknown,1140790167,1140790167
+OSM-BUS-4624037658,OSM-BUS-4644026858,Mangatram Petrol Pump,Mangatram Petrol Pump,25.95,outside merge distance,right,left,1192555951,1190097339
+OSM-BUS-4624037658,OSM-BUS-4625570689,Mangatram Petrol Pump,Mangatram Petrol Pump,9.38,outside merge distance,right,unknown,1192555951,1190097850
+OSM-BUS-4624037660,OSM-BUS-4644026860,Dockyard kanjurmarg St,Dockyard kanjurmarg St,9.39,outside merge distance,right,left,666020852,666020852
+OSM-BUS-4624037660,OSM-BUS-4625570581,Dockyard kanjurmarg St,Dockyard kanjurmarg St,5.55,side unknown,right,unknown,666020852,666020852
+OSM-BUS-4624037661,OSM-BUS-4644026863,Huma Talkies,Huma Talkies,18.64,outside merge distance,left,left,1306994189,470187344
+OSM-BUS-4624037661,OSM-BUS-4676916067,Huma Talkies,Huma Talkies,4.91,side unknown,left,unknown,1306994189,1306994189
+OSM-BUS-4624037663,OSM-BUS-4644026865,Gandhi Nagar Vikhroli,Gandhi Nagar Vikhroli,12.16,outside merge distance,left,unknown,469039149,470187347
+OSM-BUS-4624037663,OSM-BUS-4644026866,Gandhi Nagar Vikhroli,Gandhi Nagar Vikhroli,15.74,outside merge distance,left,left,469039149,470187347
+OSM-BUS-4624037663,OSM-BUS-4625570582,Gandhi Nagar Vikhroli,Gandhi Nagar Vikhroli,2.06,side unknown,left,unknown,469039149,469039149
+OSM-BUS-4624037664,OSM-BUS-4625570585,Hindustan Company,Hindustan Company,3.95,side unknown,left,unknown,469039149,469039149
+OSM-BUS-4625570692,OSM-BUS-4644026840,Nahur Railway Station,Nahur Railway Station,16.21,outside merge distance,right,right,652568424,1120064758
+OSM-BUS-4632210339,OSM-BUS-4644026850,Kasturi Vidyalay,Kasturi Vidyalay,3.58,opposite road sides,right,left,124864448,124864448
+OSM-BUS-4632210339,OSM-BUS-4625570588,Kasturi Vidyalay,Kasturi Vidyalay,1.71,side unknown,right,unknown,124864448,124864448
+OSM-BUS-4632210341,OSM-BUS-4644026849,Usha Nagar,Usha Nagar,14.74,outside merge distance,right,left,124864448,124864448
+OSM-BUS-4632210341,OSM-BUS-4624037645,Usha Nagar,Usha Nagar,6.2,outside merge distance,right,unknown,124864448,124864448
+OSM-BUS-4632210347,OSM-BUS-4644026845,Hanuman Nagar Nahur,Subhash Nagar Nahur,2.49,different names,unknown,left,151581373,151581373
+OSM-BUS-4632210347,OSM-BUS-4624037676,Hanuman Nagar Nahur,Hanuman Nagar Nahur,0.62,side unknown,unknown,unknown,151581373,151581373
+OSM-BUS-4632210378,OSM-BUS-4644026836,Bhandup Village Junction,Bhandup Village Junction,5.59,opposite road sides,left,right,779616743,779616743
+OSM-BUS-4634597672,OSM-BUS-4663175691,Sahakar Bazaar-Airoli,Sahakaar Bazaar,17.88,outside merge distance,right,unknown,830825363,830825363
+OSM-BUS-4634597672,OSM-BUS-4663176489,Sahakar Bazaar-Airoli,Sahakaar Bazaar,7.61,outside merge distance,right,right,830825363,830825363
+OSM-BUS-4634597672,OSM-BUS-4624034478,Sahakar Bazaar-Airoli,Sahakar Bazaar-Airoli,1.88,side unknown,right,unknown,830825363,830825363
+OSM-BUS-4644026809,OSM-BUS-4663176191,Sector 4-Airoli Corporation Bank,Airoli Sector 4 / Corporation Bank,18.69,outside merge distance,right,left,470810407,470810407
+OSM-BUS-4644026809,OSM-BUS-4663176289,Sector 4-Airoli Corporation Bank,Airoli Sector 4 / Corporation Bank,38.53,outside merge distance,right,right,470810407,470810407
+OSM-BUS-4644026809,OSM-BUS-4625570696,Sector 4-Airoli Corporation Bank,Sector 4-Airoli Corporation Bank,10.64,outside merge distance,right,unknown,470810407,470810407
+OSM-BUS-4644026822,OSM-BUS-4663156492,Sector 5-Airoli,Airoli Sec 6 Bus Stand,29.08,outside merge distance,left,left,830825362,830825362
+OSM-BUS-4644026822,OSM-BUS-4625570697,Sector 5-Airoli,Sector 5-Airoli,17.53,outside merge distance,left,unknown,830825362,830825360
+OSM-BUS-4644026843,OSM-BUS-4625570690,Mulund-Goregaon Link Road,Mulund-Goregaon Link Road,29.67,outside merge distance,left,unknown,652568425,469042936
+OSM-BUS-4644026843,OSM-BUS-4644026842,Mulund-Goregaon Link Road,Mulund-Goregaon Link Road,13.03,outside merge distance,left,unknown,652568425,652568425
+OSM-BUS-4644026844,OSM-BUS-5924793332,Subhash Nagar Nahur,Subhash Nagar Nahur,16.49,outside merge distance,unknown,left,1431153742,1431153743
+OSM-BUS-4644026844,OSM-BUS-4625570699,Subhash Nagar Nahur,Subhash Nagar Nahur,27.36,outside merge distance,unknown,unknown,1431153742,151581373
+OSM-BUS-4644026845,OSM-BUS-4624037676,Subhash Nagar Nahur,Hanuman Nagar Nahur,1.94,different names,left,unknown,151581373,151581373
+OSM-BUS-4644026846,OSM-BUS-4625570578,Ceat Company,Ceat Company,2.81,side unknown,right,unknown,151581373,151581373
+OSM-BUS-4644026847,OSM-BUS-4625570691,Nahur Railway St.,Nahur Railway Station,2.87,different names,right,unknown,151581373,151581373
+OSM-BUS-4644026848,OSM-BUS-4625570575,Bhandup Village (W),Bhandup Village (W),1.51,different or unknown road way,unknown,unknown,151581617,124864448
+OSM-BUS-4644026849,OSM-BUS-4624037645,Usha Nagar,Usha Nagar,8.6,outside merge distance,left,unknown,124864448,124864448
+OSM-BUS-4644026850,OSM-BUS-4625570588,Kasturi Vidyalay,Kasturi Vidyalay,1.87,side unknown,left,unknown,124864448,124864448
+OSM-BUS-4644026853,OSM-BUS-4644026854,Bhandup Police Station,Bhandup Police Station,24.21,outside merge distance,right,left,1178254828,1111931947
+OSM-BUS-4644026856,OSM-BUS-4625570574,Bhandup St (W),Bhandup Station (W),0.98,different names,unknown,unknown,1207065694,1207065694
+OSM-BUS-4644026858,OSM-BUS-4625570689,Mangatram Petrol Pump,Mangatram Petrol Pump,16.67,outside merge distance,left,unknown,1190097339,1190097850
+OSM-BUS-4644026860,OSM-BUS-4625570581,Dockyard kanjurmarg St,Dockyard kanjurmarg St,3.9,side unknown,left,unknown,666020852,666020852
+OSM-BUS-4644026863,OSM-BUS-4676916067,Huma Talkies,Huma Talkies,14.92,outside merge distance,left,unknown,470187344,1306994189
+OSM-BUS-4644026865,OSM-BUS-4644026866,Gandhi Nagar Vikhroli,Gandhi Nagar Vikhroli,3.72,side unknown,unknown,left,470187347,470187347
+OSM-BUS-4644026865,OSM-BUS-4625570582,Gandhi Nagar Vikhroli,Gandhi Nagar Vikhroli,10.1,outside merge distance,unknown,unknown,470187347,469039149
+OSM-BUS-4644026866,OSM-BUS-4625570582,Gandhi Nagar Vikhroli,Gandhi Nagar Vikhroli,13.69,outside merge distance,left,unknown,470187347,469039149
+OSM-BUS-4644026869,OSM-BUS-4644026868,Hindustan Company,Hindustan Company,2.3,side unknown,left,unknown,469497537,469497537
+OSM-BUS-4647297094,OSM-BUS-4647298190,Talavali Naka,Talavali Naka,31.95,outside merge distance,left,left,589835173,1152889485
+OSM-BUS-4647298191,OSM-BUS-4647299691,Gothivali Village,Gothivali Village,28.44,outside merge distance,unknown,left,589835173,1152889485
+OSM-BUS-4647302410,OSM-BUS-4647423110,Bharat Bijli,Bharat Bijli,27.62,outside merge distance,left,left,1558090733,220839334
+OSM-BUS-4647479700,OSM-BUS-4647492103,Siemens Company,Siemens Company,28.54,outside merge distance,left,left,1558090733,220839334
+OSM-BUS-4647685992,OSM-BUS-4647713090,Sathe Nagar,Sathe Nagar,23.96,outside merge distance,left,left,1189114411,220839337
+OSM-BUS-4647714594,OSM-BUS-4647870489,Chendani Koliwada,Chendani Koliwada,21.6,outside merge distance,left,right,49592053,49592053
+OSM-BUS-4647734296,OSM-BUS-4647775090,Kanhaji Agrh Chowk,Kanhaji Agrh Chowk,25.17,outside merge distance,left,left,185467585,627539084
+OSM-BUS-4647739096,OSM-BUS-4647829791,Mahagiri Koliwada,Mahagiri Koliwada,26.03,outside merge distance,left,right,1002541973,151861324
+OSM-BUS-4647739097,OSM-BUS-4647739098,Dadoji Konddev Stadium,Dadoji Konddev Stadium,16.37,outside merge distance,right,right,775949730,49592053
+OSM-BUS-4663156492,OSM-BUS-4663197890,Airoli Sec 6 Bus Stand,Airoli Sec 6 Bus Stand,32.4,outside merge distance,left,left,830825362,830825360
+OSM-BUS-4663167293,OSM-BUS-4663254393,Sector 8 (Airoli),Diva Village Bus Stop,21.87,outside merge distance,right,left,830825362,830825360
+OSM-BUS-4663167294,OSM-BUS-4663224289,Airoli Sector 7,Airoli Sector 7,20.56,outside merge distance,left,left,291747451,220732481
+OSM-BUS-4663175691,OSM-BUS-4663176489,Sahakaar Bazaar,Sahakaar Bazaar,14.82,outside merge distance,unknown,right,830825363,830825363
+OSM-BUS-4663175691,OSM-BUS-4624034478,Sahakaar Bazaar,Sahakar Bazaar-Airoli,17.8,outside merge distance,unknown,unknown,830825363,830825363
+OSM-BUS-4663175692,OSM-BUS-9817705128,DAV School,,19.57,outside merge distance,left,left,220732461,220732482
+OSM-BUS-4663175693,OSM-BUS-4663243590,Airoli Sector 14,Airoli Sector 14,23.04,outside merge distance,left,left,220732482,220732461
+OSM-BUS-4663176189,OSM-BUS-4663176191,Airoli Bus Depot,Airoli Sector 4 / Corporation Bank,39.34,outside merge distance,left,left,470810407,470810407
+OSM-BUS-4663176189,OSM-BUS-4663176289,Airoli Bus Depot,Airoli Sector 4 / Corporation Bank,14.2,outside merge distance,left,right,470810407,470810407
+OSM-BUS-4663176191,OSM-BUS-4663176289,Airoli Sector 4 / Corporation Bank,Airoli Sector 4 / Corporation Bank,38.22,outside merge distance,left,right,470810407,470810407
+OSM-BUS-4663176191,OSM-BUS-4625570696,Airoli Sector 4 / Corporation Bank,Sector 4-Airoli Corporation Bank,8.06,outside merge distance,left,unknown,470810407,470810407
+OSM-BUS-4663176289,OSM-BUS-4625570696,Airoli Sector 4 / Corporation Bank,Sector 4-Airoli Corporation Bank,36.85,outside merge distance,right,unknown,470810407,470810407
+OSM-BUS-4663176298,OSM-BUS-4644026827,Airoli Sector 9,Sector 9-Airoli,29.08,outside merge distance,left,unknown,214751781,1199966898
+OSM-BUS-4663176489,OSM-BUS-4624034478,Sahakaar Bazaar,Sahakar Bazaar-Airoli,9.11,outside merge distance,right,unknown,830825363,830825363
+OSM-BUS-4663215501,OSM-BUS-4663248590,Airoli Sector 14,Airoli Sector 14,21.49,outside merge distance,left,left,220732472,38585738
+OSM-BUS-4663215502,OSM-BUS-4663245997,Airoli Sector 16,Airoli Sector 16,24.84,outside merge distance,left,left,220914264,220732469
+OSM-BUS-4663219090,OSM-BUS-4663224290,Yash Paradise,Yash Paradise,24.21,outside merge distance,left,left,654678709,220732475
+OSM-BUS-4663219091,OSM-BUS-4663223991,HP Gas Godown,HP Gas Godown,29.63,outside merge distance,left,left,220732461,220732482
+OSM-BUS-4663243591,OSM-BUS-4663246000,Sai Nath Sports Club,Sai Nath Sports Club,26.13,outside merge distance,left,left,220732452,38585733
+OSM-BUS-4663246193,OSM-BUS-4663251493,Patni Computers,Patni Computers,24.83,outside merge distance,left,left,1189111590,376622666
+OSM-BUS-4663250818,OSM-BUS-4663251406,Tulshiram Narayan Joshi Chowk,Airoli Village,24.97,outside merge distance,left,unknown,38587181,38587181
+OSM-BUS-4761353928,OSM-BUS-6038193885,Bhandup Station (W),Bhandup Station (W),31.48,outside merge distance,left,left,473614662,1265526462
+OSM-BUS-4761353928,OSM-BUS-10310496687,Bhandup Station (W),,26.18,outside merge distance,left,left,473614662,1265526462
+OSM-BUS-4761368327,OSM-BUS-10253594985,,,19.31,outside merge distance,left,left,1056950637,1140790167
+OSM-BUS-4761370027,OSM-BUS-10253594987,Birla Company,,26.66,outside merge distance,left,left,666020852,1479592212
+OSM-BUS-4929295225,OSM-BUS-10255674906,Mulund Depot,Mulund Depot,15.89,outside merge distance,right,right,124861813,1482454274
+OSM-BUS-4929295225,OSM-BUS-10255674907,Mulund Depot,Mulund Depot,28.03,outside merge distance,right,left,124861813,124861813
+OSM-BUS-4929295227,OSM-BUS-12860494334,Gavan Pada,Gavan Pada,38.07,outside merge distance,right,left,1272021840,1525161171
+OSM-BUS-4929295323,OSM-BUS-13760696967,Mahanagarpalika Udyan,,31.77,outside merge distance,left,left,1192260047,1238879358
+OSM-BUS-4929307126,OSM-BUS-10246302361,Kelker College,Kelker College,17.65,outside merge distance,left,left,1273848775,1559065033
+OSM-BUS-5078296200,OSM-BUS-5078296201,H10,Canara Bank,9.88,outside merge distance,unknown,left,556314750,366913701
+OSM-BUS-5433513521,OSM-BUS-10280293718,,Dr Hegdewar Chowk/Bhandup Sonapur,26.54,outside merge distance,left,left,1140802583,1140802581
+OSM-BUS-5707923621,OSM-BUS-12860494334,Palm Acres Society,Gavan Pada,20.55,outside merge distance,left,left,1525161171,1525161171
+OSM-BUS-5839245287,OSM-BUS-5839246685,Khindipada,Khindipada,20.67,outside merge distance,left,right,124858276,124858276
+OSM-BUS-5924793332,OSM-BUS-4625570699,Subhash Nagar Nahur,Subhash Nagar Nahur,23.99,outside merge distance,left,unknown,1431153743,151581373
+OSM-BUS-5940610991,OSM-BUS-10280126559,Hira Nagar,,11.38,outside merge distance,right,left,1555044064,1555044064
+OSM-BUS-6017561678,OSM-BUS-8795208244,Annabhau Sathe Chowk,Annabhau Sathe Chowk,10.02,outside merge distance,unknown,unknown,950052812,151531015
+OSM-BUS-6017562392,OSM-BUS-6017562405,Gyaneshwar Nagar,Gyaneshwar Nagar,8.13,outside merge distance,unknown,unknown,35357679,1526091759
+OSM-BUS-6038134585,OSM-BUS-8788708021,Muktai Nagar,Muktai Nagar,24.51,outside merge distance,left,left,725409853,311450372
+OSM-BUS-6038146487,OSM-BUS-10247412212,Flower Valley,Flower Valley,38.94,outside merge distance,left,left,620857550,185467250
+OSM-BUS-6038146489,OSM-BUS-10057041039,Johnson Company,Johnson Company,33.62,outside merge distance,left,left,1445540651,787854545
+OSM-BUS-6038146490,OSM-BUS-10057041040,Kashish Park,Kashish Park,22.63,outside merge distance,left,left,1445540653,1445500743
+OSM-BUS-6038148685,OSM-BUS-10054380658,Louis Wadi,,10.39,outside merge distance,left,unknown,620857547,620857547
+OSM-BUS-6038148786,OSM-BUS-10245111422,Ralli Wolf,Ralli Wolf,11.68,outside merge distance,left,left,132269580,132269580
+OSM-BUS-6038148786,OSM-BUS-10245111438,Ralli Wolf,Ralli Wolf,37.95,outside merge distance,left,left,132269580,439133790
+OSM-BUS-6038148887,OSM-BUS-10259362736,Duncan Company,Duncan Company,21.61,outside merge distance,unknown,left,1158503763,439133790
+OSM-BUS-6038148888,OSM-BUS-6038195287,Hoechst Company,Hoechst Company,24.67,outside merge distance,left,left,132269580,439133790
+OSM-BUS-6038148888,OSM-BUS-10255325197,Hoechst Company,Hoechst Company,12.44,outside merge distance,left,left,132269580,132269580
+OSM-BUS-6038193885,OSM-BUS-10310496687,Bhandup Station (W),,9.92,outside merge distance,left,left,1265526462,1265526462
+OSM-BUS-6038193888,OSM-BUS-10253292684,,,22.5,outside merge distance,left,right,470187343,666023048
+OSM-BUS-6038193889,OSM-BUS-10253292695,Asian Paints,Asian Paints,39.69,outside merge distance,left,left,1140790171,470187343
+OSM-BUS-6038195286,OSM-BUS-10308317047,Dr Hegdewar Chowk,Dr Hegdewar Chowk,35.99,outside merge distance,right,left,1479997999,470187343
+OSM-BUS-6038195287,OSM-BUS-10255325197,Hoechst Company,Hoechst Company,27.96,outside merge distance,left,left,439133790,132269580
+OSM-BUS-6116158099,OSM-BUS-8493462496,R-Mall,R-Mall,33.31,outside merge distance,right,left,1457062063,241241314
+OSM-BUS-6116158099,OSM-BUS-9215039106,R-Mall,,24.54,outside merge distance,right,unknown,1457062063,241501984
+OSM-BUS-6792582785,OSM-BUS-10250420336,Mulund Railway Station (W),Mulund Railway Station (W) Towards Mulund Colony,30.16,outside merge distance,left,left,124861821,124861821
+OSM-BUS-6792582785,OSM-BUS-10250420341,Mulund Railway Station (W),Mulund Railway Station (W),29.2,outside merge distance,left,left,124861821,124861821
+OSM-BUS-6802893015,OSM-BUS-6802893027,Shahu Market,Shahu Market,26.8,outside merge distance,left,left,93059027,1314340513
+OSM-BUS-7108673660,OSM-BUS-8792348033,Police Line,Police Line,18.9,outside merge distance,left,right,185467492,35374839
+OSM-BUS-7280128656,OSM-BUS-7280128657,Vasant Vihar,Vasant Vihar,17.92,outside merge distance,unknown,unknown,779615082,185467304
+OSM-BUS-7366287329,OSM-BUS-10247412258,Sandoz Baug,Sandoz Baug,34.6,outside merge distance,unknown,left,915320991,915320989
+OSM-BUS-7366380224,OSM-BUS-7366380225,Yashaswi Nagar,Yashaswi Nagar,37.57,outside merge distance,right,right,1513542058,627547465
+OSM-BUS-7366380235,OSM-BUS-8794902858,Shruti Park,Shruti Park,25.04,outside merge distance,left,left,787908440,102388775
+OSM-BUS-7366380235,OSM-BUS-10251547849,Shruti Park,,3.95,side unknown,left,unknown,787908440,787908440
+OSM-BUS-7375128770,OSM-BUS-8795776779,Gawand Baug,Gawand Baug,5.36,different or unknown road way,unknown,unknown,35375142,919984235
+OSM-BUS-7944371745,OSM-BUS-8795838222,Upvan lake Voltas,Upvan lake Voltas,9.56,outside merge distance,unknown,unknown,950912481,950912478
+OSM-BUS-8493462496,OSM-BUS-9215039106,R-Mall,,26.35,outside merge distance,left,unknown,241241314,241501984
+OSM-BUS-8551670545,OSM-BUS-13431778547,Ravi Estate,Ravi Estate,14.71,outside merge distance,unknown,left,37813456,950113970
+OSM-BUS-8592017248,OSM-BUS-8796504402,Anunagar,,33.61,outside merge distance,left,unknown,1485776107,1485776107
+OSM-BUS-8592367903,OSM-BUS-8790099254,Voltas Gate,Voltas Gate,21.73,outside merge distance,unknown,right,949497794,1513564781
+OSM-BUS-8788708017,OSM-BUS-8789863207,Happy Valley Circle,Happy Valley Circle,20.31,outside merge distance,left,left,185467434,185467569
+OSM-BUS-8788708019,OSM-BUS-10251478087,Central Maidan,Central Maidan,20.18,outside merge distance,left,left,790249504,439263508
+OSM-BUS-8788708020,OSM-BUS-8789863202,Ambika Yoga Kutir,Ambika Yoga Kutir,26.83,outside merge distance,right,left,1189302782,725409850
+OSM-BUS-8788708026,OSM-BUS-9925315050,Sahyog Society,Sahyog Society,21.45,outside merge distance,right,left,1189600801,185467569
+OSM-BUS-8789746256,OSM-BUS-13780208479,Thane Station (W),Thane Station (W),10.99,outside merge distance,left,left,949441299,1137199168
+OSM-BUS-8789746257,OSM-BUS-10054380640,Talao Pali,,9.1,outside merge distance,left,unknown,949441300,949441300
+OSM-BUS-8789746257,OSM-BUS-10054380641,Talao Pali,,26.34,outside merge distance,left,unknown,949441300,950015367
+OSM-BUS-8790099253,OSM-BUS-8790154388,Gandhi Nagar,Gandhi Nagar,14.57,outside merge distance,left,left,997216403,997216401
+OSM-BUS-8792348020,OSM-BUS-8792348021,Azad Nagar Naka,Azad Nagar Naka,35.36,outside merge distance,left,left,241241312,1460434865
+OSM-BUS-8792348020,OSM-BUS-10251547863,Azad Nagar Naka,,8.15,outside merge distance,left,unknown,241241312,241241312
+OSM-BUS-8792348021,OSM-BUS-10251547863,Azad Nagar Naka,,28.06,outside merge distance,left,unknown,1460434865,241241312
+OSM-BUS-8792348024,OSM-BUS-8792348025,Panchamrit,Panchamrit,39.2,outside merge distance,left,right,1457062065,1103629206
+OSM-BUS-8792348027,OSM-BUS-10251547856,Dongaripada,,12.64,outside merge distance,left,unknown,241234446,950196937
+OSM-BUS-8792348027,OSM-BUS-10251547857,Dongaripada,,23.51,outside merge distance,left,unknown,241234446,950196935
+OSM-BUS-8792348029,OSM-BUS-10251521073,Brahmand Phase 5,Brahmand Phase 5,28.97,outside merge distance,unknown,left,107533642,787846523
+OSM-BUS-8792348030,OSM-BUS-8794902868,Swastik Park,Swastik Park,10.74,outside merge distance,unknown,unknown,1510487925,1188815818
+OSM-BUS-8794902854,OSM-BUS-10054380669,Ice Factory,Ice Factory,20.49,outside merge distance,left,left,49592032,950052804
+OSM-BUS-8794902855,OSM-BUS-10054380670,A.K. Joshi Vidyalaya,A.K. Joshi Vidyalaya,19.36,outside merge distance,left,left,1333188312,950052804
+OSM-BUS-8794902856,OSM-BUS-8794902857,Kapurbawadi,Kapurbawadi,30.05,outside merge distance,left,left,951426927,421707813
+OSM-BUS-8794902858,OSM-BUS-10251547849,Shruti Park,,24.01,outside merge distance,left,unknown,102388775,787908440
+OSM-BUS-8794902862,OSM-BUS-8794902866,Wellman Company,Wellman Company,20.04,outside merge distance,unknown,unknown,787900398,787900400
+OSM-BUS-8794902864,OSM-BUS-8794902865,Highland Park,Highland Park,22.23,outside merge distance,left,left,951426926,1190804915
+OSM-BUS-8794902864,OSM-BUS-10251547848,Highland Park,,19.28,outside merge distance,left,unknown,951426926,1190804915
+OSM-BUS-8794902865,OSM-BUS-10251547848,Highland Park,,3.05,side unknown,left,unknown,1190804915,1190804915
+OSM-BUS-8794902867,OSM-BUS-10247412259,Bayer,Bayer Main Gate,24.67,outside merge distance,unknown,left,787900400,915298549
+OSM-BUS-8795208236,OSM-BUS-8795208247,Nitin Company,Nitin Company,13.06,outside merge distance,unknown,unknown,950052809,1507885660
+OSM-BUS-8795208237,OSM-BUS-8795208245,Kamgar Hospital,Kamgar Hospital,10.83,outside merge distance,unknown,unknown,35357679,638497544
+OSM-BUS-8795208242,OSM-BUS-8795208243,Tata Motors,Tata Motors,8.22,outside merge distance,unknown,unknown,950052812,151531015
+OSM-BUS-8795208250,OSM-BUS-10291367368,Hari Niwas,,17.71,outside merge distance,unknown,left,950052818,950052807
+OSM-BUS-8795776769,OSM-BUS-10054429283,Khopat,,9.98,outside merge distance,left,unknown,554135525,554135525
+OSM-BUS-8795776770,OSM-BUS-8795776771,Pujani Estate,Pujani Estate,29.67,outside merge distance,left,left,554135525,554135533
+OSM-BUS-8795776770,OSM-BUS-10054429285,Pujani Estate,,22.83,outside merge distance,left,unknown,554135525,554135533
+OSM-BUS-8795776770,OSM-BUS-10054429286,Pujani Estate,,8.29,outside merge distance,left,unknown,554135525,554135525
+OSM-BUS-8795776771,OSM-BUS-10054429285,Pujani Estate,,7.04,outside merge distance,left,unknown,554135533,554135533
+OSM-BUS-8795776771,OSM-BUS-10054429286,Pujani Estate,,22.17,outside merge distance,left,unknown,554135533,554135525
+OSM-BUS-8795776772,OSM-BUS-10054429280,Shivai Nagar,,21.59,outside merge distance,left,unknown,1098074158,1098074158
+OSM-BUS-8795776772,OSM-BUS-10054429281,Shivai Nagar,Shivai Nagar,24.98,outside merge distance,left,left,1098074158,1098074159
+OSM-BUS-8795776773,OSM-BUS-8795776774,Khandelwal Estate,Khandelwal Estate,19.67,outside merge distance,unknown,left,185467444,151531013
+OSM-BUS-8795776775,OSM-BUS-8795776776,Bhu Kendra,Bhu Kendra,25.63,outside merge distance,unknown,unknown,185467444,151531013
+OSM-BUS-8795776775,OSM-BUS-10054466810,Bhu Kendra,,25.63,outside merge distance,unknown,unknown,185467444,151531013
+OSM-BUS-8795776775,OSM-BUS-10054466811,Bhu Kendra,,0.0,side unknown,unknown,unknown,185467444,185467444
+OSM-BUS-8795776776,OSM-BUS-10054466810,Bhu Kendra,,0.0,side unknown,unknown,unknown,151531013,151531013
+OSM-BUS-8795776776,OSM-BUS-10054466811,Bhu Kendra,,25.63,outside merge distance,unknown,unknown,151531013,185467444
+OSM-BUS-8795776777,OSM-BUS-8795776778,Upvan,Upvan,9.15,outside merge distance,unknown,unknown,950912481,950912478
+OSM-BUS-8795776781,OSM-BUS-10054380653,Sambhaji Nagar,,38.73,outside merge distance,left,unknown,185467471,828749436
+OSM-BUS-8795776782,OSM-BUS-8795776783,Forest Office,Forest Office,17.31,outside merge distance,left,left,185467329,620343756
+OSM-BUS-8795776784,OSM-BUS-10054380661,Thane RTO,Thane RTO,7.21,outside merge distance,left,unknown,620857542,620857542
+OSM-BUS-8795776785,OSM-BUS-10054380662,Thane RTO,,5.66,side unknown,left,unknown,620857547,620857547
+OSM-BUS-8795776790,OSM-BUS-10054380653,Sambhaji Nagar,,10.03,outside merge distance,left,unknown,828749436,828749436
+OSM-BUS-8795776791,OSM-BUS-10054380652,Siddheshwar Lake,,8.6,outside merge distance,left,unknown,828749436,828749436
+OSM-BUS-8795776792,OSM-BUS-10054380650,Cadbury Junction,,7.15,outside merge distance,left,unknown,828749436,828749436
+OSM-BUS-8795776794,OSM-BUS-8795776795,Cadbury Company,Cadbury Company,24.32,outside merge distance,left,left,788874489,788874486
+OSM-BUS-8795776794,OSM-BUS-10054380649,Cadbury Company,,17.46,outside merge distance,left,unknown,788874489,788874486
+OSM-BUS-8795776795,OSM-BUS-10054380649,Cadbury Company,,6.88,outside merge distance,left,unknown,788874486,788874486
+OSM-BUS-8795776796,OSM-BUS-13431778551,Raymond / J.K. Gram,J.K. Gram,38.47,outside merge distance,left,left,1177171407,788874489
+OSM-BUS-8795776797,OSM-BUS-10054380647,Raymond / J.K. Gram,,8.12,outside merge distance,left,unknown,788874486,788874486
+OSM-BUS-8795776809,OSM-BUS-8795776810,MRR Childrens Hospital / Building Number 3,MRR Childrens Hospital / Building Number 3,23.3,outside merge distance,left,left,950113958,950113969
+OSM-BUS-8795776809,OSM-BUS-10054380643,MRR Childrens Hospital / Building Number 3,,18.4,outside merge distance,left,unknown,950113958,950113969
+OSM-BUS-8795776810,OSM-BUS-10054380643,MRR Childrens Hospital / Building Number 3,,5.63,side unknown,left,unknown,950113969,950113969
+OSM-BUS-8795776811,OSM-BUS-8795776812,S.T. Juna Thamba,S.T. Juna Thamba,37.94,outside merge distance,left,left,1098069577,1098069579
+OSM-BUS-8795776811,OSM-BUS-10054429277,S.T. Juna Thamba,,37.39,outside merge distance,left,unknown,1098069577,1098069579
+OSM-BUS-8795776812,OSM-BUS-10054429277,S.T. Juna Thamba,,7.91,outside merge distance,left,unknown,1098069579,1098069579
+OSM-BUS-8795776815,OSM-BUS-10251547846,Lakshminarayan Residency,,26.51,outside merge distance,left,unknown,950113970,37813456
+OSM-BUS-8795776815,OSM-BUS-13143942412,Lakshminarayan Residency,Neelkanth Dev Daya Nagar,25.48,outside merge distance,left,unknown,950113970,439100016
+OSM-BUS-8796504395,OSM-BUS-8796504396,Vijay Nagari,Vijay Nagari,27.54,outside merge distance,unknown,left,1154837050,1154837045
+OSM-BUS-8796504395,OSM-BUS-10258995650,Vijay Nagari,,23.95,outside merge distance,unknown,unknown,1154837050,1154837045
+OSM-BUS-8796504395,OSM-BUS-10258995651,Vijay Nagari,,0.28,side unknown,unknown,unknown,1154837050,1154837050
+OSM-BUS-8796504396,OSM-BUS-10258995650,Vijay Nagari,,4.45,side unknown,left,unknown,1154837045,1154837045
+OSM-BUS-8796504396,OSM-BUS-10258995651,Vijay Nagari,,27.81,outside merge distance,left,unknown,1154837045,1154837050
+OSM-BUS-8796504402,OSM-BUS-8796504403,,Anunagar,25.55,outside merge distance,unknown,left,1485776107,1176206977
+OSM-BUS-8796526607,OSM-BUS-8796526608,Novartis,Novartis,24.56,outside merge distance,unknown,unknown,784746962,787900401
+OSM-BUS-8802032176,OSM-BUS-10251478089,New Shakti Mill / Ambedkar Road,New Shakti Mill / Ambedkar Road,15.56,outside merge distance,right,unknown,185467915,185467915
+OSM-BUS-8929296348,OSM-BUS-10247438134,Amrut Angan,Amrut Angan,31.42,outside merge distance,left,left,1098641714,1098641709
+OSM-BUS-8989602086,OSM-BUS-8989602087,Vimal Nagar,Vimal Nagar,23.55,outside merge distance,left,left,151861278,775976522
+OSM-BUS-9811390697,OSM-BUS-9811390698,,,11.71,outside merge distance,left,left,788333912,788333912
+OSM-BUS-9811390697,OSM-BUS-9811390699,,,15.44,outside merge distance,left,left,788333912,885119928
+OSM-BUS-9811390697,OSM-BUS-9811390700,,,25.15,outside merge distance,left,left,788333912,885119928
+OSM-BUS-9811390697,OSM-BUS-9811397161,,,29.05,outside merge distance,left,left,788333912,788333912
+OSM-BUS-9811390698,OSM-BUS-9811390699,,,11.43,outside merge distance,left,left,788333912,885119928
+OSM-BUS-9811390698,OSM-BUS-9811390700,,,15.64,outside merge distance,left,left,788333912,885119928
+OSM-BUS-9811390698,OSM-BUS-9811397161,,,17.35,outside merge distance,left,left,788333912,788333912
+OSM-BUS-9811390699,OSM-BUS-9811390700,,,11.98,outside merge distance,left,left,885119928,885119928
+OSM-BUS-9811390699,OSM-BUS-9811397161,,,21.91,outside merge distance,left,left,885119928,788333912
+OSM-BUS-9811390700,OSM-BUS-9811397161,,,13.36,outside merge distance,left,left,885119928,788333912
+OSM-BUS-10054380631,OSM-BUS-13780208471,Rabodi,Rabodi,9.03,outside merge distance,left,right,1098069571,213074000
+OSM-BUS-10054380640,OSM-BUS-10054380641,,,31.98,outside merge distance,unknown,unknown,949441300,950015367
+OSM-BUS-10054380666,OSM-BUS-10054380667,Income Tax Office,Income Tax Office,38.02,outside merge distance,left,left,950052830,1464302525
+OSM-BUS-10054380668,OSM-BUS-10251521038,Malhar Cinema,Malhar Cinema,14.37,outside merge distance,unknown,left,1464302525,950052830
+OSM-BUS-10054429280,OSM-BUS-10054429281,,Shivai Nagar,34.34,outside merge distance,unknown,left,1098074158,1098074159
+OSM-BUS-10054429285,OSM-BUS-10054429286,,,15.73,outside merge distance,unknown,unknown,554135533,554135525
+OSM-BUS-10054466808,OSM-BUS-10054466809,,,12.58,outside merge distance,unknown,unknown,151531013,185467444
+OSM-BUS-10054466810,OSM-BUS-10054466811,,,25.63,outside merge distance,unknown,unknown,151531013,185467444
+OSM-BUS-10057041035,OSM-BUS-10251521058,Majiwada Gaon,Majiwada Gaon,12.34,outside merge distance,right,unknown,1512418993,1098378167
+OSM-BUS-10057041036,OSM-BUS-10251521060,Sachin Society,Sachin Society,28.48,outside merge distance,left,left,1508013337,235991650
+OSM-BUS-10057041042,OSM-BUS-10057041046,Automatic Company,Automatic Company,35.46,outside merge distance,left,left,185467506,1549260567
+OSM-BUS-10057041043,OSM-BUS-13780208475,Kamgar Hospital,Kamgar Naka,39.44,outside merge distance,left,left,1098378169,1098378172
+OSM-BUS-10057041043,OSM-BUS-13780208483,Kamgar Hospital,Kamgar Naka,25.33,outside merge distance,left,left,1098378169,1098378169
+OSM-BUS-10057041045,OSM-BUS-13780208486,Passport Office / M.I.D.C.,M.I.D.C.,24.06,outside merge distance,left,left,185467504,185467506
+OSM-BUS-10059370036,OSM-BUS-10059370042,Nadanawan Homes,Nadanawan Homes,20.9,outside merge distance,left,left,654616803,1098641710
+OSM-BUS-10059370037,OSM-BUS-10059370043,Subhash Tower,Reliance Market,33.35,outside merge distance,unknown,left,1301423864,151861278
+OSM-BUS-10059370038,OSM-BUS-10059370044,Vastu Anand,Vastu Anand,37.77,outside merge distance,unknown,left,1572138327,1500170525
+OSM-BUS-10059370039,OSM-BUS-10059370045,Raj Park,Vilas Park,34.22,outside merge distance,left,unknown,775976522,1558044694
+OSM-BUS-10059370048,OSM-BUS-10059370058,Kharegaon Naka,Kharegaon Naka,33.29,outside merge distance,left,left,1156709498,1156709500
+OSM-BUS-10059370050,OSM-BUS-10059370059,Sukur Park,Sukur Park,35.47,outside merge distance,left,left,1552855442,1173913085
+OSM-BUS-10059370054,OSM-BUS-10251521049,Indira Nagar,Indira Nagar,29.98,outside merge distance,left,left,950052810,638497529
+OSM-BUS-10151918348,OSM-BUS-10151918349,Vrindavan Society,Vrindavan Society Thane,12.58,outside merge distance,unknown,right,1109703519,931947037
+OSM-BUS-10151918348,OSM-BUS-10152063577,Vrindavan Society,Vrindavan Society,10.42,outside merge distance,unknown,right,1109703519,1109703519
+OSM-BUS-10151918349,OSM-BUS-10152063577,Vrindavan Society Thane,Vrindavan Society,20.08,outside merge distance,right,right,931947037,1109703519
+OSM-BUS-10245111411,OSM-BUS-10245111427,P&T Colony,P&T Colony,14.61,outside merge distance,unknown,left,102404324,1120052249
+OSM-BUS-10245111417,OSM-BUS-10245111439,Nahur Depot,Nahur Depot,13.39,outside merge distance,left,right,1179972278,1120035412
+OSM-BUS-10245111429,OSM-BUS-10245111438,Ralli Wolf,Ralli Wolf,12.12,outside merge distance,left,left,439133790,439133790
+OSM-BUS-10245111441,OSM-BUS-10245111442,Kavi Kokil Vidyapati Thakur Chowk,Kavi Kokil Vidyapati Thakur Chowk,14.76,outside merge distance,left,unknown,1120175986,1557817246
+OSM-BUS-10247406098,OSM-BUS-10259279460,Mulund Station (W),Mulund Railway Station (W),12.84,outside merge distance,left,left,1531623619,1531623619
+OSM-BUS-10247406098,OSM-BUS-10259279461,Mulund Station (W),Mulund Railway Station (W),24.72,outside merge distance,left,left,1531623619,1531623619
+OSM-BUS-10247406099,OSM-BUS-10251521039,Dnyan Sarita College,Gyan Sarita Sada,14.88,outside merge distance,left,left,1121871258,1121871259
+OSM-BUS-10247406102,OSM-BUS-10291367365,Santoshi Mata Mandir,,37.03,outside merge distance,left,left,723561432,1274644226
+OSM-BUS-10247406103,OSM-BUS-10251521044,Kamagar Hospital / ESIS Mulund,Kamagar Hospital Mulund,26.81,outside merge distance,left,left,1235814456,1235814451
+OSM-BUS-10247412214,OSM-BUS-10251478088,Kolbad,Kolbad,16.61,outside merge distance,left,right,185467360,185467363
+OSM-BUS-10247412220,OSM-BUS-10251521080,Swastik Regalia,Swastik Regalia,34.59,outside merge distance,right,left,1515985815,35375404
+OSM-BUS-10247412221,OSM-BUS-10251521079,Hiranandani Garden,Hiranandani Garden,18.07,outside merge distance,left,right,1115130323,890145688
+OSM-BUS-10247412222,OSM-BUS-10251521081,Stanford Society,Stanford Row,26.34,outside merge distance,left,left,868523940,890145687
+OSM-BUS-10247412228,OSM-BUS-10251521051,Kores Nakshtra,Kores Nakshtra,23.18,outside merge distance,left,left,725401393,37815496
+OSM-BUS-10247412229,OSM-BUS-10251521052,Runwal Plaza,Runwal Plaza,34.42,outside merge distance,left,left,725401393,37815496
+OSM-BUS-10247412230,OSM-BUS-10251521050,Aai Mata Mandir / Chowk,Aai Mata Mandir Chowk,24.71,outside merge distance,right,right,725401390,1190566447
+OSM-BUS-10247412231,OSM-BUS-10251521055,Dadlani Park,Dadlani Park,21.74,outside merge distance,left,left,185467914,1517556726
+OSM-BUS-10247412232,OSM-BUS-10251521054,Ashok Nagar,Ashok Nagar,30.36,outside merge distance,left,unknown,185467914,1191360350
+OSM-BUS-10247412233,OSM-BUS-10251521056,Balkum Pada No 1,Balkum Pada No 1,18.58,outside merge distance,left,right,1517556724,1517556724
+OSM-BUS-10247412234,OSM-BUS-10251521065,Balkum Pada No 2,Balkum Pada No 2,20.43,outside merge distance,left,right,102531687,102531687
+OSM-BUS-10247412235,OSM-BUS-10251521063,Balkum Pada No 3,Balkum Pada No 3,31.76,outside merge distance,left,right,102531687,102531687
+OSM-BUS-10247412236,OSM-BUS-10251521045,Ravi Fisheries / Road Number 27,Ravi Fisheries / Road Number 27,18.82,outside merge distance,left,left,151528924,185467796
+OSM-BUS-10247412237,OSM-BUS-10251521046,Wagle Circle / Road No 22,Wagle Circle / Road No 22,26.44,outside merge distance,left,left,1098378173,1119876589
+OSM-BUS-10247412238,OSM-BUS-10251521047,Durdwani Kendra,Durdwani Kendra,17.22,outside merge distance,left,left,1098378173,1119876589
+OSM-BUS-10247412240,OSM-BUS-10251521048,ITI Circle,ITI Circle,19.36,outside merge distance,left,left,151528924,1120393194
+OSM-BUS-10247412275,OSM-BUS-10251478018,Kalher Pipe Line,Pipe Line Kalher,36.45,outside merge distance,left,right,504549002,1449298565
+OSM-BUS-10247412278,OSM-BUS-10251478029,"Maratha Punjab, Madvi Chowk",Maratha Punjab / Madvi Chowk,31.21,outside merge distance,left,unknown,504549002,1338609350
+OSM-BUS-10247412286,OSM-BUS-10251521061,Lodha,Lodha,33.75,outside merge distance,unknown,left,212983421,704542376
+OSM-BUS-10247412292,OSM-BUS-10251521062,Lodha Complex,Lodha Complex,34.63,outside merge distance,unknown,left,212983421,1189085552
+OSM-BUS-10247412293,OSM-BUS-10251478034,Diva 1 / Diva Gaon / Anjur,Diva,28.32,outside merge distance,right,unknown,1420684507,217665171
+OSM-BUS-10247412295,OSM-BUS-10251478047,Diva 2 / Diva Phata / Petrol Pump,Diva 2 / Diva Phata / Petrol Pump,38.19,outside merge distance,unknown,left,1420684504,217665171
+OSM-BUS-10247412298,OSM-BUS-10251478030,Kalyan Naka,Kalyan Naka,20.28,outside merge distance,left,unknown,1079706820,1288625411
+OSM-BUS-10247412301,OSM-BUS-10251478039,Bhoomi World,Bhoomi World,38.37,outside merge distance,left,left,784760101,1384301061
+OSM-BUS-10247412306,OSM-BUS-10251478042,Chhatrapati Shivaji Maharaj Chowk Bhiwandi,Chhatrapati Shivaji Maharaj Chowk Bhiwandi,4.25,side unknown,left,unknown,48795274,48795274
+OSM-BUS-10247412307,OSM-BUS-10251478045,Swayam Siddhi College,Swayam Siddhi College,21.95,outside merge distance,left,unknown,1529568237,1498927468
+OSM-BUS-10247435538,OSM-BUS-10251521094,Kasarvadavali / Sainik Shala,Kasarvadavali / Sainik Shala,31.31,outside merge distance,right,left,1510222668,439143594
+OSM-BUS-10247438112,OSM-BUS-10251478036,Saibaba Mandir,Saibaba Mandir,24.16,outside merge distance,left,unknown,1079706822,1529568239
+OSM-BUS-10247438113,OSM-BUS-10251478106,Khirkali,Khirkali,33.55,outside merge distance,left,left,8462602,344092391
+OSM-BUS-10247438121,OSM-BUS-10251521012,Kalsekar College / K.V.K.,Kalsekar College / K.V.K.,36.34,outside merge distance,left,unknown,780145285,1177188718
+OSM-BUS-10247438124,OSM-BUS-10251521024,Millenium Hospital / Shimla Park,Millenium Hospital / Shimla Park,27.15,outside merge distance,right,left,1303660891,122578337
+OSM-BUS-10247438125,OSM-BUS-10251521016,Kousa Jama Masjid,Kousa Jama Masjid,34.78,outside merge distance,right,left,1189354422,122578337
+OSM-BUS-10247438126,OSM-BUS-10251478099,Kousa Gaon,Kousa Gaon,26.57,outside merge distance,left,left,775953686,600209527
+OSM-BUS-10247438128,OSM-BUS-10251478104,Tanwar Nagar / Nashimat Colony,Tanwar Nagar / Nashimat Colony,24.02,outside merge distance,left,left,775953686,122578337
+OSM-BUS-10247438129,OSM-BUS-10251478098,Mumbra Police Station,Mumbra Police Station,37.49,outside merge distance,left,unknown,1156709509,775950770
+OSM-BUS-10247438130,OSM-BUS-10251521018,Amrut Nagar,Amrut Nagar,37.14,outside merge distance,left,left,775953686,122578337
+OSM-BUS-10247438131,OSM-BUS-10251521021,Jalim Kura Mandir / Kismat Colony,Jalim Kura Mandir / Kismat Colony,29.25,outside merge distance,left,left,214089939,122578337
+OSM-BUS-10247438133,OSM-BUS-10251478105,Retibunder Number 1,Retibunder Number 1,30.7,outside merge distance,left,left,346025915,346025914
+OSM-BUS-10247438135,OSM-BUS-10251521013,Lalit Clinic,Lalit Clinic,21.97,outside merge distance,left,left,1156709509,1156709505
+OSM-BUS-10247438136,OSM-BUS-10251478101,Retibunder Number 3,Retibunder Number 3,27.0,outside merge distance,right,right,885163043,885163041
+OSM-BUS-10247438139,OSM-BUS-10251521026,Mumbra Prabhat Office,Mumbra Prabhat Office,25.05,outside merge distance,left,left,775953688,122578327
+OSM-BUS-10247438140,OSM-BUS-10251521010,Mumbra Shiv Mandir,Mumbra Shiv Mandir,36.95,outside merge distance,left,left,1156709509,1156709505
+OSM-BUS-10247438141,OSM-BUS-10251521025,Dattu Wadi Mumbra/Sainath Hospital,Dattu Wadi Mumbra/Sainath Hospital,26.28,outside merge distance,left,left,775950767,628548466
+OSM-BUS-10247438143,OSM-BUS-10251478103,Sai Nath Nagar,Sai Nath Nagar,27.9,outside merge distance,unknown,left,1098641709,1098641714
+OSM-BUS-10247438159,OSM-BUS-10251521130,Kinara Dhaba,Kinara Dhaba,36.39,outside merge distance,left,left,104675789,215414817
+OSM-BUS-10247438160,OSM-BUS-10251521101,Sasunavghar,Sasunavghar,29.69,outside merge distance,right,left,776892826,215414817
+OSM-BUS-10247438175,OSM-BUS-10251521127,Pathar Pada,Pathar Pada,28.65,outside merge distance,left,left,780078811,215414817
+OSM-BUS-10247438188,OSM-BUS-10251478075,Ghodbunder Village,Ghodbunder Village,36.95,outside merge distance,left,left,215416291,50882078
+OSM-BUS-10247438197,OSM-BUS-10251478082,Piyushpani Parshvanath Jain Temple,Piyushpani Parshvanath Jain Temple,30.03,outside merge distance,left,left,215416291,50882078
+OSM-BUS-10247438198,OSM-BUS-10251521088,Varsova / Fountain Hotel,Varsova / Fountain Hotel,38.5,outside merge distance,left,left,784134289,563373496
+OSM-BUS-10247438201,OSM-BUS-10251521086,Ovala Gaon,Ovala Gaon,34.15,outside merge distance,right,left,1179658870,1152832800
+OSM-BUS-10247438203,OSM-BUS-10251521092,Kajupada,Kajupada,34.93,outside merge distance,unknown,right,241504208,215069602
+OSM-BUS-10247438209,OSM-BUS-10251521074,Atriya Society,Atriya Society,32.64,outside merge distance,left,left,949647035,950015372
+OSM-BUS-10247438210,OSM-BUS-10251521078,Rutu Tower,Rutu Tower,27.16,outside merge distance,left,left,930562759,787085079
+OSM-BUS-10247438212,OSM-BUS-10251521076,Shree Maa Bal Niketan,Shree Maa Bal Niketan,29.29,outside merge distance,left,left,241723715,241506006
+OSM-BUS-10250420325,OSM-BUS-10250420333,,Mulund Railway Station (W),21.1,outside merge distance,left,left,320394882,320394882
+OSM-BUS-10250420325,OSM-BUS-10259382133,,Mulund Railway Station (W),32.92,outside merge distance,left,left,320394882,320394882
+OSM-BUS-10250420327,OSM-BUS-10250420341,Mulund Railway Station (W),Mulund Railway Station (W),14.87,outside merge distance,left,left,124861821,124861821
+OSM-BUS-10250420333,OSM-BUS-10259382133,Mulund Railway Station (W),Mulund Railway Station (W),11.82,outside merge distance,left,left,320394882,320394882
+OSM-BUS-10251478031,OSM-BUS-10251478035,Power House,Power House,21.29,outside merge distance,left,left,1079706820,1079706821
+OSM-BUS-10251478032,OSM-BUS-10251478037,Babla Compound / Hanuman Mandir,Babla Compound / Hanuman Mandir,22.22,outside merge distance,unknown,unknown,786432923,1079706828
+OSM-BUS-10251478046,OSM-BUS-10251478048,Jakat Naka,Gopal Nagar,23.39,outside merge distance,right,left,51568032,51568032
+OSM-BUS-10251478085,OSM-BUS-10251478086,R. T. O/ Central Jail,R. T. O/ Central Jail,18.21,outside merge distance,left,unknown,1507908359,1031318264
+OSM-BUS-10251521030,OSM-BUS-10251521034,Gaondevi Mandir Kopri,Gaondevi Mandir Kopri,14.07,outside merge distance,right,left,1078883106,1524557927
+OSM-BUS-10251521031,OSM-BUS-10251521037,Swami Vivekanand Chowk,Swami Vivekanand Chowk,23.21,outside merge distance,left,left,185467947,185467593
+OSM-BUS-10251521032,OSM-BUS-10251521035,Twelve Bunglows,Twelve Bunglows,18.64,outside merge distance,unknown,left,185467947,185467593
+OSM-BUS-10251521033,OSM-BUS-10251521036,Siddharth Nagar Shashkiya Niwas,Siddharth Nagar Shashkiya Niwas,35.32,outside merge distance,left,left,185467947,185467593
+OSM-BUS-10251521041,OSM-BUS-12306894574,Ambaji Dham,Ambaji Dham,16.93,outside merge distance,left,left,1480679917,1480679917
+OSM-BUS-10251521043,OSM-BUS-10259382134,Pach Rasta Devidayal Road,Maharishi Arvind Chowk,3.39,different names,left,left,665946597,665946597
+OSM-BUS-10251547846,OSM-BUS-13143942412,,Neelkanth Dev Daya Nagar,7.06,outside merge distance,unknown,unknown,37813456,439100016
+OSM-BUS-10251547856,OSM-BUS-10251547857,,,11.86,outside merge distance,unknown,unknown,950196937,950196935
+OSM-BUS-10251547865,OSM-BUS-10251547866,,,16.43,outside merge distance,unknown,unknown,951426920,421707812
+OSM-BUS-10255674906,OSM-BUS-10255674907,Mulund Depot,Mulund Depot,25.48,outside merge distance,right,left,1482454274,124861813
+OSM-BUS-10255680424,OSM-BUS-10255680425,Shivram Society,Shivram Society,33.2,outside merge distance,right,left,124861813,124861813
+OSM-BUS-10258995650,OSM-BUS-10258995651,,,24.21,outside merge distance,unknown,unknown,1154837045,1154837050
+OSM-BUS-10259279460,OSM-BUS-10259279461,Mulund Railway Station (W),Mulund Railway Station (W),11.87,outside merge distance,left,left,1531623619,1531623619
+OSM-BUS-10259362735,OSM-BUS-10259362739,Johnson & Johnson,Johnson & Johnson,5.86,ambiguous road,left,left,1293647953,1293647953
+OSM-BUS-10259382131,OSM-BUS-10259382138,RP Road (Only Alighting),RP Road,31.88,outside merge distance,left,left,1121689775,1121689775
+OSM-BUS-10259382131,OSM-BUS-13970084040,RP Road (Only Alighting),RP Road (Only Alighting),15.84,outside merge distance,left,left,1121689775,1121689775
+OSM-BUS-10259382133,OSM-BUS-10259382138,Mulund Railway Station (W),RP Road,37.82,outside merge distance,left,left,320394882,1121689775
+OSM-BUS-10259382138,OSM-BUS-13970084040,RP Road,RP Road (Only Alighting),16.07,outside merge distance,left,left,1121689775,1121689775
+OSM-BUS-10259480517,OSM-BUS-10259480519,P&T Colony,P&T Colony,21.67,outside merge distance,right,left,1480007873,1480007873
+OSM-BUS-10264981396,OSM-BUS-10264981398,Konark Regency,Fortis Hospital,5.47,different names,left,left,479856211,479856211
+OSM-BUS-10279838118,OSM-BUS-12843576281,,Maharishi Arvind Chowk,38.42,outside merge distance,right,right,1238879358,214085922
+OSM-BUS-10279838119,OSM-BUS-10279838123,,,14.86,outside merge distance,left,right,1238879358,1238879358
+OSM-BUS-10289597026,OSM-BUS-10289631746,,,28.94,outside merge distance,left,left,1576479021,273833832
+OSM-BUS-10289631745,OSM-BUS-14357936581,,,35.94,outside merge distance,left,unknown,1530318979,177566557
+OSM-BUS-10291367366,OSM-BUS-12843975062,,Veena Nagar,30.16,outside merge distance,left,left,1235814452,1235814455
+OSM-BUS-10304034850,OSM-BUS-10304034855,St. Mary's High School,St. Mary's High School,12.67,outside merge distance,right,left,1192343256,124861822
+OSM-BUS-10304641566,OSM-BUS-10786769353,,,25.32,outside merge distance,left,left,1296357049,621990855
+OSM-BUS-10308317043,OSM-BUS-10308317047,Dr Hegdewar Chowk,Dr Hegdewar Chowk,7.46,outside merge distance,left,left,470187343,470187343
+OSM-BUS-10310554330,OSM-BUS-10310554339,,,11.57,outside merge distance,left,left,1265526460,1265526460
+OSM-BUS-10310554330,OSM-BUS-10310554351,,Doctor Ambedkar Park,22.8,outside merge distance,left,left,1265526460,1265526460
+OSM-BUS-10310554338,OSM-BUS-10310554342,,,10.08,outside merge distance,left,left,22856314,22856314
+OSM-BUS-10310554339,OSM-BUS-10310554351,,Doctor Ambedkar Park,11.29,outside merge distance,left,left,1265526460,1265526460
+OSM-BUS-10756686083,OSM-BUS-10756686084,Kausa Hospital,Kausa Hospital,28.75,outside merge distance,left,left,779541346,1304802693
+OSM-BUS-11271579658,OSM-BUS-11271586489,Mulund Vidya Mandir,Mulund Vidya Mandir,12.02,outside merge distance,left,right,1265177027,1265177027
+OSM-BUS-12846756025,OSM-BUS-12846756047,Jain Mandir,Jain Mandir,15.28,outside merge distance,right,left,725461239,725461239
+OSM-BUS-13431778545,OSM-BUS-13431778544,Maruti Mandir,Maruti Mandir,3.51,different or unknown road way,left,unknown,439102464,185467525
+OSM-BUS-13431778546,OSM-BUS-8795838217,Asian Cable,Asian Cable,8.17,outside merge distance,unknown,unknown,950113957,950113971
+OSM-BUS-13780208474,OSM-BUS-13780208475,Kamgar Hospital,Kamgar Naka,35.93,outside merge distance,right,left,37815498,1098378172
+OSM-BUS-13780208475,OSM-BUS-13780208483,Kamgar Naka,Kamgar Naka,20.62,outside merge distance,left,left,1098378172,1098378169
+OSM-BUS-13780208476,OSM-BUS-13780208482,Phulen Nagar,Phulen Nagar,18.4,outside merge distance,right,left,725401391,235944248
+OSM-BUS-13780208477,OSM-BUS-13780208481,Yashodham Nagar,Yashodham Nagar,29.04,outside merge distance,right,right,235944248,151528955
+OSM-BUS-1960734932,OSM-BUS-8795776816,Bethany Hospital,Bethany Hospital,6.2,outside merge distance,unknown,unknown,950113971,950113957
+OSM-BUS-4625570573,OSM-BUS-4644026834,Bhandup Pumping Centre,Bhandup Pumping Centre,14.14,outside merge distance,unknown,unknown,469039168,621990859
+OSM-BUS-4625570580,OSM-BUS-4644026824,Diva Village,Diva Village,12.74,outside merge distance,unknown,unknown,471660312,830825361
+OSM-BUS-4625570690,OSM-BUS-4644026842,Mulund-Goregaon Link Road,Mulund-Goregaon Link Road,18.42,outside merge distance,unknown,unknown,469042936,652568425
+OSM-BUS-4625570698,OSM-BUS-4644026827,Sector 9-Airoli,Sector 9-Airoli,24.65,outside merge distance,unknown,unknown,1199966858,1199966898
+OSM-BUS-8795776780,OSM-BUS-8795838221,Siddhachal Society,Siddhachal Society,5.09,different or unknown road way,unknown,unknown,35375309,919145080
+OSM-BUS-8795838219,OSM-BUS-8795838220,Jidh School,Jidh School,3.67,different or unknown road way,unknown,unknown,919145076,919145077

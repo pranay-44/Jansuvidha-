@@ -10,19 +10,20 @@ const imagePolicy=serverSource.match(/img-src ([^;]+);/)[1].split(' ');
 assert.ok(imagePolicy.includes(tileOrigin),'CSP must permit the exact map tile origin');
 
 // Exercise our map adapter without downloading map tiles during automated tests.
-const calls = { markers: [], bounds: [], handlers: {} };
+const calls = { markers: [], bounds: [], handlers: {}, allocations: 0 };
 const map = {
   fitBounds: bounds => calls.bounds.push(bounds),
   setView: (point, zoom) => { calls.focus = { point, zoom }; },
   invalidateSize() {}, remove: () => { calls.removed = true; },
 };
-const layer = { addTo() { return this; }, clearLayers() { calls.markers = []; } };
+const layer = { addTo() { return this; }, clearLayers() { calls.markers = []; }, removeLayer(marker) { calls.markers=calls.markers.filter(m=>m!==marker); } };
 const tiles = { addTo() { return this; }, on(event, handler) { calls.handlers[event] = handler; return this; } };
 const L = {
-  map: () => map, layerGroup: () => layer, latLngBounds: points => points,
+  map: (container,options) => {assert.equal(options.preferCanvas,true);return map;}, layerGroup: () => layer, latLngBounds: points => points,
   tileLayer: (url, options) => { calls.tiles = { url, options }; return tiles; },
   divIcon: options => options,
-  marker(point, options) {
+  circleMarker(point, options) {
+    calls.allocations++;
     const marker = { point, options, getLatLng: () => point,
       bindTooltip() { return this; },
       on(event, callback) { this[event] = callback; return this; },
@@ -45,6 +46,11 @@ located.forEach((f, i) => {
   assert.equal(calls.markers[i].point[0], f.latitude);
   assert.equal(calls.markers[i].point[1], f.longitude);
 });
+const firstMarker=calls.markers[0];
+const allocated=calls.allocations;
+controller.update(facilities);
+assert.equal(calls.allocations,allocated,'Unchanged results must reuse markers');
+assert.equal(calls.markers.length,located.length);
 calls.markers[0].click();
 assert.equal(calls.selected, located[0].facility_id);
 controller.focus(located[0].id);
@@ -53,6 +59,9 @@ controller.update([facilities[0], { ...facilities[1], latitude: null }]);
 assert.equal(calls.markers.length, 1);
 controller.showFacilities();
 assert.equal(calls.bounds.at(-1).length, 1);
+controller.update(facilities);
+assert.equal(calls.allocations,allocated,'Clearing a filter must reuse the cached markers');
+assert.equal(calls.markers.find(m=>m===firstMarker),firstMarker);
 controller.update([]);
 const previous = calls.bounds.length;
 controller.showFacilities();
