@@ -14,7 +14,7 @@
     "auth:bootstrap": "node --env-file=.env scripts/auth-cli.mjs bootstrap",
     "auth:dev-link": "node --env-file=.env scripts/auth-cli.mjs dev-link",
     "test:auth": "node --env-file=.env scripts/auth-checks.mjs",
-    "test": "node scripts/checks.mjs && node scripts/emergency-checks.mjs && node scripts/bus-checks.mjs && node scripts/import-checks.mjs && node scripts/map-checks.mjs && node scripts/account-checks.mjs && node scripts/social-auth-checks.mjs",
+    "test": "node scripts/checks.mjs && node scripts/emergency-checks.mjs && node scripts/bus-checks.mjs && node scripts/import-checks.mjs && node scripts/map-checks.mjs && node scripts/walking-checks.mjs && node scripts/account-checks.mjs && node scripts/social-auth-checks.mjs",
     "lint": "eslint .",
     "check": "npm run lint && npm test",
     "analyze": "node scripts/analysis.mjs",

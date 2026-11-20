@@ -28,7 +28,7 @@ const AmenityCanvas=L.Canvas.extend({
   },
 });
 
-export function createFacilityMap(container, message, onSelect) {
+export function createFacilityMap(container, message, onSelect, setupWalking) {
   const map = L.map(container, { minZoom: 9, maxZoom: 19, scrollWheelZoom: false, preferCanvas: true });
   const cityView = () => map.fitBounds(thaneBounds, { padding: [12, 12] });
   cityView();
@@ -53,7 +53,9 @@ export function createFacilityMap(container, message, onSelect) {
   let activeIds = new Set();
   const observer = new ResizeObserver(() => map.invalidateSize({ pan: false }));
   observer.observe(container);
+  const walking = setupWalking?.(map, L);
   return {
+    walking,
     update(facilities) {
       const wanted=facilities.filter(located);
       const nextIds=new Set(wanted.map(f=>f.id));
@@ -65,7 +67,7 @@ export function createFacilityMap(container, message, onSelect) {
           // Canvas avoids a separate DOM icon for every stop. Keyboard access is provided by the paginated list.
           marker=L.circleMarker([f.latitude,f.longitude],{renderer,amenityIcon:icons[f.type],radius:12,color:'#fff',weight:1.5,fillColor:color,fillOpacity:.9});
           marker.bindTooltip(()=>{const label=document.createElement('span');label.textContent=`${f.name} · ${f.facility_id}`;return label;});
-          marker.on('click',()=>onSelect(f.id));
+          marker.on('click',()=>{walking?.pauseFollow();onSelect(f.id);});
           markers.set(f.id,marker);
         }
         if(!activeIds.has(f.id))marker.addTo(layer);
@@ -73,14 +75,16 @@ export function createFacilityMap(container, message, onSelect) {
       activeIds=nextIds;
     },
     focus(id) {
+      walking?.pauseFollow();
       const marker = markers.get(id);
       if (marker && activeIds.has(id)) map.setView(marker.getLatLng(), 18);
     },
-    cityView,
+    cityView() { walking?.pauseFollow(); cityView(); },
     showFacilities() {
+      walking?.pauseFollow();
       const points = [...activeIds].map(id => markers.get(id).getLatLng());
       if (points.length) map.fitBounds(L.latLngBounds(points), { padding: [32, 32], maxZoom: 17 });
     },
-    destroy() { observer.disconnect(); map.remove(); markers.clear(); activeIds.clear(); },
+    destroy() { walking?.destroy(); observer.disconnect(); map.remove(); markers.clear(); activeIds.clear(); },
   };
 }

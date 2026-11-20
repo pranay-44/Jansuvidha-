@@ -1,4 +1,5 @@
 import express from 'express';
+import {walkingRoute} from './walking-route.mjs';
 import session from 'express-session';
 import createMySQLStore from 'express-mysql-session';
 import {Passport} from 'passport';
@@ -89,6 +90,10 @@ export async function createApp(pool,{rateLimitNamespace='',resolveIdentity}={})
   }));
   installSocialAuth(app,pool,{limit,signedIn,resolveIdentity});
   app.get('/api/auth/session',(req,res)=>res.json({user:req.user?publicUser(req.user):null,csrf:req.session.csrf,providers:socialProviders(),localPrototype:true}));
+  app.post('/api/walking-route',limit('walking-route',60),async(req,res)=>{
+    const {status,...result}=await walkingRoute(req.body);
+    res.status(status).json(result);
+  });
   app.post(['/api/auth/register','/api/auth/login','/api/auth/recover','/api/auth/recovery-codes'],(req,res)=>res.status(410).json({message:'Citizens now sign in with Google or Facebook.'}));
   app.post('/api/auth/staff-login',limit('login',20),(req,res,next)=>{
     if(req.portal!=='staff')return next(Object.assign(Error('Use the staff portal.'),{status:403}));

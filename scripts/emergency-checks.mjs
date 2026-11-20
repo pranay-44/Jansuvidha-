@@ -23,7 +23,7 @@ assert.equal(batch.records.filter(r=>r.action==='existing_record_photos_added').
 const elements=new Map();let mapped=[];
 for(const id of ['#thane-map','#map-message','#city-view','#facility-view','#count','#facilities','#search','#list-prev','#list-next','#list-page','#amenity-results'])elements.set(id,{value:'',textContent:'',innerHTML:'',addEventListener(){}});
 const main={innerHTML:'',querySelectorAll:()=>[]};
-const ctx={main,setTimeout:fn=>{fn();return 1;},clearTimeout(){},busStopDetails,$:id=>{assert.ok(elements.has(id),`Unexpected removed control ${id}`);return elements.get(id);},intro:()=>'',stats:()=>'',facilities,filterFacilities,score,translate,language:'en',esc:s=>s??'',badge:()=>'',date:s=>s,refreshLanguage(){},facilityDetail(){},createFacilityMap:()=>({update:items=>{mapped=items},cityView(){},showFacilities(){}})};
+const ctx={setupWalking(){},main,setTimeout:fn=>{fn();return 1;},clearTimeout(){},busStopDetails,$:id=>{assert.ok(elements.has(id),`Unexpected removed control ${id}`);return elements.get(id);},intro:()=>'',stats:()=>'',facilities,filterFacilities,score,translate,language:'en',esc:s=>s??'',badge:()=>'',date:s=>s,refreshLanguage(){},facilityDetail(){},createFacilityMap:()=>({update:items=>{mapped=items},cityView(){},showFacilities(){}})};
 runInNewContext(source.slice(source.indexOf('function mapPage()'),source.indexOf('function show('))+';mapPage();',ctx);
 assert.equal(mapped.length,facilities.length);
 const toolbar=main.innerHTML.split('<div class="toolbar">')[1].split('<div class="chips"')[0];

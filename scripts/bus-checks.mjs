@@ -41,7 +41,7 @@ const elements=new Map();
 for(const id of ['#thane-map','#map-message','#city-view','#facility-view','#count','#facilities','#search','#list-prev','#list-next','#list-page','#amenity-results'])elements.set(id,{value:'',innerHTML:'',hidden:true,addEventListener(name,fn){this[name]=fn;}});
 const chips=['All amenities','Bus stops','Parks'].map(type=>({dataset:{type},classList:{toggle(){}},setAttribute(){}}));
 const main={innerHTML:'',querySelectorAll(selector){return selector==='[data-type]'?chips:selector==='input,select'?[elements.get('#search')]:[];}};
-const ctx={main,searchTimer:undefined,setTimeout:fn=>{pending.set(++timerId,fn);return timerId;},clearTimeout:id=>pending.delete(id),$:id=>{assert.ok(elements.has(id),id);return elements.get(id);},intro:()=>'',stats:()=>'',facilities,filterFacilities,score,translate,language:'en',esc,badge:()=>'',date:s=>s,busStopDetails,refreshLanguage(){},facilityDetail(){},createFacilityMap:()=>({update:items=>{mapped=items;mapUpdates++},cityView(){},showFacilities(){}})};
+const ctx={setupWalking(){},main,searchTimer:undefined,setTimeout:fn=>{pending.set(++timerId,fn);return timerId;},clearTimeout:id=>pending.delete(id),$:id=>{assert.ok(elements.has(id),id);return elements.get(id);},intro:()=>'',stats:()=>'',facilities,filterFacilities,score,translate,language:'en',esc,badge:()=>'',date:s=>s,busStopDetails,refreshLanguage(){},facilityDetail(){},createFacilityMap:()=>({update:items=>{mapped=items;mapUpdates++},cityView(){},showFacilities(){}})};
 const source=read('../dist/app.js');
 runInNewContext(source.slice(source.indexOf('function mapPage()'),source.indexOf('function show('))+';mapPage();',ctx);
 chips[1].onclick();assert.equal(mapped.length,busStops.length);
