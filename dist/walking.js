@@ -1,4 +1,4 @@
-export function setupWalking(map, L) {
+export function setupWalking(map, L, layers) {
   const panel = document.querySelector('#walking-controls');
   const button = id => panel.querySelector('#' + id);
   const locationStatus = button('location-status');
@@ -6,6 +6,19 @@ export function setupWalking(map, L) {
   const modePicker = button('route-mode');
   let watch = null, generation = 0, following = false, origin, dot, circle;
   let destination, route, pending;
+  let browseView, highlight, geometry, lastAccuracy;
+  const along = button('along-route');
+  const arrival = button('arrival');
+  const endpoint = () => {
+    const point = destination.entrance ?? destination;
+    return [point.latitude,point.longitude];
+  };
+  function checkArrival() {
+    arrival.hidden = true;
+    if (!destination || !origin || lastAccuracy == null || lastAccuracy > 65) return;
+    const metres = map.distance([origin.latitude,origin.longitude],endpoint());
+    arrival.hidden = metres > Math.min(45,25+lastAccuracy/3);
+  }
   // Keep every navigation path out of the amenity canvas's hit-testing surface.
   const pane = map.createPane('walking');
   pane.style.zIndex = '390';
@@ -14,6 +27,10 @@ export function setupWalking(map, L) {
   const distance = metres => metres < 1000 ? Math.round(metres) + ' m' : (metres / 1000).toFixed(1) + ' km';
 
   function clearRoute() {
+    geometry = null;
+    along.checked = false;
+    button('along-option').hidden = true;
+    if(destination) layers.showAlong(null);
     pending?.abort();
     pending = null;
     route?.remove();
@@ -28,14 +45,16 @@ export function setupWalking(map, L) {
   }
   function mark(point, accuracy) {
     origin = point;
+    lastAccuracy = accuracy;
     const latlng = [point.latitude, point.longitude];
     if (dot) dot.setLatLng(latlng);
     else dot = L.circleMarker(latlng, {...overlay,radius:8, color:'white', weight:3, fillColor:'#1769cf', fillOpacity:1}).addTo(map);
-    if (accuracy != null) {
+    if (accuracy != null && !destination) {
       if (circle) circle.setLatLng(latlng).setRadius(accuracy);
       else circle = L.circle(latlng, {...overlay,radius:accuracy, stroke:false, fillColor:'#1769cf', fillOpacity:0.15}).addTo(map);
     } else { circle?.remove(); circle = null; }
     dot.bringToFront();
+    checkArrival();
     if (following) map.setView(latlng, Math.max(16,map.getZoom()));
   }
   async function directions() {
@@ -69,10 +88,15 @@ export function setupWalking(map, L) {
       route.remove();
       route = L.geoJSON(result.geometry, {...overlay,style:{color:'#194ea6',weight:5,dashArray:mode==='bus'?'6 6':null}}).addTo(map);
       route.bringToBack();
+      geometry = result.geometry;
+      button('along-option').hidden = geometry.type !== 'LineString';
+      highlight.bringToFront();
+      dot?.bringToFront();
       following = false;
       map.fitBounds(route.getBounds(), {padding:[24,24],maxZoom:18});
       routeStatus.textContent = destination.name + ' · ' + (mode==='bus'?result.description:
-        distance(result.distanceMeters) + (mode==='drive'?' by car':' on foot'));
+        distance(result.distanceMeters) + (mode==='drive'?' by car':' on foot') + ' · about ' +
+        Math.max(1,Math.round(result.durationSeconds/60)) + ' min');
     } catch (error) {
       if (pending === controller) routeStatus.textContent = direct + '. ' + (error.name === 'TimeoutError'
         ? 'Directions timed out. Try updating the route.'
@@ -99,15 +123,18 @@ export function setupWalking(map, L) {
       firstFix = false;
     }, error => {
       if (generation !== token) return;
-      stopLocation();
+      stopWatch();
+      lastAccuracy = null;
+      arrival.hidden = true;
       locationStatus.textContent = (error.code === 1 ? 'Location permission denied.' : 'Live location unavailable.') + ' You can choose a starting point.';
     }, {enableHighAccuracy:true,maximumAge:5000,timeout:15000});
   };
   function stopLocation() {
     stopWatch();
-    endDirections();
     dot?.remove(); circle?.remove();
     dot = circle = origin = null;
+    lastAccuracy = null;
+    endDirections();
     locationStatus.textContent = 'Live location stopped.';
   }
   button('stop-location').onclick = stopLocation;
@@ -121,20 +148,55 @@ export function setupWalking(map, L) {
   };
   button('update-walk').onclick = directions;
   modePicker.onchange = directions;
-  function endDirections() {
-    clearRoute(); destination = null; routeStatus.textContent = '';
+  function endDirections(fromHistory=false) {
+    if (!destination) return;
+    clearRoute();
+    highlight.remove(); highlight=null;
+    destination = null; routeStatus.textContent = '';
+    following = false;
+    layers.toggleRoute(false);
+    if (origin && lastAccuracy != null) mark(origin,lastAccuracy);
+    map.stop().setView(browseView.center,browseView.zoom,{animate:false});
+    arrival.hidden = true;
     button('walk-actions').hidden = true;
+    button('my-location').focus({preventScroll:true});
+    if (!fromHistory && history.state?.janSuvidhaRoute) history.back();
   }
-  button('clear-walk').onclick = endDirections;
+  button('clear-walk').onclick = button('close-route').onclick = button('arrival-end').onclick = () => endDirections();
+  along.onchange = () => layers.showAlong(along.checked ? geometry : null);
+  const back = () => { if(destination) endDirections(true); };
+  const escape = event => {
+    if (destination && event.key === 'Escape' && !document.querySelector('dialog[open]')) {
+      event.preventDefault(); endDirections();
+    }
+  };
+  window.addEventListener('popstate',back);
+  window.addEventListener('keydown',escape);
   return {
+    get active() { return Boolean(destination); },
     pauseFollow() { following = false; },
     select(facility,mode='walk') {
+      if (!destination) {
+        browseView = {center:map.getCenter(),zoom:map.getZoom()};
+        if(!history.state?.janSuvidhaRoute) history.pushState({...history.state,janSuvidhaRoute:true},'');
+        layers.toggleRoute(true);
+      }
+      following = false;
+      circle?.remove(); circle=null;
+      highlight?.remove();
       modePicker.value = mode;
       destination = facility;
+      highlight = L.circleMarker(endpoint(),{...overlay,radius:10,weight:4,color:'white',fillColor:'#b33a23',fillOpacity:1}).addTo(map);
+      checkArrival();
       button('walk-actions').hidden = false;
       panel.scrollIntoView({block:'nearest'});
       directions();
     },
-    destroy() { stopWatch(); clearRoute(); }
+    destroy() {
+      window.removeEventListener('popstate',back);
+      window.removeEventListener('keydown',escape);
+      document.querySelector('main')?.classList.remove('routing');
+      stopWatch(); clearRoute();
+    }
   };
 }

@@ -47,7 +47,11 @@ const control = id => {
   if (!controls.has(id)) controls.set(id,{});
   return controls.get(id);
 };
-globalThis.document = {querySelector:() => ({querySelector:control,scrollIntoView(){}})};
+globalThis.document = {querySelector:s => s==='#walking-controls'?{querySelector:control,scrollIntoView(){}}:null};
+const events = new Map();
+globalThis.window = {addEventListener:(k,f)=>events.set(k,f),removeEventListener:k=>events.delete(k)};
+globalThis.history = {state:null,pushState(s){this.state=s;},back(){this.state=null;events.get('popstate')();}};
+control('#my-location').focus=()=>{};
 let fix, cleared, drawn, sent;
 Object.defineProperty(navigator,'geolocation',{value:{
   watchPosition(fn){ fix=fn; return 7; }, clearWatch(id){ cleared=id; }
@@ -55,10 +59,13 @@ Object.defineProperty(navigator,'geolocation',{value:{
 const layer = () => ({addTo(){return this;},setLatLng(){return this;},setRadius(){},bringToFront(){},
   bringToBack(){},getBounds(){return [];},remove(){}});
 const pane = {style:{}};
-const map = {createPane:()=>pane,distance:()=>430,getCenter:()=>({lat:19.2,lng:73}),getZoom:()=>15,on(){},fitBounds(){},setView(){}};
+let metres=430, restored;
+const map = {createPane:()=>pane,distance:()=>metres,getCenter:()=>({lat:19.2,lng:73}),getZoom:()=>15,on(){},fitBounds(){},stop(){return this;},setView(...args){restored=args;}};
 let removed = 0;
 const locationLayer = () => ({...layer(),remove(){removed++;}});
-const walking = setupWalking(map,{svg:()=>({}),polyline:layer,circle:locationLayer,circleMarker:locationLayer,geoJSON:g=>{drawn=g;return layer();}});
+let routing, nearby;
+const walking = setupWalking(map,{svg:()=>({}),polyline:layer,circle:locationLayer,circleMarker:locationLayer,geoJSON:g=>{drawn=g;return layer();}},
+  {toggleRoute(active){routing=active;},showAlong(line){nearby=line;}});
 assert.equal(pane.style.pointerEvents,'none');
 let respond;
 globalThis.fetch = async (url,opts) => {
@@ -75,9 +82,19 @@ assert.deepEqual(sent,{...body,mode:'walk'});
 respond();
 await new Promise(resolve=>setImmediate(resolve));
 assert.deepEqual(drawn,geometry);
+assert.ok(routing);
+control('#along-route').checked=true; control('#along-route').onchange();
+assert.deepEqual(nearby,geometry);
+metres=22;
+fix({coords:{...body.origin,accuracy:15},timestamp:Date.now()});
+assert.equal(control('#arrival').hidden,false);
+assert.ok(walking.active);
+metres=430;
 assert.match(control('#route-status').textContent,/600 m on foot/);
 control('#stop-location').onclick();
 assert.equal(removed,2);
+assert.equal(routing,false);
+assert.deepEqual(restored,[{lat:19.2,lng:73},15,{animate:false}]);
 assert.equal(control('#route-status').textContent,'');
 fix({coords:{...body.origin,accuracy:15},timestamp:Date.now()});
 walking.select(facility);
@@ -92,5 +109,11 @@ respond();
 await new Promise(resolve=>setImmediate(resolve));
 assert.equal(control('#route-status').textContent,'');
 assert.equal(control('#walk-actions').hidden,true);
+walking.select(facility);
+events.get('keydown')({key:'Escape',preventDefault(){}});
+assert.ok(!walking.active);
+walking.select(facility);
+globalThis.history.back();
+assert.ok(!walking.active);
 walking.destroy();
 console.log('Passed: live fix, manual start, walk preview, watch cleanup and cancellation of stale responses.');

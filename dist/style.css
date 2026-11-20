@@ -68,3 +68,16 @@ header{height:auto;min-height:78px;gap:12px;padding-top:12px;padding-bottom:12px
 .list-pagination{display:flex;align-items:center;justify-content:space-between;gap:10px;margin-top:12px}.list-pagination span{font-size:14px}.list-pagination button:disabled{opacity:.45;cursor:default}
 
 .category-legend svg{width:24px;height:24px;background:#334155;border-radius:50%;fill:none;stroke:#fff;stroke-width:1.4;stroke-linecap:round;stroke-linejoin:round;vertical-align:middle}
+.routing .explorer { grid-template-columns: minmax(0,1fr); }
+.routing > :not(.explorer), .routing #amenity-results, .routing .map-legend,
+.routing .street-map-panel > .map-actions, .routing #map-message { display:none; }
+#walking-controls [hidden] { display:none; }
+.routing #walking-controls { position:relative; padding:12px 48px 12px 12px; }
+.routing .route-close { position:absolute; right:6px; top:6px; font-size:1.35rem; }
+.routing #route-status { font-weight:650; }
+.routing #walk-actions label:not([hidden]) { display:inline-flex; align-items:center; gap:6px; margin-right:12px; }
+.routing #along-route { width:auto; }
+@media (prefers-reduced-motion:no-preference) {
+  .routing #walk-actions { animation:route-summary-in 160ms ease-out; }
+  @keyframes route-summary-in { from { opacity:0; } to { opacity:1; } }
+}

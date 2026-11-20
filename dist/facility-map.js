@@ -53,7 +53,37 @@ export function createFacilityMap(container, message, onSelect, setupWalking) {
   let activeIds = new Set();
   const observer = new ResizeObserver(() => map.invalidateSize({ pan: false }));
   observer.observe(container);
-  const walking = setupWalking?.(map, L);
+  const nearby = L.layerGroup();
+  const walking = setupWalking?.(map, L, {
+    toggleRoute(active) {
+      nearby.remove(); nearby.clearLayers();
+      if (active) layer.remove(); else layer.addTo(map);
+      container.closest('main').classList.toggle('routing',active);
+      map.invalidateSize({pan:false});
+    },
+    showAlong(geometry) {
+      nearby.remove(); nearby.clearLayers();
+      if (!geometry || geometry.type!=='LineString') return;
+      // Project once to local metres. A bounding box skips distant facilities.
+      const path=geometry.coordinates;
+      const scale=111320*Math.cos(path[0][1]*Math.PI/180);
+      const xy=([lon,lat])=>({x:lon*scale,y:lat*111320});
+      const points=path.map(xy), buffer=150;
+      const segments=points.slice(1).map((b,i)=>({a:points[i],b}));
+      for(const id of activeIds) {
+        const marker=markers.get(id), ll=marker.getLatLng(), p=xy([ll.lng,ll.lat]);
+        const close=segments.some(({a,b})=>{
+          if(p.x<Math.min(a.x,b.x)-buffer||p.x>Math.max(a.x,b.x)+buffer||
+             p.y<Math.min(a.y,b.y)-buffer||p.y>Math.max(a.y,b.y)+buffer)return false;
+          const dx=b.x-a.x,dy=b.y-a.y;
+          const t=Math.max(0,Math.min(1,((p.x-a.x)*dx+(p.y-a.y)*dy)/(dx*dx+dy*dy||1)));
+          return Math.hypot(p.x-a.x-t*dx,p.y-a.y-t*dy)<=buffer;
+        });
+        if(close)nearby.addLayer(marker);
+      }
+      nearby.addTo(map);
+    }
+  });
   return {
     walking,
     update(facilities) {
