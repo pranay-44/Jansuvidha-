@@ -16,10 +16,23 @@ const success = await walkingRoute(body,'test-key',async (url, options) => {
 });
 assert.deepEqual(success,{status:200,geometry,distanceMeters:600,durationSeconds:510});
 const publicRoute = await walkingRoute(body,'',async url => {
-  assert.match(url,/routed-foot\/route\/v1\/foot\/72.99,19.2;/);
+  const query=JSON.parse(new URL(url).searchParams.get('json'));
+  assert.equal(query.costing,'pedestrian');
+  assert.equal(query.costing_options.pedestrian.shortest,true);
+  assert.deepEqual(query.locations.map(p=>[p.lon,p.lat]),geometry.coordinates);
   return Response.json({routes:[{geometry,distance:600,duration:510}]});
 });
 assert.deepEqual(publicRoute,success);
+const car=await walkingRoute({...body,mode:'drive'},'test-key',async url=>{
+  assert.match(url,/driving-car/);
+  return Response.json({features:[{geometry,properties:{summary:{distance:600,duration:90}}}]});
+});
+assert.equal(car.durationSeconds,90);
+const kalherBus=await walkingRoute({origin:{latitude:19.1888027,longitude:72.9633143},facilityId:'THN-LIB-B05-001',mode:'bus'});
+assert.equal(kalherBus.status,200);
+assert.match(kalherBus.description,/Teen Hath Naka to Kalher/);
+assert.equal(kalherBus.geometry.type,'MultiLineString');
+assert.equal((await walkingRoute({...body,mode:'unknown'})).status,400);
 assert.equal((await walkingRoute({...body,origin:{latitude:null,longitude:73}},'test')).status,400);
 assert.equal((await walkingRoute({...body,facilityId:'missing'},'test')).status,404);
 for (const [upstream, expected] of [[Response.json({error:{code:2010}},{status:404}),422],
@@ -58,7 +71,7 @@ assert.match(control('#route-status').textContent,/choose a starting point/);
 control('#my-location').onclick();
 fix({coords:{...body.origin,accuracy:15},timestamp:Date.now()});
 await new Promise(resolve=>setImmediate(resolve));
-assert.deepEqual(sent,body);
+assert.deepEqual(sent,{...body,mode:'walk'});
 respond();
 await new Promise(resolve=>setImmediate(resolve));
 assert.deepEqual(drawn,geometry);

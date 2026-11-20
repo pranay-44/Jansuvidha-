@@ -2,13 +2,17 @@ export const languages = {en:'English',hi:'हिन्दी',mr:'मराठ�
 export const normalizeLanguage = value => typeof value==='string'&&Object.hasOwn(languages,value) ? value : 'en';
 // English source labels remain the stored values; only their presentation changes.
 const rows = [
-['Walk here','यहाँ पैदल जाएँ','इथे पायी जा'],
+['Directions','दिशा-निर्देश','दिशानिर्देश'],
+['Travel mode','यात्रा का साधन','प्रवासाचे साधन'],
+['Walk','पैदल','पायी'],
+['Drive','कार','कार'],
+['Bus','बस','बस'],
 ['My location','मेरा स्थान','माझे स्थान'],
 ['Stop live location','लाइव स्थान बंद करें','थेट स्थान बंद करा'],
 ['Use map centre as start','नक्शे के केंद्र से शुरू करें','नकाशाच्या मध्यातून सुरुवात करा'],
 ['Update route','रास्ता अपडेट करें','मार्ग अद्ययावत करा'],
 ['End directions','दिशा-निर्देश समाप्त करें','मार्गदर्शन थांबवा'],
-['Walking directions send both endpoints to the routing provider. The key-free FOSSGIS service logs route requests.','रास्ते के लिए दोनों स्थान सेवा प्रदाता को भेजे जाते हैं। बिना कुंजी वाली FOSSGIS सेवा अनुरोध दर्ज करती है।','दोन्ही ठिकाणे मार्ग सेवा पुरवठादाराला पाठवली जातात. किल्लीशिवाय चालणारी FOSSGIS सेवा विनंत्यांची नोंद ठेवते.'],
+['Walking and driving directions send both endpoints to the routing provider. The key-free FOSSGIS service logs route requests.','रास्ते के लिए दोनों स्थान सेवा प्रदाता को भेजे जाते हैं। बिना कुंजी वाली FOSSGIS सेवा अनुरोध दर्ज करती है।','दोन्ही ठिकाणे मार्ग सेवा पुरवठादाराला पाठवली जातात. किल्लीशिवाय चालणारी FOSSGIS सेवा विनंत्यांची नोंद ठेवते.'],
 ['Previous','पिछला','मागील'],
 ['Next','अगला','पुढील'],
 ['Bus stops','बस स्टॉप','बस थांबे'],

@@ -3,6 +3,7 @@ export function setupWalking(map, L) {
   const button = id => panel.querySelector('#' + id);
   const locationStatus = button('location-status');
   const routeStatus = button('route-status');
+  const modePicker = button('route-mode');
   let watch = null, generation = 0, following = false, origin, dot, circle;
   let destination, route, pending;
   // Keep every navigation path out of the amenity canvas's hit-testing surface.
@@ -41,7 +42,7 @@ export function setupWalking(map, L) {
     clearRoute();
     if (!destination) return;
     if (!origin) {
-      routeStatus.textContent = 'To walk to ' + destination.name + ', use My location or choose a starting point.';
+      routeStatus.textContent = 'For directions to ' + destination.name + ', use My location or choose a starting point.';
       return;
     }
     following = false;
@@ -50,29 +51,31 @@ export function setupWalking(map, L) {
     const direct = destination.name + ' · ' + distance(map.distance(...points)) + ' straight-line distance';
     route = L.polyline(points,{...overlay,color:'#536b82',weight:3,dashArray:'6 8'}).addTo(map);
     map.fitBounds(route.getBounds(), {padding:[24,24],maxZoom:18});
-    const body = JSON.stringify({origin, facilityId:destination.id});
+    const mode = modePicker.value;
+    const body = JSON.stringify({origin, facilityId:destination.id,mode});
     const controller = new AbortController();
     pending = controller;
     const signal = AbortSignal.any([controller.signal, AbortSignal.timeout(18000)]);
-    routeStatus.textContent = direct + ' · Finding walking route…';
+    routeStatus.textContent = direct + ' · Finding directions…';
     try {
       const session = await fetch('/api/auth/session', {signal});
       if (!session.ok) throw Error('Could not start a map session. Try again.');
       const {csrf} = await session.json();
-      const response = await fetch('/api/walking-route', {method:'POST', signal,
+      const response = await fetch('/api/directions', {method:'POST', signal,
         headers:{'Content-Type':'application/json','X-CSRF-Token':csrf}, body});
       const result = await response.json();
       if (pending !== controller) return;
-      if (!response.ok) throw Error(result.message || 'Walking directions are unavailable.');
+      if (!response.ok) throw Error(result.message || 'Directions are unavailable.');
       route.remove();
-      route = L.geoJSON(result.geometry, {...overlay,style:{color:'#194ea6',weight:5}}).addTo(map);
+      route = L.geoJSON(result.geometry, {...overlay,style:{color:'#194ea6',weight:5,dashArray:mode==='bus'?'6 6':null}}).addTo(map);
       route.bringToBack();
       following = false;
       map.fitBounds(route.getBounds(), {padding:[24,24],maxZoom:18});
-      routeStatus.textContent = destination.name + ' · ' + distance(result.distanceMeters) + ' on foot';
+      routeStatus.textContent = destination.name + ' · ' + (mode==='bus'?result.description:
+        distance(result.distanceMeters) + (mode==='drive'?' by car':' on foot'));
     } catch (error) {
       if (pending === controller) routeStatus.textContent = direct + '. ' + (error.name === 'TimeoutError'
-        ? 'Walking directions timed out. Try updating the route.'
+        ? 'Directions timed out. Try updating the route.'
         : error instanceof SyntaxError || error instanceof TypeError ? 'Cannot reach the JanSuvidha routing server.' : error.message);
     } finally { if (pending === controller) pending = null; }
   }
@@ -117,6 +120,7 @@ export function setupWalking(map, L) {
     if (destination) directions();
   };
   button('update-walk').onclick = directions;
+  modePicker.onchange = directions;
   function endDirections() {
     clearRoute(); destination = null; routeStatus.textContent = '';
     button('walk-actions').hidden = true;
@@ -124,7 +128,8 @@ export function setupWalking(map, L) {
   button('clear-walk').onclick = endDirections;
   return {
     pauseFollow() { following = false; },
-    select(facility) {
+    select(facility,mode='walk') {
+      modePicker.value = mode;
       destination = facility;
       button('walk-actions').hidden = false;
       panel.scrollIntoView({block:'nearest'});

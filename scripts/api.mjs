@@ -90,7 +90,7 @@ export async function createApp(pool,{rateLimitNamespace='',resolveIdentity}={})
   }));
   installSocialAuth(app,pool,{limit,signedIn,resolveIdentity});
   app.get('/api/auth/session',(req,res)=>res.json({user:req.user?publicUser(req.user):null,csrf:req.session.csrf,providers:socialProviders(),localPrototype:true}));
-  app.post('/api/walking-route',limit('walking-route',60),async(req,res)=>{
+  app.post(['/api/directions','/api/walking-route'],limit('walking-route',60),async(req,res)=>{
     const {status,...result}=await walkingRoute(req.body);
     res.status(status).json(result);
   });
