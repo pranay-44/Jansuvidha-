@@ -67,7 +67,7 @@ elements.get('#search').value='';chips[2].onclick();assert.ok(mapped.length>0&&m
 elements.get('#search').value='IMPOSSIBLE-SEARCH-NO-RESULT';elements.get('#search').input();flushSearch();assert.equal(mapped.length,0);
 // Detail dialog must show bus information, without an empty photo gallery.
 let detail='';const detailNodes={'#report-link':{},'#rating-form':{},'#amenity-reviews':{}};
-const detailCtx={facilities,busStopDetails,esc,show:html=>{detail=html},$:id=>detailNodes[id],ratings:[],refreshLanguage(){},photoUrl:s=>s,options:()=>'',date:s=>s,dialog:{close(){}}};
+const detailCtx={connectRecordForm(){},facilities,busStopDetails,esc,show:html=>{detail=html},$:id=>detailNodes[id],ratings:[],refreshLanguage(){},photoUrl:s=>s,options:()=>'',date:s=>s,dialog:{close(){}}};
 runInNewContext(source.slice(source.indexOf('function facilityDetail('),source.indexOf('function analytics('))+`;facilityDetail('${known.id}');`,detailCtx);
 assert.match(detail,/Address:/);assert.doesNotMatch(detail,/Buses:|Bus routes not known yet|bus-route-list/);assert.doesNotMatch(detail,/facility-photos/);
 console.log('Passed: bus import, 40-card pagination, debounced search, smaller bus payload, stop-only cards, name search, category switching, empty search, safe OSM text and photo-free bus details.');

@@ -41,8 +41,8 @@ export function isPrivateIPv4(host) {
   return a===10||(a===172&&b>=16&&b<=31)||(a===192&&b===168);
 }
 export function assertLocalPrototype() {
-  if (process.env.NODE_ENV === 'production') throw Error('Production startup blocked: staff MFA enrollment, verification and recovery must be implemented first.');
+  if (process.env.NODE_ENV === 'production') throw Error('Production startup blocked for local-only tools.');
   const host=process.env.HOST||'127.0.0.1';
   if(process.env.PRESENTATION_MODE==='true'&&process.env.NODE_ENV==='development'&&isPrivateIPv4(host))return;
-  if (!['127.0.0.1','localhost','::1'].includes(host)) throw Error('Use a loopback address. Public deployment requires staff MFA.');
+  if (!['127.0.0.1','localhost','::1'].includes(host)) throw Error('Use a loopback address. Use the HTTPS production service for public deployment.');
 }

@@ -2,6 +2,7 @@ import {facilities} from './data.js';
 
 const esc=value=>String(value??'').replace(/[&<>"']/g,c=>({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[c]));
 const $=s=>document.querySelector(s);
+let requiresStaffFactor=true;
 let csrf,user,routeVersion=0,portal='citizen',providers={};
 const staffRoutes=new Set(['government','staff-login','staff-forgot','staff-reset','invitation','staff-account','officers','catalog','audit']);
 const routes=new Set(['login','register','recover','staff-login','staff-forgot','invitation','staff-reset','account','staff-account','complaints','government','officers','catalog','audit']);
@@ -53,7 +54,7 @@ function citizenLogin(error=false){
 }
 function loginPage(staff){
   if(!staff){citizenLogin();return;}
-  $('#main').innerHTML=header('Government portal sign in','Officers and administrators sign in with their official email.')+`<section class="panel auth-card"><p class="warning">Local prototype: staff MFA is not implemented. Production access is blocked.</p>${form('login-form',field('Official email','identifier','email','autocomplete="username"')+field('Password','password','password','autocomplete="current-password"'),'Sign in')}<div class="account-links"><a href="#staff-forgot">Forgot password?</a><a href="#login">Citizen sign in</a></div></section>`;
+  $('#main').innerHTML=header('Government portal sign in','Officers and administrators sign in with their official email.')+`<section class="panel auth-card">${form('login-form',field('Official email','identifier','email','autocomplete="username"')+field('Password','password','password','autocomplete="current-password"')+(requiresStaffFactor?field('Authenticator code','code','text','autocomplete="one-time-code" inputmode="numeric" pattern="[0-9]{6}" maxlength="6"'):' '),'Sign in')}<div class="account-links"><a href="#staff-forgot">Forgot password?</a><a href="#login">Citizen sign in</a></div></section>`;
   bind('#login-form',async data=>{
     const result=await api('/auth/staff-login',data);user=result.user;profile();
     const target=dashboard();
@@ -80,7 +81,7 @@ function accountPage(){
     $('#main').innerHTML=header('Account settings',`Signed in as ${esc(user.name||user.username)}`)+links()+`<p id="account-notice" role="status"></p><section class="panel"><h2>Google and Facebook sign-in</h2><p>Manage your password and account recovery directly with your sign-in provider. Use the same provider to return to this citizen account.</p></section>`;
     logout();return;
   }
-  $('#main').innerHTML=header('Account settings',`Signed in as ${esc(user.name||user.username)} · ${esc(user.role)}`)+links()+`<p id="account-notice" role="status"></p><div class="two-col"><section class="panel"><h2>Change password</h2>${form('password-form',field('Current password','current_password','password','autocomplete="current-password"')+passwords(),'Change password')}</section><section class="panel"><h2>Staff account</h2><p>Official email: ${esc(user.official_email)}</p><p class="warning">Staff MFA is deferred in this local prototype. Production startup is blocked.</p></section></div>`;
+  $('#main').innerHTML=header('Account settings',`Signed in as ${esc(user.name||user.username)} · ${esc(user.role)}`)+links()+`<p id="account-notice" role="status"></p><div class="two-col"><section class="panel"><h2>Change password</h2>${form('password-form',field('Current password','current_password','password','autocomplete="current-password"')+passwords(),'Change password')}</section><section class="panel"><h2>Staff account</h2><p>Official email: ${esc(user.official_email)}</p><p class="warning">Contact your administrator to enroll or replace your authenticator.</p></section></div>`;
   bind('#password-form',async(data,output,element)=>{await api('/auth/password',data);element.reset();output.textContent='Password changed. Your other sessions have been revoked.';});
   logout();
 }
@@ -122,10 +123,20 @@ async function adminPage(page,version){
 export function isAccountRoute(page){return routes.has(page);}
 export function cancelAccountRender(){routeVersion++;user=null;csrf=null;portal='citizen';profile();}
 export async function renderAccount(page,action,id){
+  if(globalThis.Capacitor?.isNativePlatform?.()){
+    const main=$('#main');
+    try{
+      const {origin}=await (await fetch('hosted-origin.json')).json();
+      if(!origin||new URL(origin).protocol!=='https:')throw Error();
+      const link=document.createElement('a');link.className='button primary';link.href=origin+'/'+location.hash;link.textContent='Open secure account services';
+      main.innerHTML=header('Account services','Continue in your browser for secure sign-in and synced reviews and drafts.');main.append(link);
+    }catch{main.innerHTML=header('Account services','This Android build needs the hosted service address.');}
+    return;
+  }
   portal=staffRoutes.has(page)?'staff':'citizen';user=null;csrf=null;profile();
   const version=++routeVersion;$('#main').innerHTML='<section class="panel" role="status">Loading account services…</section>';
   try{
-    const result=await api('/auth/session');if(version!==routeVersion)return;user=result.user;providers=result.providers||{};profile();
+    const result=await api('/auth/session');if(version!==routeVersion)return;user=result.user;providers=result.providers||{};requiresStaffFactor=result.requiresStaffFactor!==false;profile();
     if(['login','register','recover','staff-login','staff-forgot','invitation','staff-reset'].includes(page)){publicPage(page,action);return;}
     if(!user){loginPage(portal==='staff');return;}
     if(page==='account'||page==='staff-account'){accountPage();return;}

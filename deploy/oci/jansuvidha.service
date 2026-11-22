@@ -1,0 +1,21 @@
+[Unit]
+Description=JanSuvidha account service
+After=network-online.target
+Wants=network-online.target
+
+[Service]
+User=jansuvidha
+Group=jansuvidha
+WorkingDirectory=/opt/jansuvidha
+EnvironmentFile=/etc/jansuvidha.env
+Environment=NODE_ENV=production
+ExecStart=/usr/bin/node scripts/server.mjs
+Restart=on-failure
+RestartSec=5
+NoNewPrivileges=true
+PrivateTmp=true
+ProtectSystem=strict
+ProtectHome=true
+
+[Install]
+WantedBy=multi-user.target

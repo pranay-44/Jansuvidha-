@@ -41,7 +41,7 @@ const detailSource=appSource.slice(appSource.indexOf('function facilityDetail(')
 const elements={'#report-link':{},'#rating-form':{},'#amenity-reviews':{scrollIntoView(){}}};
 let card='',closed=false,saved=[],message='';
 const ratings=[];
-const ctx={facilities,ratings,Date,Number,String,
+const ctx={connectRecordForm(){},facilities,ratings,Date,Number,String,
   $:s=>elements[s],
   esc:s=>String(s??'').replaceAll('&','&amp;').replaceAll('<','&lt;').replaceAll('>','&gt;').replaceAll('"','&quot;'),
   show:html=>{card=html;},photoUrl:p=>p,options:a=>a.join(''),date:s=>s,refreshLanguage(){},

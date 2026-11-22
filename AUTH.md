@@ -6,7 +6,7 @@ Citizens now use Google and Facebook only. Follow [SOCIAL_AUTH_SETUP.md](SOCIAL_
 
 This is one Node/Express application with one MySQL application database. The separate `jansuvidha_test` database is used only by automated tests. The existing map, dataset, theme and language controls remain available. Complaints now use authenticated backend storage; old browser demo complaints are neither imported nor deleted.
 
-**Local prototype, not production-ready:** staff MFA is deferred. `NODE_ENV=production` refuses startup, and the ordinary server binds only to loopback. Staff login additionally requires `ALLOW_LOCAL_STAFF_WITHOUT_MFA=true`. Do not expose this prototype through a public proxy or tunnel. Implement an established MFA enrollment, verification and recovery flow before lifting these guards. Staff password reset must retain the MFA requirement.
+Production uses a loopback HTTPS reverse proxy and mandatory staff TOTP. Enrollment and operator-assisted replacement are documented in [the OCI guide](deploy/oci/README.md).
 
 ## Setup and start
 
@@ -81,7 +81,7 @@ The authentication integration suite uses real HTTP requests and MySQL in `jansu
 
 ## Remaining deployment work
 
-- Staff MFA, including enrollment, verification, replay protection and recovery, is mandatory before production; startup currently fails closed.
+- Staff password reset preserves the enrolled authenticator. Factor replacement revokes existing sessions.
 - Configure HTTPS, secure proxy trust, SMTP delivery/monitoring, production database privileges/backups, secret storage and deployment security review before real use. This implementation does not claim anonymity or breach-proof storage; complaint content itself may identify people.
 - The packaged Android/static-hosting version has no remote API configuration. Use the Node-served local web application for accounts. Do not publish `dist/` alone and expect authentication to work.
 - New account screens are in English. Existing map translations are preserved. Existing local ratings/assessment drafts remain prototype-only and do not modify server complaint/account data.

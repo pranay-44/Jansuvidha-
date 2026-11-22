@@ -1,6 +1,6 @@
 # JanSuvidha foundation
 
-Citizen, officer and administrator accounts now use a Node/Express backend with MySQL. For citizen Google/Facebook sign-in, see [SOCIAL_AUTH_SETUP.md](SOCIAL_AUTH_SETUP.md). Start with [AUTH.md](AUTH.md) for database setup, first-admin creation, login, invitations and recovery. Staff MFA is deferred; production startup is blocked. Use the Node-served web application for accounts.
+Citizen, officer and administrator accounts now use a Node/Express backend with MySQL. For citizen Google/Facebook sign-in, see [SOCIAL_AUTH_SETUP.md](SOCIAL_AUTH_SETUP.md). Start with [AUTH.md](AUTH.md) for database setup, first-admin creation, login, invitations and recovery. Production staff sign-in requires an enrolled authenticator. See the [OCI deployment guide](deploy/oci/README.md). Use the Node-served web application for accounts.
 
 Responsive web and Android prototype based on the October 2026 PRD, now using 175 facility listings and 395 supplied photos. All 175 existing amenities were marked verified on November 15, 2026, based on the project owner’s confirmation. This does not assign usability scores or supply missing coordinates. No reports are sent to a public authority.
 
@@ -94,7 +94,7 @@ At setup, npm reported eight moderate advisories in transitive development depen
 
 ## Next implementation
 
-Confirm wards, entrance coordinates and scoring methodology for the Thane pilot. The requested Node/MySQL authentication, complaint permissions and auditing are implemented. Add production staff MFA and evidence uploads before deployment. React/Vite migration can accompany that integration; the current interface uses browser modules with bundled Leaflet. Add full type-specific checklists, validated scoring/version history, OTP, GPS, notifications, staff-only notes, SLA handling, moderation, PWA/offline support and staff/analytics translations. Only the account/complaint features documented in AUTH.md are backed by active server APIs.
+Confirm wards, entrance coordinates and scoring methodology for the Thane pilot. The requested Node/MySQL authentication, complaint permissions and auditing are implemented. Evidence uploads are still pending. React/Vite migration can accompany that integration; the current interface uses browser modules with bundled Leaflet. Add full type-specific checklists, validated scoring/version history, OTP, GPS, notifications, staff-only notes, SLA handling, moderation, PWA/offline support and staff/analytics translations. Signed-in citizens can also sync private reviews and assessment drafts.
 
 Local storage is a single-device demo convenience, not secure multi-user persistence. Do not enter real personal information. Google Fonts is optional; system fonts work if unavailable.
 

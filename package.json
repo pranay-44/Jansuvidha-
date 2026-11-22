@@ -26,13 +26,14 @@
     "predev": "npm run map:assets && npm run data:import",
     "preandroid:sync": "npm run map:assets && npm run data:import",
     "map:assets": "node scripts/prepare-map-assets.mjs",
-    "postandroid:sync": "node scripts/android-checks.mjs",
+    "postandroid:sync": "node scripts/android-origin.mjs && node scripts/android-checks.mjs",
     "android:check": "node scripts/android-checks.mjs",
     "preandroid:open": "npm run android:sync",
     "preandroid:run": "npm run android:sync",
     "bus:fetch": "python bus-pipeline/pipeline.py",
     "bus:import": "node scripts/import-bus.mjs",
-    "bus:test": "python bus-pipeline/test_pipeline.py"
+    "bus:test": "python bus-pipeline/test_pipeline.py",
+    "auth:mfa": "node --env-file-if-exists=.env scripts/enroll-staff.mjs"
   },
   "dependencies": {
     "@capacitor/android": "^8.6.0",
@@ -46,6 +47,7 @@
     "leaflet": "^1.9.4",
     "mysql2": "^3.24.6",
     "nodemailer": "^10.3.1",
+    "otpauth": "^9.6.0",
     "passport": "^0.7.0",
     "passport-local": "^1.0.0",
     "simple-statistics": "^8.0.0"
@@ -55,5 +57,10 @@
     "@eslint/js": "^10.0.1",
     "eslint": "^10.14.0",
     "globals": "^17.14.0"
+  },
+  "overrides": {
+    "express-mysql-session": {
+      "mysql2": "$mysql2"
+    }
   }
 }

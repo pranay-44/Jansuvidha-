@@ -1,3 +1,5 @@
+import {consumeFactor,requiresFactor} from './staff-mfa.mjs';
+import {installRecords} from './citizen-records.mjs';
 import express from 'express';
 import {walkingRoute} from './walking-route.mjs';
 import session from 'express-session';
@@ -20,6 +22,7 @@ export async function createApp(pool,{rateLimitNamespace='',resolveIdentity}={})
   const store=new (createMySQLStore(session))({createDatabaseTable:false,clearExpired:true,expiration:8*60*60*1000},pool);
   const dummy=await hashPassword(token());
   app.disable('x-powered-by');
+  if(process.env.NODE_ENV==='production')app.set('trust proxy','loopback');
   if(process.env.PRESENTATION_MODE==='true')app.use((req,res,next)=>{
     const address=req.socket.remoteAddress?.replace(/^::ffff:/,'');
     if(!isPrivateIPv4(address||'')&&address!=='127.0.0.1'&&address!=='::1')return res.status(403).send('Presentation access is restricted to the local network.');
@@ -59,7 +62,7 @@ export async function createApp(pool,{rateLimitNamespace='',resolveIdentity}={})
   function roles(...allowed) {return(req,res,next)=>{
     if(!req.user) fail(401,'Sign in to continue.');
     if(!allowed.includes(req.user.role)) fail(403,'Access denied.');
-    if(req.user.role!=='CITIZEN'&&(process.env.NODE_ENV==='production'||process.env.ALLOW_LOCAL_STAFF_WITHOUT_MFA!=='true')) fail(403,'Staff MFA is required. See local setup instructions.');
+    if(req.user.role!=='CITIZEN'&&(requiresFactor()&&!req.session.mfa)) fail(403,'Staff MFA is required. See local setup instructions.');
     next();
   };}
   const citizen=roles('CITIZEN'),admin=roles('ADMIN'),authenticated=roles('CITIZEN','OFFICER','ADMIN');
@@ -70,9 +73,9 @@ export async function createApp(pool,{rateLimitNamespace='',resolveIdentity}={})
     const [entry]=await rows(pool,'SELECT attempts FROM auth_limits WHERE bucket=?',[bucket]);
     if(entry.attempts>max){res.set('Retry-After','900');fail(429,'Too many attempts. Try again in 15 minutes.');} next();
   };
-  async function signedIn(req,u){
+  async function signedIn(req,u,mfa=false){
     if((u.role==='CITIZEN')!==(req.portal==='citizen'))fail(403,'Use the correct sign-in portal for this account.');
-    await regenerate(req);Object.assign(req.session,{uid:u.id,portal:req.portal,version:u.session_version,issued:Date.now(),csrf:token()});await new Promise((resolve,reject)=>req.session.save(e=>e?reject(e):resolve()));
+    await regenerate(req);Object.assign(req.session,{mfa,uid:u.id,portal:req.portal,version:u.session_version,issued:Date.now(),csrf:token()});await new Promise((resolve,reject)=>req.session.save(e=>e?reject(e):resolve()));
   }
   // Every protected write rechecks and locks its actor, including session revocation.
   const write=(req,work)=>transaction(pool,async db=>{
@@ -88,8 +91,9 @@ export async function createApp(pool,{rateLimitNamespace='',resolveIdentity}={})
       done(null,valid&&u?.status==='ACTIVE'?u:false);
     }catch(e){done(e);}
   }));
+  installRecords(app,{citizen,write,limit,pool});
   installSocialAuth(app,pool,{limit,signedIn,resolveIdentity});
-  app.get('/api/auth/session',(req,res)=>res.json({user:req.user?publicUser(req.user):null,csrf:req.session.csrf,providers:socialProviders(),localPrototype:true}));
+  app.get('/api/auth/session',(req,res)=>res.json({user:req.user?publicUser(req.user):null,csrf:req.session.csrf,providers:socialProviders(),requiresStaffFactor:requiresFactor()}));
   app.post(['/api/directions','/api/walking-route'],limit('walking-route',60),async(req,res)=>{
     const {status,...result}=await walkingRoute(req.body);
     res.status(status).json(result);
@@ -100,8 +104,9 @@ export async function createApp(pool,{rateLimitNamespace='',resolveIdentity}={})
     passport.authenticate('local',{session:false},async(error,u)=>{
       try{
         if(error) throw error;if(!u||u.role==='CITIZEN') fail(401,generic);
-        if(process.env.NODE_ENV==='production'||process.env.ALLOW_LOCAL_STAFF_WITHOUT_MFA!=='true') fail(403,'Staff MFA is required. See local setup instructions.');
-        await signedIn(req,u);await audit(pool,u.id,'LOGIN','user',u.id);res.json({user:publicUser(u),csrf:req.session.csrf});
+        const mfa=requiresFactor();
+        if(mfa&&!await transaction(pool,db=>consumeFactor(db,u,req.body.code)))fail(401,generic);
+        await signedIn(req,u,mfa);await audit(pool,u.id,'LOGIN','user',u.id);res.json({user:publicUser(u),csrf:req.session.csrf});
       }catch(e){next(e);}
     })(req,res,next);
   });
@@ -113,7 +118,7 @@ export async function createApp(pool,{rateLimitNamespace='',resolveIdentity}={})
       await rows(db,'UPDATE users SET password_hash=?,session_version=session_version+1 WHERE id=?',[hash,u.id]);
       await rows(db,"DELETE FROM account_tokens WHERE user_id=? AND kind='STAFF_RESET'",[u.id]);
       await audit(db,u.id,'PASSWORD_CHANGED','user',u.id);return {...u,session_version:u.session_version+1};
-    });await signedIn(req,u);res.json({ok:true,csrf:req.session.csrf});
+    });await signedIn(req,u,req.session.mfa);res.json({ok:true,csrf:req.session.csrf});
   });
   app.post('/api/auth/staff-forgot',limit('recovery',10),async(req,res)=>{
     const address=email(req.body.email);if(!hasMail()) fail(503,'Email is not configured. For local testing use npm run auth:dev-link.');

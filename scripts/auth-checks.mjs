@@ -1,3 +1,4 @@
+import {authenticator,encryptSecret} from './staff-mfa.mjs';
 import assert from 'node:assert/strict';
 import {randomUUID} from 'node:crypto';
 import {once} from 'node:events';
@@ -52,7 +53,13 @@ try {
   const a=await social(alice,'alice_'+suffix);ids.push(a.data.user.id);assert.equal(a.data.user.role,'CITIZEN');
   const b=await social(bob,'bob_'+suffix);ids.push(b.data.user.id);
   const [stored]=await rows(pool,'SELECT * FROM users WHERE id=?',[ids[0]]);assert.match(stored.password_hash,/^\$argon2id\$/);assert.equal(stored.department_id,null);
+  const recordId=randomUUID(), record={owner:ids[0],kind:'assessment',data:{facility:facilities[0].id,date:'2026-11-22',condition:'Usable',notes:'Private draft'}};
+  for(let attempt=0;attempt<2;attempt++)assert.equal((await alice.request('/records/'+recordId,record,'PUT')).status,200);
+  assert.equal((await alice.request('/records')).data.items.length,1);
+  assert.equal((await bob.request('/records')).data.items.length,0);
+  assert.equal((await bob.request('/records/'+recordId,record,'PUT')).status,409);
   const login=await fresh();assert.equal((await social(login,'alice_'+suffix)).data.user.id,ids[0]);
+  assert.equal((await login.request('/records')).data.items[0].payload.notes,'Private draft');
   for(const path of ['login','recover','recovery-codes'])assert.equal((await login.request('/auth/'+path,{password})).status,410);
   assert.equal((await login.request('/auth/password',{current_password:password,password:newPassword,confirmation:newPassword})).status,403);
   const invalid=await fresh();
@@ -109,7 +116,16 @@ try {
   assert.equal((await alice.request('/complaints')).status,401);
   assert.equal((await login.request('/complaints')).status,401);
   const recovery1=await fresh();await social(recovery1,'alice_'+suffix);
-  const mfaFlag=process.env.ALLOW_LOCAL_STAFF_WITHOUT_MFA;process.env.ALLOW_LOCAL_STAFF_WITHOUT_MFA='false';assert.equal((await admin.c.request('/admin/officers')).status,403);process.env.ALLOW_LOCAL_STAFF_WITHOUT_MFA=mfaFlag;
+  process.env.MFA_ENCRYPTION_KEY='37'.repeat(32);
+  const factor=authenticator(admin.address);
+  await rows(pool,'INSERT INTO staff_factors(user_id,encrypted_secret,last_step) VALUES (?,?,0)',[admin.id,encryptSecret(admin.id,factor.secret.base32)]);
+  const probe=await fresh();await probe.usePortal('staff');
+  const mfaFlag=process.env.ALLOW_LOCAL_STAFF_WITHOUT_MFA;process.env.ALLOW_LOCAL_STAFF_WITHOUT_MFA='false';assert.equal((await admin.c.request('/admin/officers')).status,403);const credentials={identifier:admin.address,password};
+  assert.equal((await probe.request('/auth/staff-login',credentials)).status,401);
+  const code=factor.generate();assert.equal((await probe.request('/auth/staff-login',{...credentials,code})).status,200);
+  assert.equal((await probe.request('/admin/officers')).status,200);
+  assert.equal((await probe.request('/auth/staff-login',{...credentials,code})).status,401);
+  process.env.ALLOW_LOCAL_STAFF_WITHOUT_MFA=mfaFlag;
   await recovery1.request('/auth/logout',{});assert.equal((await recovery1.request('/complaints')).status,401);
   let limited;const rateClient=await fresh();
   for(let i=0;i<21;i++){limited=await rateClient.request('/auth/staff-login',{identifier:'missing',password});if(limited.status===429)break;}
@@ -125,6 +141,6 @@ try {
   for(const id of ids)await rows(pool,'DELETE FROM users WHERE id=?',[id]);
   for(const id of departments)await rows(pool,'DELETE FROM departments WHERE id=?',[id]);
   for(const id of jurisdictions)await rows(pool,'DELETE FROM jurisdictions WHERE id=?',[id]);
-  for(const scope of ['social-login','social-callback','register','login','password','recovery','tokens','complaints','invitations'])await rows(pool,'DELETE FROM auth_limits WHERE bucket=?',[digest(`${rateLimitNamespace}:${scope}:127.0.0.1`)]);
+  for(const scope of ['social-login','social-callback','register','login','password','recovery','tokens','complaints','invitations','records'])await rows(pool,'DELETE FROM auth_limits WHERE bucket=?',[digest(`${rateLimitNamespace}:${scope}:127.0.0.1`)]);
   await pool.end();
 }
