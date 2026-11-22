@@ -22,7 +22,7 @@ export async function createApp(pool,{rateLimitNamespace='',resolveIdentity}={})
   const store=new (createMySQLStore(session))({createDatabaseTable:false,clearExpired:true,expiration:8*60*60*1000},pool);
   const dummy=await hashPassword(token());
   app.disable('x-powered-by');
-  if(process.env.NODE_ENV==='production')app.set('trust proxy','loopback');
+  if(process.env.NODE_ENV==='production')app.set('trust proxy',process.env.RENDER==='true'?1:'loopback');
   if(process.env.PRESENTATION_MODE==='true')app.use((req,res,next)=>{
     const address=req.socket.remoteAddress?.replace(/^::ffff:/,'');
     if(!isPrivateIPv4(address||'')&&address!=='127.0.0.1'&&address!=='::1')return res.status(403).send('Presentation access is restricted to the local network.');

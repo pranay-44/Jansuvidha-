@@ -124,13 +124,17 @@ export function isAccountRoute(page){return routes.has(page);}
 export function cancelAccountRender(){routeVersion++;user=null;csrf=null;portal='citizen';profile();}
 export async function renderAccount(page,action,id){
   if(globalThis.Capacitor?.isNativePlatform?.()){
-    const main=$('#main');
+    const main=$('#main'), version=++routeVersion, fragment=location.hash;
     try{
       const {origin}=await (await fetch('hosted-origin.json')).json();
-      if(!origin||new URL(origin).protocol!=='https:')throw Error();
-      const link=document.createElement('a');link.className='button primary';link.href=origin+'/'+location.hash;link.textContent='Open secure account services';
-      main.innerHTML=header('Account services','Continue in your browser for secure sign-in and synced reviews and drafts.');main.append(link);
-    }catch{main.innerHTML=header('Account services','This Android build needs the hosted service address.');}
+      if(version!==routeVersion)return;
+      if(!origin||new URL(origin).protocol!=='https:'||new URL(origin).origin!==origin)throw Error();
+      const label=page==='government'?'Government portal':page==='complaints'?'My complaints':page==='login'?'Citizen sign-in':'Account services';
+      const link=document.createElement('a');
+      link.className='button primary';link.href=origin+'/'+fragment;link.textContent='Open '+label;
+      main.innerHTML=header(label,'Continue in your browser.');
+      main.append(link);location.assign(link.href);
+    }catch{if(version===routeVersion)main.innerHTML=header('Account services','The online account service has not been configured for this build.');}
     return;
   }
   portal=staffRoutes.has(page)?'staff':'citizen';user=null;csrf=null;profile();
