@@ -6,7 +6,7 @@ Citizens now use Google and Facebook only. Follow [SOCIAL_AUTH_SETUP.md](SOCIAL_
 
 This is one Node/Express application with one MySQL application database. The separate `jansuvidha_test` database is used only by automated tests. The existing map, dataset, theme and language controls remain available. Complaints now use authenticated backend storage; old browser demo complaints are neither imported nor deleted.
 
-Production uses a loopback HTTPS reverse proxy and mandatory staff TOTP. Enrollment and operator-assisted replacement are documented in [the OCI guide](deploy/oci/README.md).
+Production staff sign in with their official email and password.
 
 ## Setup and start
 
@@ -77,11 +77,10 @@ npm run check
 npm run test:auth
 ```
 
-The authentication integration suite uses real HTTP requests and MySQL in `jansuvidha_test`. It creates its own random records and removes only those records afterward. It covers Argon2id, username uniqueness/case handling, role injection, login, CSRF, citizen isolation, internal notes, officer assignment and scope, administrator-only endpoints, disabled sessions, invitation approval/reuse, reset expiry/reuse, concurrent recovery-code consumption, password/session revocation, code replacement, rate limiting and production-MFA guards.
+The authentication integration suite uses real HTTP requests and MySQL in `jansuvidha_test`. It creates its own random records and removes only those records afterward. It covers Argon2id, username uniqueness/case handling, role injection, login, CSRF, citizen isolation, internal notes, officer assignment and scope, administrator-only endpoints, disabled sessions, invitation approval/reuse, reset expiry/reuse, concurrent recovery-code consumption, password/session revocation, code replacement, rate limiting.
 
 ## Remaining deployment work
 
-- Staff password reset preserves the enrolled authenticator. Factor replacement revokes existing sessions.
 - Configure HTTPS, secure proxy trust, SMTP delivery/monitoring, production database privileges/backups, secret storage and deployment security review before real use. This implementation does not claim anonymity or breach-proof storage; complaint content itself may identify people.
 - The packaged Android/static-hosting version has no remote API configuration. Use the Node-served local web application for accounts. Do not publish `dist/` alone and expect authentication to work.
 - New account screens are in English. Existing map translations are preserved. Existing local ratings/assessment drafts remain prototype-only and do not modify server complaint/account data.

@@ -1,4 +1,3 @@
-import {authenticator,encryptSecret} from './staff-mfa.mjs';
 import assert from 'node:assert/strict';
 import {randomUUID} from 'node:crypto';
 import {once} from 'node:events';
@@ -65,11 +64,12 @@ try {
   const invalid=await fresh();
   assert.equal((await invalid.request('/auth/social/google/start',{},'POST',true)).status,403);
   assert.equal((await invalid.request('/auth/social/facebook/start',{})).status,503);
-  assert.equal((await invalid.request('/auth/social/google/callback?state=wrong&code=bad')).data.redirect,'/#login/oauth-error');
+  assert.equal((await invalid.request('/auth/social/google/callback?state=wrong&code=bad')).data.redirect,'/#login/oauth-session');
   const begin=await invalid.request('/auth/social/google/start',{}),state=new URL(begin.data.url).searchParams.get('state');
   const callback='/auth/social/google/callback?'+new URLSearchParams({state,code:'alice_'+suffix});
+  assert.equal((await invalid.request('/auth/social/google/callback?state=stale&code=bad')).data.redirect,'/#login/oauth-session');
   assert.equal((await invalid.request(callback)).data.redirect,'/#complaints');
-  assert.equal((await invalid.request(callback)).data.redirect,'/#login/oauth-error');
+  assert.equal((await invalid.request(callback)).data.redirect,'/#login/oauth-session');
   await rows(pool,"UPDATE users SET status='DISABLED' WHERE id=?",[ids[1]]);
   const disabled=await fresh(),disabledStart=await disabled.request('/auth/social/google/start',{});
   assert.equal((await disabled.request('/auth/social/google/callback?'+new URLSearchParams({state:new URL(disabledStart.data.url).searchParams.get('state'),code:'bob_'+suffix}))).data.redirect,'/#login/oauth-error');
@@ -116,21 +116,14 @@ try {
   assert.equal((await alice.request('/complaints')).status,401);
   assert.equal((await login.request('/complaints')).status,401);
   const recovery1=await fresh();await social(recovery1,'alice_'+suffix);
-  process.env.MFA_ENCRYPTION_KEY='37'.repeat(32);
-  const factor=authenticator(admin.address);
-  await rows(pool,'INSERT INTO staff_factors(user_id,encrypted_secret,last_step) VALUES (?,?,0)',[admin.id,encryptSecret(admin.id,factor.secret.base32)]);
   const probe=await fresh();await probe.usePortal('staff');
-  const mfaFlag=process.env.ALLOW_LOCAL_STAFF_WITHOUT_MFA;process.env.ALLOW_LOCAL_STAFF_WITHOUT_MFA='false';assert.equal((await admin.c.request('/admin/officers')).status,403);const credentials={identifier:admin.address,password};
-  assert.equal((await probe.request('/auth/staff-login',credentials)).status,401);
-  const code=factor.generate();assert.equal((await probe.request('/auth/staff-login',{...credentials,code})).status,200);
+  assert.equal((await probe.request('/auth/staff-login',{identifier:admin.address,password})).status,200);
   assert.equal((await probe.request('/admin/officers')).status,200);
-  assert.equal((await probe.request('/auth/staff-login',{...credentials,code})).status,401);
-  process.env.ALLOW_LOCAL_STAFF_WITHOUT_MFA=mfaFlag;
   await recovery1.request('/auth/logout',{});assert.equal((await recovery1.request('/complaints')).status,401);
   let limited;const rateClient=await fresh();
   for(let i=0;i<21;i++){limited=await rateClient.request('/auth/staff-login',{identifier:'missing',password});if(limited.status===429)break;}
   assert.equal(limited.status,429);
-  console.log('Passed: Argon2id, username case/uniqueness, role injection, CSRF, login, citizen isolation, internal-note privacy, officer scope, admin boundaries, assignments, disabled sessions, invitation approval/reuse, reset expiry/reuse, social sign-in/return, rejected legacy endpoints, callback state/replay, disabled social accounts, session revocation, MFA production guard and logout.');
+  console.log('Passed: Argon2id, username case/uniqueness, role injection, CSRF, login, citizen isolation, internal-note privacy, officer scope, admin boundaries, assignments, disabled sessions, invitation approval/reuse, reset expiry/reuse, social sign-in/return, rejected legacy endpoints, callback state/replay, disabled social accounts, session revocation, password-only staff sign-in and logout.');
 }finally{
   if(server)await new Promise(resolve=>server.close(resolve));
   if(store)await store.close();

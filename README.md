@@ -1,6 +1,6 @@
 # JanSuvidha foundation
 
-Citizen, officer and administrator accounts now use a Node/Express backend with MySQL. For citizen Google/Facebook sign-in, see [SOCIAL_AUTH_SETUP.md](SOCIAL_AUTH_SETUP.md). Start with [AUTH.md](AUTH.md) for database setup, first-admin creation, login, invitations and recovery. Production staff sign-in requires an enrolled authenticator. See the [OCI deployment guide](deploy/oci/README.md). Use the Node-served web application for accounts.
+Citizen, officer and administrator accounts now use a Node/Express backend with MySQL. For citizen Google/Facebook sign-in, see [SOCIAL_AUTH_SETUP.md](SOCIAL_AUTH_SETUP.md). Start with [AUTH.md](AUTH.md) for database setup, first-admin creation, login, invitations and recovery. Production staff sign-in uses official email and password. See the [OCI deployment guide](deploy/oci/README.md). Use the Node-served web application for accounts.
 
 Responsive web and Android prototype based on the October 2026 PRD, now using 175 facility listings and 395 supplied photos. All 175 existing amenities were marked verified on November 15, 2026, based on the project owner’s confirmation. This does not assign usability scores or supply missing coordinates. No reports are sent to a public authority.
 

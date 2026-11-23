@@ -2,7 +2,6 @@ import {facilities} from './data.js';
 
 const esc=value=>String(value??'').replace(/[&<>"']/g,c=>({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[c]));
 const $=s=>document.querySelector(s);
-let requiresStaffFactor=true;
 let csrf,user,routeVersion=0,portal='citizen',providers={};
 const staffRoutes=new Set(['government','staff-login','staff-forgot','staff-reset','invitation','staff-account','officers','catalog','audit']);
 const routes=new Set(['login','register','recover','staff-login','staff-forgot','invitation','staff-reset','account','staff-account','complaints','government','officers','catalog','audit']);
@@ -39,8 +38,14 @@ function bind(id,handler) {
   };
 }
 function logout(){if($('#logout'))$('#logout').onclick=async()=>{try{await api('/auth/logout',{});user=null;csrf=null;profile();location.hash=portal==='staff'?'staff-login':'login';}catch(e){$('#account-notice').textContent=e.message;}};}
-function citizenLogin(error=false){
-  $('#main').innerHTML=header('Citizen sign in','Create an account or sign in with Google or Facebook.')+`<section class="panel auth-card social-login"><h2>Welcome to JanSuvidha</h2><p>Use the same provider each time to access your complaints.</p><div class="social-buttons">${['google','facebook'].map(provider=>`<button class="button" id="signin-${provider}" ${providers[provider]?'':'disabled'}>Continue with ${provider==='google'?'Google':'Facebook'}</button>`).join('')}</div>${!providers.google||!providers.facebook?'<p class="note">Sign-in options that are unavailable are still being set up. Please try again later.</p>':''}<p id="social-message" role="status" aria-live="polite">${error?'Sign-in was cancelled or could not be completed. Please try again.':''}</p><p class="note">Your first sign-in creates a citizen account. JanSuvidha never receives your Google or Facebook password.</p><a href="#staff-login">Officer / administrator sign in</a></section>`;
+function citizenLogin(reason){
+  const feedback={
+    'oauth-error':'Sign-in could not be completed. Please try again.',
+    'oauth-session':'Your sign-in session expired or changed. Start again here and complete sign-in in the same browser.',
+    'oauth-denied':'Your sign-in provider declined access or consent was cancelled. If Google restricts access to testers, contact the app owner.'
+  };
+  const error=Object.hasOwn(feedback,reason)?feedback[reason]:'';
+  $('#main').innerHTML=header('Citizen sign in','Create an account or sign in with Google or Facebook.')+`<section class="panel auth-card social-login"><h2>Welcome to JanSuvidha</h2><p>Use the same provider each time to access your complaints.</p><div class="social-buttons">${['google','facebook'].map(provider=>`<button class="button" id="signin-${provider}" ${providers[provider]?'':'disabled'}>Continue with ${provider==='google'?'Google':'Facebook'}</button>`).join('')}</div>${!providers.google||!providers.facebook?'<p class="note">Sign-in options that are unavailable are still being set up. Please try again later.</p>':''}<p id="social-message" role="status" aria-live="polite">${error}</p><p class="note">Your first sign-in creates a citizen account. JanSuvidha never receives your Google or Facebook password.</p><a href="#staff-login">Officer / administrator sign in</a></section>`;
   for(const provider of ['google','facebook']){
     const button=$('#signin-'+provider);
     if(!providers[provider])continue;
@@ -54,7 +59,7 @@ function citizenLogin(error=false){
 }
 function loginPage(staff){
   if(!staff){citizenLogin();return;}
-  $('#main').innerHTML=header('Government portal sign in','Officers and administrators sign in with their official email.')+`<section class="panel auth-card">${form('login-form',field('Official email','identifier','email','autocomplete="username"')+field('Password','password','password','autocomplete="current-password"')+(requiresStaffFactor?field('Authenticator code','code','text','autocomplete="one-time-code" inputmode="numeric" pattern="[0-9]{6}" maxlength="6"'):' '),'Sign in')}<div class="account-links"><a href="#staff-forgot">Forgot password?</a><a href="#login">Citizen sign in</a></div></section>`;
+  $('#main').innerHTML=header('Government portal sign in','Officers and administrators sign in with their official email.')+`<section class="panel auth-card">${form('login-form',field('Official email','identifier','email','autocomplete="username"')+field('Password','password','password','autocomplete="current-password"'),'Sign in')}<div class="account-links"><a href="#staff-forgot">Forgot password?</a><a href="#login">Citizen sign in</a></div></section>`;
   bind('#login-form',async data=>{
     const result=await api('/auth/staff-login',data);user=result.user;profile();
     const target=dashboard();
@@ -64,7 +69,7 @@ function loginPage(staff){
   });
 }
 function publicPage(page,secret){
-  if(['login','register','recover'].includes(page)){citizenLogin(secret==='oauth-error');return;}
+  if(['login','register','recover'].includes(page)){citizenLogin(secret);return;}
   if(page==='staff-login'){loginPage(true);return;}
   const titles={'staff-forgot':'Staff password recovery',invitation:'Set up your officer account','staff-reset':'Reset your staff password'};
   const body=page==='staff-forgot'?field('Official email','email','email','autocomplete="username"'):passwords();
@@ -140,7 +145,7 @@ export async function renderAccount(page,action,id){
   portal=staffRoutes.has(page)?'staff':'citizen';user=null;csrf=null;profile();
   const version=++routeVersion;$('#main').innerHTML='<section class="panel" role="status">Loading account services…</section>';
   try{
-    const result=await api('/auth/session');if(version!==routeVersion)return;user=result.user;providers=result.providers||{};requiresStaffFactor=result.requiresStaffFactor!==false;profile();
+    const result=await api('/auth/session');if(version!==routeVersion)return;user=result.user;providers=result.providers||{};profile();
     if(['login','register','recover','staff-login','staff-forgot','invitation','staff-reset'].includes(page)){publicPage(page,action);return;}
     if(!user){loginPage(portal==='staff');return;}
     if(page==='account'||page==='staff-account'){accountPage();return;}

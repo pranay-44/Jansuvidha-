@@ -29,6 +29,7 @@ for(const [role,route] of [['OFFICER','government'],['ADMIN','government']]){
       }};
     runInNewContext(source+'\nglobalThis.renderAccount=renderAccount;',context);
     await context.renderAccount(initial);
+    assert.doesNotMatch(elements['#main'].innerHTML,/Authenticator code|one-time-code/);
     await form.onsubmit({preventDefault(){}});
     assert.equal(button.disabled,false);
     assert.equal(requests.includes('/api/catalog'),false,'Inbox must not load unused catalog data');
@@ -87,6 +88,8 @@ for(const enabled of [false,true]){
   }
   if(enabled){await buttons.google.onclick();assert.equal(destination,'https://provider.example/authorize');await buttons.facebook.onclick();}
   else {assert.equal(buttons.google.onclick,undefined);assert.match(main.innerHTML,/disabled/);}
+  await context.renderAccount('login','oauth-session');assert.match(main.innerHTML,/same browser/);
+  await context.renderAccount('login','oauth-denied');assert.match(main.innerHTML,/declined access/);
   await context.renderAccount('login','oauth-error');assert.match(main.innerHTML,/could not be completed/);
 }
 console.log('Passed: social-only citizen pages, provider readiness, CSRF-protected redirects and callback errors.');

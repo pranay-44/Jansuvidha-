@@ -2,7 +2,6 @@ import {createCipheriv,createDecipheriv,randomBytes} from 'node:crypto';
 import {TOTP,Secret} from 'otpauth';
 import {rows} from './db.mjs';
 
-export const requiresFactor=()=>process.env.NODE_ENV==='production'||process.env.ALLOW_LOCAL_STAFF_WITHOUT_MFA!=='true';
 export function encryptionKey(){
   if(!/^[a-f0-9]{64}$/i.test(process.env.MFA_ENCRYPTION_KEY||''))throw Error('Configure MFA_ENCRYPTION_KEY with 32 random bytes in hex.');
   return Buffer.from(process.env.MFA_ENCRYPTION_KEY,'hex');

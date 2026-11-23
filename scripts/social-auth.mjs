@@ -41,7 +41,7 @@ export function validState(pending,provider,state){
 export async function exchangeIdentity(provider,config,code,pending,request=fetch){
   async function json(url,options={}){
     const response=await request(url,{...options,redirect:'error',signal:AbortSignal.timeout(10000)});
-    if(!response.ok)throw Error('Provider request failed');
+    if(!response.ok)throw Object.assign(Error('Provider request failed'),{providerStatus:response.status});
     const data=await response.json();
     if(data.error)throw Error('Provider rejected request');
     return data;
@@ -101,17 +101,26 @@ export function installSocialAuth(app,pool,{limit,signedIn,resolveIdentity=excha
   });
   app.get('/api/auth/social/:provider/callback',limit('social-callback',30),async(req,res)=>{
     const pending=req.session.oauth;
+    if(req.portal!=='citizen'||!validState(pending,req.params.provider,req.query.state)){
+      return res.redirect('/#login/oauth-session');
+    }
     delete req.session.oauth;
     await new Promise((resolve,reject)=>req.session.save(e=>e?reject(e):resolve()));
+    let stage='authorization';
     try{
-      if(req.portal!=='citizen'||!validState(pending,req.params.provider,req.query.state))throw Error('Invalid OAuth state');
+      if(req.query.error==='access_denied')return res.redirect('/#login/oauth-denied');
       if(req.query.error||typeof req.query.code!=='string'||!req.query.code||req.query.code.length>4096)throw Error('Authorization cancelled');
       const config=providerConfig(req.params.provider);if(!config)throw Error('Provider unavailable');
+      stage='provider exchange';
       const identity=await resolveIdentity(req.params.provider,config,req.query.code,pending);
+      stage='citizen account';
       const u=await socialCitizen(pool,req.params.provider,identity);
+      stage='session';
       await signedIn(req,u);await audit(pool,u.id,'SOCIAL_LOGIN','user',u.id);
       res.redirect('/#complaints');
-    }catch{
+    }catch(error){
+      const reason=error.providerStatus || (/^ER_[A-Z0-9_]+$/.test(error.code)?error.code:'failed');
+      console.warn('Social sign-in failed during '+stage,reason);
       // Never return provider errors, authorization codes or tokens to the page or logs.
       res.redirect('/#login/oauth-error');
     }
