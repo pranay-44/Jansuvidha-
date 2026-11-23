@@ -43,14 +43,7 @@ The debug APK is written to `android/app/build/outputs/apk/debug/app-debug.apk`.
 
 ## Remaining account setup
 
-The standalone Android package has no Node/MySQL server inside it. Its relative `/api` requests currently target the bundled WebView origin, so sign-in and server-backed complaint submission/tracking are not yet operational on a phone. The report button and screens are included, but submission needs the server connection.
-
-Before activating accounts on Android:
-
-1. Provide a reachable HTTPS JanSuvidha backend. The existing production guard still requires staff MFA before public deployment; do not remove it just to expose the server.
-2. Configure the Google and Meta credentials using `SOCIAL_AUTH_SETUP.md`.
-3. Implement the Android API/session connection and native social-login handoff through the system browser, with verified app links and a one-time authenticated return exchange. The current browser cookie session must not be assumed to transfer into the Android WebView. Do not put secrets or session tokens in app links or web assets.
-4. Test first/returning sign-in, logout, complaint ownership, failure/cancel flows and reconnect behavior on a device.
+Account and complaint screens open the hosted service in the system browser. The Android build defaults to https://jansuvidha-9t1l.onrender.com. Staff sign in with official email and password. Verify first and returning sign-in, logout and complaint ownership on a device before release.
 
 Google/Facebook must not be forced through an embedded WebView login. This update synchronizes the current app; it does not claim that native provider login or a hosted backend is already configured.
 
