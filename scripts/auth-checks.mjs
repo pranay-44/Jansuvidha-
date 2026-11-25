@@ -67,7 +67,15 @@ try {
   assert.equal((await invalid.request('/auth/social/google/callback?state=wrong&code=bad')).data.redirect,'/#login/oauth-session');
   const begin=await invalid.request('/auth/social/google/start',{}),state=new URL(begin.data.url).searchParams.get('state');
   assert.equal((await invalid.request('/auth/social/google/start',{})).status,200);
-  const callback='/auth/social/google/callback?'+new URLSearchParams({state,code:'alice_'+suffix});
+  const noCookieUrl=origin+'/api/auth/social/google/callback?'+new URLSearchParams({state,code:'alice_'+suffix});
+  const landing=await fetch(noCookieUrl,{redirect:'manual'});
+  assert.equal(landing.status,200);
+  assert.match(await landing.text(),/src="\/oauth-return.js"/);
+  assert.equal(landing.headers.get('set-cookie'),null);
+  const missing=await fetch(noCookieUrl+'&resume=1',{redirect:'manual'});
+  assert.equal(missing.headers.get('location'),'/#login/oauth-browser');
+  assert.equal(missing.headers.get('set-cookie'),null);
+  const callback='/auth/social/google/callback?resume=1&'+new URLSearchParams({state,code:'alice_'+suffix});
   assert.equal((await invalid.request('/auth/social/google/callback?state=stale&code=bad')).data.redirect,'/#login/oauth-session');
   assert.equal((await invalid.request(callback)).data.redirect,'/#complaints');
   assert.equal((await invalid.request(callback)).data.redirect,'/#login/oauth-session');

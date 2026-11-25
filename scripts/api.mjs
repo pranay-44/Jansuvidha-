@@ -37,6 +37,17 @@ export async function createApp(pool,{rateLimitNamespace='',resolveIdentity}={})
     next();
   });
   app.use((req,res,next)=>{res.set({'X-Content-Type-Options':'nosniff','Referrer-Policy':'no-referrer','X-Frame-Options':'DENY','Content-Security-Policy':"default-src 'self'; script-src 'self'; style-src 'self' 'unsafe-inline' https://fonts.googleapis.com; font-src 'self' https://fonts.gstatic.com; img-src 'self' data: https://tile.openstreetmap.org; connect-src 'self'; frame-ancestors 'none'; base-uri 'self'; form-action 'self'"});next();});
+  // A provider return may omit a cookie that is available on same-origin navigation.
+  // Handle it before session middleware can issue a replacement session cookie.
+  app.get('/api/auth/social/:provider/callback',(req,res,next)=>{
+    if(!['google','facebook'].includes(req.params.provider)||/(?:^|;\s*)js\.citizen\.sid=/.test(req.headers.cookie||''))return next();
+    res.set('Cache-Control','no-store');
+    if(req.query.resume==='1'){
+      console.warn('Social sign-in callback: cookie missing on same-origin retry');
+      return res.redirect('/#login/oauth-browser');
+    }
+    res.type('html').send('<!doctype html><html lang="en"><meta charset="utf-8"><title>Completing sign-in</title><p>Returning to JanSuvidha…</p><script src="/oauth-return.js"></script></html>');
+  });
   app.use('/api',express.json({limit:'16kb'}));
   const portalSessions=Object.fromEntries(['citizen','staff'].map(portal=>[portal,session({name:`js.${portal}.sid`,secret:process.env.SESSION_SECRET,store,resave:false,saveUninitialized:false,cookie:{httpOnly:true,secure:process.env.NODE_ENV==='production',sameSite:portal==='citizen'?'lax':'strict',maxAge:8*60*60*1000}})]));
   app.use('/api',(req,res,next)=>{
@@ -86,6 +97,10 @@ export async function createApp(pool,{rateLimitNamespace='',resolveIdentity}={})
       const normalized=typeof identifier==='string'?identifier.trim().toLowerCase().slice(0,254):'';
       const [u]=await rows(pool,"SELECT * FROM users WHERE official_email=? AND role IN ('OFFICER','ADMIN')",[normalized]);
       const valid=typeof password==='string'&&password.length<=512&&await verifyPassword(u?.password_hash||dummy,password);
+      if(!valid||u?.status!=='ACTIVE'){
+        const reason=!u?'unknown staff email':u.status!=='ACTIVE'?'inactive staff account':'password mismatch';
+        console.info('Staff sign-in rejected:',reason);
+      }
       done(null,valid&&u?.status==='ACTIVE'?u:false);
     }catch(e){done(e);}
   }));

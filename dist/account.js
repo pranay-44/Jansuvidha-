@@ -41,6 +41,7 @@ function logout(){if($('#logout'))$('#logout').onclick=async()=>{try{await api('
 function citizenLogin(reason){
   const feedback={
     'oauth-error':'Sign-in could not be completed. Please try again.',
+    'oauth-browser':'This browser could not retrieve the session that started sign-in. Open JanSuvidha directly in your regular browser, allow cookies for this site, and start Google sign-in there.',
     'oauth-session':'Your sign-in session expired or changed. Start again here and complete sign-in in the same browser.',
     'oauth-denied':'Your sign-in provider declined access or consent was cancelled. If Google restricts access to testers, contact the app owner.'
   };
