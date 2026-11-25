@@ -89,22 +89,32 @@ export async function socialCitizen(pool,provider,identity){
     return transaction(pool,async db=>{const u=await existing(db);if(!u)throw error;return u;});
   }
 }
+function attempts(session){
+  if(Array.isArray(session.oauth))return session.oauth;
+  return session.oauth?[session.oauth]:[];
+}
 export function installSocialAuth(app,pool,{limit,signedIn,resolveIdentity=exchangeIdentity}){
   app.post('/api/auth/social/:provider/start',limit('social-login',20),async(req,res)=>{
     if(req.portal!=='citizen')fail(403,'Use citizen sign in.');
     if(req.user)fail(409,'Log out before switching accounts.');
     const config=providerConfig(req.params.provider);if(!config)fail(503,'This sign-in provider is not configured yet.');
     const {pending,url}=beginAuthorization(req.params.provider,config);
-    req.session.oauth=pending;
+    const recent=attempts(req.session).filter(item=>validState(item,item.provider,item.state));
+    req.session.oauth=[...recent.slice(-4),pending];
     await new Promise((resolve,reject)=>req.session.save(e=>e?reject(e):resolve()));
     res.json({url});
   });
   app.get('/api/auth/social/:provider/callback',limit('social-callback',30),async(req,res)=>{
-    const pending=req.session.oauth;
-    if(req.portal!=='citizen'||!validState(pending,req.params.provider,req.query.state)){
+    const saved=attempts(req.session);
+    const pending=saved.find(item=>validState(item,req.params.provider,req.query.state));
+    if(req.portal!=='citizen'||!pending){
+      const hasCookie=/(?:^|;\s*)js\.citizen\.sid=/.test(req.headers.cookie||'');
+      const match=saved.some(item=>item.provider===req.params.provider&&item.state===req.query.state);
+      const reason=!hasCookie?'missing session cookie':!saved.length?'no pending attempt':match?'expired attempt':'unrecognized state';
+      console.warn('Social sign-in callback:',reason);
       return res.redirect('/#login/oauth-session');
     }
-    delete req.session.oauth;
+    req.session.oauth=saved.filter(item=>item!==pending);
     await new Promise((resolve,reject)=>req.session.save(e=>e?reject(e):resolve()));
     let stage='authorization';
     try{

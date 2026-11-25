@@ -66,6 +66,7 @@ try {
   assert.equal((await invalid.request('/auth/social/facebook/start',{})).status,503);
   assert.equal((await invalid.request('/auth/social/google/callback?state=wrong&code=bad')).data.redirect,'/#login/oauth-session');
   const begin=await invalid.request('/auth/social/google/start',{}),state=new URL(begin.data.url).searchParams.get('state');
+  assert.equal((await invalid.request('/auth/social/google/start',{})).status,200);
   const callback='/auth/social/google/callback?'+new URLSearchParams({state,code:'alice_'+suffix});
   assert.equal((await invalid.request('/auth/social/google/callback?state=stale&code=bad')).data.redirect,'/#login/oauth-session');
   assert.equal((await invalid.request(callback)).data.redirect,'/#complaints');
